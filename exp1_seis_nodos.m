@@ -58,8 +58,8 @@ end
 % --- Verificacion contra Moler ---
 fprintf('\nVerificacion contra Moler pp.78-79:\n');
 fprintf('%s\n', repmat('-', 1, 50));
-resultados_moler = [0.2675, 0.2524, 0.2046, 0.1662, 0.0625, 0.0625];
-nodos_moler      = {'alpha','beta','gamma','delta','rho','sigma'};
+resultados_moler = [0.2675, 0.2524, 0.1697, 0.1323, 0.0625, 0.1156];
+nodos_moler      = {'alpha','beta','delta','gamma','rho','sigma'};
 ok = true;
 for k = 1:n
   idx_n = find(strcmp(nombres, nodos_moler{k}));

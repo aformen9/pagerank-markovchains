@@ -18,7 +18,7 @@
 function G = generar_red_jerarquica(n, seed)
 
   if nargin < 2, seed = 42; end
-  rand('state', seed);
+  rng(seed);
 
   n1 = max(1, floor(n * 0.10));   % nivel 1: nodos criticos
   n2 = max(1, floor(n * 0.30));   % nivel 2: intermedios
