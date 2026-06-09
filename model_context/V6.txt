@@ -1,0 +1,444 @@
+bueno esta es la lectura 8 de aproximación de raíces en particular
+0:099 segundosvamos a ver el método de newton rap son si esta lectura pertenece a la unidad 6
+0:1616 segundosde métodos numéricos de matemática aplicada para ingeniería eléctrica y electrónica de la facultad de ciencias
+0:2424 segundosen ingeniería y hábil y mensura de la universidad nacional de rosa ok
+0:3333 segundosyo soy luciano ponce link y marinería vamos a hacer una introducción en
+0:4141 segundosparticular veamos una motivación por ejemplo con este ejemplo con este
+0:4949 segundosproblema de aplicación supongamos que tenemos un cable de una potencia eléctrica suspendido entre dos torres
+0:5959 segundosvamos en igual altura sin y que están separadas una distancia de 100 metros ok
+1:081 minuto y 8 segundosustedes saben que la curva que va a adoptar el cable si la curva se tiene un
+1:181 minuto y 18 segundosnombre particular y se conoce como en la curva catenaria esa curva está descripta
+1:241 minuto y 24 segundospor la siguiente ecuación y que depende de x es igual a un coeficiente lambda
+1:321 minuto y 32 segundospor el coseno hiperbólico de x sobre la banda donde lambda que es un coeficiente
+1:401 minuto y 40 segundosmayor cripto que 0 es decir que para determinar la forma que tiene esa curva necesito determinar
+1:481 minuto y 48 segundosel valor de lambda bueno usando algunas condiciones iniciales en este caso las condiciones iniciales de mi problema son
+1:581 minuto y 58 segundosque x en 0 cuando la variable vale 0
+2:042 minutos y 4 segundosy en 0 + yang es igual ahí en 50 con lo cual yo puedo reemplazar esos valores en
+2:132 minutos y 13 segundosla ecuación de la curva y obtengo la siguiente ecuación no lineal que si la
+2:212 minutos y 21 segundospuedo resolver para lambda si va a determinar cuál es el valor de mi coeficiente y por dando el valor en la
+2:302 minutos y 30 segundosdescripción geométrica de la curva una vez que tengo la ley de mi curvas yo puedo calcular su longitud etcétera
+2:402 minutos y 40 segundospor tanto tengo que resolver esa última ecuación no línea fíjense que el anda
+2:472 minutos y 47 segundoscoseno hiperbólico de 50 sobre el andar igualado a las mamarias
+2:562 minutos y 56 segundosbueno en general en gran parte de las
+3:043 minutos y 4 segundossimulaciones en procesos físicos se ven involucrados ecuaciones no lineales
+3:113 minutos y 11 segundospor tanto yo necesito desarrollar e implementar métodos numéricos que nos permitan hallar nuestro caso será
+3:193 minutos y 19 segundosaproximar raíces de ecuaciones no lineales y quiero que estos algoritmos lo hagan en una forma precisa o exacta y
+3:293 minutos y 29 segundostambién eficiente o rápida en particular más la octava shaila ya
+3:373 minutos y 37 segundostienen incorporados solvers no lineales
+3:453 minutos y 45 segundosa nosotros nos va a interesar en particular en el caso unidimensional si
+3:523 minutos y 52 segundosestudiar y desarrollar e implementar el método de newton rap son si es un método
+3:593 minutos y 59 segundosque todavía se usa y los métodos que está implementado en la gran mayoría de
+4:064 minutos y 6 segundoslos software computacionales y que además se sigue desarrollando y mejorando
+4:144 minutos y 14 segundossin embargo existen otros métodos como el método de punto fijo así que puede pensarse como una generalización del
+4:224 minutos y 22 segundosmétodo de newton o al revés el método benito en rawson puede pensarse como un caso particular del método punto giros
+4:304 minutos y 30 segundosel método de las disecciones aumento de las decepciones seguramente lo han escuchado consiste en
+4:394 minutos y 39 segundosbasarse en el teorema de bolsa no diciendo que si yo no tiene una función continua definida en un intervalo
+4:464 minutos y 46 segundoscerrado y acordado si la función asumen distintos signos en
+4:544 minutos y 54 segundosel extremo de ese intervalo entonces al menos existe una raíz en ese intervalo y
+5:035 minutos y 3 segundospor tanto yo lo que puedo hacer es ir diseccionando ese intervalo respetando
+5:095 minutos y 9 segundosque los signos sean distintos el grado sube intervalo e ir generando me a partir de mis secciones de esos
+5:175 minutos y 17 segundosintervalos una sucesión que converja a la al menos una de las raíces que había
+5:245 minutos y 24 segundosen ese intervalo también está el método de la secante que es parecido al método de newton robson y
+5:325 minutos y 32 segundoshay otros ok veamos entonces el que nos interesa nosotros que es el método de newton
+5:415 minutos y 41 segundosrawson lo que queremos hacer es hallar numéricamente quiero ser numéricamente
+5:505 minutos y 50 segundosno lo quiero hacer analíticamente a mano si lo quiero hacer numéricamente la raíz que está en el intervalo ave de mi
+6:006 minutosfunción efe tal que por definición la función evaluado en la raíz es cero
+6:116 minutos y 11 segundospara lo cual voy a pedirle que me fmf prima y también mi jefe segundas sean
+6:176 minutos y 17 segundoscontinuas en un entorno de dicha raíz y en un entorno del centro r y radio delta
+6:276 minutos y 27 segundossin un entorno simétrico en particular fíjense que allí les
+6:336 minutos y 33 segundosgráfica la función fx igual a la x menos
+6:396 minutos y 39 segundosx2 si que tiene dos raíces en el intervalo menos 33 lo que queremos hacer
+6:476 minutos y 47 segundoses desarrollar un método que nos permita aproximar numéricamente esas dos raíces
+6:566 minutos y 56 segundosentonces bien veamos cuál es la idea y newton ramsay supongamos que x es la aproximación de
+7:057 minutos y 5 segundosla raíz r entonces r va a ser igual a x + 1 h que
+7:147 minutos y 14 segundosiba a ser un incremento si sea que la raíz no hacer otra cosa que su aproximación más un incremento
+7:237 minutos y 23 segundossi f es dos veces derivables con continuidad el intervalo abierto a b lo que puedo hacer es un desarrollo de
+7:307 minutos y 30 segundostaylor de esa f centrado en x sí es decir centrado en la
+7:397 minutos y 39 segundosaproximación y lo que vale efe nr va a ser por
+7:467 minutos y 46 segundosdefinición eres x más h el polinomio de traylor
+7:537 minutos y 53 segundosgrado 1 va a ser efe evaluado en x + fpm en x por el
+8:008 minutosincremento h más usó la expresión del error de lagrange
+8:088 minutos y 8 segundoses la derivada segunda en un cierto si sobre dos factorial por h cuadrado donde
+8:148 minutos y 14 segundossexy es un valor que va a estar entre r y x dependiendo si x es mayor que
+8:228 minutos y 22 segundosrecoger o x es menor que el ok sí siempre bajar entre esos dos valores
+8:298 minutos y 29 segundosaunque no sé bien quién es ese sí sí entonces bueno hice
+8:378 minutos y 37 segundoscentrándome en la aproximación de mi raíz hice un desarrollo lineal centrado
+8:458 minutos y 45 segundosen esa aproximación desarrollo de taylor lineal centrado en esa aproximación ahora bien sí que es una buena
+8:538 minutos y 53 segundosaproximación y yo espero que mi método vaya construyendo buenas aproximaciones el incremento debería ser chico sin
+9:029 minutos y 2 segundosdebería ser pequeño por tanto si el incremento es pequeño el
+9:109 minutos y 10 segundosh pequeño h cuadrado es más pequeño todavía si h es menor a 1 h cuadrado
+9:179 minutos y 17 segundoshacer todavía un mayor menor a 1 por tanto lo que puedo hacer con ese último
+9:249 minutos y 24 segundostérmino lo puedo despreciar sí es decir que f en r no es otra cosa es
+9:359 minutos y 35 segundosaproximadamente fx más f prima en x por h que es la el término en lineal de
+9:459 minutos y 45 segundosmi desarrollo de tejido ahora bien cómo eres raíz
+9:529 minutos y 52 segundosefe nr vale 0 por dando efe en x + f prima en x por h va a ser
+10:0110 minutos y 1 segundoaproximadamente 0 de donde yo puedo despejar cuánto vale aproximadamente el incremento que es -
+10:1010 minutos y 10 segundosefe en x sobre fp en x entonces una vez que obtuve la aproximación explícita de mi incremento
+10:1810 minutos y 18 segundoslo que puedo hacer es volver a la expresión de la reguera como x como sobreestimación más un incremento es
+10:2710 minutos y 27 segundosdecir que r va a ser aproximadamente la
+10:3210 minutos y 32 segundosaproximación x menos fx sobre f primera ok con lo cual esto nos da una idea de
+10:4210 minutos y 42 segundoscómo tiene que ser nuestro esquema interactivo esta última ecuación nos da una idea de cómo podemos generar nuestro esquema iterativo
+10:5110 minutos y 51 segundosla iteración del indoor rap son justamente va a ser la aproximación en e1 es sima va a ser
+11:0111 minutos y 1 segundola aproximación enésima menos f evaluado en dicha aproximación sobre la derivada de la f evaluada en esa aproximación
+11:1011 minutos y 10 segundospara todo en el mayor o igual que 0 entendiendo que x sub zero es una
+11:1811 minutos y 18 segundosaproximación inicial dada entonces esta es la que se conoce como
+11:2511 minutos y 25 segundosla iteración de newton razón fíjense que tiene es un esquema de tipo
+11:3511 minutos y 35 segundose interactivos y tengo una es una ley una regla a partir de la cual puedo esperar
+11:4311 minutos y 43 segundosy además los valores en un décimo están dependiendo de los
+11:5011 minutos y 50 segundosvalores anteriores siempre y cuando yo de una aproximación inicial x sub sé si
+11:5711 minutos y 57 segundosaquí esto es una puesto décimo que viene la idea de integración joven
+12:0812 minutos y 8 segundosahora bien que estoy haciendo geométricamente geométricamente que hago bueno hagamos la primera iteración
+12:1512 minutos y 15 segundosfíjense x sub 1 va a ser igual a x0 - efe en x 0 sobre f prima en x 0
+12:2412 minutos y 24 segundosde dónde puedo despejar el f prime en x 0 o sea la derivada
+12:3312 minutos y 33 segundosefe en x 0 sí
+12:3812 minutos y 38 segundoses el cociente entre cero y menos f xx
+12:4412 minutos y 44 segundossub 0 sobre x 1 - x sub zero es decir la pendiente a la recta
+12:5512 minutos y 55 segundostangente a la gráfica
+13:0013 minutosen el punto x 0 si no es otra cosa que el cociente de esos valores es decir qué
+13:0913 minutos y 9 segundosva a pasar por esos dos puntitos que son el x sub 0 fn x 10 y x sub 10
+13:2113 minutos y 21 segundosmirémoslo acá en la gráfica en el ejemplo que le había dado anteriormente la función que a la x x 2 supongamos que
+13:2913 minutos y 29 segundostengo un x0 que está entre 2 y 3 entonces en esa aproximación inicial
+13:3913 minutos y 39 segundoslo que hago es un desarrollo de taylor lineal sin x dando geométricamente eso
+13:4613 minutos y 46 segundosno es más que una recta una recta que están gente si a la gráfica de mi
+13:5313 minutos y 53 segundosfunción en el punto x 0 f en x sin cortando cuando esa recta
+14:0114 minutos y 1 segundotangente intercepta aleje de las abscisas es decir pasa por el punto x
+14:0914 minutos y 9 segundossub 10 en ese en esa intersección en ese x1 yo
+14:1714 minutos y 17 segundosvoy a considerar mi primera aproximación luego en el segundo paso de mi integración de newton rap son repito
+14:2514 minutos y 25 segundoseste procedimiento es decir algún taylor lineal centrado en x1
+14:3314 minutos y 33 segundosy donde la recta tangente al punto x 1 f en x1 la recta tangente de mí
+14:4214 minutos y 42 segundosmi función inter seca aleje de la app sisa voy a encontrar el x sub 2 así
+14:4914 minutos y 49 segundossucesivamente en la medida que estas rectas tangentes vayan e interceptando el eje de la sisa voy a ir encontrando
+14:5814 minutos y 58 segundosuna sucesión numérica que yo esperaría que en el infinito converja a la raíz de
+15:0715 minutos y 7 segundosmi función veamos un ejemplo sin
+15:1615 minutos y 16 segundosveamos un ejemplo vamos a calcular la raíz cuadrada de
+15:2415 minutos y 24 segundosla raíz cuadrada ms sin perdón de la raíz cuadrada de m siendo un m un número
+15:3215 minutos y 32 segundosvalor un número real positivo lo primero que hay que hacer es
+15:3815 minutos y 38 segundosdefinirnos adecuadamente la función cuya raíz va a coincidir con la raíz cuadrada
+15:4715 minutos y 47 segundosde fíjense que si yo defino la función f x igual x cuadrado menos m
+15:5715 minutos y 57 segundosquien va a ser una raíz de esa función va a ser un valor tal que x cuadrado
+16:0316 minutos y 3 segundosmenos m es igual a cero por tanto si ustedes despejan el x de esa ecuación en
+16:1116 minutos y 11 segundosx despejando el x van a obtener dos valores más menos la raíz cuadrada de en
+16:2016 minutos y 20 segundosparticular nos vamos a ayudar con él la raíz cuadrada positiva ok entonces está bien definida nuestra
+16:2916 minutos y 29 segundosfunción ahora bien puedo aplicar un intro raxón sí claro porque mi jefe es polinómica es
+16:3716 minutos y 37 segundosuna cuadrática puedo derivar la infinitamente por tanto la derivada primera en este caso es 2x entonces
+16:4716 minutos y 47 segundosnuestro esquema interactivo de newton rawson queda como x suben a 1 igual que suben menos fx suben eso de febrero y
+16:5616 minutos y 56 segundossuben e igualdad x suben ahí reemplazo por quienes son
+17:0317 minutos y 3 segundoslas expresiones de mi jefe y mi prima fíjense que en este caso tuve que hacer
+17:0917 minutos y 9 segundosla derivada de analítica de la de la f evaluados tanto efe como su derivada en
+17:1717 minutos y 17 segundosx suben y luego a través de un trabajito algebraico obtengo esa expresión que es un medio de paréntesis x suben más m
+17:2717 minutos y 27 segundossobre x sube en el caso particular yo tomé en mi igual 2 lo que voy a estar calculando es
+17:3517 minutos y 35 segundosla raíz cuadrada de 2 es decir x su n 1 es un medio paréntesis
+17:4517 minutos y 45 segundosx suben en + 2 sobre x suben para todo en el mayor o igual que 0 ese va a ser el esquema interactivo en el caso dicho
+17:5317 minutos y 53 segundosque ir aproxima a la raíz cuadrada de 2 pero bueno este es un ejemplo conocido por nosotros porque fue el ejemplo el recuerdos
+18:0118 minutos y 1 segundola función de recuerdos que vimos en la lectura uno cuando aproximamos efectivamente la raíz cuadrados en este
+18:0918 minutos y 9 segundoscaso aunque no lo dijimos estábamos usando el esquema iterativo de newton rams
+18:1918 minutos y 19 segundosrodea fíjense que esto el esquema iterativo newton rap song es fácilmente
+18:2718 minutos y 27 segundosimplementable yo puedo hacerme una función que que realice este esquema interactivo y
+18:3718 minutos y 37 segundosentonces mi función que la llamo newton rap son y tiene como argumentos de entrada
+18:4618 minutos y 46 segundosefe efe nom que es el nombre de la función que define mi ecuación no lineal
+18:5418 minutos y 54 segundostambién tiene fp none que es la derivada de esta función
+19:0019 minutosdespués tiene x0 que es una estimación inicial o una aproximación inicial de la
+19:0719 minutos y 7 segundosraíz que yo estoy buscando para tener también argumentos vinculados a los criterios de parada por ejemplo
+19:1619 minutos y 16 segundostalk que es una tolerancia y max que va a ser un número máximo de
+19:2319 minutos y 23 segundositeraciones que yo voy a realizar entonces y el argumento de salida en este caso
+19:3319 minutos y 33 segundoshay un solo argumento de salida que es x que va a ser la aproximación de mi raíz fíjense bueno después de los comentarios
+19:4219 minutos y 42 segundoshay una serie de fp efe que no son otra cosa que impresiones por pantalla simplemente para ir teniendo algunos
+19:5119 minutos y 51 segundosresultados parciales ir viéndolo en la ventana del comando esto no hacen al método ncis pero por ahí nos
+19:5819 minutos y 58 segundossirven para ir viendo cómo va evolucionando la solución peter igual uno que es un contador de número de iteraciones y luego entró en
+20:0720 minutos y 7 segundosla estructura repetitivo con un while uno se sirve es una estructura que se va a repetir siempre hasta que corte por
+20:1520 minutos y 15 segundosalguno de los criterios de parada que vamos a ver a continuación pero dentro de wilde tengo las tres siguientes líneas que son las que
+20:2320 minutos y 23 segundosdefinen la iteración del millón rap son son tres líneas que podrían simplificarse a uno y fíjense que la
+20:3220 minutos y 32 segundosprimera línea lo que hace es a la el argumento de entrada a la función que ingrese como argumento de entrada efe no
+20:3920 minutos y 39 segundosle evaluó en x0 así que es la estimación inicial y eso lo asignó a la variable fx
+20:4820 minutos y 48 segundoslo mismo hago con efe - los signos en la variable f px y luego hago la iteración de newton rap son es decir x igual x 0
+20:5820 minutos y 58 segundosme - f x / efe ok
+21:1121 minutos y 11 segundosbueno como van a ser los criterios de parada bueno en principio fíjense el primer criterio hasta vinculó a la
+21:1921 minutos y 19 segundostolerancia y le voy a decir bueno si el valor absoluto de x menos x 0 es decir
+21:2721 minutos y 27 segundosde la aproximación n más una décima con la aproximación enésima si es menor o
+21:3621 minutos y 36 segundosigual que la tolerancia es decir si dos aproximaciones sucesivas están muy cerquita
+21:4321 minutos y 43 segundosy además el valor absoluto de la función evaluado en la aproximación
+21:5221 minutos y 52 segundosen un esquema es decir y ese valor en valor absoluto es muy
+21:5921 minutos y 59 segundoschiquito dado que yo quiero que x aproxime la raíz por tanto
+22:0722 minutos y 7 segundosla función evaluada en la aproximación debería ser cero o casi cero por tanto le pido que sea un valor muy chiquito
+22:1522 minutos y 15 segundosmenor que mi tolerancia cuando se cumplan estas dos condiciones es decir que la aproximación sucesiva entre sí es
+22:2322 minutos y 23 segundosen ser mitad y el valor en la última aproximación sea un valor muy chiquito casi cero entonces se alcanza la
+22:3122 minutos y 31 segundostolerancia y me imprime la reina aproximada luego lo que hago es si no si supongamos
+22:4022 minutos y 40 segundosque estoy tirando y esto no de estas condiciones por tolerancia no se alcanza
+22:4622 minutos y 46 segundosbueno tengo el contador se actualiza en uno y te va a ser peter más uno
+22:5622 minutos y 56 segundosy le pregunto si peter es mayor estricto gay max es decir si en algún momento
+23:0423 minutos y 4 segundossupera el número máximo de iteraciones entonces que corté mi esquema iterativo
+23:1223 minutos y 12 segundosmi estructura de wight por tanto yo digamos o bien alcanzó la tolerancia
+23:2223 minutos y 22 segundoso bien pero un número máximo de veces y seguro el algoritmo va a cortar en el
+23:3123 minutos y 31 segundosmedio de esos dos y fíjense que tengo muy importante la asignación de x la asignó a la variable x0 porque en ese
+23:4023 minutos y 40 segundoscaso yo estoy actualizando las variables x 0 y x recuerden que estamos haciendo una estructura repetitiva entonces
+23:4823 minutos y 48 segundosimportante hacer esta actualización para que se repita la la integración de niños raps
+23:5923 minutos y 59 segundosentonces veamos cómo funciona esto en un ejemplo
+24:0624 minutos y 6 segundospor ejemplo veamos cómo aproximar la raíz cuadrada de
+24:1324 minutos y 13 segundosde 2 este caso no lo vamos a hacer con la función que dimos inicialmente que era recuerdos sino hagámoslo
+24:2124 minutos y 21 segundosdirectamente ahora con newton rap son si conservo importante que definamos bien nuestra función que es jefe de x igual x
+24:3024 minutos y 30 segundoscuadrado menos 2 una raíz de esa función efectivamente es la raíz cuadrada positiva de 2
+24:3924 minutos y 39 segundoscon lo cual tengo que definirme las funciones efe y su derivada para pasarla como argumento de entrada a newton rap son
+24:4824 minutos y 48 segundosy luego llamar por la ventana de comandos a newton raps o si vamos a
+24:5524 minutos y 55 segundoshacerlo esto vamos a ir a manda pero vamos a ir a más
+25:0225 minutos y 2 segundosentonces vamos a hacerlo en matlab vamos a definirla efe vamos a hacerlo como un animal
+25:1325 minutos y 13 segundosf x es x al cuadrado x al cuadrado
+25:2125 minutos y 21 segundos- 2 lo hago como una función candal
+25:3325 minutos y 33 segundosya tengo definida de la función f luego tengo que hacer su derivada en
+25:4425 minutos y 44 segundoseste caso como una función sencillas los buenos críticamente es 2 x x 5 y luego
+25:5225 minutos y 52 segundossiempre y cuando recuerden que uno tiene que estar en el directorio actual de trabajo si su función a la que van a
+26:0026 minutosllamar bold ventana de comando que en este caso de nieto en ratón tiene que estar en el directorio actual de trabajo sí
+26:0826 minutos y 8 segundosvamos a llamar a newton rawson
+26:1726 minutos y 17 segundosy le vamos a pasar como argumento la f su derivada la aproximación inicial obviamente
+26:2526 minutos y 25 segundosdependerá del problema como yo sé que la raíz cuadrada de 2 está entre 1 y 2 en particular le voy a pasar como próxima
+26:3326 minutos y 33 segundosse inicia al 1 le voy a pasar como tolerancia 1 por 10 al menos 5 si
+26:4326 minutos y 43 segundosun número de interacciones máximo igual a 30 ejecutó y fíjense bueno hay una serie de impresiones por pantalla que me dan un
+26:5226 minutos y 52 segundosnivel o aproximaciones parciales esta es la primera integración la segunda la tercera y fíjense que en la cuarta
+27:0027 minutositeración ya se alcanza la tolerancia si se alcanzó
+27:0827 minutos y 8 segundosla tolerancia es decir la tolerancia que estaba definida por 1 por 10 a lo menos 5
+27:1527 minutos y 15 segundosy el resultado final aproximado que haga lo imprimí en formato largo fíjense
+27:2427 minutos y 24 segundos1.41 42 13 56 23 74 69 0
+27:3127 minutos y 31 segundosveamos quién es el valor exacto d de para maldad de la raíz cuadrada de 2
+27:3927 minutos y 39 segundoscon el comando svr de dos bueno fíjense que tengo diferencia acá sí o sea que
+27:4827 minutos y 48 segundosevidentemente estos valores hay un error vamos a considerar como que el valor este último es el valor exacto y fíjense
+27:5527 minutos y 55 segundosque efectivamente acá tengo error si tengo terror en estas cuatro cifras con
+28:0328 minutos y 3 segundoslo cual si yo quisiera lograr una aproximación más exacta tendría que forzar un poquito más la
+28:1028 minutos y 10 segundostolerancia pongamos 1 por 10 a los menos 10 si a la tolerancia si le estoy exigiendo 5
+28:2028 minutos y 20 segundosórdenes más amigos y tolerancia estoy forzando mucho más el método y veamos qué pasa vuelvo a ejecutar bueno fíjense ahora
+28:2928 minutos y 29 segundosfíjense ahora que solamente se agregó una integración más en el thompson
+28:3628 minutos y 36 segundosy que ahora sí fíjense estoy alcanzando estoy alcanzando el mismo valor exacto que
+28:4528 minutos y 45 segundoscalculamos la 'u' de la raíz cuadrada de 2 esto es porque lo vamos a ver luego el método y newton rawson es un método muy
+28:5328 minutos y 53 segundosrápido si la velocidad convergencia en ciertos casos es muy rápida si por tanto yo agregando
+29:0229 minutos y 2 segundosforzando en cinco órdenes la tolerancia solamente se agregó una iteración más en
+29:1029 minutos y 10 segundosrelación al caso anterior y alcance y alcance el valor que me está devolviendo
+29:1829 minutos y 18 segundosmás la como la aproximación de la raíz cuadrada v
+29:2529 minutos y 25 segundosbueno vuelvo a la lectura vuelvo a la lectura bueno en nuestro ejemplo
+29:3529 minutos y 35 segundosahora les quiero hacer ver otra cosa quiero aproximar la raíz o las raíces d
+29:4229 minutos y 42 segundosa la x 62 si con lo cual
+29:5029 minutos y 50 segundosvamos a hacerlo también en matlab gray
+30:0030 minutosvoy a borrar pantalla vamos a definir lage
+30:0730 minutos y 7 segundosestá bien vamos a hacerlo en línea como la exponencial
+30:1530 minutos y 15 segundosrecuérdense que cuando esa línea en el carácter es la exponencial
+30:2130 minutos y 21 segundos- x menos 2 no hace falta pero si quieren pueden
+30:2830 minutos y 28 segundosindicarle cuál es la variable independiente fíjense que me dice que es una función en línea vamos a definir
+30:3530 minutos y 35 segundosquién es la derivada de esta g también en forma en línea
+30:4330 minutos y 43 segundosesto no es otra cosa que el exponencial - 1
+30:5030 minutos y 50 segundossi fíjense que si yo no le aclaró quién es la variable independiente entiende sí
+30:5830 minutos y 58 segundosestá bien y vamos a llamar a newton rap son en este caso lo vamos a
+31:0531 minutos y 5 segundosllamar con la je con su derivada y recuerden que había dos raíces de esta
+31:1631 minutos y 16 segundosfunción sin dos raíces esta función vamos a
+31:2331 minutos y 23 segundosa ponerle una tolerancia a una corrida de la menos 5 y 30 interacciones
+31:3031 minutos y 30 segundosfíjense que en cuatro iteraciones sí
+31:3631 minutos y 36 segundosen cuatro iteraciones yo alcancé si la tolerancia de uno por día la menos cinco
+31:4331 minutos y 43 segundostomando como aproximación inicial 1 y alcancé una aproximación de desarrollo
+31:5231 minutos y 52 segundoslo que podemos hacer es plotear por ejemplo vamos a discret izar
+31:5931 minutos y 59 segundosvamos a discret izar en una variable vision xx en el intervalo menos 33 con
+32:0732 minutos y 7 segundosun paso de 0 1
+32:1632 minutos y 16 segundosy lo podríamos graphics 0.01 si lo podríamos punto y como para que no se
+32:2332 minutos y 23 segundosimprima lo que podemos hacer es
+32:3032 minutos y 30 segundoslotear la para que veamos x g en x
+32:4832 minutos y 48 segundosy pasó algo que no le gustó
+32:5132 minutos y 51 segundos[Música]
+32:5632 minutos y 56 segundoshay problema un problemita de con la gráfica
+33:0933 minutos y 9 segundosson más chicas pero no y que podemos pasarle xx en mi variable
+33:1633 minutos y 16 segundosno quise x ahí está bien a ver si uno pone gritón
+33:2933 minutos y 29 segundosdebería a ver si puedo mostrarle
+33:3733 minutos y 37 segundosdebería poder más
+33:4633 minutos y 46 segundosdebería poder si los puedo mostrar la figura 1 acepta
+34:0134 minutos y 1 segundono ahí está
+34:0834 minutos y 8 segundos[Música]
+34:1134 minutos y 11 segundosahí sí ahí tienen la gráfica
+34:2034 minutos y 20 segundosde la función fíjense que la raíz que aproximamos es ésta ahora bien si
+34:2734 minutos y 27 segundosquisiéramos aproximar la otra tendríamos que tomar un valor inicial que
+34:3434 minutos y 34 segundosque este digamos cercano a esta otra raíz por ejemplo si queremos a próximamente rey que está cerca del -2
+34:4334 minutos y 43 segundosvamos a vamos a volver amarla
+34:5334 minutos y 53 segundosentonces en -2 tendríamos que llamar a newton robson
+35:0235 minutos y 2 segundospero en una raíz cerca menos 2 ya con un valor inicial por ejemplo menos 2
+35:1135 minutos y 11 segundosfíjense que lo ejecutó y en este caso obtengo la raíz aproximada si que es
+35:2035 minutos y 20 segundosmenos 1.84 que coincide con la gráfica
+35:2735 minutos y 27 segundossi ustedes miramos la gráfica voy a volver a la gráfica fíjense que
+35:3435 minutos y 34 segundoscoincide con la aproximación de esta otra raíz muy bien
+35:4235 minutos y 42 segundosbueno ahora bien qué pasa si
+35:4935 minutos y 49 segundosqué pasa si por ejemplo yo quisiera
+35:5635 minutos y 56 segundosaproximar alguna de las dos raíces pero tomando como valor inicial
+36:0436 minutos y 4 segundosel 0 así como aproximarse inicial en el cero bueno fíjense lo que nos pasa
+36:1236 minutos y 12 segundosya cuando empieza a integrar ya empieza con una indeterminación si está bien y
+36:1936 minutos y 19 segundosdespués empieza a operar con un ordenador nuevo incluso si hubiese sido un valor chiquito
+36:2736 minutos y 27 segundos0.01 fíjense que también era una vez sí y ya
+36:3436 minutos y 34 segundosdespués cae en una indeterminación cuál es la explicación geométrica de esto al menos en este caso vamos a intentar dar una explicación geométrica
+36:4336 minutos y 43 segundossi miramos la gráfica de mi función fíjense
+36:5036 minutos y 50 segundossi yo empiezo y tirar aquí en este punto 0 o cercano al 0 cuando yo en este
+36:5936 minutos y 59 segundospunto que le estoy marcando quiero hacer el taylor de primer orden
+37:0537 minutos y 5 segundos[Música]
+37:0637 minutos y 6 segundosfíjense que me quedo una recta que va a ser casi casi paralela paralela al de
+37:1337 minutos y 13 segundosque la occisa por tanto va a interceptar al eje la opsis agua en el infinito o en
+37:2237 minutos y 22 segundosel más infinito o en al menos infinito por tanto después el esquema sigue y tirando pero sigue evaluando con valores
+37:3037 minutos y 30 segundoscomo infinito muy infinito y en algún momento llega the numbers sigue tirando y alcanza en una integración es máxima
+37:3737 minutos y 37 segundosentonces si uno quisiera aproximar esta raíz o esta raíz tiene que intentar
+37:4537 minutos y 45 segundosdando un aproximación inicial cercana a esa raíz porque me puede pasar que yo empiece de araga y el esquema no
+37:5337 minutos y 53 segundosconverge volvemos a la lectura ok
+38:0538 minutos y 5 segundosbueno ahora bien hay otra observación que hice que fue que cuando uno aproxima
+38:1338 minutos y 13 segundosnuméricamente cuando uno tiene que usar mientras repsol tiene que pasar como argumento la derivada de la función
+38:2038 minutos y 20 segundosahora bien esto en algunos casos puede ser complicado si puede ser un poco complicado tener que derivar
+38:2838 minutos y 28 segundosanalíticamente alguna función si a veces no tengo una expresión explícita de la derivada por tanto me interesaría poder
+38:3638 minutos y 36 segundosderivar numéricamente la función f si entonces como aproximó a numéricamente efe de primera
+38:4438 minutos y 44 segundosbueno una forma mala e intuitiva que uno
+38:5038 minutos y 50 segundostiene sería bueno aproximar la derivada por su cociente incremental es decir
+39:0039 minutosa partir del cociente incremental o ustedes saben que la derivada de la función en x no es otra cosa que el
+39:0639 minutos y 6 segundoslímite cuando h tiende a 0 del cociente incremental que tengo escrito ahí ahora bien yo podría decir bueno con un h
+39:1539 minutos y 15 segundoschiquito aproxima la derivada de la f en x por su consciente incremental
+39:2339 minutos y 23 segundosbueno esta es una idea natural pero no es una buena idea del mundo veamos por qué el tema está en el error
+39:3139 minutos y 31 segundosde truncamiento que se comete qué error comentó cuando yo uso esta fórmula
+39:3839 minutos y 38 segundosentonces bueno recordando taylor si uno hace un taylor lineal centrado en x
+39:4739 minutos y 47 segundostambién uno tiene obtiene esta expresión que vimos anteriormente si yo reacomodo esta expresión si yo la
+39:5539 minutos y 55 segundosre cómodo y despejó quién es efe prima de x band basta hacer una web
+40:0240 minutos y 2 segundoscuenta pueden llegar esta expresión por tanto fíjense que nos dice esta expresión
+40:0940 minutos y 9 segundosque la derivada de la de fe en x es igual su consciente incremental
+40:1640 minutos y 16 segundosmenos o más si se quiere menos un medio por h
+40:2340 minutos y 23 segundospor efe se una en cierto es decir esto que tengo acá es una
+40:3040 minutos y 30 segundosexpresión del error de truncamiento y de una expresión del error el truncamiento que depende del ciertos y que no conozco
+40:3940 minutos y 39 segundospero tengo una expresión de errores nunca miento y que además nuestro h aparece elevado a la 1
+40:4740 minutos y 47 segundosel error de truncamiento se define como esta expresión sí ok tengo una expresión de retranca
+40:5540 minutos y 55 segundosmiento que además se observa que es de orden h también yo lo que quiero a veces que el
+41:0341 minutos y 3 segundosorden de esos errores droga miento sea mayor es decir que puede ser de orden h
+41:1141 minutos y 11 segundossea por ejemplo de orden h cuadrado bueno qué es esa o chillida
+41:1841 minutos y 18 segundosbueno es lado del hondo vamos a definir la porción a un momento no la vieron
+41:2441 minutos y 24 segundosvamos a suponer que una función g de h es distinto de 0 para todo h en cierto
+41:3341 minutos y 33 segundosintervalo que con tenga al 0 cuando yo digo que
+41:3941 minutos y 39 segundosefe dh es igual a 1 o deje de h cuando h tiende a 0 lo que estoy diciendo es que
+41:4741 minutos y 47 segundosel límite cuando h tiende a 0 dfh sobre g de h vale 0 y se dice que
+41:5841 minutos y 58 segundosefe dh es de orden inferior a g de h cuando h tiende a 0
+42:0542 minutos y 5 segundosllegamos a leer en algunos ejemplos para que se entienda sí qué significa por ejemplo que f sea de
+42:1442 minutos y 14 segundosorden 1 o de orden inferior a 1 en este caso la que es la función
+42:2342 minutos y 23 segundosconstante 1 significa que efe dh sobre g h en este caso vale 1
+42:2942 minutos y 29 segundostiende a cero cuando h tiende a 0 qué significa qué efe dh sea de orden h
+42:3942 minutos y 39 segundossignifica qué efe dh sobre h tiende a cero cuando h tiende a cero es decir que
+42:4842 minutos y 48 segundosen este caso se dice que f es de orden inferior a h cuando h entiendas
+42:5442 minutos y 54 segundosqué significa qué efe dh sea de orden h cuadrado
+43:0143 minutos y 1 segundosignifica que efe dh sobre h cuadrado tiende a cero cuando h tiende a cero si
+43:0943 minutos y 9 segundosdecir en este caso decimos que f es de orden inferior a h cuadrado cuando h tiendas
+43:1743 minutos y 17 segundosy en el caso de taylor también se dice que x tiene un error de orden h al aire
+43:2743 minutos y 27 segundoscuando h bien tercero si bien entonces lo que yo quisiera es siempre
+43:3643 minutos y 36 segundosun tener un orden inferior algo h cuadrado
+43:4443 minutos y 44 segundospor ejemplo h sí entonces lo que vimos anteriormente es
+43:5143 minutos y 51 segundosque si yo hiciese la aproximación por el consciente incremental tendría una orden d
+43:5943 minutos y 59 segundosen orden h pero si yo en cambio de usar el cociente
+44:0644 minutos y 6 segundosincremental algo uso la fórmula centrada de la derivada
+44:1244 minutos y 12 segundoses decir aproximar la derivada de la función en x como fx h
+44:2144 minutos y 21 segundos- efe en x menos h heidi fíjense que ahora estoy tomando un incremento hacia
+44:2944 minutos y 29 segundosadelante y un incremento hacia atrás y evaluó en esos valores y hago la diferencia y lo divido si ahora la
+44:3844 minutos y 38 segundosdistancia que tengo en el eje la justicia es 2 h cuando uso esta fórmula centrada para
+44:4544 minutos y 45 segundosaproximar la derivada de la f en x se ve que se demuestra que esto tiene un
+44:5244 minutos y 52 segundoserror de orden h cuadrado cuando aproximó el poder el cociente incrementa con lo cual es un mejor error
+45:0145 minutos y 1 segundocon lo cual yo es la fórmula que usó la fórmula centrada para aproximar la
+45:0745 minutos y 7 segundosderivada de primer orden de una la vida de primer orden de una función
+45:1445 minutos y 14 segundoscon lo cual fíjense que es fácilmente implementable me hago una función que se
+45:2045 minutos y 20 segundosllama de f1 de equis o sea con la deriva primera de la f respecto a x que tiene
+45:2845 minutos y 28 segundoscomo argumento entrada la f nom que es la función en la cual le quiero calcular la derivada numérica y x que va a ser un
+45:3645 minutos y 36 segundosvector o un escalar en el cual yo quiero aproximar la derivada número numérica y
+45:4345 minutos y 43 segundosque eso sale como argumento de salida d con lo cual en la implementación simplemente usó la expresión de la
+45:5245 minutos y 52 segundosderivada centrada y asignó h un valor chiquito si en este caso uno podría
+45:5945 minutos y 59 segundosmenos 6 fíjense que en este caso con una chiquito el orden de h cuadrado
+46:0646 minutos y 6 segundosestaríamos hablando de un error inferior a orden de h al cuadrado o sea la menos
+46:1346 minutos y 13 segundos2 por eso la importancia que el orden sea de el error sea de orden
+46:2146 minutos y 21 segundosdh cuadrado con lo cual ahora lo que puedo hacer es
+46:2746 minutos y 27 segundosmodificar mi newton rap son para que no yo no necesite pasarle como argumento la
+46:3446 minutos y 34 segundosderivada explícita de la función sino que a partir de la función derivada que yo ingreso
+46:4346 minutos y 43 segundoscalculé su derivada numérica entonces me hice un newton rap son deriva que es igual a newton raps aunque tenía antes
+46:5046 minutos y 50 segundosla única diferencia es que en el paso donde tenía que calcular la derivada es donde hago la asignación la función
+46:5946 minutos y 59 segundosderivada simplemente lo que hago es llamo a la función que me calcula la derivada numérica
+47:0647 minutos y 6 segundossi voy tirando como en el caso de newton rod si acá tengo un caso de funciones nuevamente anidado estoy llamando una
+47:1247 minutos y 12 segundosfunción dentro de otro bueno esto también lo pueden hacer sin
+47:2047 minutos y 20 segundoses muy muy sencillo de que lo ejecuten si
+47:2947 minutos y 29 segundossimplemente llaman a newton rap sonder y ya no necesito pasar como argumento la
+47:3647 minutos y 36 segundosderivada de la f sólo hace falta derivar la numéricamente mm y efe obviamente estoy
+47:4447 minutos y 44 segundosintroduciendo un nuevo error ustedes piensen que acá hay error de tratamiento de redondeo en el método editor robson y
+47:5247 minutos y 52 segundosusando deriva numérica estoy introduciendo un nuevo error pero como la fórmula centrada tiene un error muy chiquito de orden h cuadrado no va a ser
+48:0048 minutossignificativo en el cálculo de la aproximación de la raíz de la misma manera o en hacerlo con las
+48:0948 minutos y 9 segundosraíces voy a hacer simplemente el caso de
+48:1748 minutos y 17 segundosla voy a borrar pantalla recuerden que ya tenía almacenado
+48:2448 minutos y 24 segundosy voy a hacerlo con mi newton rap son acá fíjense voy a llamar ahora a newton
+48:3248 minutos y 32 segundosrob sanders y bueno para que comparemos voy a ejecutar este sí y voy a ejecutar el newton
+48:4148 minutos y 41 segundosrespondería quitándole como argumento de entrada la derivada con los mismos estimaciones
+48:4948 minutos y 49 segundosiniciales tolerancia fíjense que en la misma cantidad de
+48:5548 minutos y 55 segundositeraciones en cuatro iteraciones también yo obtuve esta aproximación y en
+49:0449 minutos y 4 segundoseste caso estoy calculado en la raíz cuadrada positiva de 2 y usando newton rap son de tríos haciendo la derivada numérica de mi
+49:1349 minutos y 13 segundosfunción llegó al mismo resultado y efectivamente el error introducido por la derivada numérica no me modifica en
+49:2149 minutos y 21 segundoseste caso nada este el la aproximación es la diferencia entre los dos algoritmos y la salida de los resultados
+49:2949 minutos y 29 segundosentre los dos algoritmos hay que usar la deriva numérica puede ser una solución interesante cuando yo
+49:3749 minutos y 37 segundosno conozco la deriva explícita de mi función bueno la pregunta natural que nos surge
+49:4649 minutos y 46 segundoses cuando convergen es decir vimos también que podía ser un
+49:5549 minutos y 55 segundoscaso vino bomber bueno hay distintos tipos de situaciones que se pueden dar bueno miren este ejemplo por ejemplo
+50:0450 minutos y 4 segundossupongan sé que empiezan peter ando en el primer puntito verde a y el que está en el medio sigue donde empieza como
+50:1250 minutos y 12 segundoseste espiral si mi función es está en negro que tengo acá en eje el eje de la ocs y ese es el
+50:2150 minutos y 21 segundoseje azul supongan sé que empiezan liderando ahí con este valor el puntito que está ahí
+50:2950 minutos y 29 segundossean más cercano positivo o más cercano a la raíz
+50:3650 minutos y 36 segundosbueno empieza a integrar si hacen la primera tangente ya obtienen esa el
+50:4350 minutos y 43 segundossegundo puntito luego hacen la segunda tangente se empiezan a alejar de la raíz cuando hacen
+50:5350 minutos y 53 segundosobtiene la segunda aproximación cuando obtienen la tercera aproximación ya se alejan totalmente de la raíz y fíjense
+51:0151 minutos y 1 segundoque cuando quieren y hacerla la última tangente ya se me dispara más
+51:1051 minutos y 10 segundosinfinito y la aproximación mi método va a vivir ángel ok
+51:1651 minutos y 16 segundoso sea que situaciones así podría fallar ni dos razón acá uno de los problemas que si quieren
+51:2551 minutos y 25 segundospensar porque acá no converge fíjense que acá se me vuelve muy abrupta la
+51:3151 minutos y 31 segundosderivada de mi función o sea que en la raíz en la raíz la derivada yo le diría
+51:4051 minutos y 40 segundosque está valiendo infinito más o menos infinito
+51:5551 minutos y 55 segundosotro tipo de ejemplo que puede pasar es este supongan que tienen la raíz ahí es
+52:0352 minutos y 3 segundosla curva negro donde intersexuales de la occisa en azul empiezan a integrar por ejemplo en el
+52:1052 minutos y 10 segundospuntito de la derecha hacen la tangente conducen la tangente llegan al puntito de la izquierda sobre el eje azul
+52:1752 minutos y 17 segundosvuelven a hacerle device vuelven a ver en el mismo punto por tanto cada vez que y terence están circulando entre dos
+52:2652 minutos y 26 segundosaproximaciones entre dos valores fijos y nunca van a converger al nuevamente acá también el problema es que si ven la
+52:3452 minutos y 34 segundosderivada la derivada es infinito en la raíz
+52:5652 minutos y 56 segundosbueno hay un teorema de carácter local para garantizar la convergencia vamos a suponer que la función s 2 o sea que
+53:0553 minutos y 5 segundostiene derivada derivada segunda continua el intervalo 2
+53:1253 minutos y 12 segundosque hay una raíz en él en el intervalo ave y si lo que le
+53:2053 minutos y 20 segundosdecían es la derivada primera en la raíz es distinta de cero
+53:2753 minutos y 27 segundoses decir si hay una raíz simple entonces hay un intervalo delta tal que la
+53:3553 minutos y 35 segundossucesión definida por el metro y te digo newton robson va a converger para cualquier aproximación inicial
+53:4453 minutos y 44 segundoshay un teorema de carácter global que me dice que si mi función ese 2 sobre todos los reales y además es una función
+53:5353 minutos y 53 segundoscreciente convexa y tiene una raíz r entonces dicha raíz es única y la
+54:0254 minutos y 2 segundositeración de newton rap son converge convergerá para cualquier aproximación
+54:0754 minutos y 7 segundos[Música]
+54:1154 minutos y 11 segundosel orden de convergencia del error es también muy importante porque hace relación a la velocidad de convergencia
+54:1854 minutos y 18 segundosse dice que un método numérico que genera una sucesión convergente x suben
+54:2454 minutos y 24 segundosy tiende a r cuando r cuando en el infinito tiene orden de convergencia
+54:3054 minutos y 30 segundosalfa si y sólo si fíjense el cociente entre el error en valor absoluto en el
+54:3854 minutos y 38 segundospaso tenemos un pésimo sobre el error enésimo el error absoluto elevado a la
+54:4554 minutos y 45 segundosalfa es aproximadamente una constante si cuando n tiende a infinito
+54:5354 minutos y 53 segundosesto equivale a decir que si yo tomo el límite cuando n tiende a infinito del cociente entre el error absoluto en el
+55:0155 minutos y 1 segundopaso n 1 y en el paso en el paso enésimo elevado a la alfa eso
+55:0955 minutos y 9 segundoses una constante c se dice entonces que s método numérico tiene orden de
+55:1755 minutos y 17 segundosconvergencia alfa por ejemplo si alfa vale 1 decimos que la convergencia es lineal y si alfa vale
+55:2655 minutos y 26 segundos2 decimos que la convergencia de cuadrática que no pasa algo newton rap song
+55:3455 minutos y 34 segundosbueno fíjense qué pasa con el don rap sung
+55:4255 minutos y 42 segundosun último ejemplo tenemos el polinomio x cubo menos 3 x 2
+55:5055 minutos y 50 segundossabiendo qué r 1 igual a menos 2 es una raíz simple
+55:5755 minutos y 57 segundossí es decir que la función del polinomio vale cero en esa raíz pero su derivada ya ya no y que r2 igual a 1 es un array
+56:0756 minutos y 7 segundosdoble es decir que tanto en la función en tanto el polinomio como la derivada del fútbol y no mió valen cero por eso
+56:1656 minutos y 16 segundosse dice una raíz doble en la gráfica lo pueden ver porque tanto la función como la derivada de su función valen cero es
+56:2356 minutos y 23 segundosdecir la recta tangente en la raíz rr2 igual a 1 la función vale 0 y además su derivada
+56:3256 minutos y 32 segundosva de 0 fíjense que que nos va a pasar queremos aproximar esas dos raíces
+56:4256 minutos y 42 segundosentonces lo primero que hacemos es ejecutar newton robson en este caso voy a usar nilton bonder y para aproximar la
+56:4956 minutos y 49 segundosraíz simple que es menos 2 es un caso conocido pero quiero hacer una comparación
+56:5756 minutos y 57 segundosen cinco iteraciones inicial izando me cerquita de menos 2 menos 2.5 con una
+57:0557 minutos y 5 segundostolerancia de uno por día menos cinco y treinta iteraciones máxima alcance la tolerancia
+57:1257 minutos y 12 segundosahora bien si repito lo mismo pero con la raíz doble sí con la raíz doble con
+57:2057 minutos y 20 segundosr2 fíjense un sonido en rap son deriva también me aproximo cerca empezó
+57:2857 minutos y 28 segundosliderando en 1.5 con una con la misma tolerancia y el mismo nombre te lo hace en el máximo sin embargo en este caso
+57:3557 minutos y 35 segundosnewton rap son va a tardar 16 iteraciones en alcanzar esa tolerancia termina aproximando a la raíz pero le
+57:4457 minutos y 44 segundoscuesta mucho entonces bueno este es uno de los problemas que tienen interrupción en
+57:5057 minutos y 50 segundosraíces dobles o múltiples sí bueno entonces hasta acá todo lo que
+57:5857 minutos y 58 segundosvimos de newton rap son sí está bien cuáles son sus ventajas
+58:0658 minutos y 6 segundosbueno es un método muy rápido la convergencia de newton rap son cerca de
+58:1358 minutos y 13 segundosuna raíz simple escuadra tica y la convergencia de newton rap son cerca de
+58:2058 minutos y 20 segundosuna raíz múltiple si es lineal de todas formas uno puede modificar el
+58:2758 minutos y 27 segundosesquema iterativo de newton rap son para que una raíz múltiple pueda recuperarse
+58:3458 minutos y 34 segundosy que tenga convergencia cuadrática si hay un ejemplo puesto en las actividades para que ustedes vean como una sencilla
+58:4258 minutos y 42 segundosmodificación yo puedo recuperar la convergencia cuadrática de newton robson en raíces múltiples
+58:4958 minutos y 49 segundosbueno y veamos algunas desventajas
+58:5658 minutos y 56 segundosbueno no siempre convergen puede darse en algunos casos la división por cero o valores casi cero en el caso de la
+59:0459 minutos y 4 segundosderiva sea casi 0 con lo cual se me va a disparar el cociente en el que me interativo añadió rap son a infinito
+59:1159 minutos y 11 segundosmenos infinito con lo cual podría no converger el esquema iterativo puede divergen o sí
+59:2059 minutos y 20 segundosclaro les mostré esos ejemplos donde podría quedar ciclado en los valores y
+59:2659 minutos y 26 segundosademás se requiere calcular una derivada si cortando si yo necesito hacer una derivada o bien lo tengo que hacer
+59:3559 minutos y 35 segundosanalíticamente o bien lo tengo que hacer en forma numérica si lo hago analíticamente tengo la cumplir la
+59:4359 minutos y 43 segundoscomplicación de que tengo que hacerlo en forma analítica y numéricamente introduzco el error de redondeo bueno
+59:5059 minutos y 50 segundoshasta acá llegamos con esta lectura y nos veremos

@@ -1,0 +1,462 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                         CHEATSHEET - ACTIVIDAD 10                       %%
+%%                  AJUSTE DE CURVAS - MÍNIMOS CUADRADOS                   %%
+%%                                                                          %%
+%%                        Autor: Agustín Formenti                          %%
+%%                    Métodos y Cómputos Numéricos - UCA                   %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+===============================================================================
+                    ¿QUÉ ES EL AJUSTE POR MÍNIMOS CUADRADOS?
+===============================================================================
+
+CONCEPTO CLAVE:
+---------------
+Tenés un conjunto de datos (puntos) y querés encontrar una FUNCIÓN que mejor
+se ajuste a esos datos. "Mejor" significa que minimiza la suma de los errores
+cuadráticos entre los datos reales y los valores ajustados.
+
+ERROR CUADRÁTICO MEDIO (ECM):
+------------------------------
+ECM = (1/n) * sum((y_i - y_ajustado_i)^2)
+
+Cuanto MENOR es el ECM, MEJOR es el ajuste.
+
+
+===============================================================================
+                        TIPOS DE PROBLEMAS QUE VAS A VER
+===============================================================================
+
+1. AJUSTE POLINOMIAL
+   Función: P(x) = a0 + a1*x + a2*x^2 + ... + an*x^n
+   Usar: ajustepoly(x, y, grado)
+
+2. AJUSTE CON FUNCIONES EXPONENCIALES
+   Función: F(x) = A*e^x  o  F(x) = A*e^(Bx)
+   Método: Linealización (tomar logaritmos) o ecuaciones normales directas
+
+3. AJUSTE CON FUNCIONES BASE PERSONALIZADAS
+   Función: F(x) = c1*f1(x) + c2*f2(x) + ... + cn*fn(x)
+   Usar: ajustebase(x, y, 'nombre_funcion_base')
+
+4. AJUSTE CON POLINOMIOS ORTOGONALES (Legendre, Chebyshev, etc)
+   Similar al caso 3 pero con bases específicas
+
+
+===============================================================================
+                    PASO A PASO PARA RESOLVER EJERCICIOS
+===============================================================================
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TIPO 1: AJUSTE POLINOMIAL (Ejercicio 3)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📋 LO QUE TE DAN:
+   - Tabla de datos (x_i, y_i)
+   - Te piden: ajustar polinomios de diferentes grados
+
+✅ PASOS:
+
+1. Definir los datos
+   x = [x1, x2, x3, ...];
+   y = [y1, y2, y3, ...];
+
+2. Para cada grado que te pidan (ejemplo: grados 1, 2, 3, 4, 5):
+   
+   for i = 1:length(grados)
+       g = grados(i);
+       
+       %% Usar ajustepoly para obtener coeficientes
+       c = ajustepoly(x, y, g);
+       
+       %% Calcular el ECM
+       ecm = ECM(x, y, c, 'poly');
+       
+       %% Guardar resultados
+       coeficientes{i} = c;
+       errores(i) = ecm;
+   end
+
+3. Determinar cuál es el mejor ajuste
+   [min_error, idx_mejor] = min(errores);
+   mejor_grado = grados(idx_mejor);
+
+4. Graficar (SIEMPRE graficar si te lo piden):
+   - Puntos datos: plot(x, y, 'ko', ...)
+   - Para cada polinomio: usar polyval(c, x_plot)
+
+🎯 TRUCO IMPORTANTE:
+   - A MAYOR grado, MENOR ECM (pero cuidado con overfitting)
+   - En general, el polinomio de mayor grado da el menor ECM
+   - Si el ECM no baja mucho, el grado menor es mejor (parsimonia)
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TIPO 2: AJUSTE CON FUNCIONES EXPONENCIALES F(x) = A*e^x (Ejercicio 4)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📋 LO QUE TE DAN:
+   - Datos (x_i, y_i)
+   - Función del tipo F(x) = A*e^x (o variantes)
+   - Te piden: encontrar el parámetro A
+
+✅ MÉTODO - ECUACIONES NORMALES DIRECTAS:
+
+Para F(x) = A*e^x, la ecuación normal es:
+
+   A * sum(e^(2*x_i)) = sum(y_i * e^(x_i))
+
+Despejando A:
+   
+   A = sum(y_i * e^(x_i)) / sum(e^(2*x_i))
+
+CÓDIGO:
+   x = [datos...];
+   y = [datos...];
+   
+   sum_e2x = sum(exp(2*x));
+   sum_yex = sum(y .* exp(x));
+   
+   A = sum_yex / sum_e2x;
+   
+   %% Valores ajustados
+   y_ajustado = A * exp(x);
+   
+   %% Calcular ECM
+   ecm = ECM(x, y, y_ajustado, 'base');
+
+🎯 TRUCOS:
+   - Si es F(x) = A*e^(Bx), el problema se complica (linealizar)
+   - Para linealizar: ln(y) = ln(A) + Bx (esto es una recta)
+   - Pero cuidado: linealizar cambia el criterio de mínimos cuadrados
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TIPO 3: AJUSTE CON FUNCIONES BASE F(x) = c1*f1(x) + c2*f2(x) (Ejercicio 5)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📋 LO QUE TE DAN:
+   - Datos (x_i, y_i)
+   - Funciones base: f1(x), f2(x), ..., fn(x)
+   - Te piden: encontrar los coeficientes c1, c2, ..., cn
+
+✅ MÉTODO - ECUACIONES NORMALES:
+
+La función de ajuste es:
+   F(x) = c1*f1(x) + c2*f2(x) + ... + cn*fn(x)
+
+Sistema a resolver: A*c = b
+
+Donde la matriz A es SIMÉTRICA:
+   A(i,j) = sum(fi(x_k) * fj(x_k))  para k=1 hasta n
+
+Y el vector b:
+   b(i) = sum(y_k * fi(x_k))  para k=1 hasta n
+
+CÓDIGO PARA 2 FUNCIONES BASE (ejemplo: f1(x)=x, f2(x)=e^x):
+
+   x = [datos...];
+   y = [datos...];
+   
+   %% Evaluar funciones base
+   f1 = x;           % o la función que te den
+   f2 = exp(x);      % o la función que te den
+   
+   %% Armar matriz A (2x2 en este caso)
+   A = zeros(2, 2);
+   A(1,1) = sum(f1 .* f1);
+   A(1,2) = sum(f1 .* f2);
+   A(2,1) = A(1,2);  % simétrica
+   A(2,2) = sum(f2 .* f2);
+   
+   %% Armar vector b
+   b = zeros(2, 1);
+   b(1) = sum(y .* f1);
+   b(2) = sum(y .* f2);
+   
+   %% Resolver el sistema
+   c = Gauss(A, b);
+   
+   %% Valores ajustados
+   y_ajustado = c(1) * f1 + c(2) * f2;
+   
+   %% ECM
+   ecm = ECM(x, y, y_ajustado, 'base');
+
+🎯 TRUCOS:
+   - La matriz A SIEMPRE es simétrica: A(i,j) = A(j,i)
+   - Si tenés 3 funciones base, A es 3x3, si tenés 4, A es 4x4, etc.
+   - Podés usar un for para armar A y b si tenés muchas funciones
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TIPO 4: AJUSTE CON ajustebase.m (Ejercicio 6)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📋 LO QUE TE DAN:
+   - Datos (x_i, y_i)
+   - Funciones base definidas en un archivo .m
+   - Te piden: usar ajustebase.m
+
+✅ PASOS:
+
+1. Verificar qué funciones tiene el archivo de base (ejemplo: base.m)
+   - Abrirlo y ver qué funciones define
+   - base.m tiene: 1, x, sin(x), x*e^x
+
+2. Usar ajustebase directamente:
+   
+   x = [datos...];
+   y = [datos...];
+   
+   c = ajustebase(x, y, 'base');  % 'base' es el nombre del archivo
+   
+3. Los coeficientes c están en ORDEN INVERSO (por eso el script los reordena)
+   c(1) corresponde a la ÚLTIMA función base
+   c(n) corresponde a la PRIMERA función base
+
+4. Calcular valores ajustados manualmente:
+   y_ajustado = c(1)*1 + c(2)*x + c(3)*sin(x) + c(4)*x.*exp(x);
+   
+5. ECM:
+   ecm = ECM(x, y, y_ajustado, 'base');
+
+🎯 TRUCO IMPORTANTE:
+   - ajustebase.m reordena los coeficientes al final (línea: c = c(n:-1:1))
+   - Esto puede ser confuso, prestá atención al orden cuando interpretes
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TIPO 5: POLINOMIOS ORTOGONALES (Legendre, Chebyshev) (Ejercicio 7)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📋 LO QUE TE DAN:
+   - Una función f(x) (ejemplo: sen(x))
+   - Un intervalo (ejemplo: [-1, 1])
+   - Te piden: aproximar f(x) con polinomios ortogonales
+
+✅ DIFERENCIA CLAVE CON AJUSTE NORMAL:
+   - NO tenés datos discretos (x_i, y_i)
+   - Tenés una FUNCIÓN CONTINUA f(x)
+   - Generás puntos en el intervalo para trabajar
+
+✅ PASOS:
+
+1. Generar puntos en el intervalo (usar MUCHOS puntos, ej: 100):
+   
+   n_puntos = 100;
+   x = linspace(-1, 1, n_puntos);  % para intervalo [-1,1]
+   y = sin(x);  % o la función que te den
+
+2a. OPCIÓN A - Base canónica (ejemplo: {x, x^3, x^5}):
+    
+    %% Evaluar funciones base
+    f1 = x;
+    f2 = x.^3;
+    f3 = x.^5;
+    
+    %% Armar sistema (igual que Tipo 3)
+    A = zeros(3, 3);
+    A(1,1) = sum(f1 .* f1);
+    A(1,2) = sum(f1 .* f2);
+    % ... etc
+    
+    b(1) = sum(y .* f1);
+    % ... etc
+    
+    c = Gauss(A, b);
+
+2b. OPCIÓN B - Polinomios de Legendre:
+    
+    %% Definir los polinomios de Legendre (TE LOS DAN en el enunciado)
+    P1 = x;
+    P3 = (1/2) * (-3*x + 5*x.^3);
+    P5 = (1/8) * (15*x - 70*x.^3 + 63*x.^5);
+    
+    %% Armar sistema (igual que antes pero con P1, P3, P5)
+    A(1,1) = sum(P1 .* P1);
+    A(1,2) = sum(P1 .* P3);
+    % ... etc
+    
+    c = Gauss(A, b);
+
+3. Calcular valores ajustados y ECM
+
+4. Graficar comparando la función original con la aproximación
+
+🎯 TRUCOS:
+   - Polinomios de Legendre son ORTOGONALES en [-1,1]
+   - Esto significa que A tiende a ser más diagonal (más estable)
+   - Legendre suele dar MEJOR aproximación (menor ECM) que base canónica
+   - Si te dan los polinomios, COPIÁ la fórmula EXACTA (son complicados)
+
+
+===============================================================================
+                        FÓRMULAS Y ECUACIONES IMPORTANTES
+===============================================================================
+
+1. ECUACIONES NORMALES GENERALES:
+   
+   Para ajustar F(x) = sum(c_i * f_i(x)):
+   
+   Sistema: A*c = b
+   
+   A(i,j) = sum_{k=1}^{n} f_i(x_k) * f_j(x_k)
+   
+   b(i) = sum_{k=1}^{n} y_k * f_i(x_k)
+
+2. ERROR CUADRÁTICO MEDIO:
+   
+   ECM = (1/n) * sum_{i=1}^{n} (y_i - F(x_i))^2
+
+3. PARA AJUSTE POLINOMIAL:
+   
+   Las funciones base son: {1, x, x^2, x^3, ..., x^n}
+
+4. POLINOMIOS DE LEGENDRE (grado impar en [-1,1]):
+   
+   P_1(x) = x
+   P_3(x) = (1/2)(-3x + 5x^3)
+   P_5(x) = (1/8)(15x - 70x^3 + 63x^5)
+
+
+===============================================================================
+                            FUNCIONES DISPONIBLES
+===============================================================================
+
+1. ajustepoly(x, y, grado)
+   - Ajusta un polinomio de grado especificado
+   - Retorna: vector c de coeficientes (en orden para polyval)
+
+2. ajustebase(x, y, 'nombre_base')
+   - Ajusta con funciones base personalizadas
+   - 'nombre_base' es el nombre del archivo .m con las funciones
+   - Retorna: vector c de coeficientes
+
+3. ECM(x, y, c, tipo)
+   - Calcula el error cuadrático medio
+   - tipo: 'poly' para polinomios, 'base' para otras funciones
+   - Retorna: valor del ECM
+
+4. Gauss(A, b)
+   - Resuelve el sistema A*x = b
+   - Retorna: vector solución x
+
+5. polyval(c, x)
+   - Evalúa un polinomio con coeficientes c en los puntos x
+   - Los coeficientes deben estar en orden descendente de potencias
+
+
+===============================================================================
+                        CHECKLIST ANTES DEL EXAMEN
+===============================================================================
+
+✅ Entiendo qué es el ajuste por mínimos cuadrados
+✅ Sé calcular el ECM a mano y con la función
+✅ Conozco la diferencia entre ajuste polinomial y ajuste con base
+✅ Sé armar la matriz A y el vector b para las ecuaciones normales
+✅ Recuerdo que la matriz A es SIMÉTRICA
+✅ Sé usar ajustepoly, ajustebase y ECM
+✅ Entiendo que menor ECM = mejor ajuste
+✅ Sé graficar los resultados (datos + ajuste)
+✅ Conozco los polinomios de Legendre básicos
+✅ Sé generar puntos para aproximar funciones continuas
+
+
+===============================================================================
+                            ERRORES COMUNES
+===============================================================================
+
+❌ ERROR 1: Confundir el orden de los coeficientes
+   Solución: Verificá si la función devuelve coeficientes en orden 
+            creciente o decreciente de potencias
+
+❌ ERROR 2: No usar suficientes puntos para aproximar funciones continuas
+   Solución: Usá al menos 50-100 puntos en linspace
+
+❌ ERROR 3: Olvidar el producto elemento a elemento (.*)
+   Solución: Usá .* en lugar de * cuando multipliques vectores elemento a elemento
+
+❌ ERROR 4: No verificar que la matriz A sea simétrica
+   Solución: Hacé A(j,i) = A(i,j) después de calcular A(i,j)
+
+❌ ERROR 5: Graficar solo los puntos datos sin la curva ajustada
+   Solución: Generá x_plot con linspace y evaluá la función ajustada
+
+
+===============================================================================
+                        TIPS PARA EL EXAMEN
+===============================================================================
+
+💡 Si te dan datos discretos → Ajuste por mínimos cuadrados clásico
+
+💡 Si te dan una función continua → Generá puntos y ajustá
+
+💡 Si te piden comparar varios ajustes → Calculá el ECM de cada uno
+
+💡 Si hay funciones exponenciales → Pensá en linealizar O usar ecuaciones normales
+
+💡 Si te dan polinomios ortogonales → Copiá EXACTO las fórmulas del enunciado
+
+💡 SIEMPRE verificá que la matriz A sea simétrica (ahorra cálculos)
+
+💡 Si el ejercicio pide graficar → No te olvides de agregar leyendas y títulos
+
+💡 Antes de entregar → Verificá que el ECM tenga sentido (no negativo, no muy grande)
+
+
+===============================================================================
+                            EJEMPLO RÁPIDO
+===============================================================================
+
+PREGUNTA: Ajustar y = Ax + Be^x a los datos {(1,2), (2,5), (3,10)}
+
+SOLUCIÓN:
+
+1. Datos:
+   x = [1, 2, 3];
+   y = [2, 5, 10];
+
+2. Funciones base:
+   f1 = x;          → [1, 2, 3]
+   f2 = exp(x);     → [e, e^2, e^3]
+
+3. Matriz A (2x2):
+   A(1,1) = 1^2 + 2^2 + 3^2 = 14
+   A(1,2) = 1*e + 2*e^2 + 3*e^3 = ...
+   A(2,1) = A(1,2)
+   A(2,2) = e^2 + e^4 + e^6 = ...
+
+4. Vector b:
+   b(1) = 2*1 + 5*2 + 10*3 = 42
+   b(2) = 2*e + 5*e^2 + 10*e^3 = ...
+
+5. Resolver:
+   c = Gauss(A, b);
+
+6. Resultado:
+   A = c(1), B = c(2)
+
+¡LISTO! 🎉
+
+
+===============================================================================
+                            RECURSOS ÚTILES
+===============================================================================
+
+📁 Scripts de ejemplo:
+   - ej3_a10.m  → Ajuste polinomial
+   - ej4_a10.m  → Ajuste exponencial
+   - ej5_a10.m  → Ajuste con funciones base (método manual)
+   - ej6_a10.m  → Ajuste con ajustebase.m
+   - ej7a_a10.m → Aproximación con base canónica
+   - ej7b_a10.m → Aproximación con Legendre
+
+📚 Teoría:
+   - L11_ajuste_mcn_2do_2025_uca.pdf → Slides de la cátedra
+
+===============================================================================
+
+                        ¡MUCHA SUERTE EN EL EXAMEN! 💪
+
+===============================================================================

@@ -1,0 +1,493 @@
+bueno esta es la lectura 2 de la unidad 6 de métodos numéricos de la asignatura matemática aplicada
+0:099 segundosla carrera ingeniería electrónica y eléctrica de la facultad de ciencias exactas y agrimensura en esta lectura 2 vamos a ver una
+0:1919 segundosintroducción a los lenguajes de matlab octava y sila y vamos en este caso vamos
+0:2828 segundosa ver algunas de sus principales características algunas de sus operaciones y de sus funciones
+0:3636 segundospredefinidas comencemos viendo un poco sus
+0:4545 segundoscaracterísticas iremos lo iremos tratando lo en general y luego intentaremos ver algo
+0:5454 segundoslenguaje por lenguaje algunas de sus diferencias las características principales de estos
+1:041 minuto y 4 segundoslenguajes es que son software matemático podemos pensarlo como una gran
+1:131 minuto y 13 segundoscalculadora que nos permite realizar cálculos numéricos fundamentalmente con
+1:211 minuto y 21 segundosvectores y con matrices permiten trabajar dando en los reales como
+1:281 minuto y 28 segundosel cuerpo en los complejos para representar los datos de ingresos serán los datos de ingresos a nuestros algoritmos
+1:361 minuto y 36 segundosademás todos tienen un entorno de integrado para facilitar el manejo del
+1:441 minuto y 44 segundossoftware y cada uno de los lenguajes tienen a un lenguaje de programación propio
+1:511 minuto y 51 segundospara implementar nuestros algoritmos además tienen una gran variedad de
+1:581 minuto y 58 segundosgráficos 2d y 3d para representar funciones pueden usarse en plataformas de software
+2:082 minutos y 8 segundoslibre o también en plataforma de software privado y bueno y todas permiten crear interfaces de usuario
+2:162 minutos y 16 segundospara alisar cálculos y comunicarse entre otros programas y muchas veces permiten
+2:232 minutos y 23 segundoscomunicarse entre estos mismos lenguajes e incluso entre dispositivos
+2:302 minutos y 30 segundosentonces bueno en nuestro entorno de demanda octavio silva vamos a iniciar lo
+2:372 minutos y 37 segundoshaciendo un doble clic en el acceso directo una vez que yo instalado
+2:452 minutos y 45 segundosrecuerden que el mandado tienen una versión gratis de 30 días y octavi y si
+2:522 minutos y 52 segundosla pueden descargar entonces lo que nos va a aparecer es la
+2:592 minutos y 59 segundosventana de comandos command windows donde vamos a ejecutar nuestros comandos cada uno de estos programas tienen un
+3:083 minutos y 8 segundoseditor de texto un editor que permite escribir nuestros programas y scripts
+3:163 minutos y 16 segundostambién vamos a tener un área de trabajo word space donde vamos a visualizar
+3:243 minutos y 24 segundoslas variables que se están definiendo la ventana de comandos
+3:323 minutos y 32 segundostodos estos programas tienen un gel que son de mucha ayuda cuando uno quiere conocer las funciones que vienen
+3:403 minutos y 40 segundospredefinidas vamos a ver esto un poquito más adelante pero siempre es bueno si uno desconoce el ingreso de alguno de
+3:483 minutos y 48 segundossus argumentos tanto de entrada como de salida es bueno consultar
+3:543 minutos y 54 segundoshay un historial de comando que permite reutilizar comando que ya ingresamos con
+4:024 minutos y 2 segundoslas flechitas para arriba y para abajo en la ventana de comandos ustedes pueden ir recorriendo para no tener que volver
+4:104 minutos y 10 segundosa teclear los comandos que ya ingresar yo bueno también tienen un perfilador
+4:174 minutos y 17 segundosprofiler que permite optimizar y depurar la performance un algoritmo se los
+4:244 minutos y 24 segundoscomento aunque nosotros no vamos a usar el perfilador y también hay depuradores o de bagger que permiten eliminar
+4:344 minutos y 34 segundoserrores de programación nosotros tampoco vamos a usar un depurador pero como es el entorno de matt lamb
+4:424 minutos y 42 segundosbien el entorno es maldad tiene estas características ustedes verán que hay
+4:524 minutos y 52 segundos[Música]
+4:544 minutos y 54 segundosventana de comandos sí que es la ventana central también van a ver a la derecha
+5:025 minutos y 2 segundosel editor a la izquierda verán el word space o área de trabajo y a la izquierda abajo
+5:115 minutos y 11 segundosvan a ver el directorio actual de trabajo
+5:175 minutos y 17 segundosen octubre es muy similar sí
+5:235 minutos y 23 segundosal centro les va a aparecer ventanas de comandos a la derecha leva
+5:335 minutos y 33 segundosles puede aparecer a ustedes pues lo pueden replicar el editor y a la izquierda arriba van a ver el files
+5:405 minutos y 40 segundosbrowser que es el área del directorio alcohol de trabajo y en él workspace
+5:475 minutos y 47 segundosaparecerán las variables que usan en la ventana de comando fíjense que similar es el entorno del
+5:575 minutos y 57 segundossilo que tiene las mismas características a la izquierda van a ver el área de trabajo pero el fair browser
+6:066 minutos y 6 segundosdirectorio actual de trabajo van a ver en el medio la ventana de comandos
+6:136 minutos y 13 segundosdespués van a ver el by wire del browser que es donde se van a ir definiendo en
+6:216 minutos y 21 segundosnuestra área de trabajo las variables que yo vaya creando en la ventana de comando tiene un historial de comandos y
+6:276 minutos y 27 segundosa la derecha les puse en dos ventanitas paralelas editor propio de
+6:446 minutos y 44 segundosbueno como trabajamos las expresiones en cada uno de estos programas en principio
+6:516 minutos y 51 segundosuna forma sencilla sería una expresión numérica asignarlo a una variable
+7:017 minutos y 1 segundoentonces a una expresión le podemos dar un valor y con el igual lo asignamos a
+7:097 minutos y 9 segundosuna variable por ejemplo ahí hice un ejemplo en el bromo ustedes pueden teclear si es igual
+7:197 minutos y 19 segundosa uno más ese verde de 5 es la raíz cuadra de 5 sobre 2 y la asignación de
+7:277 minutos y 27 segundosese valor numérico se va a asignar en la variable fi y si esa variable se va a
+7:347 minutos y 34 segundoscrear en nuestra área de trabajo el punto y coma al final de la sentencia
+7:417 minutos y 41 segundosevita sí que los resultados se impriman por pantalla otra forma puede ser directamente
+7:507 minutos y 50 segundosescribir en la ventana de comando una expresión numérica si con lo cual en
+7:577 minutos y 57 segundoseste caso el resultado se va a almacenar en una variable interna llamada
+8:038 minutos y 3 segundos[Música]
+8:048 minutos y 4 segundosthe answer entonces hay que tener cuidado porque si esa variable interna se va a ir
+8:128 minutos y 12 segundosactualizando cada vez que yo escribo una expresión sin asignarle una variable entonces es importante asignar las
+8:228 minutos y 22 segundosexpresiones numéricas a las variables como trabajamos en la ventana de
+8:318 minutos y 31 segundoscomandos bueno en principio cada expresión va a terminar con un enter
+8:398 minutos y 39 segundossi deseamos seguir escribiendo en una línea porque se nos hizo muy largo
+8:478 minutos y 47 segundosel renglón con los tres puntos al final y enter seguimos escribiendo abajo sí y
+8:558 minutos y 55 segundosel programa va a leer toda esa línea como de forma continua
+9:039 minutos y 3 segundospodemos incluir varias expresiones en una misma línea separando por coma o
+9:109 minutos y 10 segundostambién por un coma recuerden que el punto y coma evita que se imprima en la
+9:179 minutos y 17 segundosventana de comandos para limpiar la ventana de comandos
+9:259 minutos y 25 segundospuede usar el comando clc y también para eliminar todas las variables creadas en la memoria puede
+9:349 minutos y 34 segundosusar el comando clear ahora bien si solo quiero borrar alguna variable determinada vamos a
+9:449 minutos y 44 segundosescribir clear espacio y el nombre de la variable determinada que quiero eliminar
+9:549 minutos y 54 segundosok bueno cómo
+10:0210 minutos y 2 segundosles voy a voy a cambiar la escena para mostrar el mando antes de seguir como nuestra salida numérica para que vean lo
+10:1110 minutos y 11 segundosque les acabo de contar
+10:1810 minutos y 18 segundospor ejemplo si yo pongo el 2 ustedes ven qué
+10:2710 minutos y 27 segundosel 2 se guardó en una variable temporal llamada ans y además se creó en el work
+10:3610 minutos y 36 segundosspace si yo ahora escribo por la ventana de comando quien es la variable ams me
+10:4410 minutos y 44 segundosva a decir que esta variable tiene asignado el valor numérico 2 pero
+10:5110 minutos y 51 segundossi yo lo escribo pongo asignó una expresión 3 fíjense que ahora
+11:0011 minutosand se actualizó con tres por tanto siempre es recomendable asignar sí
+11:0811 minutos y 8 segundosuna u otra variable de los valores numéricos para que éstos no se pierdan fíjense que hay definir cree las
+11:1711 minutos y 17 segundosvariables x y los valores numéricos son 2 y 3 y si yo le pregunto ahora amanda
+11:2411 minutos y 24 segundosquien es 2 me dirá que x tiene el valor 2 y se preguntó quién es y me dirá que y tiene el valor
+11:3311 minutos y 33 segundosok de la misma manera esto lo pueden trabajar
+11:4211 minutos y 42 segundosy esta vez voy a hacer siempre esta vez el caso en general fíjense qué
+11:4811 minutos y 48 segundosasigna la variable ans
+11:5511 minutos y 55 segundosy de la misma manera también pueden hacerlo en silao
+12:0512 minutos y 5 segundostambién se va a asignar a la variable ams el valor numérico 2 ok
+12:1812 minutos y 18 segundosvoy a
+12:2712 minutos y 27 segundoscontinuamos voy a mostrarle cómo mostramos nuestra salida numérica
+12:4112 minutos y 41 segundosentonces es importante observar que los números reales
+12:4812 minutos y 48 segundosen estos programas se calculan con doble precisión es decir
+12:5512 minutos y 55 segundosse guardan en 8 bytes de 8 bits cada uno con lo cual tengo 53 bits para la
+13:0413 minutos y 4 segundosmantilla 11 bits para el exponente todos estos números en base 2 y un vip para el
+13:1313 minutos y 13 segundossigno ok esto nos da entre 15 ó 16 cifras decimales dependiendo que podamos que
+13:2013 minutos y 20 segundosusando fíjense que en realidad 53 bits más los 11 bits más el bit del
+13:2813 minutos y 28 segundossigno de 65 bits luego veremos en la aritmética de punto flotante porque son
+13:3613 minutos y 36 segundos65 bits y no 64 es importante remarcar que estos
+13:4413 minutos y 44 segundosprogramas calculan internamente los números con la máxima precisión
+13:5013 minutos y 50 segundosobviamente en binario puedo modificar los formatos numéricos
+13:5713 minutos y 57 segundosmostrado por pantalla por defecto el formato que tenemos excel formato corto
+14:0514 minutos y 5 segundosforma sort que es un arco fija escalada con cuatro decimales que lo van a ver
+14:1414 minutos y 14 segundosa la izquierda verán como se ve más lago en octava por ejemplo si yo ingreso por
+14:2114 minutos y 21 segundoslan tam en el comando y que no va a ser otra cosa que una aproximación numérica de del número irracional pi y bueno en
+14:3014 minutos y 30 segundosshaila de manera muy parecida vamos a ingresar porcentual y también me dará el
+14:3914 minutos y 39 segundosvalor de pi y fíjense que por defecto me aparece el formato corto pueden probarlo
+14:4714 minutos y 47 segundosustedes sin embargo es importante tener en cuenta que internamente están calculados
+14:5614 minutos y 56 segundoscon la máxima precisión puedo cambiar el formato a un formato largo si
+15:0515 minutos y 5 segundosen la octava lo que nos da una coma fija escalada con 15 decimales mal hay 14
+15:1415 minutos y 14 segundossima en octavo con lo cual él
+15:1915 minutos y 19 segundos[Música]
+15:2015 minutos y 20 segundospor ejemplo si yo pongo el formato largo de pi más la octava me mostraran esa expresión
+15:2915 minutos y 29 segundosen cambio en sai la tengo que escribir la longitud que quiero de decimales entre paréntesis
+15:3615 minutos y 36 segundossin formar paréntesis 25 espacio porcentual pi y me dará una aproximación
+15:4715 minutos y 47 segundoshay otros ejemplos como el formato corto y que para la anotación científica
+15:5715 minutos y 57 segundoscon cuatro decimales va a aparecer por ejemplo el número y la respuesta será
+16:0416 minutos y 4 segundos3.14 16 más 00 significa que eso
+16:1116 minutos y 11 segundosesta x 10 a la 0
+16:1716 minutos y 17 segundosformando el largo científico si el número pi también nos
+16:2716 minutos y 27 segundosdará los 14 decimales o 15 dependiendo si estoy usando
+16:3516 minutos y 35 segundoses más la buscaba y
+16:4016 minutos y 40 segundospero que se violen de a 10 a la 0 el formato corto ingenieril me va a
+16:5016 minutos y 50 segundosmostrar cuatro decimales y las potencias en múltiplos de tres por ejemplo si
+16:5816 minutos y 58 segundostecleo forma short 10 por eso hacer 314 1593 por 10 a 0
+17:0817 minutos y 8 segundospero si en cambio ya le aumentó un orden le pongo 1000 por eso va a ser 3.14 16
+17:1717 minutos y 17 segundospor 10 a la 3 y serán múltiplos de 3 las
+17:2417 minutos y 24 segundospotencias de 10 bueno y de la misma manera tengo el formato largo ingeniería existen otros
+17:3317 minutos y 33 segundosformatos pero en general usaremos en la aritmética de punto flotante hay
+17:4117 minutos y 41 segundostipos de datos muy importantes el royal min y el real manos
+17:4817 minutos y 48 segundosqué es el eps es lo que se conoce como épsilon máquina que nos da un poco idea
+17:5417 minutos y 54 segundosde la precisión de nuestra computadora
+18:0118 minutos y 1 segundodevuelve si ustedes ingresan por teclado el eps por definición es la diferencia
+18:0818 minutos y 8 segundosque hay entre el valor numérico 1 el número inmediato superior que le
+18:1618 minutos y 16 segundossiguen representable en la máquina por ejemplo en más la octava vez si
+18:2518 minutos y 25 segundosustedes ingresan eps la respuesta será 2.22 04 por 10 a la menos 16
+18:3218 minutos y 32 segundosalgo parecido aparecerán en shaila y nos da una idea de cuál es la
+18:3918 minutos y 39 segundosdistancia que hay entre 1 y 1 + épsilon en la computadora es importante tener en
+18:4818 minutos y 48 segundoscuenta que nosotros no podemos representar en el continuo una computadora por tanto el eje real no
+18:5618 minutos y 56 segundoslo podemos representar y tendremos una cantidad finita aunque muy grandes de
+19:0319 minutos y 3 segundosnúmeros para representar pero es una cantidad discreta y el épsilon es la distancia que hay
+19:1219 minutos y 12 segundosentre uno y el próximo número representable el máquina o sea uno más
+19:1819 minutos y 18 segundosépsilon entre uno y uno más es long no hay números que la computadora pueda
+19:2619 minutos y 26 segundosrepresentar otro valor importante es el real min si ustedes ingresa el real min les va a
+19:3619 minutos y 36 segundosdevolver menor número positivo con el que se
+19:4219 minutos y 42 segundospuede trabajar si después de eso ya vendrá el cero
+19:4919 minutos y 49 segundosen matlab bueno otra vez si ponen real me la respuesta sería 2.22 51 por 10 a
+19:5719 minutos y 57 segundosla menos 308 ese es el número más chiquito con el que vamos a trabajar
+20:0420 minutos y 4 segundosalgo más chiquito de eso puede ser considerado 0 sí
+20:1220 minutos y 12 segundosen cambio en si la vuelve hay que usar otra función number pro birdies tiny les va a devolver el mismo
+20:1920 minutos y 19 segundosvalor numérico a su vez tengo el real max que devuelve el mayor número positivo con el que
+20:2920 minutos y 29 segundospuedo trabajar por ejemplo si ingreso real max no tanto en matlab en octavo en silao nos va a
+20:3820 minutos y 38 segundosdevolver un número del orden de 10 a la 308 o sea cualquier número más grande
+20:4620 minutos y 46 segundosque ese no va a ser no va a poder representarse en máquina o sea que nuestro rango de trabajo en el
+20:5520 minutos y 55 segundoscaso de los reales positivos estará en principio entre rial min y real max
+21:0321 minutos y 3 segundosvolveremos sobre este punto en la representación de aritmética de punto flotante
+21:1221 minutos y 12 segundosotros datos importantes son info ing que es no está en ámbar sí
+21:2021 minutos y 20 segundosque nos sirve para representar justamente números muy grandes
+21:2621 minutos y 26 segundosy que ya son considerados infinitos si es el caso positivo o menos infinito si fue cerca ciones amigos o también nos
+21:3521 minutos y 35 segundossirven para algunas determinaciones por ejemplo si hago 1 / 0
+21:4321 minutos y 43 segundosla respuesta va a ser in o sea en esa variable se va a almacenar la variable y
+21:5121 minutos y 51 segundosalgunas versiones viejas demandas imprimen y un aviso de que estamos dividiendo por
+21:5921 minutos y 59 segundoscero las versiones recientes ya no lo implican también el noten amber no sirve para
+22:0922 minutos y 9 segundosdeterminaciones por ejemplo si tengo cero sobre cero o infinito sobre infinitos y yo ingresó por la ventana de
+22:1922 minutos y 19 segundoscomandos esa y sentencia van a ver que la respuesta es not en ámbar
+22:2722 minutos y 27 segundosy además es importante remarcar que hay un álgebra entre los infinito y note
+22:3422 minutos y 34 segundosnumber o sea infinito más infinito nos dará infinito o bien si hago infinito
+22:4222 minutos y 42 segundosmenos infinito nos va a dar una indeterminación como nos dé number y así pueden probar usarlo esto es importante
+22:5022 minutos y 50 segundosen los algoritmos porque cuando sigo esperando y a veces nuestros algoritmos y teherán y todos nuestros números se
+22:5822 minutos y 58 segundoshacen muy grandes si en algún momento mis variables alcanzan el valor y el
+23:0523 minutos y 5 segundosalgoritmo va a seguir operando con s como valor asignado y con operando con
+23:1323 minutos y 13 segundosel álgebra correspondiente bueno también a modo de comentario le
+23:2023 minutos y 20 segundosles cuento que es muy sencillo trabajar en números complejos en estos programas por ejemplo si
+23:2923 minutos y 29 segundosingresan el cerco verde - 1 o sea la raíz cuadrada de menos uno le va a devolver la variable imaginaria
+23:3823 minutos y 38 segundossi en matlab en octava le va a aparecer como 0 +1 por i
+23:4723 minutos y 47 segundostambién si ingresan en el valor complejo 2 - 3 y
+23:5523 minutos y 55 segundosse entiende que ustedes quieren definir un valor numérico complejo que tiene
+24:0124 minutos y 1 segundoparte real 2 parte imaginaria menos 3
+24:0624 minutos y 6 segundosotra forma es poner 212 por jota también a jota la entiende con la variable
+24:1524 minutos y 15 segundosimaginaria siempre y cuando la variable jota no esté
+24:2124 minutos y 21 segundosotra forma es usar el comando complex
+24:2824 minutos y 28 segundosse le da entre paréntesis la parte de la parte imaginaria y lo asignó a una
+24:3524 minutos y 35 segundosvariable zeta y me crea el número complejo con dicha parte real y dicha
+24:4124 minutos y 41 segundosparte imaginaria bueno algo importante es cómo leer por pantalla
+24:5324 minutos y 53 segundospodemos escribir un mensaje por pantalla para definir variables desde el teclado y que luego sean almacenadas en nuestra
+25:0225 minutos y 2 segundosárea de trabajo la función input imprime un mensaje en
+25:1125 minutos y 11 segundosla línea de comandos en la ventana de comandos y es que estamos trabajando en una ventana de comando y recupera como
+25:1925 minutos y 19 segundosvalor de retorno un valor numérico en el caso que yo quiera ingresar un escalar
+25:2525 minutos y 25 segundosun vector una matriz o un strings y lo ingresó entre apóstrofo
+25:3325 minutos y 33 segundosdespués de imprimir el mensaje el programa espera a que se ingrese un valor por ejemplo
+25:4125 minutos y 41 segundossi yo en la ventana de comando ingresó input entre paréntesis y entre apostó of apostó frost cantidad de ecuaciones del
+25:5025 minutos y 50 segundossistema y eso lo asignó una variable en el programa quedará esperando hasta que
+25:5825 minutos y 58 segundosyo ingresé la cantidad de ecuaciones del sistema para luego
+26:0426 minutos y 4 segundosimprimir el valor en una vez que sólo un beso
+26:1126 minutos y 11 segundosen cambio si fuese una variable tipo strange tipo cadena de caracteres yo
+26:2026 minutos y 20 segundospodría haber hecho otro mensaje como ingrese el nombre del método entre apóstrofo si eso lo asignó en la
+26:2826 minutos y 28 segundosvariable s y esta vez el método lo ingresó en entre apóstrofo
+26:3626 minutos y 36 segundosque el método va a ser el método de gauss y n se queda almacenada ahora una variable tipo string no t no observen
+26:4526 minutos y 45 segundosque no fue necesario para definir qué tipo de variable eran s n esto en otro
+26:5426 minutos y 54 segundoslenguaje de programación como por ejemplo en fort drum es necesario pre definir qué tipo de variable van a ser n
+27:0227 minutos y 2 segundoso s también para imprimir por bandas ya me va a servir el comando this sí
+27:1227 minutos y 12 segundosy que va a imprimir un mensaje de texto o el valor de una variable pero sin imprimir su nombre
+27:2027 minutos y 20 segundospor ejemplo si agundis fin del programa aparecerá un cartel que diga fin del
+27:2627 minutos y 26 segundosprograma si a la variable a le asignó un run 23 o sea una matriz aleatoria de dos
+27:3727 minutos y 37 segundosfilas y tres columnas bueno perdón en este caso son cinco columnas
+27:4627 minutos y 46 segundoscuando ponga disc e se va
+27:5527 minutos y 55 segundosse va a imprimir la matriz pero sin su nombre solo se van a mostrar sus
+28:0328 minutos y 3 segundoscoeficientes también una función un poco más
+28:1028 minutos y 10 segundoscompleta es la función el pp f que imprime permite imprimir mensajes en las
+28:1828 minutos y 18 segundospantallas y valores en distintos formatos por ejemplo
+28:2828 minutos y 28 segundosla estructura es fmf y algún texto en ese caso sólo imprimiría
+28:3628 minutos y 36 segundosun texto en cambio si yo lo uso de la forma estrépito entre paréntesis yente
+28:4228 minutos y 42 segundosapóstrofe una cadena de control y después variables luego ya ahí puedo
+28:5028 minutos y 50 segundosmostrar distintos valores de variables en los formatos que yo determine
+28:5828 minutos y 58 segundospor ejemplo sí a la variable e se le asignó en la
+29:0529 minutos y 5 segundoscadena de caracteres matemática aplicada y ago efe print efe s matemática aplicada se va a imprimir y fíjense que
+29:1329 minutos y 13 segundosinmediatamente me aparece el pronto ok para corregir esto digamos que no me
+29:2129 minutos y 21 segundosquede pegado lo que tengo que hacer es usar el comando barra invertida
+29:2929 minutos y 29 segundosen silao el comando no es efe print efe sino print
+29:4329 minutos y 43 segundosla cadena de control que me permite controlar los las salidas numéricas
+29:5129 minutos y 51 segundosde cadena de caracteres usando el comando el jefe tiene y distintos tipos
+29:5929 minutos y 59 segundospara eso les recomiendo del comando efe efe simplemente en la ventana del comando escriben help fmf y
+30:0830 minutos y 8 segundospodrán ver los distintos formatos de salida por ejemplo para controlar mi salida
+30:1830 minutos y 18 segundosnumérica supongamos que tenemos una variable llamada raíz que tiene ese
+30:2430 minutos y 24 segundosvalor numérico asignado si si yo pongo efe print efe valor final aproximado dos puntos
+30:3430 minutos y 34 segundosespacio porcentual 12 5 efe y luego raíz lo que hace es va a tomar
+30:4330 minutos y 43 segundos12 dígitos antes de la coma si si fuesen 0 hacia la izquierda no los va a
+30:5030 minutos y 50 segundosimprimir obviamente y cinco dígitos después en formato de coma
+30:5930 minutos y 59 segundosfijada sí o sea que va a imprimir en este caso
+31:0531 minutos y 5 segundos1.41 42 1 y la última cifra va a estar re donde redondeada
+31:1531 minutos y 15 segundospor ejemplo si en cambio usar la salida tipo f la salida tipo en
+31:2431 minutos y 24 segundosminúscula qué es el formato y científico
+31:3331 minutos y 33 segundospueden escribir porcentual 12 5 es barra
+31:4031 minutos y 40 segundosinvertida n para que nos baje el prom y la salida será
+31:4631 minutos y 46 segundos1.41 42 1 por 10 a 0 en un formato
+31:5531 minutos y 55 segundosok vamos a ver algunas operaciones
+32:1532 minutos y 15 segundosentonces mal doctor si la operan las variables por medio de operadores
+32:2232 minutos y 22 segundostenemos operadores aritméticos como la adición suma resta multiplicación que el
+32:2932 minutos y 29 segundosasterisco la división la barra la barrita el circunflejo que es la
+32:3632 minutos y 36 segundospotenciación y la barra invertida es la división inversa por ejemplo en la barra invertida divide
+32:4332 minutos y 43 segundosde derecha a izquierda o sea es el ser se está asignando el
+32:5032 minutos y 50 segundosvalor numérico untarse también hay operadores lógicos el ampersand
+32:5932 minutos y 59 segundostélam la barrita vertical el logo no excluyente el éxito reciente y la
+33:0833 minutos y 8 segundosviborita es la negación por ejemplo sigue en la ventana del
+33:1433 minutos y 14 segundoscomando escribo 1 ampersand 1 sí es decir que estoy escribiendo si uno y uno
+33:2333 minutos y 23 segundoses verdadero la respuesta va a ser uno que evidentemente es verdadero si en cambio escribo 1 ampersand 0 la
+33:3333 minutos y 33 segundosrespuesta va a ser cambios y uso lo excluyente con el 11 la
+33:4033 minutos y 40 segundosrespuesta también disponen de operadores relacionales el
+33:5133 minutos y 51 segundosmenor mayor menor igual mayor o igual el igual igual o el distinto que nos sirve
+33:5833 minutos y 58 segundosa veces para chequear cuando los valores numéricos son iguales o distintos por ejemplo si en la ventana de comando
+34:0634 minutos y 6 segundosingresó uno igual igual uno la respuesta es uno que es verdadero si
+34:1334 minutos y 13 segundosingreso una aproximación de pi y le preguntó si perdón si eso es igual a
+34:2034 minutos y 20 segundosigual a pi la respuesta es falso pero en cambio si le pregunto qué esa aproximación de pi 3 14 15 9 26 es
+34:2934 minutos y 29 segundosdistinto que vi la respuesta es verdadera bueno esto es algo muy importante por lo
+34:3934 minutos y 39 segundosque le decía al comienzo como trabajar con vectores y matrices
+34:4934 minutos y 49 segundosvectores y matrices también se definen como variable con nombres marc la octava y si la distinguen
+34:5834 minutos y 58 segundosvariable es mayúscula y minúscula tengan cuidado cuando ingrese mayúsculas minúsculas a diferencia de otro lenguaje no hace
+35:0735 minutos y 7 segundosfalta por establecer su dimensión o incluso su dimensión se puede modificar
+35:1435 minutos y 14 segundossegún yo defina estas variables yo voy a ir determinando su dimensión
+35:2335 minutos y 23 segundospor ejemplo quiero definir al vector fila para lo cual voy a
+35:3135 minutos y 31 segundosseparar sus componentes por espacio en blanco o bien por coma o sea de fino el x igual corchete uno
+35:4135 minutos y 41 segundosespacio 2 espacio 4 cierro corchete o bien podría hacerlo con coma
+35:4735 minutos y 47 segundosy la salida será ese vector fila en cambio si separo los números por
+35:5635 minutos y 56 segundospunto y coma voy a obtener un vector columna si ingreso y igual corchete 1 punto y
+36:0536 minutos y 5 segundoscoma tres punto y coma 9 cierro corchete voy a quedar el vector columna
+36:1436 minutos y 14 segundospara definir matrices voy a hacer uso de las comas o lo espacio en blanco para separar elementos por filas y para
+36:2236 minutos y 22 segundosseparar elementos por columnas con punto y coma por ejemplo la matriz a
+36:2936 minutos y 29 segundosque tiene cuya primera fila 816 punto y coma la segunda fila 357 punto y coma la
+36:3736 minutos y 37 segundostercer fila 49 es importante remarcar que internamente
+36:4536 minutos y 45 segundosen estos lenguajes las matrices y los vectores sean filas o columnas se
+36:5236 minutos y 52 segundosalmacenan por columnas aunque uno los introduzca como filas o de otra manera
+37:0137 minutos y 1 segundohay una gran cantidad de funciones predefinidas en estos programas que nos permiten definir matrices
+37:1037 minutos y 10 segundosmagic y algunos de estos veremos puedo crear una nueva matriz o vector a
+37:1937 minutos y 19 segundospartir de otras matrices o vectores definidos previamente por ejemplo si creó el vector z a partir del x con
+37:2837 minutos y 28 segundoscorchete x8 1632 separándolos en tres espacios cierro corchete me va a crear
+37:3537 minutos y 35 segundosese vector x cuyas primeras tres es el doctor z fila cuyas primeras tres
+37:4237 minutos y 42 segundoscomponentes son las de equis islas terceras son las que agregue de la misma
+37:4937 minutos y 49 segundosmanera sin destino la variable b y digo que esta es igual a corchete a
+37:5737 minutos y 57 segundospunto y coma x lo que va a ser al final de la matriz a que yo ya tenía detenida
+38:0438 minutos y 4 segundosanteriormente voy a agregarle una última fila que no es otra cosa que el vector
+38:1138 minutos y 11 segundosfila x en cambio si yo quiero asignar luego de haber ingresado la matriz be quiero
+38:2038 minutos y 20 segundosasignarle al final una nueva fila que sea zeta seguramente en algunas
+38:2738 minutos y 27 segundosversiones viejas va a aparecer este tipo de error porque no coincide
+38:3338 minutos y 33 segundoslas dimensiones es decir la cantidad de columnas que tiene son 3 mientras que la
+38:4038 minutos y 40 segundoscantidad de elementos que tienen el doctor z son 6
+38:5038 minutos y 50 segundospara acceder a los elementos de un vector lo voy a hacer escribiendo el índices entre paréntesis
+38:5938 minutos y 59 segundoses muy importante remarcar que aquí los índices están indexados desde el valor numérico 1 a diferencia de otros
+39:0839 minutos y 8 segundoslenguajes por ejemplo si escribo z de 5 me dará z paréntesis 5 me dará el valor
+39:1539 minutos y 15 segundosnumérico de la componente quinta en cambio si pongo cerca de 770
+39:2239 minutos y 22 segundosparéntesis a bridge el 17 no va a tener ningún valor numérico asignado con lo
+39:2839 minutos y 28 segundoscual no va a tirar una ruta accedemos a lumen a los elementos de una matriz con los índices entre paréntesis
+39:3839 minutos y 38 segundosseparándolos por coma aunque también puedo hacerlo con un solo
+39:4539 minutos y 45 segundossubíndice dado que tengo en cuenta que internamente se almacena en la matriz como una columna es decir la primera
+39:5539 minutos y 55 segundoscolumna debajo de esta columna va la segunda columna debajo de la segunda columna va a la tersa en columna y así
+40:0240 minutos y 2 segundossucesivamente otra forma de crear vectores y matrices es a partir de algún valor por ejemplo
+40:1140 minutos y 11 segundossi a paréntesis 3 le doy el valor punto 1 o
+40:1840 minutos y 18 segundossea 0,1 y a un paréntesis 10 le doy el valor 05 voy a crear ese vector fila
+40:2740 minutos y 27 segundossolamente con esos valores predefinidos en la tercera y décima posición los demás valores conservan análogamente la
+40:3640 minutos y 36 segundosmatriz se puedo crear la definiendo el valor 35 desea asignándolo con 1 y se
+40:4440 minutos y 44 segundospresiona concepto y puedo ir redefiniendo los valores de la cee por
+40:5040 minutos y 50 segundosejemplo asignando le a 23 el valor una operación importante es la trans
+40:5940 minutos y 59 segundostransposición en matrices recordarán lo que era la transposición matricial de álgebra
+41:0841 minutos y 8 segundoslineal era intercambiar filas con columnas si el elemento y j pasaba a
+41:1841 minutos y 18 segundosestar en la posición j y entonces si yo pongo be apóstrofe lo que va a hacer es va a transponer
+41:2741 minutos y 27 segundosla matriz ve muy sencillo de transformar matrices en esto
+41:3541 minutos y 35 segundostambién hay una diferencia entre vectores fila de columna si yo quiero sumar x que lo tenía definido como un
+41:4441 minutos y 44 segundosvector fila quiero sumarle a y que tiene una asignado un vector columna versiones
+41:5341 minutos y 53 segundosviejas demanda van a dar error porque no coinciden las dimensiones
+42:0142 minutos y 1 segundoalgunas versiones recientes de matlab si permiten hacer esto pero lo transforman en una matriz
+42:1142 minutos y 11 segundoslo correcto sería o bien tras poner y la solución de esa suma va a estar almacenada en un vector fila o bien tras
+42:1942 minutos y 19 segundosponer equis y la solución de esa suma va a estar almacenada en un vector columna
+42:2642 minutos y 26 segundosfíjense de qué manera puedo muy sencillo armar un producto escalar interno entre dos vectores de un mismo espacio
+42:3542 minutos y 35 segundosvectorial recuerden cómo definimos el producto estelar interno entre dos vectores de rn lo que hacía era producir
+42:4442 minutos y 44 segundosa su componente de componentes y las sumaba en bar la puedo definirlo muy fácilmente
+42:5342 minutos y 53 segundospor ejemplo teniendo en cuenta que x es fila y es columna cuando haga x por y en ese
+43:0143 minutos y 1 segundoorden voy a obtener el producto interno en el r3 en este caso del vector x por el vector y que tenía almacenado
+43:1043 minutos y 10 segundosen cambio si atrás pongo la y quiero hacer un producto de fila vector fila por otro fila o bien si atrás pongo la
+43:1943 minutos y 19 segundosequis y quiero hacer un producto de un vector columna por un vector columna en versiones viejas eso nos va a dar un
+43:2643 minutos y 26 segundoserror porque las condiciones las dimensiones no coinciden aunque en versiones nueva estos productos se
+43:3443 minutos y 34 segundospueden hacer pero terminando en dos productos industriales dejo por si quieren probar y verlo
+43:4243 minutos y 42 segundosmás reciente también puedo por ejemplo transponer el
+43:5443 minutos y 54 segundosvector x pasar la columna puedo transponer el vector y pasarlo a fila y si hago el vector x atrás puesto que lo
+44:0244 minutos y 2 segundosalmacene en la variable que usted por el vector y atrás puesto que lo almacene en
+44:0944 minutos y 9 segundosla variable y te lo que no devuelve ahora es un producto escalar externo es
+44:1644 minutos y 16 segundosdecir multiplique un vector columna por un vector fila y lo que obtuve es una
+44:2344 minutos y 23 segundosmatriz por eso se conoce como un producto escalar interno a partir de dos vectores obtuve una matriz
+44:3244 minutos y 32 segundoslo hice de la forma que se hace del producto usual entre materia
+44:3844 minutos y 38 segundosahora veremos este punto podemos combinar operadores por ejemplo
+44:4544 minutos y 45 segundossi hago x por 2 lo que va a hacer es a cada el elemento del vector fila x lo va a
+44:5244 minutos y 52 segundosmultiplicar por 2 fíjense si en cambio hago x menos 1 si
+44:5944 minutos y 59 segundosbien esto matemáticamente no tiene sentido restar un vector a un escalar lo
+45:0645 minutos y 6 segundosque entienden los programas es que a cada con lo que yo quiero hacer es a cada componente de x restarle una unidad
+45:1745 minutos y 17 segundospara multiplicar y dividir vectores o matrices componentes o componentes voy a
+45:2645 minutos y 26 segundosusar este operador que es muy importante y lo vamos a usar mucho que es el operador punto punto asterisco o punto
+45:3445 minutos y 34 segundosbarra lo que va a hacer en este caso si yo indicó x punto asterisco x lo
+45:4245 minutos y 42 segundosprograman entender que yo sí quiero hacer el producto de cada componente de x consigo misma con lo cual nos va a
+45:5045 minutos y 50 segundosdevolver un vector fila que va a ser el vector 14 16 cuyas componentes van a ser
+45:5845 minutos y 58 segundosel producto del primer componente de x consigo mismo la segunda consigo mismo y la tercera
+46:0646 minutos y 6 segundosconsigo mismo fíjense cómo uso el operador punto barra si yo defino un vector que va a ser fila
+46:1746 minutos y 17 segundosy es 101 si yo hago x punto barra sé lo que hago es a cada componente de x lo
+46:2446 minutos y 24 segundosdivido por la respectiva componente de c con lo cual la primera componente nos queda 1 la
+46:3446 minutos y 34 segundossegunda infinito porque estoy viviendo por cero y la tercera es 4 dividido 14
+46:4146 minutos y 41 segundosanálogamente con el la 'operación potencia que con el circunflejo si yo
+46:4846 minutos y 48 segundospongo punto circunflejo es decir si en la ventana de comandos pongo x puntos
+46:5546 minutos y 55 segundoscircunvecinos 3 lo que hago es a cada componente de x elevarla al
+47:0447 minutos y 4 segundoscubo les recomiendo que vayan probando y ejecutando estas mismas operaciones en
+47:1347 minutos y 13 segundosel programa que se hayan descargado considero dos matrices las matrices m
+47:2447 minutos y 24 segundosque tiene dimensión 2 x 3 y la matriz n que tiene dimensión 3 x 2 si quiero
+47:3247 minutos y 32 segundoshacer el producto matricial recuerden que tiene que coincidir la cantidad de
+47:4147 minutos y 41 segundoscolumnas de la primera matriz con la cantidad de fila de la segunda matriz como es este caso de volviéndome en este
+47:5047 minutos y 50 segundoscaso una matriz dos por dos si yo en cambio trans pongo la la n ya
+47:5647 minutos y 56 segundosno va a tener sentido el producto matricial y posiblemente en algunas versiones vieja no d
+48:0748 minutos y 7 segundosen cambio sí hacemos con el operador punto ahí me faltó agregar lo correcto en la
+48:1448 minutos y 14 segundostransparencia por lo voy a corregir m punto asterisco en otras puestas ahí
+48:2148 minutos y 21 segundossí tendrás sentido poner hacer el producto matricial componente a
+48:3048 minutos y 30 segundoscomponente es decir cada componente de m se multiplica con cada componente
+48:3748 minutos y 37 segundosrespectiva de n traspuesta también si quisiera hacer
+48:4548 minutos y 45 segundosla raíz cuadrada de la cada una de las componentes de la matriz gm es lo que podría hacer es m punto circunflejo
+48:5548 minutos y 55 segundospunto 5 que ese punto 5 represente lo numérico un medio o sea estoy elevando a la un medio lo cual equivale a calcular
+49:0249 minutos y 2 segundosla raíz cuadrada va a calcular todas las raíces cuadradas de cada una de las componentes d
+49:1449 minutos y 14 segundosun operador que utilizaremos mucho también es el operador dos puntos
+49:2149 minutos y 21 segundoseste operador lo vamos a usar por ejemplo de la siguiente manera entre corchetes a veces pueden omitirse
+49:3149 minutos y 31 segundoslos corchetes puede ponerse un valor de inicio dos puntos un paso dos puntos un
+49:4049 minutos y 40 segundosvalor de fin por ejemplo si en la variable y asignó 12 punto 10 lo que hago por defecto el
+49:4949 minutos y 49 segundospaso es 1 y va a iniciar en el valor numérico 1 con un paso de 1 hasta llegar
+49:5749 minutos y 57 segundoshasta días en cambio si la variable j la defino
+50:0250 minutos y 2 segundos12.2 2.10 irá arrancando en 1 con un paso de dos hasta llegar hasta 10
+50:1250 minutos y 12 segundosen este caso el último valor será el 9 el paso también puede ser un valor
+50:1950 minutos y 19 segundosdecimal puedo iniciar en 12 puntos 1.5 2.10 irá con un saldo de 1.5 arrancando
+50:2850 minutos y 28 segundosen 1 generando método esos valores numéricos que se almacenarán en el doctor fila
+50:3650 minutos y 36 segundostambién si el paso de negativo permite recorrer o construir vectores con
+50:4350 minutos y 43 segundosvalores numéricos decreciente 10 2 puntos menos 12 puntos 1 me va a crear
+50:5150 minutos y 51 segundosel vector fila h que va a iniciar en 10 y con un paso de menos 1 hasta llegar hasta
+50:5950 minutos y 59 segundoseste operador nos va a ser muy útil para construir lo que llamaremos fiscalización
+51:0851 minutos y 8 segundosotro operador muy potente es este el operador 2 punto pero también
+51:1551 minutos y 15 segundosnos permite acceder a partes o filas o columnas de la matriz
+51:2351 minutos y 23 segundospor ejemplo sí tengo la madriza que ya tengo definida y
+51:3051 minutos y 30 segundosle digo le ingreso paréntesis 3,2 puntos le voy a estar
+51:3851 minutos y 38 segundosindicando que se ubique en la fila 3a y que me devuelva todas las columnas es
+51:4651 minutos y 46 segundosdecir me va a devolver toda la fila tercera de la matriz en cambio si le indicó ubicando lo
+51:5351 minutos y 53 segundosprimero al operador dos puntos dos lo que le voy está indicando es que
+52:0052 minutosrecorra todas las filas pero se fije en la columna 2 con lo cual el resultado de
+52:0752 minutos y 7 segundoseso no hace otra cosa que la columna 2 por ejemplo si quiero obtener una sub matriz o también conocido bloque
+52:1552 minutos y 15 segundosmatricial puedo indicar e paréntesis
+52:2552 minutos y 25 segundos22.3 sea desde 2 hasta 3 con un paso de
+52:3152 minutos y 31 segundos1,2 2.3 es decir el vector 23 y lo que va a extraer
+52:3952 minutos y 39 segundosva a ser el sub bloque matricial 2 x 2 de la matriz que va desde las posiciones
+52:4752 minutos y 47 segundos2 2 hasta la 3 3
+52:5252 minutos y 52 segundos[Música]
+52:5452 minutos y 54 segundoseste operador también nos permite para invertir el orden de los elementos de un
+53:0153 minutos y 1 segundovector si por ejemplo si en x los reasignó con el valor de x paréntesis 32
+53:1153 minutos y 11 segundospuntos menos 1.1 lo que voy a hacer es redefinir a x del de forma que la primer
+53:2253 minutos y 22 segundoscomponente almacenada sea la última de x la segunda va a coincidir este caso en la segunda y la tercera componente ahora
+53:3153 minutos y 31 segundosva a ser la primera que tenía inicialmente vectorial fíjense que también esto nos permite
+53:3953 minutos y 39 segundospermutar las columnas de as de la siguiente manera en la matriz de asignó
+53:4653 minutos y 46 segundoslos coeficientes de a que me recorren todas las filas pero en columnas los
+53:5253 minutos y 52 segundosestoy re acomodando de 3 a uno con un paso de menos uno
+54:0354 minutos y 3 segundossi uso corchetes entre paréntesis cuando hago referencia
+54:1054 minutos y 10 segundosa los índices de una matriz o un vector lo que le estoy indicando que quiero los elementos que están ubicados que
+54:2054 minutos y 20 segundostienen esos índices respectivos que indique entre corchetes o sea si de la matriz a le pido que me indique quiénes
+54:2854 minutos y 28 segundosson los elementos 13 me va a devolver lo
+54:3354 minutos y 33 segundosel valor ordenado en forma de vector 84
+54:4054 minutos y 40 segundostodo esto se conoce como indexación en los programas respecto
+54:4854 minutos y 48 segundosok bueno ahora vamos a ver lo que son funciones
+54:5854 minutos y 58 segundospredefinidas marley octavi si la tienen gran gran
+55:0555 minutos y 5 segundosnúmero de funciones ya incorporadas o se conocen como predefinidas a veces
+55:1355 minutos y 13 segundossuelen contarse como intrínsecas ya tan incorporadas al código de ejecutable del
+55:2055 minutos y 20 segundosprograma por lo tanto son muy rápidas y muy eficientes el formato general va a ser a la
+55:2855 minutos y 28 segundosizquierda del igual entre corchetes separados por comas los valores de retorno a la derecha del igual el nombre
+55:3655 minutos y 36 segundosde la función respectiva y entre paréntesis los argumentos de entrada separado por
+55:4355 minutos y 43 segundosse van a llamar utilizando su nombre en una expresión o bien como
+55:5055 minutos y 50 segundoscomando y es importante remarcar que ya además de las predefinidas existen un
+55:5955 minutos y 59 segundosmontón de funciones punto m de mal la octava punto s 6 de sylar que han sido
+56:0756 minutos y 7 segundosaportadas desarrolladas por usuarios y que están se pueden descargar de las
+56:1456 minutos y 14 segundosmismas páginas de los programas o bien circulan en la web les recomiendo que
+56:2156 minutos y 21 segundosvean la página del software respectivo por ejemplo max es un ejemplo de esto que nos permite calcular la máxima
+56:3156 minutos y 31 segundoscomponente del vector si ustedes ingresan max entre paréntesis y enams
+56:3856 minutos y 38 segundoscomo no asigne ninguna variable de salida nos guarda el valor 9 que es la máxima componente de si en cambio asignó dos variables de
+56:4756 minutos y 47 segundossalida que son max xy post max entre corchetes de separado por coma y eso lo
+56:5456 minutos y 54 segundosigualó al marq de x en max de max x nos va a devolver
+57:0157 minutos y 1 segundoel valor máximo de x en osh max nos va a devolver el índice
+57:0957 minutos y 9 segundosdonde se dio esa máxima también hay funciones trigonométricas
+57:1657 minutos y 16 segundoscomo coseno seno por ejemplo coseno de y sobre 2 - senado episodios los signos la
+57:2457 minutos y 24 segundosvariable o también fíjense si yo tengo un vector
+57:3057 minutos y 30 segundosbeck es fila y tienen los valores 1 2 3 y defino n b en la variable n b le
+57:3857 minutos y 38 segundosasignó el valor es el q rd de su leve punto circunflejo 2 es decir hay que
+57:4857 minutos y 48 segundosleerlo de adentro hacia afuera y lo que estoy haciendo es
+57:5657 minutos y 56 segundosa cada componente debe elevarlo al cuadrado luego con el comando predefinidos un sumo en los componentes
+58:0558 minutos y 5 segundosde ese vector que está entre paréntesis y luego a eso le calculo la raíz cuadrada
+58:1258 minutos y 12 segundoses decir en n b se va a almacenar la norma utilidad del vector b fíjense qué
+58:1958 minutos y 19 segundosfácil puedo definirlo
+58:3658 minutos y 36 segundospor ejemplo con polinomios puedo definirme el vector point sí que va a
+58:4358 minutos y 43 segundosser un polinomio y simplemente lo que les voy a asignar son los coeficientes
+58:4958 minutos y 49 segundossi los coeficientes del polinomio que van a acompañar desde la potencia en
+58:5758 minutos y 57 segundoseste caso es que a la cuarta hasta aquí a la serie para evaluar ese polinomio en un valor x
+59:0559 minutos y 5 segundospuedo usar el comando bolívar que lo que va a hacer va a evaluar ese
+59:1359 minutos y 13 segundospolinomio p en el valor que yo le asigne entre sus argumentos de entrada y además tengo que ingresarle
+59:2359 minutos y 23 segundosporque es el vector donde yo definí los coeficientes de mi camino también puedo por ejemplo pulsando el
+59:3159 minutos y 31 segundoscomando root calcula la raíz de su polinomio y malagón cada vez hay la
+59:3759 minutos y 37 segundosaproxima tanto si son reales o bien bueno hay hay muchas funciones del
+59:4659 minutos y 46 segundosanálisis matemático si se nos conoce no tangente arco coseno
+59:5459 minutos y 54 segundosarco seno arco tangente sean hiperbólico cosa en hiperbólico tangente hiperbólica arcos en hiperbólico arco conocen
+1:00:011 hora y 1 segundohiperbólico argot ante andy caroll y acá también tengo el logaritmo natural el logaritmo decimal la función exponencial
+1:00:081 hora y 8 segundosla función valor absoluto la función raíz cuadrada de sql de quesos la vimos la función signo la función resto de la
+1:00:171 hora y 17 segundosfunción redondeo tengo distintos tipos como brawn tics flor sí
+1:00:241 hora y 24 segundosy también tengo la parte real y la verde imaginaria en caso de que z sea un
+1:00:311 hora y 31 segundoscomplejo algunas funciones del álgebra lineal que nos van a interesar por ejemplo si
+1:00:391 hora y 39 segundosquiero determinar el tamaño de una matriz ingresada eso lo voy a hacer usando el comando size que me va a
+1:00:471 hora y 47 segundosdefinir el número de filas en la variable m y el número de columnas en la variable n
+1:00:541 hora y 54 segundosnon x1 que va a ser la norma 1 de un vector o matriz veremos ya y
+1:01:011 hora, 1 minuto y 1 segundorecordaremos que es la norma matricial 1 de un vector y definiremos lo que la norma matricial 1 una matriz lo mismo
+1:01:091 hora, 1 minuto y 9 segundoscon la norma 2 que es la norma libia conocida la norma inf que es la norma infinito también
+1:01:171 hora, 1 minuto y 17 segundosveremos que es la norma infinita un vector una matriz el determinante que ustedes ya conocen de una matriz la
+1:01:241 hora, 1 minuto y 24 segundosinversa de una matriz aunque esto desde el punto de vista del cálculo numérico y de los métodos numéricos no es
+1:01:311 hora, 1 minuto y 31 segundosrecomendable usar el comando i sobre todo cuando la matriz es grande y
+1:01:381 hora, 1 minuto y 38 segundosme va a devolver los auto valores blanda y de una matriz y también si lo defino
+1:01:471 hora, 1 minuto y 47 segundosen b y ende me va a construir los auto vectores en las columnas de la matriz b y en la diagonal desde va a poner los
+1:01:551 hora, 1 minuto y 55 segundosauto valores con de a va a ser lo que se conoce como el número de condición de una matriz
+1:02:031 hora, 2 minutos y 3 segundoslv esla factorización lv veremos también qué es
+1:02:111 hora, 2 minutos y 11 segundosla fronterización de una matriz para qué sirve 0 se forma una matriz de 0 de
+1:02:181 hora, 2 minutos y 18 segundostamaño m por el one's que me va a formar una matriz de tamaño m por n
+1:02:261 hora, 2 minutos y 26 segundosdíaz de x baa crear una matriz diagonal con elementos
+1:02:341 hora, 2 minutos y 34 segundosdiagonales que va a tomar del vector x que yo ya tengo definido ya va a formar
+1:02:411 hora, 2 minutos y 41 segundosun vector con elementos diagonales de la matriz a rne de n va a formar una matriz
+1:02:481 hora, 2 minutos y 48 segundosn por n con números aleatorios entre 0 y 1 distribución uniforme
+1:02:571 hora, 2 minutos y 57 segundosel round and round nm va a ser lo mismo con una matriz en el por m hilde n va a
+1:03:051 hora, 3 minutos y 5 segundosser una matriz de gilbert veremos esto el mando cabe
+1:03:121 hora, 3 minutos y 12 segundosy bueno nos vemos qué algunas funciones se aplican
+1:03:181 hora, 3 minutos y 18 segundosindistintamente sean matrices o vectores
+1:03:261 hora, 3 minutos y 26 segundosentonces para terminar les cuento lo que es el concepto de vectorización es el
+1:03:341 hora, 3 minutos y 34 segundosacto de transformar un código desarrollado para una data del tipo escalar usarlo en una escalada
+1:03:421 hora, 3 minutos y 42 segundosentonces este tipo de de este tipo de
+1:03:491 hora, 3 minutos y 49 segundosprogramación cuando unos vectores a las funciones tiene muchas ventajas dado que
+1:03:571 hora, 3 minutos y 57 segundosimpacta enormemente en la velocidad de los cálculos haciéndolo entre 10.000 veces más rápido nos permite sintetizar
+1:04:061 hora, 4 minutos y 6 segundoso o escribir de forma más legible de nuestro código nuestro algoritmo recién
+1:04:141 hora, 4 minutos y 14 segundosveíamos como en una línea tengo que podía calcular la norma euclid a de un vector usando el comando punto
+1:04:241 hora, 4 minutos y 24 segundose internamente además tienen los programas bien automatizados para
+1:04:301 hora, 4 minutos y 30 segundosanalizar con operaciones lógicas y aritméticas sobre los distintos datos lo que se conoce como para la iniciación
+1:04:371 hora, 4 minutos y 37 segundosautomática implícita con lo cual los hace muy eficientes a estos
+1:04:461 hora, 4 minutos y 46 segundosestos comandos que uno va a usar en estos programas y la mayoría de estos comandos en general están paralizados
+1:04:541 hora, 4 minutos y 54 segundosinternamente en los programas que ustedes por ejemplo si operamos los elementos de
+1:05:041 hora, 5 minutos y 4 segundosun vector en una matriz usando funciones predefinidas fíjense yo puedo calcular la raíz cuadrada de 2 pero también puedo
+1:05:121 hora, 5 minutos y 12 segundoscalcular ese coherente de una matriz 2 por 2 y lo que el programa va a entender que lo que yo quiero hacer es calcular
+1:05:201 hora, 5 minutos y 20 segundosla raíz cuadrada de cada uno de sus componentes el valor absoluto de la aps de menos 1
+1:05:291 hora, 5 minutos y 29 segundosdevuelve el valor 1 pero también si yo puedo de tiempo definir a dentro de la
+1:05:371 hora, 5 minutos y 37 segundosfunción apps un vector cuyas componentes están entre corchetes entonces lo que va a hacer es va a tomar
+1:05:461 hora, 5 minutos y 46 segundosel valor absoluto de cada una de las componentes de vector fila
+1:05:531 hora, 5 minutos y 53 segundossi esto quisiera quisiéramos hacerlo en otros lenguajes habría que programar estructuras de eeuu de bucle
+1:06:021 hora, 6 minutos y 2 segundoscon lo cual este complejizar y a mi implementación de mis algoritmos la
+1:06:091 hora, 6 minutos y 9 segundosvectorización nos permite simplificar tanto en el código sino como hacer mucho más eficiente
+1:06:181 hora, 6 minutos y 18 segundoslos cálculos bueno seguiremos en la próxima lectura les dejo la bibliografía y aquí se

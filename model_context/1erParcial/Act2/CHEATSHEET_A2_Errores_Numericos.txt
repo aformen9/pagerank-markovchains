@@ -1,0 +1,981 @@
+===============================================================================
+                    CHEATSHEET - ACTIVIDAD 2: ERRORES NUMÉRICOS
+===============================================================================
+Materia: Métodos y Cómputos Numéricos - UCA Rosario
+Alumno: Agustín Formenti
+Fecha: Noviembre 2025
+===============================================================================
+
+Este cheatsheet resume TODOS los conceptos, fórmulas, trucos y estrategias
+de la Actividad 2 para que puedas resolver los ejercicios del parcial de
+forma rápida y efectiva.
+
+===============================================================================
+📚 ÍNDICE DE CONTENIDOS
+===============================================================================
+
+1. ERRORES ABSOLUTOS Y RELATIVOS (Ejercicio 1)
+2. EVALUACIÓN POLINOMIAL CON ARITMÉTICA DE 4 CIFRAS (Ejercicio 2)
+3. OSCILACIONES NUMÉRICAS EN POLINOMIOS (Ejercicio 3)
+4. CANCELACIÓN CATASTRÓFICA Y REESCRITURA (Ejercicio 4)
+5. FÓRMULA MEJORADA PARA ECUACIÓN CUADRÁTICA (Ejercicios 5-6)
+6. SERIE DE TAYLOR DE e^x (Ejercicio 7)
+7. ERRORES EN FUNCIONES TRIGONOMÉTRICAS (Ejercicio 8)
+8. ANÁLISIS DE SERIE DE SENO Y COSENO (Ejercicios 9-10)
+
+===============================================================================
+1️⃣ ERRORES ABSOLUTOS Y RELATIVOS (Ejercicio 1)
+===============================================================================
+
+📌 CONCEPTOS CLAVE:
+
+- ERROR ABSOLUTO: mide cuánto nos equivocamos en términos absolutos
+  
+  E_abs = |x_exacto - x_aprox|
+
+- ERROR RELATIVO: normaliza el error (independiente de la escala)
+  
+  E_rel = |E_abs / x_exacto|
+  
+  E_rel (%) = E_rel × 100
+
+- CIFRAS SIGNIFICATIVAS: dígitos confiables en la aproximación
+  
+  Método 1 (aproximado): cifras ≈ -log10(E_rel)
+  Método 2 (estricto): contar mientras E_rel < 0.5 × 10^(-d-1)
+
+===============================================================================
+🔧 PASO A PASO - EJERCICIO 1:
+===============================================================================
+
+Paso 1: Definir valores exacto y aproximado
+-----------------------------------------------
+x_exacto = 2.71828182;
+x_aprox  = 2.7182;
+
+Paso 2: Calcular error absoluto
+-----------------------------------------------
+E_abs = abs(x_exacto - x_aprox);
+
+Paso 3: Calcular error relativo
+-----------------------------------------------
+E_rel = abs(E_abs / x_exacto);
+E_rel_pct = E_rel * 100;
+
+Paso 4: Estimar cifras significativas
+-----------------------------------------------
+% Método 1 (aproximado)
+cifras = -log10(E_rel);
+
+% Método 2 (estricto - usando función)
+cifras = cifras_significativas(x_exacto, x_aprox);
+
+Paso 5: Mostrar resultados
+-----------------------------------------------
+fprintf('Error absoluto: %.8e\n', E_abs);
+fprintf('Error relativo: %.8e\n', E_rel);
+fprintf('Error relativo (%%): %.6f%%\n', E_rel_pct);
+fprintf('Cifras significativas: %d\n', cifras);
+
+===============================================================================
+💡 TRUCOS Y OBSERVACIONES:
+===============================================================================
+
+✅ El error absoluto depende de la ESCALA del número
+   → Un error de 0.01 es grande en 0.1 pero pequeño en 1000
+
+✅ El error relativo es más útil para COMPARAR errores en diferentes magnitudes
+
+✅ Cifras significativas:
+   → ~5 cifras = buena aproximación
+   → ~3 cifras = aproximación regular
+   → ~1 cifra = aproximación pobre
+
+✅ En el examen: si te dan valores con diferentes órdenes de magnitud,
+   siempre usá ERROR RELATIVO para comparar
+
+===============================================================================
+2️⃣ EVALUACIÓN POLINOMIAL CON ARITMÉTICA DE 4 CIFRAS (Ejercicio 2)
+===============================================================================
+
+📌 CONCEPTOS CLAVE:
+
+Tres formas algebraicamente EQUIVALENTES del mismo polinomio:
+  p(x) = x³ - 3x² + 3x - 1        (forma expandida)
+  q(x) = ((x - 3)x + 3)x - 1      (forma de Horner)
+  r(x) = (x - 1)³                  (forma factorizada)
+
+En teoría: p(x) = q(x) = r(x) para todo x
+En la práctica (con 4 cifras): ¡pueden dar resultados DISTINTOS!
+
+===============================================================================
+🔧 FUNCIONES AUXILIARES NECESARIAS:
+===============================================================================
+
+1. fl4.m - Redondeo simétrico a 4 cifras
+---------------------------------------------
+function y = fl4(x)
+  if x == 0, y = 0; return; end
+  s = sign(x);
+  ax = abs(x);
+  n = floor(log10(ax));
+  factor = 10^(4-1-n);
+  y = s * round(ax * factor) / factor;
+end
+
+2. fl4trunc.m - Truncamiento a 4 cifras
+---------------------------------------------
+function y = fl4trunc(x)
+  if x == 0, y = 0; return; end
+  s = sign(x);
+  x_abs = abs(x);
+  n = floor(log10(x_abs));
+  m = x_abs / (10^n);
+  k = 4;
+  escalado = m * 10^(k-1);
+  escalado_trunc = fix(escalado);
+  m4 = escalado_trunc / 10^(k-1);
+  y = s * m4 * 10^n;
+end
+
+3. p4.m - Evalúa p(x) con fl4
+---------------------------------------------
+function val = p4(x0)
+  x  = fl4(x0);
+  x2 = fl4(x * x);
+  x3 = fl4(x * x2);
+  t1 = x3;
+  t2 = fl4(3 * x2);
+  t3 = fl4(3 * x);
+  s1 = fl4(t1 - t2);
+  s2 = fl4(s1 + t3);
+  val = fl4(s2 - 1);
+end
+
+4. q4.m - Evalúa q(x) con fl4
+---------------------------------------------
+function val = q4(x0)
+  x  = fl4(x0);
+  t1 = fl4(x - 3);
+  t2 = fl4(t1 * x);
+  t3 = fl4(t2 + 3);
+  t4 = fl4(t3 * x);
+  val = fl4(t4 - 1);
+end
+
+5. r4.m - Evalúa r(x) con fl4
+---------------------------------------------
+function val = r4(x0)
+  x  = fl4(x0);
+  t1 = fl4(x - 1);
+  t2 = fl4(t1 * t1);
+  t3 = fl4(t2 * t1);
+  val = fl4(t3);
+end
+
+===============================================================================
+🔧 PASO A PASO - EJERCICIO 2:
+===============================================================================
+
+Paso 1: Crear las funciones fl4, p4, q4, r4
+---------------------------------------------
+(Ver código arriba)
+
+Paso 2: Evaluar en los puntos dados
+---------------------------------------------
+x1 = 2.72;
+p1 = p4(x1);
+q1 = q4(x1);
+r1 = r4(x1);
+
+fprintf('x = %.3f\n', x1);
+fprintf('  p(%.3f) = %.4g\n', x1, p1);
+fprintf('  q(%.3f) = %.4g\n', x1, q1);
+fprintf('  r(%.3f) = %.4g\n\n', x1, r1);
+
+Paso 3: Repetir para x2 = 0.975
+---------------------------------------------
+(Mismo código pero con x2)
+
+===============================================================================
+💡 TRUCOS Y OBSERVACIONES:
+===============================================================================
+
+✅ La forma de Horner (q(x)) es generalmente la MÁS ESTABLE numéricamente
+   → Menos operaciones = menos errores acumulados
+
+✅ La forma factorizada (r(x)) es buena si el factor es simple como (x - 1)
+
+✅ La forma expandida (p(x)) es la MÁS INESTABLE
+   → Muchas sumas y restas acumulan errores
+
+✅ Cada operación aritmética pasa por fl4 → se acumulan errores de redondeo
+
+✅ En el examen: si te piden comparar formas equivalentes, explicá que
+   "algebraicamente iguales ≠ numéricamente iguales"
+
+===============================================================================
+3️⃣ OSCILACIONES NUMÉRICAS EN POLINOMIOS (Ejercicio 3)
+===============================================================================
+
+📌 CONCEPTOS CLAVE:
+
+El polinomio p(x) = (x - 1)⁶ puede escribirse de dos formas:
+
+- FORMA FACTORIZADA: (x - 1)⁶
+- FORMA EXPANDIDA: x⁶ - 6x⁵ + 15x⁴ - 20x³ + 15x² - 6x + 1
+
+Cerca de x = 1:
+- La forma factorizada es ESTABLE
+- La forma expandida produce OSCILACIONES NUMÉRICAS por cancelación
+
+===============================================================================
+🔧 PASO A PASO - EJERCICIO 3:
+===============================================================================
+
+Paso 1: Definir las dos formas del polinomio
+---------------------------------------------
+% Forma factorizada
+y_fact = (x - 1).^6;
+
+% Forma expandida
+y_exp = x.^6 - 6*x.^5 + 15*x.^4 - 20*x.^3 + 15*x.^2 - 6*x + 1;
+
+Paso 2: Graficar con diferentes zooms alrededor de x = 1
+---------------------------------------------
+for delta = [0.1 0.01 0.008 0.007 0.005 0.003]
+    x = linspace(1 - delta, 1 + delta, 100)';
+    
+    % Evaluar ambas formas
+    y_fact = (x - 1).^6;
+    y_exp = x.^6 - 6*x.^5 + 15*x.^4 - 20*x.^3 + 15*x.^2 - 6*x + 1;
+    
+    % Graficar
+    plot(x, y_exp, 'r--', x, y_fact, 'b')
+    grid on
+    title(['\delta = ', num2str(delta)])
+end
+
+Paso 3: Observar y explicar
+---------------------------------------------
+% La forma expandida muestra oscilaciones que NO existen en el polinomio real
+% La forma factorizada es suave y estable
+
+===============================================================================
+💡 EXPLICACIÓN DEL FENÓMENO:
+===============================================================================
+
+❗ CANCELACIÓN CATASTRÓFICA en la forma expandida:
+
+Cerca de x = 1:
+  x⁶ ≈ 1
+  6x⁵ ≈ 6
+  15x⁴ ≈ 15
+  ...
+  
+Todos números GRANDES que se restan para dar algo MUY CHICO (≈ 10⁻⁶)
+
+Cada término tiene error de redondeo → al restar se AMPLIFICAN los errores
+→ Resultado: oscilaciones numéricas que no son reales
+
+✅ La forma factorizada (x - 1)⁶ opera con (x - 1) que es CHICO cerca de 1
+   → NO hay cancelación → resultado ESTABLE
+
+===============================================================================
+💡 TRUCOS PARA EL EXAMEN:
+===============================================================================
+
+✅ Cuando veas "forma expandida vs factorizada":
+   → SIEMPRE la factorizada es más estable cerca de las raíces
+
+✅ Si te piden explicar oscilaciones:
+   → Mencioná "cancelación catastrófica" + "errores de redondeo amplificados"
+
+✅ En gráficas: la forma factorizada es SUAVE, la expandida OSCILA
+
+===============================================================================
+4️⃣ CANCELACIÓN CATASTRÓFICA Y REESCRITURA (Ejercicio 4)
+===============================================================================
+
+📌 CONCEPTOS CLAVE:
+
+Función problemática:
+  f(x) = 1/(1+2x) - (1-x)/(1+x)
+
+Para x ≈ 0:
+  1/(1+2x) ≈ 1
+  (1-x)/(1+x) ≈ 1
+  
+→ Resta de dos números MUY PARECIDOS → CANCELACIÓN CATASTRÓFICA
+
+===============================================================================
+🔧 PASO A PASO - EJERCICIO 4:
+===============================================================================
+
+Paso 1: Explicar el problema (inciso a)
+---------------------------------------------
+% Para x cercano a 0, ambos términos ≈ 1
+% Al restar "1 - 1" se pierden cifras significativas
+% El resultado es comparable con el error de redondeo
+
+Paso 2: Reescribir algebraicamente (inciso b)
+---------------------------------------------
+% Llevar a un mismo denominador:
+% f(x) = [(1+x) - (1-x)(1+2x)] / [(1+2x)(1+x)]
+%
+% Expandir numerador:
+% (1-x)(1+2x) = 1 + 2x - x - 2x² = 1 + x - 2x²
+%
+% Restar:
+% (1+x) - (1+x-2x²) = 2x²
+%
+% RESULTADO FINAL:
+% f(x) = 2x² / [(1+2x)(1+x)]
+
+Forma reescrita en MATLAB:
+f_reescrita = @(x) (2 .* x.^2) ./ ((1 + 2*x) .* (1 + x));
+
+Paso 3: Comparar gráficamente (inciso c)
+---------------------------------------------
+paso = 1e-10;  % o más grande si es muy lento
+intervalos = {[-1e-1, 1e-1], [-1e-7, 1e-7], [-1e-8, 1e-8]};
+
+for k = 1:3
+    I = intervalos{k};
+    x = I(1):paso:I(2);
+    
+    % Forma original
+    y_orig = 1./(1+2*x) - (1 - x)./(1 + x);
+    
+    % Forma reescrita
+    y_reesc = (2 .* x.^2) ./ ((1 + 2*x) .* (1 + x));
+    
+    % Graficar
+    subplot(3,1,k)
+    plot(x, y_orig, 'r-', x, y_reesc, 'b--')
+    grid on
+    title(['Intervalo [', num2str(I(1)), ', ', num2str(I(2)), ']'])
+    legend('Original', 'Reescrita')
+end
+
+===============================================================================
+💡 TRUCOS PARA EL EXAMEN:
+===============================================================================
+
+✅ Cuando veas "evaluar cerca de x ≈ 0 puede ser inexacto":
+   → Buscá si hay resta de números parecidos → cancelación catastrófica
+
+✅ Para reescribir:
+   1. Llevar a un mismo denominador
+   2. Simplificar algebraicamente
+   3. Buscar que el numerador NO tenga restas directas de términos grandes
+
+✅ La forma reescrita debe tener el numerador como un término DOMINANTE
+   (en este caso: 2x² que es CHICO para x ≈ 0)
+
+✅ En la gráfica: la forma original OSCILA, la reescrita es SUAVE
+
+===============================================================================
+5️⃣ FÓRMULA MEJORADA PARA ECUACIÓN CUADRÁTICA (Ejercicios 5-6)
+===============================================================================
+
+📌 CONCEPTOS CLAVE:
+
+Ecuación: ax² + bx + c = 0
+
+FÓRMULA CLÁSICA (inestable cuando b es muy grande):
+  x1 = (-b + √(b² - 4ac)) / (2a)
+  x2 = (-b - √(b² - 4ac)) / (2a)
+
+FÓRMULA MEJORADA (estable):
+  x1 = -2c / (b + √(b² - 4ac))
+  x2 = -2c / (b - √(b² - 4ac))
+
+===============================================================================
+🔧 DEMOSTRACIÓN DE LA FÓRMULA MEJORADA (Ejercicio 5b):
+===============================================================================
+
+Para x1:
+--------
+Partimos de: x1 = (-b + √D) / (2a)  donde D = b² - 4ac
+
+Multiplicamos por conjugado: (-b - √D) / (-b - √D)
+
+Numerador = (-b + √D)(-b - √D) = b² - D = b² - (b² - 4ac) = 4ac
+
+Entonces: x1 = 4ac / [2a(-b - √D)] = 2c / (-b - √D) = -2c / (b + √D)
+
+Para x2:
+--------
+Similar pero con el otro conjugado → x2 = -2c / (b - √D)
+
+===============================================================================
+🔧 PASO A PASO - EJERCICIO 5:
+===============================================================================
+
+Ejercicio 5a: Resolver con fórmula clásica y 4 cifras (truncamiento)
+---------------------------------------------------------------------
+
+a = 1; b = -40; c = 0.25;
+
+% Paso 1: Coeficientes en fl4 con truncamiento
+a4 = fl4trunc(a);
+b4 = fl4trunc(b);
+c4 = fl4trunc(c);
+
+% Paso 2: Discriminante
+t1 = fl4trunc(b4 * b4);         % b²
+t2 = fl4trunc(4 * a4 * c4);     % 4ac
+D4 = fl4trunc(t1 - t2);
+
+% Paso 3: Raíz cuadrada
+sqrtD = sqrt(D4);
+sqrtD4 = fl4trunc(sqrtD);
+
+% Paso 4: Raíces con fórmula clásica
+mb4 = fl4trunc(-b4);
+den4 = fl4trunc(2 * a4);
+
+num1 = fl4trunc(mb4 + sqrtD4);
+x1_4 = fl4trunc(num1 / den4);
+
+num2 = fl4trunc(mb4 - sqrtD4);
+x2_4 = fl4trunc(num2 / den4);
+
+Ejercicio 5c: Resolver con fórmula mejorada y 4 cifras
+---------------------------------------------------------------------
+
+% Pasos 1-3 iguales (coeficientes, discriminante, raíz)
+
+% Paso 4: Raíces con fórmula mejorada
+num_mej = fl4trunc(-2 * c4);
+
+den1 = fl4trunc(b4 + sqrtD4);
+x1_mej_4 = fl4trunc(num_mej / den1);
+
+den2 = fl4trunc(b4 - sqrtD4);
+x2_mej_4 = fl4trunc(num_mej / den2);
+
+Ejercicio 5d: Comparar errores relativos porcentuales
+---------------------------------------------------------------------
+
+% Raíces exactas (doble precisión)
+coef = [a b c];
+x_exact = sort(roots(coef));
+x1_exact = x_exact(1);
+x2_exact = x_exact(2);
+
+% Errores clásica
+E1_classic = abs(x1_exact - x1_4) / abs(x1_exact) * 100;
+E2_classic = abs(x2_exact - x2_4) / abs(x2_exact) * 100;
+
+% Errores mejorada
+E1_mejorada = abs(x1_exact - x1_mej_4) / abs(x1_exact) * 100;
+E2_mejorada = abs(x2_exact - x2_mej_4) / abs(x2_exact) * 100;
+
+% Mostrar tabla comparativa
+fprintf('  x1 - Clásica   : %.4g %%\n', E1_classic);
+fprintf('  x1 - Mejorada  : %.4g %%\n', E1_mejorada);
+
+===============================================================================
+🔧 EJERCICIO 6 - IMPLEMENTAR FUNCIONES:
+===============================================================================
+
+cuad.m - Fórmula clásica
+---------------------------------------------
+function [x1, x2] = cuad(a, b, c)
+  discriminante = b^2 - 4*a*c;
+  x1 = (-b + sqrt(discriminante)) / (2*a);
+  x2 = (-b - sqrt(discriminante)) / (2*a);
+end
+
+cuad_mejor.m - Fórmula mejorada
+---------------------------------------------
+function [x1, x2] = cuad_mejor(a, b, c)
+  D = b^2 - 4*a*c;
+  sqrtD = sqrt(D);
+  x1 = -2*c / (b + sqrtD);
+  x2 = -2*c / (b - sqrtD);
+end
+
+Comparación (Ejercicio 6c):
+---------------------------------------------
+a = 1; b = -1000000.000001; c = 1;
+
+% Con clásica
+[x1_clas, x2_clas] = cuad(a, b, c);
+
+% Con mejorada
+[x1_mej, x2_mej] = cuad_mejor(a, b, c);
+
+% Exactas (para comparar)
+raices_exactas = sort(roots([a b c]));
+
+% Errores relativos
+err_rel_x1_clas = abs(raices_exactas(1) - x1_clas) / abs(raices_exactas(1));
+err_rel_x1_mej = abs(raices_exactas(1) - x1_mej) / abs(raices_exactas(1));
+
+===============================================================================
+💡 TRUCOS PARA EL EXAMEN:
+===============================================================================
+
+✅ Si b es MUY GRANDE en módulo y c es CHICO:
+   → Fórmula clásica INESTABLE
+   → Fórmula mejorada ESTABLE
+
+✅ La raíz "chiquita" es la que más sufre la pérdida de cifras con la fórmula clásica
+
+✅ En la fórmula mejorada, el numerador -2c es CHICO → evita la resta directa
+
+✅ Para demostrar la fórmula mejorada: multiplicar por conjugado → simplificar
+
+✅ Siempre comparar con roots() de MATLAB para tener el "valor exacto"
+
+===============================================================================
+6️⃣ SERIE DE TAYLOR DE e^x (Ejercicio 7)
+===============================================================================
+
+📌 CONCEPTOS CLAVE:
+
+Serie de Taylor de e^x centrada en a = 0:
+  
+  e^x ≈ 1 + x/1! + x²/2! + x³/3! + ... + x^n/n!
+
+Término recursivo:
+  T_k = T_(k-1) × x / k
+  
+Suma parcial:
+  S_n = Σ(k=0 hasta n) T_k
+
+Error absoluto:
+  E_abs = |exp(x) - S_n|
+
+===============================================================================
+🔧 FUNCIÓN TaylorExp.m:
+===============================================================================
+
+function S = TaylorExp(x, n)
+%% Aproxima e^x con polinomio de Taylor centrado en 0
+% Input:  x = punto, n = número de términos
+% Output: S = aproximación de e^x
+
+  S = 1;          % término k=0
+  term = 1;
+  
+  for k = 1:n
+      term = term * x / k;
+      S = S + term;
+  end
+end
+
+===============================================================================
+🔧 FUNCIÓN TaylorExp_tabla.m (Ejercicio 7b):
+===============================================================================
+
+function S = TaylorExp_tabla(x, n)
+%% Imprime tabla con sumas parciales, términos y errores
+
+  f_exacto = exp(x);
+  S = 1;
+  term = 1;
+  
+  fprintf('  k    S_k (suma parcial)    termino_k      error abs\n');
+  fprintf('------------------------------------------------------------\n');
+  
+  err = abs(f_exacto - S);
+  fprintf('%3d   %20.12e   %12.4e   %12.4e\n', 0, S, term, err);
+  
+  for k = 1:n
+      term = term * x / k;
+      S = S + term;
+      err = abs(f_exacto - S);
+      fprintf('%3d   %20.12e   %12.4e   %12.4e\n', k, S, term, err);
+  end
+end
+
+===============================================================================
+🔧 ANÁLISIS DE ERRORES (Ejercicio 7c):
+===============================================================================
+
+x_vals = [1, 10, 100];
+n_vals = [10, 15, 20];
+
+for i = 1:length(x_vals)
+    x = x_vals(i);
+    f_exacto = exp(x);
+    
+    for j = 1:length(n_vals)
+        n = n_vals(j);
+        aprox = TaylorExp(x, n);
+        err_abs = abs(f_exacto - aprox);
+        
+        % Guardar y mostrar errores
+    end
+end
+
+===============================================================================
+💡 INTERPRETACIÓN DE RESULTADOS:
+===============================================================================
+
+Para x = 1:
+  → Serie converge RÁPIDO (cerca del centro a=0)
+  → Con n=10, 15, 20 el error ya es muy chico
+
+Para x = 10:
+  → Serie converge MÁS LENTO
+  → Necesita más términos para buen ajuste
+
+Para x = 100:
+  → Serie converge MUY MAL (lejos del centro)
+  → Incluso con n=20 el error es ENORME
+  → El polinomio NO alcanza para aproximar e^100
+
+CONCLUSIÓN:
+  Taylor centrado en 0 es eficiente CERCA del centro
+  Lejos del centro (x >> 0) la precisión se DEGRADA fuerte
+
+===============================================================================
+💡 TRUCOS PARA EL EXAMEN:
+===============================================================================
+
+✅ Término recursivo: T_k = T_(k-1) × x / k
+   → NO calcular factoriales directamente (overflow)
+
+✅ Para |x| grande, la serie necesita MUCHOS términos
+
+✅ Si x < 0, los términos oscilan en signo (alternan + y -)
+
+✅ Error = |exp(x) - S_n| se calcula con la función exp() de MATLAB
+
+✅ Tabla: incluir k, suma parcial, término, error absoluto
+
+===============================================================================
+7️⃣ ERRORES EN FUNCIONES TRIGONOMÉTRICAS (Ejercicio 8)
+===============================================================================
+
+📌 CONCEPTOS CLAVE:
+
+Matemáticamente:
+  sin(π/2 + 2π·10^j) = 1   para todo j entero positivo
+  (por periodicidad: sin(θ + 2πk) = sin(θ))
+
+Numéricamente:
+  Para j grande, el resultado SE ALEJA DE 1
+
+===============================================================================
+🔧 PASO A PASO - EJERCICIO 8:
+===============================================================================
+
+Ejercicio 8a: Cálculo exacto (matemático)
+---------------------------------------------
+% Para cualquier j entero positivo:
+% sin(π/2 + 2π·10^j) = sin(π/2) = 1
+% (porque 2π·10^j es múltiplo de 2π)
+
+Ejercicio 8b: Cálculo numérico en MATLAB
+---------------------------------------------
+j_vals = [1, 10, 20, 50, 100, 1000];
+
+for k = 1:length(j_vals)
+    j = j_vals(k);
+    angulo = pi/2 + 2*pi*10^j;
+    sen_val = sin(angulo);
+    
+    fprintf('%5d   %25.16e   %25.16e\n', j, angulo, sen_val);
+end
+
+Ejercicio 8c: Explicación de las diferencias
+---------------------------------------------
+
+MOTIVOS NUMÉRICOS:
+
+1) Representación finita:
+   - π NO se puede representar exactamente en punto flotante
+   - 10^j tampoco es exacto para j grande
+
+2) Error al formar el ángulo:
+   - El ángulo π/2 + 2π·10^j se redondea
+   - En teoría 2π·10^j es múltiplo exacto de 2π
+   - En la máquina: queda π/2 + 2π·10^j + (pequeño error)
+   
+3) Reducción del ángulo módulo 2π:
+   - La librería de sin() reduce el ángulo módulo 2π
+   - Como el ángulo es GIGANTE, un error chico en el argumento
+     se traduce en una diferencia GRANDE en el valor final
+
+4) Overflow:
+   - Para j = 1000: 10^1000 → Inf
+   - Entonces sin(Inf) → NaN
+
+===============================================================================
+💡 TRUCOS PARA EL EXAMEN:
+===============================================================================
+
+✅ Cuando veas "calcular sin(π/2 + 2π·10^j)":
+   → Matemáticamente SIEMPRE vale 1
+   → Numéricamente se ALEJA de 1 para j grande
+
+✅ Explicación clave:
+   → Representación finita de π y 10^j
+   → Error amplificado en la reducción módulo 2π
+   → Overflow para j muy grande
+
+✅ No confundir error MATEMÁTICO (=0) con error NUMÉRICO (≠0)
+
+===============================================================================
+8️⃣ ANÁLISIS DE SERIE DE SENO Y COSENO (Ejercicios 9-10)
+===============================================================================
+
+📌 CONCEPTOS CLAVE:
+
+Serie de Taylor de sin(x) centrada en 0:
+  sin(x) ≈ x - x³/3! + x⁵/5! - x⁷/7! + ... + x^(2n-1)/(2n-1)!
+  
+Serie de Taylor de cos(x) centrada en 0:
+  cos(x) ≈ 1 - x²/2! + x⁴/4! - x⁶/6! + ... + x^(2n)/(2n)!
+
+===============================================================================
+🔧 FUNCIÓN SerieSeno.m:
+===============================================================================
+
+function ssum = SerieSeno(x, tol, n)
+%% Aproxima sin(x) con serie de Taylor
+% Input:  x = punto, tol = tolerancia, n = máximo de términos
+% Output: ssum = aproximación de sin(x)
+
+  if nargin < 2, tol = 5e-9; end
+  if nargin < 3, n = 15; end
+  
+  term = x;
+  ssum = term;
+  
+  fprintf('  n   término      serie\n');
+  fprintf('%3d %11.3e %12.8f\n', 1, term, ssum);
+  
+  for k = 3:2:(2*n-1)
+      term = -term * x * x / (k * (k-1));
+      ssum = ssum + term;
+      fprintf('%3d %11.3e %12.8f\n', k, term, ssum);
+      
+      if abs(term / ssum) < tol
+          break
+      end
+  end
+  
+  fprintf('\nError Total: %g\n', abs(ssum - sin(x)));
+end
+
+===============================================================================
+🔧 FUNCIÓN SerieCoseno.m (Ejercicio 10b):
+===============================================================================
+
+function ssum = SerieCoseno(x, tol, n)
+%% Aproxima cos(x) con serie de Taylor
+% Similar a SerieSeno pero con exponentes PARES y primer término = 1
+
+  if nargin < 2, tol = 5e-9; end
+  if nargin < 3, n = 15; end
+  
+  term = 1;
+  ssum = term;
+  
+  fprintf('  n   término      serie\n');
+  fprintf('%3d %11.3e %12.8f\n', 0, term, ssum);
+  
+  for k = 2:2:(2*n)
+      term = -term * x * x / (k * (k-1));
+      ssum = ssum + term;
+      fprintf('%3d %11.3e %12.8f\n', k, term, ssum);
+      
+      if abs(term / ssum) < tol
+          break
+      end
+  end
+  
+  fprintf('\nError Total: %g\n', abs(ssum - cos(x)));
+end
+
+===============================================================================
+🔧 ANÁLISIS DE ERRORES (Ejercicio 10a):
+===============================================================================
+
+% Intervalo [0, π/2]
+x = linspace(0, pi/2, 300);
+
+% Para cada punto, calcular aproximación con 6 y 15 términos
+for i = 1:length(x)
+    xi = x(i);
+    
+    % n = 6 términos
+    n = 6;
+    term = xi;
+    ssum = term;
+    for k = 3:2:(2*n-1)
+        term = -term * xi * xi / (k * (k-1));
+        ssum = ssum + term;
+    end
+    aprox6 = ssum;
+    err6(i) = abs(sin(xi) - aprox6);
+    
+    % n = 15 términos (similar)
+    % ...
+end
+
+% Graficar errores en escala logarítmica
+semilogy(x, err6, 'r', x, err15, 'b')
+grid on
+xlabel('x')
+ylabel('Error absoluto')
+title('Error de Taylor de sin(x) en [0, π/2]')
+legend('n=6', 'n=15')
+
+===============================================================================
+💡 INTERPRETACIÓN - EJERCICIO 9:
+===============================================================================
+
+Casos de análisis:
+  (a) SerieSeno(π/4, 5e-10)
+  (b) SerieSeno(π, 5e-10)
+  (c) SerieSeno(5π, 5e-10)
+
+Para x = π/4:
+  → x está cerca del centro (0)
+  → Serie converge RÁPIDO
+  → Pocos términos necesarios
+
+Para x = π:
+  → x está más lejos del centro
+  → Serie necesita MÁS términos
+  → Error total mayor que en π/4
+
+Para x = 5π:
+  → x está MUY lejos del centro
+  → Serie puede necesitar MUCHOS términos
+  → O bien: reducir x módulo 2π primero
+
+===============================================================================
+💡 CONTROL DEL ERROR TOTAL:
+===============================================================================
+
+El error total tiene DOS componentes:
+
+1. ERROR DE TRUNCAMIENTO:
+   - Por cortar la serie en el término n
+   - Se reduce aumentando n
+
+2. ERROR DE REDONDEO:
+   - Por operaciones de punto flotante
+   - Puede AUMENTAR si sumamos muchos términos chicos
+
+Para x cerca del centro → ERROR DE TRUNCAMIENTO domina
+Para x lejos del centro → ambos errores son significativos
+
+ESTRATEGIA:
+  - Para |x| grande: reducir x módulo 2π PRIMERO
+  - Luego aplicar la serie con x reducido
+
+===============================================================================
+💡 TRUCOS PARA EL EXAMEN:
+===============================================================================
+
+✅ Seno: exponentes IMPARES (1, 3, 5, ...), signos alternados
+✅ Coseno: exponentes PARES (0, 2, 4, ...), signos alternados
+
+✅ Término recursivo:
+   Seno:   T_k = -T_(k-2) × x² / (k(k-1))    para k = 3, 5, 7, ...
+   Coseno: T_k = -T_(k-2) × x² / (k(k-1))    para k = 2, 4, 6, ...
+
+✅ Criterio de parada: |T_k / S_k| < tol
+
+✅ Graficar errores en ESCALA LOGARÍTMICA (semilogy)
+
+✅ Más términos → menor error de truncamiento (si no hay overflow)
+
+===============================================================================
+📝 RESUMEN GENERAL DE LA ACTIVIDAD 2
+===============================================================================
+
+TEMAS PRINCIPALES:
+
+1. Errores absolutos, relativos y cifras significativas
+2. Aritmética de punto flotante con precisión reducida (4 cifras)
+3. Evaluación polinomial y estabilidad numérica
+4. Cancelación catastrófica y reescritura algebraica
+5. Fórmulas mejoradas para evitar pérdida de cifras
+6. Series de Taylor y análisis de convergencia
+7. Errores en funciones trigonométricas
+8. Implementación y análisis de funciones matemáticas
+
+===============================================================================
+🎯 ESTRATEGIA PARA EL EXAMEN:
+===============================================================================
+
+1. Leer el ejercicio COMPLETO antes de empezar
+2. Identificar el TIPO de ejercicio (usar este cheatsheet como guía)
+3. Si hay funciones: crearlas PRIMERO en archivos separados
+4. Seguir los PASOS indicados en este cheatsheet
+5. Incluir COMENTARIOS explicando cada paso
+6. Verificar resultados cuando sea posible
+7. Interpretar resultados con CRITERIO NUMÉRICO (no solo matemático)
+
+===============================================================================
+✅ CHECKLIST PRE-EXAMEN:
+===============================================================================
+
+Conceptos que DEBO saber explicar:
+  □ Diferencia entre error absoluto y relativo
+  □ Qué son las cifras significativas
+  □ Por qué la aritmética de punto flotante genera errores
+  □ Qué es la cancelación catastrófica y cómo evitarla
+  □ Por qué la forma factorizada es más estable que la expandida
+  □ Cómo funcionan las fórmulas mejoradas de la ecuación cuadrática
+  □ Cómo calcular términos recursivos en series de Taylor
+  □ Por qué las series convergen peor lejos del centro
+
+Habilidades que DEBO dominar:
+  □ Calcular errores absolutos y relativos
+  □ Implementar funciones fl4 y fl4trunc
+  □ Evaluar polinomios paso a paso con precisión reducida
+  □ Reescribir expresiones para evitar cancelación
+  □ Implementar series de Taylor con término recursivo
+  □ Graficar resultados (plot, subplot, semilogy)
+  □ Comparar métodos y calcular errores relativos
+
+===============================================================================
+🚀 TIPS FINALES:
+===============================================================================
+
+✅ Siempre incluir clear, clc al inicio de cada script
+
+✅ Usar fprintf para mostrar resultados con formato controlado
+
+✅ Para operaciones vectoriales, usar punto: .*, .^, ./
+
+✅ Verificar dimensiones con size() cuando trabajes con matrices
+
+✅ Graficar con grid on, xlabel, ylabel, title, legend
+
+✅ Si el ejercicio pide "a mano": hacer las cuentas paso a paso con fl4
+
+✅ Si el ejercicio pide "explicar": mencionar cancelación, errores de
+   redondeo, estabilidad numérica
+
+✅ Comparar siempre con funciones intrínsecas (exp, sin, cos, roots)
+   para tener valores "exactos"
+
+===============================================================================
+🎓 PALABRAS CLAVE PARA RECONOCER EJERCICIOS:
+===============================================================================
+
+"Errores absolutos y relativos" → Ejercicio tipo 1
+"4 cifras significativas" → Ejercicio tipo 2
+"Forma expandida vs factorizada" → Ejercicio tipo 3
+"Evaluar cerca de x ≈ 0" → Ejercicio tipo 4 (cancelación)
+"Fórmula mejorada" + "ecuación cuadrática" → Ejercicio tipo 5-6
+"Serie de Taylor" + "e^x" → Ejercicio tipo 7
+"sin(π/2 + ...)" → Ejercicio tipo 8
+"SerieSeno" o "SerieCoseno" → Ejercicios tipo 9-10
+
+===============================================================================
+                          ¡MUCHA SUERTE EN EL PARCIAL! 💪
+===============================================================================

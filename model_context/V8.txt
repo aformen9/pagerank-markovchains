@@ -1,0 +1,465 @@
+bueno vamos a dar comienzo a las lecturas 7 de resolución de sistemas de
+0:099 segundosecuaciones lineales en este caso vamos a ver métodos interactivos habíamos visto en la lectura anterior que había
+0:1818 segundosdos grandes categorías los métodos directos donde vimos la iluminación
+0:2424 segundoslausana la factorización lv entre otros y ahora vamos a ver la idea del esquema
+0:3232 segundosinteractivo para resolver sistemas de ecuaciones lineales esto pertenece a la unidad 6 de métodos numéricos de
+0:4141 segundosmatemática aplicada para electrónica y eléctrica de la facultad de ciencias exactas ingeniería y agrimensura de la universidad nacional de rosario
+0:4949 segundosyo soy tuya no con celine imaginate ok
+0:5757 segundosuna introducción recordemos primero lo que son las normas en espacios vectoriales es decir dado un
+1:071 minuto y 7 segundosb es un conjunto que vamos a adoptar de una operación que
+1:141 minuto y 14 segundosllamamos la suma y un producto por escalares que llamamos el producto del puntito donde esos escalares los vamos a tomar
+1:231 minuto y 23 segundosen enero ence en particular nos va a interesar el cuerpo de los reales este es un espacio vectorial que usted
+1:321 minuto y 32 segundosámbito en álgebra lineal un espacio arterial abstracto sobre ese paseo definimos una norma sí
+1:401 minuto y 40 segundosque es una función que toma valores reales no negativos que satisfacen esas cuatro condiciones como producía tres
+1:491 minuto y 49 segundospero bueno que dicen que la norma de un vector de llamamos al vector x es mayor víctor de
+1:581 minuto y 58 segundos0 para todo x distinto de 0 la norma vale 0 si y sólo si el vector vale 0
+2:082 minutos y 8 segundosen la norma de un escalar por x es igual al valor absoluto o bien el módulo
+2:162 minutos y 16 segundosfijamos en ce por el módulo del vector
+2:232 minutos y 23 segundosy la norma de la suma es menor o igual de la suma de las normas es conocida como la desigual de a temblar siempre
+2:312 minutos y 31 segundosque se cumplan todas estas condiciones vamos a decir que ve con esa operación
+2:382 minutos y 38 segundosnueva es un espacio vectorial ahora normal ok
+2:472 minutos y 47 segundosla noción de norma lo que hace es generalizar el concepto de longitud y
+2:542 minutos y 54 segundosnos permite una vez que yo tengo la longitud la distancia entre elementos de un espacio ya puedo definir lo que se
+3:023 minutos y 2 segundosllama límite y por tanto convergencia qué espacio sectoriales nos van a interesar a nosotros bueno nosotros nos
+3:103 minutos y 10 segundosva a interesar el espacio vectorial rn de los vectores sean fila o columnas si con la suma usual de vectores y el
+3:193 minutos y 19 segundosproducto por escalares en r y él rn n o sea las matrices de m fila y n
+3:273 minutos y 27 segundoscolumnas si un caso se ha encuadrado serán n por n si también con la suma un suelo de matrices y el producto por
+3:343 minutos y 34 segundosescalares de matrices ahora bien esos son los espacios vectoriales sobre los cuales vamos a trabajar pero tenemos
+3:413 minutos y 41 segundosnormas definidos sobre esos espacios vectoriales bueno en adn ustedes conocen normas
+3:483 minutos y 48 segundosvectoriales por ejemplo las normas si yo me tomo un vector x que tiene n
+3:563 minutos y 56 segundoscomponentes perteneciente a rn las p normas se definen como la norma p encima
+4:034 minutos y 3 segundosde x como la raíz pésima de la suma de los valores
+4:124 minutos y 12 segundosabsolutos de las componentes del vector cada una de ellas elevado a la p esp
+4:194 minutos y 19 segundospuede variar entre 1 e infinito si sólo lo fijo golpe y obtengo una menor no hay
+4:274 minutos y 27 segundoscasos conocidos por ejemplo la norma 1 es decir cuando el p vale 1 cuando el p vale 1 la norma 1 pasa a ser aplicando
+4:374 minutos y 37 segundosla definición anterior cuando el pp vale 1 a la suma de los valores absolutos de
+4:444 minutos y 44 segundoslos componentes del vector la norma de la norma euclídea es
+4:514 minutos y 51 segundosla raíz cuadrada de la suma de los cuadrados de las componentes del vector
+4:584 minutos y 58 segundosy la norma infinito que se hace tomando alguna forma límite en la definición cuando p tiende a infinito termina
+5:075 minutos y 7 segundossiendo la norma infinito de x no es otra cosa que el mar la máxima componente en
+5:155 minutos y 15 segundosvalor absoluto de x estas son conocidos tres normas
+5:215 minutos y 21 segundosconocidas que además satisfacen todos los axiomas para que sean normas por lo
+5:275 minutos y 27 segundostanto con este tipo de normas sobre rn tengo un espacio de tutorial normal
+5:355 minutos y 35 segundoscómo cambia la noción no con la norma que uno define por ejemplo ustedes han que la abuela unitaria en la p norma no
+5:445 minutos y 44 segundoses otra cosa que el conjunto de vectores debe supongamos que estamos en rn tal
+5:515 minutos y 51 segundosque la norma pésima es menor o igual que uno esa es la definición abstracta de bolt unitaria
+5:585 minutos y 58 segundosgeométricamente fíjense si el pp vale uno y uno toma la norma definido anteriormente sí
+6:076 minutos y 7 segundossi tomamos está entonces la voluntaria es ese cuadradito si el pp vale 2 y
+6:156 minutos y 15 segundostenemos entonces la norma 2 la voluntaria coincide con la noción de
+6:226 minutos y 22 segundosbola que nosotros conocemos si es el disco unitario centro en el origen ahora
+6:286 minutos y 28 segundossí tomó la norma infinito si la bola unitaria será ese cuadrado más grande y
+6:366 minutos y 36 segundosen el caso general en el caso pésimo será como ese cuadrado redondeado
+6:436 minutos y 43 segundosya que las bolas unitarias geométricamente van a depender de qué norma esté definiendo en mi espacio en este caso
+6:516 minutos y 51 segundosr2 en más la octava si la tenemos predefinida a la función norm si xp que
+7:007 minutoscalcula la norma pésima de un vector por ejemplo en matlab si yo me defino el
+7:087 minutos y 8 segundosvector x de esa manera usando el operador dos puntos de 1 a 4 / 5 me define ese vector
+7:187 minutos y 18 segundosde cuatro componentes 02 04 06 08 si y si yo le calculo en la norma 1 usando el
+7:267 minutos y 26 segundosfunción intrínseca demanda le tengo que indicar que el primer argumento del director y el segundo argumento es la
+7:347 minutos y 34 segundosnorma que yo creo calcular me dice que la norma 1 es 2 obviamente porque es la suma de todos sus componentes mal
+7:427 minutos y 42 segundosabsoluto la norma dos que ya loca el bulo si no hace falta ingresar como argumento el 2
+7:507 minutos y 50 segundospor defecto ya entiende que la que cuando no ingreso argumento el segundo argumento en la función no ya por
+7:587 minutos y 58 segundosdefecto calcula la norma 2 y me da ese valor y la norma infinito
+8:058 minutos y 5 segundos[Música]
+8:068 minutos y 6 segundosme devuelve la máxima componente que es 0.8 y en xalapa hay que poner el link
+8:158 minutos y 15 segundoscomo cadena de caracteres pero también calcula la norma infinito ahora fíjense qué fácil teniendo la definición de norma que es poder
+8:238 minutos y 23 segundoshacernos una función nuestra que se va a llamar norma p para no que coincida el nombre de nuestra función
+8:328 minutos y 32 segundoscon la función intrínseca de matlab que va a tomar como argumento x de entrada x
+8:398 minutos y 39 segundosque va a ser un vector el p que va a ser la normal que yo
+8:458 minutos y 45 segundosquiero calcular y en n p va a devolver la norma pésima de ese vector y digo si
+8:518 minutos y 51 segundosps int entonces me calcula el máximo en valor absoluto de las componentes de x
+8:588 minutos y 58 segundosesto esta vectorizado por eso puedo usarlo tranquilamente al valor absoluto de esa manera y si no defino n p como el
+9:079 minutos y 7 segundosvalor absoluto vectorizado elevado a la pensando el reflejo con el operador
+9:149 minutos y 14 segundospunto sumo todas esas componentes y lo elevó a la 1 sobre p
+9:209 minutos y 20 segundosok ahora también sobre el espacio de matrices n por m por n también tengo
+9:299 minutos y 29 segundosdefinidas normas matriciales por ejemplo alguna conocida no vemos la definición
+9:379 minutos y 37 segundospero hay una definición de pez de p normas team pero algunas normas conocidas terminan siendo por ejemplo en
+9:469 minutos y 46 segundosel caso de igual 1 la norma 1 de de una matriz termina
+9:549 minutos y 54 segundossiendo vamos a sumar que la materia de cuadrada termina siendo el máximo sí
+10:0010 minutosfíjense lo que hago es en la norma 1 sumo sobre el índice y osea estoy
+10:0710 minutos y 7 segundossumando por filas si estoy sumando por fila o sea estoy sumando todos los
+10:1410 minutos y 14 segundosvalores absolutos d la primera columna sí sumo todos los valores absoluto de la
+10:2210 minutos y 22 segundossegunda columna y así sucesivamente hasta la última columna de la matriz y luego digo cuál de todos esos valores el
+10:2910 minutos y 29 segundosmáximo eso no devuelve la norma 1 la norma 2 de una matriz es poco usada
+10:3710 minutos y 37 segundospero la norma 2 no es otra cosa que sumar todos sus componentes al cuadrado y hacerlo en la
+10:4610 minutos y 46 segundosraíz cuadrada y la norma infinito es parecida a la norma 1 fíjense que en este caso la sumatoria se da sobre el
+10:5410 minutos y 54 segundosíndice j es decir que lo que hago es me paro en una fila sumo todos los valores
+11:0211 minutos y 2 segundosabsolutos de los componentes de esa fila y esto lo repito por fila y a todos esos valores le calculo el máximo y 'son a la
+11:1011 minutos y 10 segundosnorma infinito en particular para calcular algunas acotaciones que son de interés en el
+11:1811 minutos y 18 segundosálgebra lineal numérica la normalidad es de poco interés porque no satisface la
+11:2511 minutos y 25 segundoscondición de compatibilidad una norma que satisface la condición de
+11:3111 minutos y 31 segundoscompatibilidad es una norma tal que la norma p del producto a por x es menor o
+11:4111 minutos y 41 segundosigual que la norma matricial de p por la norma del vector x xi y la enorme
+11:4911 minutos y 49 segundosutilidad no siempre los satisface por tanto para acotaciones no me sirve yo quiero que en verde una mis normas
+11:5711 minutos y 57 segundossatisfagan esta condición bien una
+12:0712 minutos y 7 segundosel método numérico una técnica fundamental es la idea de la interacción si en qué consiste la iteración consiste
+12:1512 minutos y 15 segundosen repetir un proceso determinado para obtener una sucesión de valores hasta un
+12:2212 minutos y 22 segundosresultado suficientemente aproximado y que yo esperaría que idealmente converja a la solución de problemas
+12:3212 minutos y 32 segundospara definir un proceso iterativo o un método iterativo necesitó de un esquema
+12:3912 minutos y 39 segundosoperativo o una regla o una fórmula o una función que me defina una ley para enterar
+12:4712 minutos y 47 segundosnecesito una condición inicial y necesito una tolerancia de corte nosotros en la primera lectura cuando
+12:5412 minutos y 54 segundosvimos una introducción vimos aproximamos la raíz cuadrada de dos por un esquema iterativo sin
+13:0213 minutos y 2 segundosen ese momento lo vimos pero ahora estamos definiendo bien lo que es una nación necesito la fórmula que me define
+13:1013 minutos y 10 segundosel esquema alguna condición inicial también conocida como aproximación inicial y una tolerancia de corte que va
+13:1713 minutos y 17 segundosa observar de mi criterio de salida los métodos interactivos presentan ventajas sobre los métodos directos en
+13:2613 minutos y 26 segundoscuanto en cuanto a velocidad y memoria yo ahora a diferencia de los métodos
+13:3313 minutos y 33 segundosdirectos que se repetían una cantidad de pasos finito ahora yo voy a empezar a alterar voy a empezar a integrar hasta
+13:4113 minutos y 41 segundosaproximarme a la solución con lo cual ahora voy a introducir
+13:5213 minutos y 52 segundosademás del error de redondeo que siempre voy a tener una computadora en un momento de interactivos siempre habrá
+13:5913 minutos y 59 segundoserror de truncamiento lo que vamos a estudiar en estos
+14:0614 minutos y 6 segundosesquemas es un proceso de integración que consiste en ir sustituyendo repetidamente un valor obtenido en una
+14:1614 minutos y 16 segundosmisma fórmula es decir supongamos que tengo una función g para calcular los sucesivos
+14:2514 minutos y 25 segundostérminos si lo que hago es ir produciendo a partir de una condición inicial supongamos que se llame p 0 si
+14:3514 minutos y 35 segundosvamos a poner que p 0 es un vector citó si yo esp 0 lo le voy a aplicar la
+14:4214 minutos y 42 segundosfunción g grande eso me da volver el valor p 1 luego ese valor p 1 le voy a volver a aplicar generan de me va a
+14:5014 minutos y 50 segundosdevolver p 2 y así sucesivamente lo que yo deseo es que mi sucesión de los pesos que converja cuando el k tiene infinito
+14:5914 minutos y 59 segundosagarre donde eres la solución de nuestro problema numérico ahora bien como esta convergencia se va
+15:0615 minutos y 6 segundosa dar en el infinito la pregunta tan natural es cuando cortamos bueno cuando cortamos cuando la
+15:1215 minutos y 12 segundostolerancia sea alguna tolerancia deseada que satisfaga mi problema
+15:2015 minutos y 20 segundosesto muchas veces lo da la experimentación numérica
+15:2915 minutos y 29 segundosveamos entonces el método de jacob
+15:3615 minutos y 36 segundosmétodo de jacob vamos a verlo con un ejemplo puede ser más pedagógico vamos a considerar ese
+15:4415 minutos y 44 segundossistema un sistema de ecuaciones lineales de 3 x 3
+15:5115 minutos y 51 segundoslleno y lo que voy a hacer voy a tomar la
+15:5715 minutos y 57 segundosprimera ecuación y voy a despejar x1 de la segunda ecuación voy a despejar x2
+16:0716 minutos y 7 segundosy de la tercera ecuación voy a despejar el i3
+16:1416 minutos y 14 segundosentonces qué hago ahora esto ya me sugiere un esquema iterativo si yo doy una aproximación inicial
+16:2216 minutos y 22 segundosy luego yo puedo empezar a calcular si los valores de x1 y x2 x sub 3 a partir
+16:3116 minutos y 31 segundosde esa aproximación inicial fíjense que acá el supra índice que está en azul en
+16:3816 minutos y 38 segundossu prime y se nos subíndice el supra índice que está en azul me indica en qué paso de la iteración estoy por ejemplo
+16:4616 minutos y 46 segundosen el paso acá decimos voy a calcular los valores y los coeficientes del vector x en el paso que decimos a partir
+16:5516 minutos y 55 segundosde los valores del pasok a menos 1 s entonces lo que necesito es una
+17:0417 minutos y 4 segundosaproximación inicial sí que llamaré x0 será un vector citó de tres componentes x0 sí
+17:1317 minutos y 13 segundosy voy a empezar a integrar de esta manera este esquema fue desarrollado por jacob y se conoce como el método
+17:2217 minutos y 22 segundosinteractivo de jacob y jacob y la desarrolló hace cientos de años
+17:2917 minutos y 29 segundosen ese momento no había computadora pero sin embargo no podía y tirar a mano y hacer la cuenta a mano y ver que la
+17:3717 minutos y 37 segundossolución convergía en algunos casos supongamos que tomamos como aproximación
+17:4417 minutos y 44 segundosinicial el vector 122 atrás puesto que estoy trabajando con vectores columnas entonces en mi esquema reemplazo la
+17:5317 minutos y 53 segundosprimera componente por uno en la segunda por dos y la tercera por dos sí y cálculo la primera aproximación que
+18:0018 minutostiene ese valor luego con esos valores lo que hago es vuelvo a insertarla en mi esquema y
+18:0918 minutos y 9 segundosempiezo a calculó la segunda aproximación x 2 x
+18:1518 minutos y 15 segundossuperados bueno de esa manera si uno empieza a
+18:2218 minutos y 22 segundoshacer las cuentas empieza a ver que esto tiene una
+18:3018 minutos y 30 segundosconvergencia y termina siendo el vector 243
+18:3818 minutos y 38 segundosfíjense que esto es fácilmente implementable en un algoritmo en una computadora bueno esta es la
+18:4718 minutos y 47 segundosfórmula general del método interactivo de jacob y como las las variables los
+18:5518 minutos y 55 segundoscomponentes mi vector x sub j en el paso cada décimo terminan dependiendo de los
+19:0319 minutos y 3 segundosx sub j en el paso camino nos decimos si y también bueno se puede escribir en una
+19:0919 minutos y 9 segundosforma sintetizada de esa manera si ese es el metro iterativo de jacob y que fácilmente puedo implementarlo ahora
+19:1819 minutos y 18 segundosbien que voy a tener que pasar como argumento en el algoritmo de jacob y si en jacob
+19:2619 minutos y 26 segundospunto m voy a pasar como argumento por un lado la matriz a que se ven argumentos vamos a asumir que la matriz es
+19:3419 minutos y 34 segundosinvencible es una matriz nn el lado derecho de mi sistema que es un
+19:4119 minutos y 41 segundosvector n por uno la estimación inicial o aproximación inicial que es un vector x0
+19:4919 minutos y 49 segundossol que va a ser una tolerancia que me va a satisfacer a mí
+19:5519 minutos y 55 segundosy max que va a ser un número máximo de interacciones que va a integrar jacob y
+20:0220 minutos y 2 segundossi llegado el caso no se alcanza la tolerancia y finalmente el argumento de salida va a
+20:1120 minutos y 11 segundosser x que va a ser la aproximación de harbor bueno después vamos a ver si que
+20:2020 minutos y 20 segundosasediaban es una funcionalidad o sea es otra función que hicimos que está llamada dentro de dónde voy
+20:3020 minutos y 30 segundosen esa implementación tienen implementado el algoritmo de jacob y les recomiendo que lo vean para entender
+20:3920 minutos y 39 segundoscomo tim efectivamente estoy implementando el algoritmo de jacob y pero me interesa contables cuando corta
+20:4920 minutos y 49 segundosjacobi y esto es lo que le decía antes vamos a tener que tener dos criterios de
+20:5620 minutos y 56 segundoscorte o de parada por un lado cuando yo
+21:0221 minutos y 2 segundosingrese x 0 x 0 con mi aproximación inicial y luego hice la primera aproximación de jacob y que quedó
+21:0921 minutos y 9 segundosalmacenado en la variable x en la variable er asignó la norma pésima en
+21:1721 minutos y 17 segundoseste caso la norma 2 la monuc libia sí d
+21:2321 minutos y 23 segundosx 2 x 0 es decir estoy midiendo qué tan
+21:2821 minutos y 28 segundoscerca están a qué distancia están x la primera aproximación y la segunda eso lo
+21:3721 minutos y 37 segundosguardó en la variable y digo si él es menor que la tolerancia
+21:4521 minutos y 45 segundosa signos atrás pongo el x y hay un break y si no fíjense que digo si iter que
+21:5421 minutos y 54 segundosésta es un contador que va aumentando se en una unidad en cada iteración es igual light max número de iteraciones máximos
+22:0322 minutos y 3 segundosnúmero máximo integración alcanzado y también hay un break y la próxima y la última sentencia de x0 igual a equis es
+22:1022 minutos y 10 segundosla actualización del vero sea si no se cumple nada de esto hago la actualización de x x 0 y vuelvo entera
+22:1922 minutos y 19 segundossin o sea que tengo dos criterios de corte porque llegado el caso que mi error nunca sea menor que la tolerancia
+22:2722 minutos y 27 segundosmi algoritmo si os iba a cortar por un número de interacciones máximas cuanta zona el número de iteraciones
+22:3522 minutos y 35 segundosmáxima y dependerá del problema en general cuando las matrices son muy grandes se suele usar como criterio el
+22:4522 minutos y 45 segundosel tamaño de la matriz es decir si tengo una matriz 1000 x 1000 1 podría usar el número de acciones máximas como 1000 aunque a veces se puede poner más
+22:5422 minutos y 54 segundosnumeración máxima obviamente esto lo da la experimentación numérica y no hay fórmula y la tolerancia también
+23:0223 minutos y 2 segundosdependerá de que que tan que tanta precisión este show acá
+23:1023 minutos y 10 segundosbueno vamos a ver este caso el ejemplo que vimos en
+23:1723 minutos y 17 segundosen vamos a correrlo en matlab voy a pasar a amarla
+23:2823 minutos y 28 segundosbueno y vamos a hacer nuestro ejemplo que teníamos recién teníamos una matriz
+23:3423 minutos y 34 segundos4 menos 11 la segunda fila es 4
+23:4123 minutos y 41 segundos- 81 la tercera fila es menos 215
+23:5323 minutos y 53 segundossimplemente para chequear no hace falta mostrarla con el punto y como evitar la impresión por bandas ya fíjense que se
+24:0024 minutosme está almacenando ya aquí la matriz a boya generarme mi vector lado derecho 7 - 21
+24:0924 minutos y 9 segundos15 no lo voy a mostrar por donde vaya fíjense que también se nos genera en
+24:1724 minutos y 17 segundoseste caso a diferencia del método directo necesito la aproximación inicial dijimos que habíamos tomado 122
+24:2824 minutos y 28 segundosperdón acá me olvidé de trasponer el bebé porque me dio fila voy a trasponer el bebé muy fácil
+24:3524 minutos y 35 segundosfíjense que estoy atrás poniendo el bebé para hacer la columna si vienen para chequear lo que es columna ahora sí voy
+24:4424 minutos y 44 segundosa ingresar la aproximación inicial que es 1 2 lo voy a trasponer porque tiene que ser
+24:5324 minutos y 53 segundoscolumna no lo voy a mostrar y bueno y ahora
+25:0025 minutosvoy a llamar función jacobi
+25:0925 minutos y 9 segundosrecuerden que tiene un argumento de salida por tanto vamos a llamarlo x y jacob y para que tengo un nombre
+25:1625 minutos y 16 segundosasociado la solución y es jacob y tiene como argumento de
+25:2325 minutos y 23 segundosentrada la matriz tiene como argumento de entrada el vector
+25:3225 minutos y 32 segundosy los derechos tienen como argumento de entrada la aproximación inicial
+25:3925 minutos y 39 segundostiene como argumento de entrar a la tolerancia si en este caso le voy a poner una tolerancia de 1 x dice la
+25:4625 minutos y 46 segundosmenos 4 y un número integración máxima le voy a poner 30 así pues como mi materia chiquita 3 x 3
+25:5525 minutos y 55 segundosejecutó y fíjense que efectivamente alcance la solución es aproximada
+26:0326 minutos y 3 segundosobviamente veamos son valores aproximados hay error del redondel de truncamiento acá si yo
+26:1326 minutos y 13 segundoschequeo si yo chequeo van a ver qué
+26:1926 minutos y 19 segundosfíjense que no es ni dos ni cuatro ni tres son valores aproximados además mi
+26:2526 minutos y 25 segundostolerancia era chiquita me interesaría saber en cuántas
+26:3226 minutos y 32 segundosinteracciones alcanzó la tolerancia porque efectivamente no llego a las 30 iteraciones
+26:4026 minutos y 40 segundosuna forma de hacer eso fíjense abrí la función jacob y con doble clic y con doble clic en la función en el
+26:4826 minutos y 48 segundosdirectorio actual de trabajo acá tengo mi función jacob implementada y lo que puedo hacer si quieren mostrar
+26:5726 minutos y 57 segundosfíjense el iter le digo que me implico mono le pongo punto y coma como éter es una
+27:0527 minutos y 5 segundosvariable donde se está almacenando es un contador que me va contando las iteraciones al final le le digo que me
+27:1527 minutos y 15 segundosimprima quienes iter con lo cual cuando yo vuelva a ejecutar jacob y fíjense qué
+27:2327 minutos y 23 segundospeter aparece impreso sí pero como les dije cuando usa cuando aprendíamos
+27:3127 minutos y 31 segundosmatlab iter al ser una variable interna de la función no se genera si en el
+27:3927 minutos y 39 segundosworks page hay que tener cuidado con eso sin embargo me sirve al menos en este caso para saber en cuanto a iteraciones jacob
+27:4827 minutos y 48 segundosy alcanzó la tolerancia que yo le había puesto que es 1 por 10 a la menos 4 si
+27:5627 minutos y 56 segundosyo quisiera que el iter sea una variable de un argumento de salida y se me genere network space lo que tengo que hacer es
+28:0528 minutos y 5 segundosen la definición de la función si acá sacar como argumento de salida también la variable ita y en este caso si se me
+28:1428 minutos y 14 segundosva a generar en mi workspace sin embargo acá en inversión de banda ya veo que se alcanza
+28:2128 minutos y 21 segundosen 10 integraciones ok bueno vamos a
+28:3328 minutos y 33 segundosvamos a ver otro método es una idea muy parecida si es el método de gausave del sí
+28:4128 minutos y 41 segundosqué qué hizo quisieron gauci seidel para mejorar el método jacob y todo esto lo hicieron
+28:4928 minutos y 49 segundoscuando no había computadores lo que hicieron fue decir mirémoslo en el ejemplo que teníamos anteriormente
+28:5828 minutos y 58 segundoslo que hicieron puede decir bueno ah perdón que vivió y la lectura
+29:0729 minutos y 7 segundossin métodos de causa entonces les decía que hicieron
+29:1629 minutos y 16 segundoskausay dels baus y seidel para mejorar el método de jacob y así
+29:2629 minutos y 26 segundoslo que hicieron fue despejaron la primera variable la segunda variable y la tercer variable
+29:3429 minutos y 34 segundospero cuando miraron la primera ecuación dijeron bueno que la primera ecuación si va a tomar
+29:4229 minutos y 42 segundosdatos del aproximación inicial el x2 y el x3 lo va a tomar de la aproximación
+29:4729 minutos y 47 segundosinicial y esto me va a calcular el x1 ahora bien cuando miro la segunda
+29:5529 minutos y 55 segundosecuación el x1 ya es una variable actualizada que yo en la línea anterior
+30:0230 minutos y 2 segundosya calculé por tanto no uso la aproximación inicial sino que usó el x
+30:1330 minutos y 13 segundoscalculador recientemente y por eso los el supra índice en verdad y para el x3
+30:2130 minutos y 21 segundoscomo todavía no la tengo calculado si uso la aproximación inicial de la misma manera para el x para la
+30:3030 minutos y 30 segundostercera variedad sea para la tercera componente el x sub 3 si cuando la primera aproximación el x1 y x2 sub dos
+30:3930 minutos y 39 segundosya fueron calculado anteriormente por tanto no me hacen falta usar la aproximación iniciada en este caso uso esta aproximación
+30:4830 minutos y 48 segundoscon lo cual los sufre índice en verde son la diferencia con el algoritmo de
+30:5530 minutos y 55 segundosjacob si estoy usando las variables actualizadas y este tema fíjense fue conocido como el
+31:0531 minutos y 5 segundosmétodo interactivo de gausave que en cierta manera parecería una
+31:1231 minutos y 12 segundosmejora al método de jabón bueno una forma de expresar lo al método
+31:2231 minutos y 22 segundosde bau seidel es expresar la dependencia de los componentes en el paso acá
+31:2931 minutos y 29 segundosdecimos en este caso de las dependen de los componentes en el pasok a menos 1 y
+31:3731 minutos y 37 segundoscarísimo dependiendo cual esté trabajando y también tiene una expresión simplificada de esa manera pero como
+31:4631 minutos y 46 segundosverán también es una forma muy implementable en una computadora bueno si ustedes empiezan a hacer las
+31:5531 minutos y 55 segundoscuentas si quieren hacerlo a mano pueden ir haciendo a mano tomando la misma aproximación inicial si x sub 0
+32:0532 minutos y 5 segundos122 y van a empezar a ver si quieres la primera aproximación la segunda la
+32:1532 minutos y 15 segundostercera la cuarta la quinta y la sexta si estoy redondeando con cinco cifras
+32:2332 minutos y 23 segundossignificativas voy a llegar al 243 que la solución exacta de mi problema obviamente la aproximación sexta tiene
+32:3232 minutos y 32 segundoserror de redondeo y error de truncamiento sí bueno fíjense para que me crean vamos a
+32:4232 minutos y 42 segundoshacer lo manda también voy a limpiar pantalla para no
+32:5032 minutos y 50 segundosconfundirlos ok recordemos que tenemos la almacenada
+32:5932 minutos y 59 segundostenemos la vez almacenada sí y voy a llamar ahora al método de gauss
+33:0933 minutos y 9 segundosseidel sí con la misma tolerancia si vamos a ponerle kausay del la variable
+33:1633 minutos y 16 segundossalida entonces llamada house 6 del
+33:2433 minutos y 24 segundosque tiene como un aumento entrar a la matriz el vector de lo derecho la próxima a su inicial que es la misma la tolerancia que habíamos dicho que era
+33:3233 minutos y 32 segundosuno por diez a lo menos cuatro y un número y elevaciones máxima que es 30
+33:3933 minutos y 39 segundosbueno fíjense que en formato largo tengo una aproximación si si quieren los
+33:4733 minutos y 47 segundospaso a formato gordo sí y pregunto
+33:5433 minutos y 54 segundosfíjense que estamos obteniendo la solución aproximada del sistema sí
+34:0134 minutos y 1 segundocon lo cual también me interesaría ver en qué iteración en qué iteración alcanzó esta tolerancia con lo cual voy
+34:1134 minutos y 11 segundosa buscarla mi función go seidel y voy a imprimir al final la variable iter como variable
+34:1834 minutos y 18 segundosinterna simplemente los fines de ver quinteros yo voy a volver a ejecutar bueno fíjense que en menos interacciones
+34:2734 minutos y 27 segundosantes había house jacob ya había alcanzado la tolerancia de una polilla del -4 en días
+34:3634 minutos y 36 segundositeraciones y cause del que parecería ser que es una mejora deja algo y lo alcanza en 6
+34:4434 minutos y 44 segundosintegraciones ok vuelvo en la lectura
+34:5334 minutos y 53 segundosahí tienen el ejemplo que les comentarse veamos ahora algunos aspectos de
+35:0035 minutosconvergencia es la pregunta natural que nos haríamos cuando convergen estos métodos si cuando convergen jacob y
+35:0935 minutos y 9 segundoscuando convergen kawsay there para eso necesitamos definir la noción
+35:1635 minutos y 16 segundosde una matriz diagonalmente dominante también se conoce como estrictamente
+35:2435 minutos y 24 segundosdiagonalmente dominante es decir cuando una matriz cuadradito es diagonalmente dominante
+35:3335 minutos y 33 segundoscuando en la diagonal el término diagonal el azul y así cuando cada
+35:4235 minutos y 42 segundostérmino es su diagonal en valor absoluto es mayor estricto que la suma que la
+35:5035 minutos y 50 segundossuma del resto de los componentes en esa misma fila fíjense que estoy sumando con jota de
+35:5835 minutos y 58 segundosuno hasta n pero jota es distinto del de i es decir cuando me paro en la fila y
+36:0636 minutos y 6 segundosmiro en la diagonal miro el elemento a diagonal y sumó el resto de la fila en valor absoluto y si para todas las filas
+36:1536 minutos y 15 segundossucede eso sin las matrices diagonalmente dominante a veces reacomodamiento de las filas nos
+36:2436 minutos y 24 segundospermiten obtener ya una matriz se dio finalmente dominante y así el intercambio de filas son operaciones
+36:3036 minutos y 30 segundoselementales permitidas ya que si yo una matriz la puedo hacer diagonalmente
+36:3736 minutos y 37 segundosdominante la matriz no siempre pero a veces algún reordenamiento me puede servir hacer
+36:4836 minutos y 48 segundosla matriz anterior la que vimos antes si si ustedes la revisan
+36:5636 minutos y 56 segundosqué es la primera fila era 4 menos 11 el 4 es mayor estricto que la suma del
+37:0337 minutos y 3 segundosresto de sus filas la segunda fila era 4 menos 81 o sea que el menos 8 en valor absoluto
+37:1037 minutos y 10 segundoses mayor que el resto de su fila y la tercera fila de la era menos 215 osea
+37:1737 minutos y 17 segundosque el 5 es mayor estricto que la suma del resto de sus filas lo absoluto por dando esa matriz era diagonalmente
+37:2537 minutos y 25 segundosdominante y porque nos interesa la diagonalmente de dominancia bueno
+37:3237 minutos y 32 segundosnos interesa porque si ya es una matriz diagonalmente dominante sin
+37:3937 minutos y 39 segundoslos métodos interactivos de jacob y haussler convergen a la solución del
+37:4737 minutos y 47 segundossistema para cualquier vector inicial x sub zero si entonces sí hay una madrid
+37:5537 minutos y 55 segundosfinalmente dominante yo puedo usar jacobi o puede usar gauss hayden y van a tomar a converger a la
+38:0238 minutos y 2 segundossolución del sistema obviamente que van a converger cuando iter infinita infinitas veces y van a converger para
+38:1038 minutos y 10 segundoscualquier vector inicial que yo tome si esta demostración la puede consultar en macro o algún otro libro de análisis
+38:2038 minutos y 20 segundosnumérico bueno esa era la función anidada que yo tenía adentro de jacob y que tengo entre
+38:2838 minutos y 28 segundosjacobi y adentro de outsiders se llama yang gon lo que hace es diacrom el único argumento entrada es la matriz y el
+38:3738 minutos y 37 segundosargumento de salida es una variable lógica y lo que hace es cheque a cheque a que la matriz sea diagonalmente
+38:4438 minutos y 44 segundosdominante sí entonces si la matriz es diagonalmente dominante va a devolver el
+38:5138 minutos y 51 segundosvalor set igual uno que es verdadero y si no va a devolver el cero igual 0 que es les dejo para que miren
+39:0039 minutoscomo está armada esta matriz diagonalmente y abdón que determina si la matriz diagonalmente hombre
+39:0939 minutos y 9 segundosahora bien el teorema anterior es una condición suficiente sí es decir si la
+39:1639 minutos y 16 segundosmatriz es diagonalmente dominante entonces los esquemas convergen ahora bien los esquemas pueden converger aún
+39:2539 minutos y 25 segundoscuando la matriz no sea diagonalmente dominante o sea que si uno se enfrenta a un sistema que tiene una matriz que no
+39:3339 minutos y 33 segundoses diagonalmente dominante puede probar a ver si jacob causas del convergen para
+39:4039 minutos y 40 segundosalgún vector inicial lo que sí estoy seguro por el teorema es que si es
+39:4739 minutos y 47 segundosdiagonalmente dominante van a converger entonces bueno supongamos que tenemos
+39:5639 minutos y 56 segundosalgunas observaciones sobre la convergencia supongamos que tenemos una matriz de inversis con diagonal no nula
+40:0340 minutos y 3 segundosdel sistema por el que igual b no siempre no siempre está garantizada
+40:1040 minutos y 10 segundosla convergencia de los esquemas interactivos de jacobi y de gausave esto es lo que les decía santé no siempre
+40:1940 minutos y 19 segundosestá garantizado en la convergencia de jacob y offset si es diagonalmente dominante en ese
+40:2740 minutos y 27 segundoscaso sí bueno las iteraciones de jacob y house either aplicada al mismo sistema fíjense
+40:3640 minutos y 36 segundosque pueden ser ambas convergentes ambas divergentes o bien una cualquiera de ellas ser convergente y la otra no es
+40:4540 minutos y 45 segundosdecir si bien causa del estado planteado parecería ser una mejora al algoritmo de jacob y porque toma las
+40:5540 minutos y 55 segundosvariables actualizadas en general no se puede afirmar no se
+41:0141 minutos y 1 segundopuede afirmar que una si converge si convergen a converger la otra o qué
+41:1241 minutos y 12 segundospuede converger jacobi o puede converger gausave si no hay una relación directa
+41:2041 minutos y 20 segundosentre ambos esquemas o sea si convergió usted puede no converger hawai tranquilamente y viceversa
+41:3041 minutos y 30 segundosahora bien cuando las dos iteraciones convergen
+41:3841 minutos y 38 segundosa las 2 iteraciones convergen en general en general pero no siempre esto no está
+41:4641 minutos y 46 segundosdemostrado las iteraciones de gausave convergen más rápidamente es decir
+41:5341 minutos y 53 segundosalcanzan la misma tolerancia en - iteraciones que la de jacob y cómo
+42:0242 minutos y 2 segundoscomparar lo que sucedió en el ejemplo anterior bueno eso ya lo hicimos si ustedes tienen una actividad sobre
+42:1142 minutos y 11 segundosmétodos directo y miento interactivo pueden probar qué pasa resolviendo matrices con los distintos
+42:2242 minutos y 22 segundosbueno ahora bien una vez que calculé mi solución
+42:3042 minutos y 30 segundoscon mi solución aproximada como sé que mi solución aproximada
+42:3742 minutos y 37 segundosaproxima la solución del sistema bueno para eso necesitamos dos conceptos si el
+42:4542 minutos y 45 segundosresto residual y el vector error cuando yo resuelvo en máquina el sistema
+42:5142 minutos y 51 segundospor x igual a b con precisión finita obviamente estoy usando punto flotante
+42:5942 minutos y 59 segundoslo que obtengo no es el vector x sino lo que obtengo es un vector x mono así que
+43:0543 minutos y 5 segundoses una aproximación del vector x si lo hago con un método directo habrá
+43:1343 minutos y 13 segundossolo error de redondeo ahora si lo hago con un método iterativo habrá error de redondeo y también de truncamiento
+43:2343 minutos y 23 segundoscuando difiere la solución de x monio de la solución exacta x bueno
+43:3043 minutos y 30 segundosestá lo que se conoce como el vector residual si el vector residual no es
+43:3643 minutos y 36 segundosotra cosa que la diferencia que hay entre el lado
+43:4343 minutos y 43 segundosderecho menos por el vector aproxima
+43:5043 minutos y 50 segundosy el vector error sería en el caso que yo tenga
+43:5643 minutos y 56 segundosla solución exacta cosa que en general uno desconoce la diferencia entre el
+44:0444 minutos y 4 segundosvector exacto que es xy el vector aproximado que es x mont yo esto lo puedo hacer siempre que yo conozca la
+44:1244 minutos y 12 segundossolución exacta pero el problema real de uno no conoce la solución exacta ok
+44:2044 minutos y 20 segundostambién suelen calcularse las normas tanto del vector residual como el nuestro error por qué y por qué si mi
+44:2844 minutos y 28 segundosmatriz es muy grande si esto el vector r y el vector van a ser muy grandes
+44:3544 minutos y 35 segundossí sí me matrices mil por mil si yo me vector ya rba tener dimensión mil directores rotas pies por tanto yo tengo
+44:4444 minutos y 44 segundosque estar mirando componente a componentes y se me hace un trabajo muy tedioso entonces lo que se hace es calcular la norma del vector entonces
+44:5244 minutos y 52 segundosusando la propiedad de norma se creó la norma de un vector es cero si sólo cierto de cero con lo cual si me normas
+45:0045 minutoschiquita yo esperaría que el vector residual o el vector error sean cero con
+45:0745 minutos y 7 segundoslo cual mi aproximación es buena vamos a volver a mandar vamos a calcular
+45:1445 minutos y 14 segundossimplemente a los fines de probar en matlab bueno fíjense en este caso el
+45:2445 minutos y 24 segundossistema es chiquito pero yo puedo calcular el vector residual de jacob y sí
+45:3445 minutos y 34 segundoscómo vamos a decir el exacto primero el exacto era
+45:4245 minutos y 42 segundos243 primado sí
+45:5845 minutos y 58 segundosentonces vamos a calcular los vectores residuales primero por ejemplo el vector residual de jacob y no es otra cosa que
+46:0746 minutos y 7 segundosel lado derecho menos la matriz por la aproximación de jacob y que le pusimos x
+46:1746 minutos y 17 segundosfíjense que el vector residual de cat de jacob y es uno por 10 a la menos 3 por estas componentes lo que podría hacer yo
+46:2646 minutos y 26 segundoses calcular la norma la norma 2 o algún tipo de norma de rj
+46:3346 minutos y 33 segundosenorme en libia fíjense que la norma euclídea si del
+46:4146 minutos y 41 segundosvector residual de jacob y es dos puntos 11 por 10 sea la menos 4
+46:4946 minutos y 49 segundostambién lo puedo hacer con gauze y ver si sea el vector residual de gausave si
+46:5646 minutos y 56 segundosva a ser de menos por la aproximación de gausave del que la llamamos x
+47:0547 minutos y 5 segundosgs está bien y puedo calcular también la norma de
+47:1547 minutos y 15 segundoseste vector y fíjense que es más chiquita
+47:2547 minutos y 25 segundossi yo la comparo con la norma de jacob y la norma de jacob y es del orden de 10 a
+47:3147 minutos y 31 segundosla menos 4 y la norma de causa en este caso es del orden de 10 la menos 5
+47:3947 minutos y 39 segundostambién si quieren pueden calcular el error de jacob y como en la norma vamos
+47:4847 minutos y 48 segundosa calcular la norma del error de gobi norma del error de jacob y va a ser la
+47:5647 minutos y 56 segundosnorma d el exacto menos x de jacob y sí
+48:0648 minutos y 6 segundosperdón es jacobi sí
+48:1448 minutos y 14 segundosy también podemos calcular la norma del error de causa y del como en este
+48:2048 minutos y 20 segundoscaso yo conozco el exacta yo puedo sin calcular la norma del error de
+48:2948 minutos y 29 segundosgausave del como en la norma del exacta menos la aproximación de gausave del sí y fíjense que en términos de error y de
+48:3948 minutos y 39 segundoserror de error la norma de gauss seibel es una corrida
+48:4648 minutos y 46 segundos-5 y la norma de jacob y estrés por 10-5
+48:4948 minutos y 49 segundos[Música]
+48:5148 minutos y 51 segundosen este caso lo puedo hacer porque conozco el exacto bueno volvemos
+49:0149 minutos y 1 segundoa la lectura terminando vamos a dar finalmente la noción del
+49:1049 minutos y 10 segundossistema mal condicionado un sistema de ecuaciones lineales a porec igual ver se dice un sistema mal condicionado
+49:2049 minutos y 20 segundossi pequeños cambios de la materia de coeficientes o del vector b generan
+49:2749 minutos y 27 segundosgrandes cambios en el vector solución x por ejemplo en el caso 1 hago una
+49:3549 minutos y 35 segundosperturbación del lado derecho en el caso 2 hago una perturbación de la
+49:4249 minutos y 42 segundosmatriz de coeficientes y eso me generó una perturbación del vector x y puede pasar que yo tenga
+49:5049 minutos y 50 segundosperturbaciones tanto en la materia de oficiante y del vector lado derecho y eso me genere una perturbación de vector
+49:5849 minutos y 58 segundosx en el sistema de ecuaciones lineales como medimos el condicionamiento de un
+50:0650 minutos y 6 segundossistema bueno el condicionamiento de un sistema se mide a través de lo que se conoce como el número de condición de una matriz
+50:1550 minutos y 15 segundossi ya es una matriz inversi le vamos a llamar número de condición al número
+50:2150 minutos y 21 segundoscapa de a si está asociado a la matriz ar como el producto
+50:2850 minutos y 28 segundosde la norma de a por la norma de la inversa de a donde la norma es satisface
+50:3650 minutos y 36 segundosla condición de compatibilidad en la nave tenemos una función
+50:4750 minutos y 47 segundosintrínseca que calcula el número de condición si bien esta definición es la definición
+50:5550 minutos y 55 segundosmatemática no es la definición que se usa porque calcular la inversa de una matriz es muy costoso computacionalmente
+51:0551 minutos y 5 segundossí por tanto se usan definiciones alternativas que terminan aproximando al
+51:1151 minutos y 11 segundosnúmero de condición de la matriz
+51:1651 minutos y 16 segundospor ejemplo si usan el comando con sí
+51:2351 minutos y 23 segundoslo pueden calcular en norma 2 si si bien la norma 2 no satisface la condición de
+51:3351 minutos y 33 segundoscompatibilidad se lo usa para se usa esa norma para aproximarlo
+51:4051 minutos y 40 segundoso el ere con que calcula el recíproco en normal
+51:4951 minutos y 49 segundospor ejemplo si tienen la matriz a que es la matriz que vimos inicialmente y le
+51:5751 minutos y 57 segundoscalculamos el número de condiciones lo almacenamos en la variable k fíjense que tiene un número de condición
+52:0552 minutos y 5 segundoschico en cambio si fíjense me defino una
+52:1152 minutos y 11 segundosmatriz 2 x 2 que es esa matriz b que es 4.1 2.8 la primera fila y la segunda
+52:2052 minutos y 20 segundosfila es 9.7 6.6 y en cálculo en con debe y lo almacenó la variable k fíjense que
+52:2852 minutos y 28 segundosahora ese número de condición ya empieza a ser un poquito más grande o sea es 1,6
+52:3752 minutos y 37 segundos23 por 10 a la 3 sí ok
+52:4752 minutos y 47 segundosentonces bueno y por qué me define cuando un sistema está bien o
+52:5452 minutos y 54 segundosmal condicionado bueno hay un teorema que me establece si una especie de
+53:0253 minutos y 2 segundosacotación del error relativo cuando yo resuelvo a por x igual b sí
+53:1253 minutos y 12 segundoscuando yo resuelvo a por x igual b el error fíjense que ahí tengo una
+53:1953 minutos y 19 segundosespecie del lado izquierdo de la desigualdad tengo una especie de norma entre la diferencia de él
+53:2753 minutos y 27 segundosexacto y el aproximado o sea que tengo una especie de norma del error sí
+53:3553 minutos y 35 segundoses una normal nuestro error / la norma del x que es mi exacto o sea que lo que tengo a la izquierda es una especie de
+53:4453 minutos y 44 segundoserror relativo se dice que es un error relativo lo que pasa acá no puedo hacer un cociente entre vectores pero si lo
+53:5153 minutos y 51 segundoshago en normal cociente tengo un error relativo en norma y ese error está
+53:5753 minutos y 57 segundosacotado por el número de condición de la matriz por fíjense tengo en la norma de
+54:0654 minutos y 6 segundosvm de menos a por el aquí ha aproximado que es la norma otra cosa es la norma del corregido al / la norma del vector
+54:1654 minutos y 16 segundoslado derecho como yo tengo la matriz be y la matriz perdón la matriz y el lado derecho que
+54:2554 minutos y 25 segundosfijado es ese término es un valor y lo que termina mandando en el lado derecho de esta
+54:3454 minutos y 34 segundosdesigualdad es el capa de a o sea que cuando el capa de a se me hace muy grande muy grande estamos hablando de
+54:4254 minutos y 42 segundosvarios órdenes de magnitud e el error relativo
+54:5054 minutos y 50 segundosel método que sucede al aproximar el equipo no puede puede ser
+54:5654 minutos y 56 segundosmuy muy muy grande y puede ser muy muy grande o sea que esté capa de la mente
+55:0355 minutos y 3 segundosdetermina una cota para el error relativo respecto al método que yo estoy
+55:1155 minutos y 11 segundoscalculando la aproximación x
+55:1955 minutos y 19 segundossiempre el número de condición es mayor o igual que uno para una matriz inversa
+55:2655 minutos y 26 segundossi capa de a es pequeño entre comillas si el error relativo también lo será y vamos a decir que la matriz a está bien
+55:3555 minutos y 35 segundoscondicionada si capaz de a es grande también entre comillas porque dependerá en qué
+55:4355 minutos y 43 segundosprecisión yo esté trabajando en qué máquina estoy trabajando el error relativo también lo será
+55:5055 minutos y 50 segundosmiremos que la matriz a está mal condicionada como nosotros trabajamos
+55:5755 minutos y 57 segundoscon forma de doble precisión de la increíble si la aritmética de punto flotante que vimos lo que define la
+56:0756 minutos y 7 segundosprecisión de mi sistema de selección máquina y por tanto
+56:1356 minutos y 13 segundoscuando la matriz está muy mal condicionada cuando
+56:1956 minutos y 19 segundosel número de condición es aproximadamente 1 sobre el epsilon
+56:2556 minutos y 25 segundosmáquina entonces en ese caso si se me va a establecer una cota el número condición me va establece una cota muy
+56:3456 minutos y 34 segundosgrande y puede puede haber pérdida de precisión en el cálculo de la solución
+56:4256 minutos y 42 segundosusando el cemento sí o sea el número de condiciones una característica intrínseca de
+56:4956 minutos y 49 segundosla matriz sí y por tanto del sistema por dándose
+56:5756 minutos y 57 segundosno va a depender si elija un método u otro si mi materia está más condicionada está mal condicionada pero lo que sí
+57:0657 minutos y 6 segundospuede depender es que yo haga modificaciones de mi método o bien un segmento directo ovinos un metro iterativo si de los de la gran cantidad
+57:1457 minutos y 14 segundosmetros que hay y pueda lograr aproximar la solución de esa madrid ok
+57:2657 minutos y 26 segundosvamos a ver en nuestro caso vamos a ver en matlab sí
+57:3357 minutos y 33 segundosrecuerda díaz ls recuerdan que el epsilon es 2 puntos por
+57:4157 minutos y 41 segundos16 por tanto sí aproximadamente cuando yo esté en uno de
+57:4957 minutos y 49 segundos10 a la 15 el número de condición de esa matriz va a ser preocupante y
+57:5657 minutos y 56 segundosseguramente puede haber pérdida de cifras significativas si dependerá con
+58:0358 minutos y 3 segundosqué método esté resolviendo puede ser que en mi número condición sea igual o mayor en orden que esto y sin embargo mi
+58:1258 minutos y 12 segundosmétodo lo resuelva bien ok
+58:2058 minutos y 20 segundosfinalmente bueno hasta que llegamos lo que les quería
+58:2958 minutos y 29 segundosmostrar simplemente al fin es de motivación es mostrarle algunas matrices reales que han
+58:3858 minutos y 38 segundosaparecido en aplicaciones reales en problemas científicos problemas de la industria les voy a mostrar el matrix
+58:4758 minutos y 47 segundosmarket que es un mercado de matrices sí
+58:5458 minutos y 54 segundoses lo pueden encontrar en google julliand o matrix market sí y lo que
+59:0059 minutostiene es que es un repositorio sí como una librería de matrices o de data se le
+59:0959 minutos y 9 segundossuele decir data que se usa o se ha usado para comparar algoritmos del
+59:1659 minutos y 16 segundosálgebra lineal numérica en particular para algoritmos que resuelve un sistema de ecuaciones lineales la gran mayoría
+59:2559 minutos y 25 segundosde estas matrices son este tipo spartz de tipo ra la xii vienen de diversas aplicaciones si tienen coordenada bueno
+59:3459 minutos y 34 segundospor propiedades por aplicación por colección
+59:4159 minutos y 41 segundosa ver por área aplicación podemos entrar acá si nos van a ver que todas las áreas
+59:4859 minutos y 48 segundosde aplicaciones donde se ha aplicado sin acústica tráfico aéreo astrofísica bioquímica ingeniería química etcétera
+59:5859 minutos y 58 segundossin circuitos físicos sí simulaciones también
+1:00:071 hora y 7 segundosvuelvo para atrás pero vamos a ver alguna por colección si tienen la colección de harb el boeing si las
+1:00:161 hora y 16 segundospartes parts kit collection si net collection
+1:00:251 hora y 25 segundospor ejemplo acá miren acá tengo matrices de ingeniería eléctrica vamos a entrar a
+1:00:341 hora y 34 segundosuna simplemente para ver por ejemplo esta matriz fue no
+1:00:421 hora y 42 segundosaparece el autor y en qué universidad su show que campo disciplina qué problema estaba resolviendo y por ejemplo qué
+1:00:511 hora y 51 segundosmatriz lee apareció esta es la estructura de la matriz por
+1:00:591 hora y 59 segundosejemplo fíjense que es bienestar también
+1:01:051 hora, 1 minuto y 5 segundosvamos a ver alguna otra bueno por ejemplo acá
+1:01:151 hora, 1 minuto y 15 segundostambién tengo otra matriz de la universidad que entra aquí si están los trabajos donde ha sido usado en los
+1:01:231 hora, 1 minuto y 23 segundosproblemas fíjense acá tengo la visualización este es una matriz más chica esto me dice los
+1:01:321 hora, 1 minuto y 32 segundospuntitos negros en los valores de donde hay coeficientes no nulos y bueno y después mediante una serie de
+1:01:401 hora, 1 minuto y 40 segundoscaracterísticas que tiene la matriz fíjense acá está el condicionamiento y fíjense que es un condicionamiento bajo
+1:01:491 hora, 1 minuto y 49 segundosme dice que la diagonal dominancia no hay o sea no es diagonalmente dominante y bueno y después tiene los números de
+1:01:581 hora, 1 minuto y 58 segundoscondiciones calculado en distintas normas sí bueno después de una serie de características de la matriz y bueno si
+1:02:061 hora, 2 minutos y 6 segundosuno quisiera testear algún método numérico podría descargarla a la matriz y cargarla en el más bueno cabo en sala
+1:02:161 hora, 2 minutos y 16 segundosy poder resolver un problema bueno nada más simplemente para mostrarle los
+1:02:241 hora, 2 minutos y 24 segundosproblemas reales los sistemas lineales que nos bueno hasta acá la lectura

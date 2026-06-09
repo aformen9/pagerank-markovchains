@@ -1,0 +1,354 @@
+bueno esta es la lectura 5 de aritmética de punto flotante
+0:1010 segundosde la unidad 6 de métodos numéricos de la asignatura matemática aplicada para el ingeniería eléctrica electrónica de la comunidad de ciencia exacta
+0:1818 segundosingeniería y agrimensura de la universidad nacional de rosario yo soy ilusionado con celine y marinero
+0:2727 segundosok bueno una introducción d
+0:3535 segundosla historia y la aritmética de punto flotante hasta hace un poco más de 30 años cada
+0:4444 segundoscomputadora tenía un sistema para representar los números de punto flotante particular
+0:5252 segundoses decir que algunas eran decimales internamente otras eran binarias o incluso había diaria
+1:011 minuto y 1 segundoentonces se usaban distintas bases para representar los números con lo cual todas las computadoras tenían una
+1:101 minuto y 10 segundosprecisión distinta entonces hacia 1.085 la el institute of
+1:191 minuto y 19 segundoselectrical and electronics engineers que ustedes van a conocer y seguramente lo van a ver como la increíble y la
+1:281 minuto y 28 segundosamerican national standard institute and see adoptaron unas normas para intentar
+1:351 minuto y 35 segundosuniformizar digamos en los sistemas a partir de los cuales se representan los números conocida como la aritmética
+1:431 minuto y 43 segundosbinaria de punto flotante o la aritmética de punto flotante esto obviamente fue el trabajo de
+1:501 minuto y 50 segundosmuchísimos programadores y embiste la computación matemático ingeniero etcétera
+1:591 minuto y 59 segundosentonces a partir de ese momento todas las computadoras adoptaron este diseño
+2:062 minutos y 6 segundosentonces con lo cual por lo menos se conoce cómo
+2:132 minutos y 13 segundosfunciona internamente la representación de los números lo cual no va a significar que todas las computadoras
+2:202 minutos y 20 segundoslleguen al mismo resultado pero al menos hay un modelo de cómo funciona esta representación y la aritmética que ya no
+2:292 minutos y 29 segundosdepende de la máquina que yo usé entonces primero veamos que la representación en
+2:392 minutos y 39 segundosbase beta ustedes saben que si tienen un x perteneciente a los reales la representación en base beta una base
+2:492 minutos y 49 segundoscualquiera va a ser de la forma x aproximadamente pues seguramente
+2:562 minutos y 56 segundostendremos que aproximar ese número más menos q x de a la n donde q se conoce
+3:043 minutos y 4 segundoscomo la mantilla beta es la base y n el exponente
+3:123 minutos y 12 segundosen particular la mantis está en valor absoluto si varía entre 1 sobre beta
+3:203 minutos y 20 segundoses mayor o igual que uno sobre beta y menor estricto que uno por ejemplo en el caso de la
+3:283 minutos y 28 segundosrepresentación decimal el beta vale 10 con lo cual la mantilla varía entre 0 y
+3:363 minutos y 36 segundos1 es mayor o igual que el 0.1 pero menor estricto que 1
+3:453 minutos y 45 segundosesto lo vimos en la lectura anterior de errores pero ahora nos interesa otro tipo de representación que la representación
+3:533 minutos y 53 segundosbinaria donde el beta vale 2 o sea que cada número x real yo lo voy a tener que
+4:014 minutos y 1 segundoaproximar así como más o menos la mantilla por 2 a la n donde s n va a
+4:084 minutos y 8 segundosvariar entre 1 es un medio y uno menor estricto que 1
+4:164 minutos y 16 segundospero es importante remarcar que en una computadora solo tenemos una cantidad finita de números binarios para la
+4:254 minutos y 25 segundosmantis aquí y para el exponente vamos a imaginarnos que tenemos una
+4:364 minutos y 36 segundoscomputadora imaginaria así que tiene solamente cuatro dígitos para la
+4:444 minutos y 44 segundosmantilla d sub uno de sus dos de sus tres de sus cuatro donde asumimos que es un 1 vale 1 sí
+4:544 minutos y 54 segundosporque si no en el caso de que uno no fuese uno yo podría correr él
+5:045 minutos y 4 segundosen el exponente y los del sub 12 sub 34 varían entre 0 y
+5:125 minutos y 12 segundos1 en binario y el exponente para no hacerlo muy complicado lo representamos en decimal y
+5:205 minutos y 20 segundosvamos a suponer que el rango de representación es un rango que va de menos 3 a 4 con un paso de 1 es decir
+5:285 minutos y 28 segundosque tengo esos 8 posibles números reales para el exponente entonces qué es lo que
+5:375 minutos y 37 segundosmuestra la tabla bueno por un lado por un lado vemos la mantilla que es
+5:455 minutos y 45 segundostodas las posibles combinaciones de 0 y 1 a partir del segundo dígito hasta el cuarto y el exponente que varía entre
+5:545 minutos y 54 segundosmenos 3 y 4 con un paso d cuando yo hago en representación decimal
+6:026 minutos y 2 segundostodos esos números y completo la tabla es decir digo bueno un número de la
+6:086 minutos y 8 segundosforma 0,1 000 con exponente menos 3 lo
+6:166 minutos y 16 segundosllevo a la forma decimal ese valor es 0 0 6 25 y así represento todos los las posibles
+6:266 minutos y 26 segundoscombinaciones que tengo y obtengo esa representación posible bueno esa sería una forma imaginaria de
+6:346 minutos y 34 segundoscuando yo tengo una cantidad finita para almacenar tanto la masa como el exponente me podría representar
+6:426 minutos y 42 segundossolamente estos números fíjense el rango
+6:496 minutos y 49 segundosy además fíjense que las primeras cuatro columnas hacen referencia a números que
+6:566 minutos y 56 segundosson menores a uno y las otras cuatro son números mayores a uno
+7:057 minutos y 5 segundosfíjense además por ejemplo que el menor valor positivo que puedo representar es
+7:107 minutos y 10 segundosel 0,0 625 que sería una especie de real min lo que yo les comentaba bien un tipo
+7:187 minutos y 18 segundosde dato importante y el 15 sería nuestro real max nuestro mayor número representable en máquina entonces
+7:277 minutos y 27 segundoscualquier número mayor que 15 o lo tendría que representar como 15 o tendría que crear un símbolo para el
+7:357 minutos y 35 segundosinfinito y cualquier número menor que cero 0 625 tendría que ser cero o
+7:427 minutos y 42 segundosaproximarlo a ese valor y además si recuerdan la definición del épsilon máquina que era la distancia que
+7:517 minutos y 51 segundoshay entre el 1 y el próximo número representable en máquina si ustedes
+7:587 minutos y 58 segundosmiran la quinta columna tienen el 1 y luego aparece el 1.125 por tanto
+8:078 minutos y 7 segundosel epsilon máquina en este caso es 0 125 en esta máquina imaginaria ahora
+8:158 minutos y 15 segundossupongamos que tenemos que operar con esta con esta máquina veamos qué pasa vemos que en la computadora anterior
+8:248 minutos y 24 segundosquiero hacer esta operación la fracción un décimo más un quinto primero más
+8:328 minutos y 32 segundosluego le voy a sumar un sexto sí y luego voy a hacer al revés voy a asociar un quinto con un sexto y vamos a ver qué
+8:408 minutos y 40 segundospasa en esta computadora imaginaria vamos a suponer además que nuestra computadora ahora redondea los números
+8:488 minutos y 48 segundosreales al binario más próximo que dispone sin entonces comencemos en principio tengo
+8:568 minutos y 56 segundosque representar al undécimo el undécimo silo aprox y es
+9:029 minutos y 2 segundosaproximadamente 0,1 101 en binario por 10 a lo menos 3
+9:099 minutos y 9 segundosahora bien eso solo lo llevó a un orden día al -2
+9:159 minutos y 15 segundospara poder luego sumarle el un quinto en un quinto lo representó aproximadamente
+9:229 minutos y 22 segundoscomo 0,1 101 en binario por 10 0 - 2
+9:299 minutos y 29 segundosentonces una vez que tengo los dos números con la misma potencia que dos al
+9:359 minutos y 35 segundosmenos dos lo sumo entonces el 3 décimo es lo que me debería dar el
+9:449 minutos y 44 segundosvalor exacto pero sin embargo cuando yo sumo esto en binario si ustedes van a
+9:539 minutos y 53 segundosver que me devuelve ese valor y donde hay dos números que están marcados en rojo que yo no voy a poder almacenar
+10:0210 minutos y 2 segundosporque mi computadora almacena solamente números con cuatro cifras significativas
+10:0910 minutos y 9 segundospor tanto de alguna manera lo voy a tener que redondear entonces supongamos que lo redondea al
+10:1810 minutos y 18 segundosvalor 0 10 10 en base binario por 10 la menos 1 en forma normalizado esto se
+10:2510 minutos y 25 segundosdebe a que la quinta cifra de ese número la primera cifra marcada en rojo es un 1
+10:3210 minutos y 32 segundossí entonces yo lo que hago es aumento en una unidad la cuarta cifra esa cifra paso a cero entonces la demás se me
+10:4010 minutos y 40 segundoscambian se me aumentan en una unidad y luego normalizó entonces esa sería la aproximación del 3
+10:4810 minutos y 48 segundosdecimos que sería el resultado de un décimo más entonces
+10:5610 minutos y 56 segundosel paso siguiente es decir bueno 3 decimos como lo aproximó si lo aproximó
+11:0511 minutos y 5 segundoscon ese valor en mi máquina 0.10 10 luego a eso le voy a sumar el un sexto
+11:1411 minutos y 14 segundosque aproximadamente es ese valor que aparece ahí fíjense que yo tengo que correr la mantilla en un orden menos 1 a
+11:2411 minutos y 24 segundosuna potencia menos 1 para poder hacer la suma la suma me termina dando en binario
+11:3111 minutos y 31 segundos0.11 11 1 por 10 a la menos uno ese uno que está marcado en rojo no lo voy a poder almacenar
+11:3911 minutos y 39 segundosentonces lo que voy a hacer es como en la quinta cifra decimal es el número marcado en rojo es un 1 la cuarta cifra
+11:4811 minutos y 48 segundosel aumento en una unidad y me queda almacenado como 0.1 binario por 2 a las
+11:5611 minutos y 56 segundos0 entonces qué pasó la solución a nuestro problema terminó siendo que un décimo
+12:0412 minutos y 4 segundosmás un quinto primero resuelvo esa suma luego le sumó un sexto que da 715 a vos
+12:1112 minutos y 11 segundosen forma exacta que a pero que es cero
+12:1712 minutos y 17 segundos4.667 envase binario es aproximadamente si yo hubiese hecho esa operación en mi
+12:2512 minutos y 25 segundoscomputadora imaginaria 0.1 por 2 al acero que llevado a decimal es 0,5
+12:3612 minutos y 36 segundosentonces fíjense que el error efectuado por nuestra computadora imaginaria que sería el error absoluto sería la
+12:4612 minutos y 46 segundosdiferencia entre el valor exacto y el aproximado en valor decimal que nos da aproximadamente un error mayor al 7% si
+12:5612 minutos y 56 segundosun error porcentual absoluto un error radio porcentual mayor al 7% ahora bien
+13:0413 minutos y 4 segundoshagamos la asociatividad al revés asociamos primero un quinto más un sexto
+13:1113 minutos y 11 segundosy resolvamos primero esa suma lo que hacemos primero es representar al un quinto en formato decimal de nuestra
+13:1913 minutos y 19 segundoscomputadora que el 0.1 101 en binario por 2 a lo menos 2
+13:2513 minutos y 25 segundosluego representó el un sexto en nuestra computadora imaginaria y además corro la
+13:3213 minutos y 32 segundosmantilla en un exponente para luego poder hacer la suma hago la suma dado que ambos números
+13:4113 minutos y 41 segundostienen el mismo exponente en binario y me devuelve ese número donde la cifra
+13:4913 minutos y 49 segundosel dígito que está en rojo no lo puedo almacenar y lo tengo que redondear como en este caso es un cero simplemente lo
+13:5913 minutos y 59 segundosque hago es dejar y vamos a hacer como una especie de
+14:0514 minutos y 5 segundostruncado y me queda en normalizado como 0 1 0 0 1 en binario por 2 a la menos 1
+14:1614 minutos y 16 segundoss sería una aproximación de el onceavo 30 a vos que es la suma exacta
+14:2514 minutos y 25 segundosluego a este valor al valor que yo calculé le tengo que sumar el undécimo
+14:3314 minutos y 33 segundosentonces el undécimo lo represento en binario y luego lo llevó un exponente de
+14:4114 minutos y 41 segundosla menos uno para poder sumarle el 11 30 o calculó anteriormente como ambos números en formato binarios tienen el
+14:4814 minutos y 48 segundosmismo de ponente hago la suma y fíjense que ahora esto que me debería dar 715 a
+14:5614 minutos y 56 segundosvos termina siendo 0,1 100 y ese 01 en rojo son dígitos que no voy
+15:0415 minutos y 4 segundosa poder almacenar en mi computadora y por tanto voy a tener que redondear como en la quinta cifra es la primera cifra
+15:1315 minutos y 13 segundosen rojo es un cero siendo el número de izquierda derecho es un cero simplemente truncó en este caso
+15:2015 minutos y 20 segundoscon lo cual el resultado que terminó obteniendo a mí a esta cuenta es 0,1 101
+15:2815 minutos y 28 segundosen base 2 por 10 por 2 a la menos 1 y por ende la solución a nuestro problema
+15:3615 minutos y 36 segundosoriginal que en este caso la realice de otra forma asociando primero en un quinto con el de un sexto
+15:4415 minutos y 44 segundosy luego eso sumándole un décimo que en forma decimal ya vimos que era cero 4667
+15:5215 minutos y 52 segundosnos termina dando aproximadamente ese número binario que llevado a forma
+15:5815 minutos y 58 segundosdecimal es 0,4 06 25
+16:0516 minutos y 5 segundossi ahora calculo el error o sea la diferencia entre el exacto y el
+16:1016 minutos y 10 segundosaproximado fíjense que el error es mayor
+16:1616 minutos y 16 segundoso casi aproximadamente de un 13% decir en mi computadora imaginaria que opera
+16:2616 minutos y 26 segundoscon apenas 4 dígitos en binario y con pocos numeritos para los exponentes la
+16:3516 minutos y 35 segundosasociatividad no valió hubo dieron yo asocie una suma de tres
+16:4516 minutos y 45 segundossumando de dos formas distintas y la asociatividad no resultó en una obtuve un error mayor al 7% en otro tuve un
+16:5216 minutos y 52 segundoserror del orden del 13 por ciento entonces bien que es la aritmética del
+17:0217 minutos y 2 segundospunto flotante bueno algo parecido a lo que vemos nos pasa mal lamentable y shaila sin
+17:1017 minutos y 10 segundospunto flotante de la y triple la norma 7 754 de precisión intenta
+17:2017 minutos y 20 segundosuniformizar esto de forma tal que todos los programas en todas las computadoras trabajen usando este mismo modelo
+17:3017 minutos y 30 segundosentonces cómo se almacena en este caso bueno cada
+17:3817 minutos y 38 segundosnúmero de doble precisión era aritmética de puntos flotantes se almacena en lo que llamamos una palabra de bits está
+17:4717 minutos y 47 segundosbien o de bytes teniendo en cuenta que un byte son 8 bits
+17:5517 minutos y 55 segundosson 64 bits almacenados en 8 bytes entonces de esos 64 bits lo que hago es
+18:0318 minutos y 3 segundosun bit y voy a usar para el signo 11 bits voy a usar para el exponente que el
+18:1118 minutos y 11 segundossigno lo llamo en el exponente lo noto con la mantilla normalizada en binaria voy a tener 52 bits es decir que voy a
+18:2118 minutos y 21 segundostener todos los casilleros que van a ir variando en numeritos entre ceros y unos
+18:2918 minutos y 29 segundosentonces obviamente el signo tendrá una sola posibilidad que sea 001 para un
+18:3618 minutos y 36 segundospositivo o negativo el exponente va a tener 11 dígitos también donde esos dígitos van a variar entre 0 y 1 cada
+18:4518 minutos y 45 segundosuno y fíjense qué nos pasa con la mantilla como la mantilla está normalizada tiene
+18:5418 minutos y 54 segundosque estar normalizada el d sub 13 hará mente tiene que ser uno o sea el primer
+19:0119 minutos y 1 segundonumerito después de la coma en binario tiene que ser uno porque si no no estaría normalizado entonces el de sub
+19:0919 minutos y 9 segundos1 vale 1 y los de sub y dónde y varía entre 2 y 53 varían entre
+19:1719 minutos y 17 segundos0 y 1 es decir que yo no me veo en la obligación de almacenar el dígito de sub
+19:2519 minutos y 25 segundos16 ya asumo que el de sub 11 solo me veo
+19:3219 minutos y 32 segundosobligado a almacenar desde el dígito segundo hasta el 53 53
+19:3919 minutos y 39 segundoshago con lo cual ganó un bit entonces cada número de aritmética de
+19:4619 minutos y 46 segundospunto flotante normalizado de esa manera
+19:5619 minutos y 56 segundosfíjense que tengo el -1 a la s por uno más q sí
+20:0420 minutos y 4 segundosel q va a estar en binario por dos a la m-23 ahora vamos a ver por
+20:1220 minutos y 12 segundosqué aparece 6.023 que es el el exponente entonces bueno el signo surge claramente
+20:2120 minutos y 21 segundosdel -1 a la s donde el s dijimos variaba entre 0 y 1 la mantilla o en la parte fraccionaria
+20:3020 minutos y 30 segundosen base 2 va a ser un número entero que en binario va a satisfacer que varía
+20:3720 minutos y 37 segundosentre 0 menor estricto que uno o bien
+20:4520 minutos y 45 segundostodas las posibles combinaciones que haya sin que haya van a hacer qué
+20:5320 minutos y 53 segundosen ese en esos 52 casilleros hayan 0 o 1
+21:0021 minutospor lo tanto las posibles combinaciones que hay es 2 a las 52
+21:0821 minutos y 8 segundosok pero como el primer valor teniendo en
+21:1421 minutos y 14 segundoscuenta la representación binaria sería 2 a la 0 sí que eso vale 1
+21:2321 minutos y 23 segundoslas posibles representaciones en decimal
+21:2821 minutos y 28 segundosde la mantis a variar variarán entre 0
+21:3521 minutos y 35 segundossi y 2 a las 52 menos 1 porque hago un
+21:4321 minutos y 43 segundostraslado para poder tener el cero
+21:5121 minutos y 51 segundosentonces como les decía teniendo en cuenta que el de su 1 vale 1 en el
+21:5821 minutos y 58 segundosformato de la increíble se permite almacenar palabras pero en
+22:0622 minutos y 6 segundosrealidad de 65 bits si aunque si bien físicamente yo tengo 64 bits en la clave
+22:1622 minutos y 16 segundosestá en poder asumir que el número está normalizado y que el primer número después de la goma es un 1 en el sistema
+22:2422 minutos y 24 segundosbinario y por tanto yo a ese 1 no hace falta almacenarlo y entonces uso todos
+22:3122 minutos y 31 segundoslos 52 bits para almacenar desde el dígito segundo hasta el 53 no
+22:4122 minutos y 41 segundosse hagan un beats con lo cual ganó mucha representación de números
+22:4822 minutos y 48 segundoscomo dije y vamos a tener 11 bits para el exponente entonces en formato decimal
+22:5522 minutos y 55 segundoslos 11 bits representaría o sea yo voy a tener 2 a la 11 posibilidades si yo
+23:0223 minutos y 2 segundostengo 11 casilleros tengo y en cada casillero puedo poner el 0 o el 1 voy a
+23:0923 minutos y 9 segundostener 2 a la 11 posibilidades ahora viene el sistema decimal solo que
+23:1623 minutos y 16 segundoslos números que puedo representar van a ser desde el 0 hasta el 2 a las 11 menos
+23:2423 minutos y 24 segundos1 y eso nos da el valor decimal 2000
+23:3223 minutos y 32 segundosaa2000 47 bueno como
+23:4123 minutos y 41 segundosel número decimal el número exponente cero y el número
+23:4923 minutos y 49 segundosexponente de 2.047 los voy a reservar para números especiales que yo voy a necesitar como el infinito menos
+23:5723 minutos y 57 segundosinfinito o note number voy a tener que perder esa representación y entonces el rango va a quedar para el exponente
+24:0724 minutos y 7 segundosentre 1 y 2 a la 11 menos 2 que es 2 mil 46 o sea que el rango que tiene mi
+24:1624 minutos y 16 segundosexponente el rango con un paso de 1 va a ser entre 1 y 2 mil 46 son todos los
+24:2424 minutos y 24 segundosnúmeros naturales entre 1 y 2 mil 46 ahora bien como yo no tengo signo almacén no tengo un bit almacenado para
+24:3324 minutos y 33 segundossigno para poder cubrir exponente negativo lo que hago es traslado este
+24:4124 minutos y 41 segundosintervalo discreto entre 1 y 2046 para poder representar exponentes
+24:5024 minutos y 50 segundosnegativos esto es lo que le decía como no tiene signo lo que hago es resto 1.023 que la
+24:5924 minutos y 59 segundosmitad de 2.046 a la representación y lo re cómodo para que el exponente en base decimal
+25:0725 minutos y 7 segundostermine pudiendo almacenar números en el intervalo menos mil mil 22 y mil 23
+25:1625 minutos y 16 segundospositivos un intervalo discreto si esa va a ser la cantidad de exponentes que
+25:2325 minutos y 23 segundosyo voy a poder representar con lo cual bueno tengo toda la representación de todas esas
+25:3225 minutos y 32 segundosposibilidades van a ser los números que yo puedo representar en la máquina ahora bien como les decía hay valores
+25:4025 minutos y 40 segundosreservados del exponente por ejemplo si yo tengo en el exponente todos ceros con
+25:4925 minutos y 49 segundoslo cual el exponente sería el cero block
+25:5625 minutos y 56 segundosreservo esa posibilidad para poder representar otros símbolos y lo mismo
+26:0426 minutos y 4 segundoscon cuando tengo en el exponente todos unos en la tabla yo le puse todas las
+26:1026 minutos y 10 segundoscombinaciones por ejemplo si tengo el signo c en el signo pongo el cero en el
+26:1926 minutos y 19 segundosexponente pongo todos ceros y en la mantilla pongo todos ceros eso me representa al número 0 positivo en
+26:2826 minutos y 28 segundoscambio si en el signo pongo un 1 eso me representa al 0 negativo
+26:3526 minutos y 35 segundosluego si en el signo en el bit del signo pongo 0 pongo todos unos en el exponente
+26:4326 minutos y 43 segundosy todos ceros en la mantilla eso me representa al símbolo infinito
+26:5026 minutos y 50 segundosde la misma manera si pongo un 1 en el signo del signo es en un esa palabra me
+26:5726 minutos y 57 segundosrepresenta al menos infinito y después bueno para noten amber o digamos para el tipo de indeterminación
+27:0527 minutos y 5 segundosel símbolo que usamos con la indeterminación es eso va a quedar representa de varias maneras tanto si
+27:1227 minutos y 12 segundostengo un 0 1 1 todos 1 el exponente y algo que sea no 0 en la mantis a eso me termina representando el símbolo no
+27:2127 minutos y 21 segundostiene ámbar entonces ahora yo tengo en claro por ejemplo quién es el mayor número positivo el mayor número positivo sería
+27:3027 minutos y 30 segundos1 punto y los 52 unos en binario por 2 a
+27:3927 minutos y 39 segundoslas 1023 que es el máximo exponente que puedo representar y eso en decimal me da
+27:4527 minutos y 45 segundosaproximadamente 1.7 997 por 10 a la 308
+27:5227 minutos y 52 segundosde la misma manera el menor número positivo que puedo representar es poner uno y luego asumir que ella te tengo el
+28:0128 minutos y 1 segundoprimer dígito 1 y en la palabra de los 50 el 52 bits de la mantilla pongo todos
+28:0928 minutos y 9 segundos0 por 2 a la menos 1000 22 que del menor entero el menor exponente pero donde yo
+28:1828 minutos y 18 segundospodía representar eso me da aproximadamente de 2.22 51 en formato decimal por 10 a la menos 300 otros eso
+28:2728 minutos y 27 segundosson
+28:2728 minutos y 27 segundos[Música]
+28:2828 minutos y 28 segundosel real max y el real min que yo tenía en mamarla y en octavo o sea es el mayor
+28:3628 minutos y 36 segundosnúmero y el menor número positivo que puedo representar que obviamente son en relación a la computadora imaginaria que
+28:4428 minutos y 44 segundostuvimos que presentamos al comienzo en esa tablita obviamente son muchísimo más
+28:5228 minutos y 52 segundosgrandes pero es importante entender que va a haber un número un royal max y va a
+28:5828 minutos y 58 segundoshaber un real min en este modelo también como también vamos a tener el epsilon máquina habíamos dicho que el epsilon
+29:0629 minutos y 6 segundosmáquina era la distancia desde el 1 al número de puntos flotante siguiente más grande
+29:1429 minutos y 14 segundosentonces en doble precisión de la y triple de la
+29:2029 minutos y 20 segundosdel modelo que estamos usando él
+29:2429 minutos y 24 segundos[Música]
+29:2529 minutos y 25 segundosepsilon máquina es un valor que es 2 a la menos 52 si cuando uno transforma eso
+29:3629 minutos y 36 segundosa formato decimal si quieren pueden hacer la prueba van a ver que en maule norte hay en si las devuelve el mismo
+29:4429 minutos y 44 segundosvalor es decir que todos tienen la misma precisión ok
+29:5229 minutos y 52 segundostengo el epsilon máquina entonces bueno como les decía el épsilon máquina el real min y el royal max me
+30:0030 minutosdefinen el rango de números disponibles y la precisión de nuestra computadora
+30:0930 minutos y 9 segundoscualquier número pone encima de real max genera el error numérico lower flow y cualquier número por debajo de rial min
+30:1830 minutos y 18 segundosgenera el error numérico de flow también
+30:2530 minutos y 25 segundosesto se los cuento muy informativo algunas máquinas manda en malas lo
+30:3230 minutos y 32 segundospueden probar permite números de punto flotante conocidos como subnormales sí
+30:4030 minutos y 40 segundoses decir que en el intervalo que va de épsilon por
+30:4730 minutos y 47 segundosrial min a real min existe la posibilidad de llenar con algunos rellenar para que eso no quede
+30:5630 minutos y 56 segundosvacío y que uno directamente no tenga que ir de ruido al final cero permite llenar ese salto con algunas cantidades
+31:0631 minutos y 6 segundosdiscretas con algunos numeritos y el menor número subnormal positivo de
+31:1431 minutos y 14 segundospunto flotante fíjense qué 4.94 bueno etcétera por 10 a la menos 324 es decir
+31:2331 minutos y 23 segundosque entre el 10 a la menos 324 y el 10 a
+31:3131 minutos y 31 segundosla menos 308 yo tengo la posibilidad de representar algunos números en ese
+31:3831 minutos y 38 segundosintervalo ahora bien cualquier número menor
+31:4331 minutos y 43 segundos4.9 por 10 a la menos que los 124 va a ser tomado como 0
+32:0032 minutosblogging sí es una estructura de números de punto
+32:0832 minutos y 8 segundosflotante para que ustedes puedan hacerse una idea de cómo cuál es la representación o la discreta ción del
+32:1732 minutos y 17 segundoseje real que contamos si él es un modelo de números positivos en
+32:2632 minutos y 26 segundoseste caso solamente los números negativos es simétrico y se determina por tres valores de emín y en máx sí o
+32:3632 minutos y 36 segundossea que voy a poder rentar un conjunto de números racionales de la forma x igual uno más q por dos a la e
+32:4632 minutos y 46 segundosdonde es un entero sobre dos a la t
+32:5432 minutos y 54 segundossiendo q la mantis está variando entre 0 y 1 y donde él es un entero siendo
+33:0333 minutos y 3 segundoses variando entre l min y el max que yo le voy a poder ingresar es decir que yo
+33:1033 minutos y 10 segundosa este flag y le puedo variar el valor mínimo del exponente el valor máximo del exponente
+33:1933 minutos y 19 segundosy luego ver cuánto también variable en el t
+33:3133 minutos y 31 segundoses importante para que vean la diferencia entender que en el formato de
+33:3933 minutos y 39 segundosla i triples en la norma 754 de doble precisión el té vale 52 el min vale
+33:4733 minutos y 47 segundosmenos mil 22 y el de max vale mil 23 no hagan esta prueba porque no van a poder visibilizar mucho pero si lo hacen por
+33:5633 minutos y 56 segundosejemplo intentando simular el rango el exponente que tiene
+34:0334 minutos y 3 segundosnuestra computadora imaginaria algo van a poder visualizar me gustaría ver en que lo vean voy a cambiar amatlán esta
+34:1134 minutos y 11 segundosfloat y solo lo van a poder ver en matlab si están
+34:1934 minutos y 19 segundosviendo más la si es una
+34:2634 minutos y 26 segundoses un script si quieren que áfrica yo simplemente lo ejecutó
+34:3434 minutos y 34 segundossí simplemente lo ejecutó este vino lo desarrolló en él
+34:4334 minutos y 43 segundosel mismo moler sí y fíjense que bueno acá nuestro te vale 4 nuestro el máximo al horno exponente
+34:5234 minutos y 52 segundostambién vale 4 y el valor mínimo el exponente vale menos 3 como en nuestra computadora imaginaria y fíjense en este
+34:5934 minutos y 59 segundoscaso de saber si maximizó si se ve ahí se ve bien sobre lindo como ustedes
+35:0635 minutos y 6 segundostienen si ahí en rojo es donde van a ver el 1 si en realidad y uno debería haber
+35:1435 minutos y 14 segundosel 1 y el 1 más épsilon sí en este caso el epsilon de esta máquina
+35:2335 minutos y 23 segundossería 2 al menos 4 sí y luego en toda la distribución de los
+35:3335 minutos y 33 segundosnúmeros de punto flotante que tendríamos en el eje real entonces fíjense que hay una mayor
+35:4235 minutos y 42 segundosdensidad de números siempre menor con los valores en la representación este
+35:4935 minutos y 49 segundosnúmero menor a 1 sí y en la medida que yo tiendo infinito miro los valores más
+35:5935 minutos y 59 segundosgrandes que puedo representar se empiezan a separar entonces esto es importante para
+36:0836 minutos y 8 segundosentender que en la representación de números siempre voy a tener una mayor densidad
+36:1536 minutos y 15 segundoscon números menores estricto a 1 sí y en la medida que yo empiece a trabajar con
+36:2236 minutos y 22 segundosnúmeros más grandes voy a tener una menor densidad sí
+36:2936 minutos y 29 segundoso bien no no se vio el flow
+36:4036 minutos y 40 segundosno se ejecutó bueno si no se vio lo dejo para que lo
+36:4736 minutos y 47 segundosejecuten ustedes bueno lo que les decía antes que se lo
+36:5936 minutos y 59 segundosdigo repito rápidamente sí fíjense el menor valor del exponente es
+37:0837 minutos y 8 segundosmenos 3 el mayor valor el exponente 4 si él te vale 4 o sea que esto define mi
+37:1637 minutos y 16 segundosprecisión como 2 al menos 4 sí
+37:2137 minutos y 21 segundoso sea define mi máquina así como 1 sobre 2 a la 4 también o sea éste va a ser la
+37:3037 minutos y 30 segundosdiferencia entre hay entre el 1 y el próximo número representable en la máquina esa marquita que van a ver en rojo
+37:3837 minutos y 38 segundosy luego van a ver que hay una mayor densidad de números tanto los números solapado representados en este formato y
+37:4637 minutos y 46 segundosen la medida que yo me alejo hago tender hacia infinito lo que van a ver es que
+37:5537 minutos y 55 segundosse empiezan a separar si los números que yo por dar la máquina entonces fíjense si mi número
+38:0438 minutos y 4 segundosen mi numero micalco lumen numérico cae en el medio de estos dos valores bajo algún criterio en la maquina bajo un
+38:1238 minutos y 12 segundostipo de redondeo la máquina va a ser algún ronde o binario va a tener que redondear ese número izquierda o derecha
+38:1938 minutos y 19 segundoscon lo cual en trabajando en este caso por ejemplo muy alejado del 1 el error
+38:2738 minutos y 27 segundosen la representación de ese número va a ser mucho más grande que por ejemplo si estoy trabajando con números menores a 1
+38:3538 minutos y 35 segundossi en ese caso el error de representación de ese número va a ser mucho menor entonces siempre es
+38:4338 minutos y 43 segundosconveniente intentar trabajar con números cercanos a 1 porque en la medida que empiezo a trabajar con números mayores a uno muy grande ya los errores
+38:5238 minutos y 52 segundosde representación o de redondeo empiezan a hacer atendibles ok bueno
+39:0339 minutos y 3 segundoscreo que ahora vamos a volver a la lectura aunque
+39:1739 minutos y 17 segundosbueno eso le da una idea de la representación de punto flotante si quieren pueden jugar un poquito agrandando l min
+39:2639 minutos y 26 segundosesperaban checando de mí no agrandó 1 min y el el té sí y además tengan en cuenta que eso no está en escala logarítmica
+39:3539 minutos y 35 segundospero si ustedes hacen la escala logarítmica en base de 10 de eso lo que van a ver es una discriminación uniforme
+39:4339 minutos y 43 segundospero en realidad esto es como en la máquina estaría almacenando los números
+39:5239 minutos y 52 segundosveamos unos ejemplos por ejemplo el número decimal cuatro tercios no lo
+40:0140 minutos y 1 segundopuedo representar como una fracción binaria exacta por tanto el cálculo de
+40:1140 minutos y 11 segundos1 - 3 por euro paréntesis cuatro tercios menos 1 no resulta 0 sí
+40:2140 minutos y 21 segundosestá bien no resulta cero entonces si en matlab uno hace por
+40:2940 minutos y 29 segundosejemplo forma long luego dice bueno en almacenó el cuatro tercios asignó el
+40:3640 minutos y 36 segundosvalor cuatro tercios fíjense que si bien yo veo en el periódico digamos obviamente esto internamente
+40:4540 minutos y 45 segundostuvo que ser representa dominar yo y tuvo que ser trancado y redondeado
+40:5240 minutos y 52 segundosluego este valor de a le restó 1 que estoy resolviendo el paréntesis eso lo asignó a la variable b
+41:0141 minutos y 1 segundoluego esa variable que es el resultado de mi paréntesis lo multiplicó por 3 si ese resultado me da 1 pero fíjense que
+41:1041 minutos y 10 segundosacá me da todo unos ceros con lo cual me da la pauta que este valor no es exactamente 1 si y finalmente cuando a
+41:1941 minutos y 19 segundosese valor yo le hago 1 - ese valor sé que tenía irene solo lo almacenan se me
+41:2741 minutos y 27 segundostermina dando un número que es muy chiquito pero sin embargo este número no
+41:3441 minutos y 34 segundoses cero como debería ser el resultado esta cuenta en forma exacta si yo ya que en matlab fíjense que esta cuenta que en
+41:4341 minutos y 43 segundosforma exacta con resulta a cero ok el número decimal 0.1 como yo les
+41:5241 minutos y 52 segundoshabía dicho es un número que al representarlo en forma periódica en forma binaria es un periódico sí
+42:0242 minutos y 2 segundoscon lo cual no tiene una representación exacta en la computadora en los programas que usamos
+42:0942 minutos y 9 segundospor tanto si yo sumo diez veces sí sí yo sumo diez veces 0,1 yo debería obtener
+42:1842 minutos y 18 segundosel valor 1 ahora fíjense si yo asignó a la variable a el valor de 0 y hago una
+42:2642 minutos y 26 segundosestructura repetitiva de 1 hasta 10 y en esa variable que inicialmente tiene el
+42:3342 minutos y 33 segundosvalor 0 empiezo a sumar 0.1 y esto lo repito 10 veces el resultado final
+42:4042 minutos y 40 segundosalmacenado en la variable a cuando termine esta estructura repetitiva
+42:4742 minutos y 47 segundoshubo bucle debería ser uno sin embargo si yo le pregunto si la variable a es
+42:5542 minutos y 55 segundosigual igual al valor numérico uno la respuesta es la variable la respuesta lógica es cero o sea que es falso decir
+43:0443 minutos y 4 segundosque sumar diez veces 0.1 en mount lab no nos da 1 y por qué porque el decimal 0,1
+43:1443 minutos y 14 segundosno lo puedo representar en forma exacta en nuestra computadora bueno es el ejemplo que vimos
+43:2143 minutos y 21 segundosinicialmente que lo resolvimos en nuestra computadora imaginaria de 4 dígitos
+43:2943 minutos y 29 segundosdonde no valía la propiedad social iba bueno algo parecido nos pasa acá ahora
+43:3843 minutos y 38 segundosen más la y vemos que no vale la propiedad conmutativa de la suma si algo bastante sorprendente por ejemplo si
+43:4843 minutos y 48 segundosdicen b igual 1 oréal a 116 o sea 1 por día
+43:5543 minutos y 55 segundos1 la computadora secuencialmente va a empezar a resolver de izquierda a derecha
+44:0144 minutos y 1 segundocon lo cual va a ser uno más
+44:0744 minutos y 7 segundos1 x de 10 al 16 1 y esto digamos
+44:1544 minutos y 15 segundosva a terminar dando un valor a ese valor le restó 1
+44:2244 minutos y 22 segundospor 10 a la menos 16 y eso lo almacenó en b luego en c digo uno por día de dieciséis menos uno por
+44:3144 minutos y 31 segundosdiez esto seguramente cero y cuando le son 111 seguramente voy a
+44:3844 minutos y 38 segundostener almacenado el valor cero sin embargo en el caso de nogoyá no va a pasar lo mismo porque cuando yo sume 1
+44:4844 minutos y 48 segundospor 16 uno en realidad debería ser un número entre
+44:5544 minutos y 55 segundosel 1 uno más epsilon sí recuerden que el
+45:0345 minutos y 3 segundosepsilon era 2 por 22 por 10 a la menos 16 sin embargo como
+45:1145 minutos y 11 segundoseste número uno por día 61 está muy cerquita de uno lo que va a ser más la
+45:1845 minutos y 18 segundosva a redondear este número en la primera suma a uno y a ese uno le voy a restar
+45:2545 minutos y 25 segundosuno por día en la menos 16 y ese número va a ser algo seguramente menor av con lo cual cuando le pregunté si veis
+45:3545 minutos y 35 segundoses son igual es decir ingrese veces igual igual hace la respuesta terminan siendo fans son experiencias que yo les
+45:4345 minutos y 43 segundosrecomiendo que hagan sí que se convenzan ustedes
+45:5045 minutos y 50 segundosy después les cuento que en maldad hay una especie de redondeo simétrico binario sin entrar dando en detalles
+45:5845 minutos y 58 segundossi hay un redondeo simétrico que se hace en binario fíjense del épsilon máquina es 2.22 por 10 ala
+46:0846 minutos y 8 segundospor lo menos 16 si yo digo quién es uno más
+46:1646 minutos y 16 segundosepsilon sobre dos en realidad uno esperaría sí que esto lo ré donde a a
+46:2346 minutos y 23 segundosuno más épsilon que es un numero representable en la máquina sin embargo uno más épsilon sobre dos lo termina
+46:3046 minutos y 30 segundosredondeando a hola pero si ustedes ingresan uno más sepsis
+46:3746 minutos y 37 segundosnos van a ver que es un número sí que es un poquito mayor a uno sí está bien y esto me da la pauta porque
+46:4546 minutos y 45 segundosaparecen los celos después de la coma y entonces evidentemente este primer valor el 1 + épsilon sobre 2 cuando no lo
+46:5546 minutos y 55 segundospodía representar en la máquina sí estoy exactamente en la mitad entre 1 y 1 + épsilon estoy en el parado en el 1
+47:0547 minutos y 5 segundosmaestro de 2 ese número no lo puede representar la máquina y lo que hace más la uoct aveo el sistema que usen lo que
+47:1347 minutos y 13 segundoshace es hace un redondeo simétrico binario y lo terminó redondeando a 1 como le decía entre 1 y 1 + épsilon no
+47:2347 minutos y 23 segundoshay ningún valor que yo perder blanda en la máquina y todo lo que caiga ahí dentro lo tengo que redondear o bien a 1
+47:3047 minutos y 30 segundoso bien a 1 + eps bueno con todo este material ya pueden realizar la actividad 2
+47:3947 minutos y 39 segundosasí que esta subida con lo cual pueden seguir practicando sobre errores
+47:4547 minutos y 45 segundosnuméricos y aritmética de punto flotante acá les dejo la bibliografía

@@ -1,0 +1,402 @@
+hola yo soy y luciano como celine y marinelli y vamos a hacer la lectura 9
+0:099 segundossobre resolución de sistemas de ecuaciones no lineales en particular vamos a estudiar el método de punto fijo
+0:1717 segundossí y pertenece esta lectura pertenece a la unidad 6 sobre métodos numéricos de
+0:2626 segundosmatemática aplicada para eléctrica y electrónica de la facultad de ciencias exactas ingeniería y agrimensura de la
+0:3333 segundosuniversidad nacional de rosario vamos a hacer una introducción
+0:4141 segundosuna breve introducción y muchos problemas de la ciencia y la
+0:4949 segundosingeniería se pueden modelar matemáticamente como un sistema de ecuaciones no lineales
+0:5757 segundosnosotros habíamos visto en lecturas anteriores cómo resolver numéricamente sistemas de ecuaciones
+1:051 minuto y 5 segundoslineales en este caso vamos a pensar que tenemos un sistema de ecuaciones no
+1:111 minuto y 11 segundoslineales donde fx igual a cero fíjense que están en negritas porque la f grande
+1:181 minuto y 18 segundoses un vector de función es decir un vector de campos escalares que dependen
+1:251 minuto y 25 segundosde la variable x y x es un vector citó sido un punto de del plano a rené sí que
+1:331 minuto y 33 segundostiene n componentes sí qué bueno obviamente va a pertenecer a un dominio que ese dominio hacer el
+1:411 minuto y 41 segundosdominio de mi función f entonces lo que ahora nos interesa es poder resolver
+1:511 minuto y 51 segundosnuméricamente un sistema de n ecuaciones con n incógnitas y en este caso van a
+1:591 minuto y 59 segundosser las ecuaciones no lineales un método numérico para hallar las
+2:072 minutos y 7 segundosraíces de este sistema de ecuaciones lineales el método del punto fijo si en el método de punto fijo
+2:162 minutos y 16 segundosnosotros vimos que en el caso de una dimensión por ejemplo teníamos para
+2:232 minutos y 23 segundoshallar a próximas raíces de ecuaciones no lineal en una dimensión teníamos el método de newton rap son vimos en la
+2:322 minutos y 32 segundoslectura anterior ahora también existen otros métodos para sistema de ecuaciones no lineales como el mismo método en newton rap son que
+2:402 minutos y 40 segundostiene una extensión natural a sistemas de ecuaciones no lineales sin el método
+2:472 minutos y 47 segundosde punto fijo lo se puede pensar como una generalización del método de newton
+2:552 minutos y 55 segundosrap son o al revés el método newton rap son se puede ver como un caso particular de punto fijo nosotros en el caso de una dimensión que
+3:043 minutos y 4 segundosestudiamos el el método inyector rap son y en el caso que vamos a ver ahora de dos dimensiones vamos a ver el método de
+3:133 minutos y 13 segundospunto fijo pero se puede extender tanto para n dimensiones como para dimensión sí
+3:223 minutos y 22 segundosbueno de qué trata el método del mundo fijo para desarrollarlo vamos a ver un
+3:303 minutos y 30 segundosejemplo introductorio si vamos a ver un ejemplo que consiste en
+3:363 minutos y 36 segundosque tenemos dos campos escalares f1 de xy igual x cuadrado menos dos x menos y
+3:453 minutos y 45 segundosmás 0.5 y f sub 2 de xy es igual a x
+3:513 minutos y 51 segundoscuadrado más 4 y cuadrado menos 4 x si esos son dos campos escalares que tengo definidos
+4:004 minutossi yo ahora bien esos campos escalares los igualó a cero es decir busco las
+4:064 minutos y 6 segundoscurvas de nivel 70 de esos campos ahora lo que tengo son ecuaciones
+4:154 minutos y 15 segundosefe 1d x igual a 20 y f2 de x igualado a cero lo que hace es definirme
+4:234 minutos y 23 segundosen forma implícita curvas en el plano z igual a cero si serían las curvas de
+4:334 minutos y 33 segundosnivel de esos campos escalares entonces cada una de esas ecuaciones define una curva en el plano del igual
+4:414 minutos y 41 segundoscero entonces bueno que es resolver el sistema de ecuaciones no lineales es
+4:474 minutos y 47 segundosdecir encontrar valores de xy tal que satisfagan a ambas ecuaciones es decir
+4:554 minutos y 55 segundosuna raíz 10 de ese mes de esas campos va a ser un
+5:015 minutos y 1 segundopunto que voy a denominarse estrella como estrella de r2 donde ambas
+5:105 minutos y 10 segundosecuaciones sean iguales a cero es decir donde geométricamente se cortan esas curvas
+5:175 minutos y 17 segundosentonces lo que queremos es un método que nos permita aproximar esas intersecciones si es que las hay es si
+5:255 minutos y 25 segundosqueremos hacer hallar las raíces de ese sistema que geométricamente son las intersecciones de esas curvas si las hubiese
+5:365 minutos y 36 segundosbueno en el ejemplo anterior fíjense la primera ecuación nos define una parábola
+5:435 minutos y 43 segundoses la ecuación de segundo grado que define una parábola es un caso particular de la ecuación de segundo
+5:505 minutos y 50 segundosgrado que define una parábola en azul y en la segunda ecuación es también un caso de una ecuación de segundo grado
+5:585 minutos y 58 segundosque define un año entonces lo que estoy interesado ve es en ayer un método que me sirva para aproximar esas dos
+6:086 minutos y 8 segundosintersecciones que veo en la que tienen estas dos curvas fíjense que la primera hay una intersección que está en el
+6:176 minutos y 17 segundossegundo cuadrante y hay otra intersección que está en el primer cuadrante
+6:286 minutos y 28 segundosbueno cuál es la idea del mundo fijo si yo lo que voy a hacer es
+6:356 minutos y 35 segundosde mi primera ecuación voy a despejar algebraica mente la primera variable si
+6:436 minutos y 43 segundoses algo parecido lo que hicimos en jacob y lo que pasa en algo hoy teníamos una expresión lineal de ecuación lineal en
+6:506 minutos y 50 segundoseste caso de una ecuación no lineal dado que una de las variables está elevada al cuadrado entonces que hice de la primera
+6:596 minutos y 59 segundosactuación efe sub 1d x igualdad 0 despeje la variable x con lo cual xx cuadrado menos
+7:077 minutos y 7 segundosy más 0.5 / 2 de la segunda ecuación despeje la y pero
+7:147 minutos y 14 segundoslo hice de una forma particular partiendo de la segunda ecuación lo que hice es sumar a ambos lados de la
+7:237 minutos y 23 segundosigualdad 8 y luego de una de esas 8 y que sume despeje una y con lo cual tengo
+7:317 minutos y 31 segundosque y es igual a menos x cuadrado menos 4 y cuadrado más 8 de i + 4 dividido
+7:407 minutos y 40 segundoses decir los valores de xy que satisfagan que tanto f1 como f
+7:477 minutos y 47 segundos2 valen 0 van a satisfacer esas dos ecuaciones que me construir
+7:567 minutos y 56 segundosentonces lo que ahora es definirme 2 lo que van a ser conocidas como
+8:028 minutos y 2 segundosgeneratrices porque las despejes que hice anteriormente me dan la idea de como yo podría empezar y
+8:108 minutos y 10 segundosesperar entonces fíjense que en la primera ecuación todo lo que está del lado derecho de la igualdad los llamé
+8:178 minutos y 17 segundosjesús uno que también es un nuevo campo escalar que ahora llame jesús uno que está definida como todo lo que tengo al
+8:268 minutos y 26 segundoslado derecho de mi primer de la igualdad de arriba y en la segunda ecuación
+8:338 minutos y 33 segundosy de arriba lo que hice fue todo lo que está del lado derecho y despeje cuando despeje la variable y
+8:418 minutos y 41 segundoslo llame jesús 2 es decir que tanto jesús 2 y jesús 1 son ahora nuevos
+8:488 minutos y 48 segundoscampos escalares y que voy a llamar generatrices de mi sistema original si
+8:568 minutos y 56 segundosestán asociado a mi sistema original que yo quería resolver lo que es importante no confundir las generatrices con las
+9:049 minutos y 4 segundosfunciones que define el sistema decir no confundir la g1 y la g2 con la f1 y la
+9:129 minutos y 12 segundosg2 obviamente la g1 y la g2 están construidas a partir de la f1 y la f2
+9:239 minutos y 23 segundosentonces bueno cómo puedo hacer lo que puedo hacer en la primera ecuación tomando una aproximación
+9:319 minutos y 31 segundosinicial de cero crucero que ahora es un punto del plano si lo que puedo hacer en
+9:399 minutos y 39 segundosla primera ecuación reemplazo esos valores y obtengo un valor pero su k es un 1
+9:499 minutos y 49 segundoscon la segunda general tris reemplazo p 0 0 y obtengo un valor curso 1
+9:569 minutos y 56 segundosy acá también con p sub 11 vuelvo a reemplazar en evaluar a mi general dicen eso fundó y obtengo un p sub 22 y así
+10:0410 minutos y 4 segundossucesivamente me generó una sucesión pese a q psuv k
+10:1210 minutos y 12 segundossi tal que yo esperaría que cuando s cada tienda infinito sí
+10:2010 minutos y 20 segundosconverja a al menos una de las raíces de mi sistema dado inicialmente
+10:3110 minutos y 31 segundosentonces tengo acá claramente lo que es un esquema iterativo y ese es el esquema iterativo de punto fijo
+10:3910 minutos y 39 segundosahora bien me voy a decir bueno pero por qué usas de esas generatrices y nosotras bueno fueron las que se me ocurrieron a
+10:4710 minutos y 47 segundosmí tranquilamente hay otras posibles generatrices yo por ejemplo de la primera ecuación que define mi sistema
+10:5610 minutos y 56 segundoslo que podría haber hecho es sumar a ambos lados de la igualdad 4x y despejar una de las x con lo cual obtengo otra
+11:0611 minutos y 6 segundosgeneratriz que llamo g1 amonio 1 monio que tiene esa expresión y
+11:1411 minutos y 14 segundossi en la segunda ecuación que define mi sistema de ecuaciones no lineales lo que hice fue sumar a ambos lados 11 y antes
+11:2311 minutos y 23 segundoslo hice sumando 8 y ahora lo que hago es sumar 11 y despejó una de las variables lo que obtengo es una otra nueva general
+11:3211 minutos y 32 segundosdriss g sub 2 money es decir que hay estas g1 monjos g sub 21 es otro par de
+11:4011 minutos y 40 segundosgeneratrices asociado en mi sistema original pero hay infinitas formas de definirse generatrices lo que me va a
+11:4911 minutos y 49 segundosinteresar obviamente van a ser las generatrices que me construyan un existe un esquema iterativo que converja la
+11:5811 minutos y 58 segundossolución de mi problema vamos a tener en cuenta en el desarrollo
+12:0412 minutos y 4 segundosque sigue tanto esta g1 g2 y una clase 1 moño es un loco ahora bien
+12:1312 minutos y 13 segundosdefinir esta general dices es sencillo de hacer en matlab si es sencillo hacer el mandado
+12:2212 minutos y 22 segundoslo que hice fue en este caso no lo hago en línea lo que hice fue definirme una
+12:2912 minutos y 29 segundosfunción un m file que llame je je je mayúscula uno que
+12:3812 minutos y 38 segundostiene como argumento de entrada una equis mayúscula que va a ser un vector fila o sea que va a tener dos
+12:4612 minutos y 46 segundoscomponentes y tiene como argumento de salida una imagen que también van a ser dos componentes
+12:5412 minutos y 54 segundosy en el cuerpo de mi función lo que hice fue decir bueno la primera componente de
+13:0213 minutos y 2 segundossu 1 va a ser igual o sea lo que era a mí
+13:1013 minutos y 10 segundosmi hijo 1 ig1 si lo almacenó en la image
+13:1713 minutos y 17 segundos1 va a ser igual a x cuadrado sea la primer componente de x al cuadrado menos
+13:2813 minutos y 28 segundostambién en ese caso sería menos x2 sería la segunda componente de the x más un
+13:3613 minutos y 36 segundosmedio / 0.5 todo / 2 sigue decir que en esa primera línea dentro del cuerpo de
+13:4313 minutos y 43 segundosfunción tengo definida mi primera generatriz de la misma forma la g2 jesús
+13:5113 minutos y 51 segundoslo que tenía antes lo almacenó en la segunda componente del vector y
+13:5613 minutos y 56 segundosmayúscula y no es otra cosa que menos x cuadrado menos 4 y cuadrado más 8 y más
+14:0714 minutos y 7 segundos4 y vividores es decir qué estoy definiendo mi primer paro de
+14:1414 minutos y 14 segundosgeneratrices jesús 1 y jesús 2 que almacene en una función que llamo g mayúscula 1 sí
+14:2514 minutos y 25 segundosok ahora bien como esto está almacenado en un archivo en un m file que tiene que estar en mi directorio de trabajo si lo
+14:3314 minutos y 33 segundosque tengo que hacer es luego cuando lo pasé como cadena de caracteres en mi
+14:4014 minutos y 40 segundosimplementación del mundo fijo es pasarlo como strings y tres comidas o apóstrofe
+14:4914 minutos y 49 segundosla implementación de punto fijo también es va a ser muy sencilla como va a ser mi punto de implementación
+14:5714 minutos y 57 segundosde puntos fijos voy a definirme una función matlab que va de él se va a llamar punto fijo que va a tener como
+15:0615 minutos y 6 segundosargumentos de entrada efe nom que va a ser la función que define las generatrices
+15:1515 minutos y 15 segundosp 0 que es una activación inicial y que en este caso va a tener que ser un par
+15:2215 minutos y 22 segundosun vector de los componentes porque es un punto del plano cartesiano una tolerancia siguió un toll que va a
+15:3115 minutos y 31 segundosser un un valor escalar chicos que va a ser parte de uno de mis criterios de parada
+15:3815 minutos y 38 segundosy un hit máx que un número de integraciones máximas llegado el caso en que yo no alcance la tolerancia si lo
+15:4715 minutos y 47 segundosque voy a hacer es esperar hasta llegar a un número máximo de iteraciones esto es un criterio de parada
+15:5715 minutos y 57 segundosy como argumento de salida entre corchetes lo que tengo es p k que es la aproximación de la
+16:0616 minutos y 6 segundossolución y inter que es el número de interacciones realizadas hasta que se
+16:1316 minutos y 13 segundosalcanzó la tolerancia en caso que se alcance la tolerancia deseada y ter
+16:1916 minutos y 19 segundostermina terminará coincidiendo con el valor de imax porque bait edad el número máximo de veces
+16:2816 minutos y 28 segundosentonces bueno tengo una serie de efe prince simplemente a los fines de que por la ventana en el comando se imprima
+16:3516 minutos y 35 segundosy yo vaya pudiendo ver resultados parciales inicializa en mi contador de iteraciones en cero la variable inter
+16:4316 minutos y 43 segundosigual a cero sí bueno la implementación de la iteración
+16:5416 minutos y 54 segundosde punto de punto fijo es muy sencilla inició una estructura repetitiva con el while
+17:0217 minutos y 2 segundoso ayuno ya que eso se va a repetir siempre y lo que hago es usando el comando
+17:1017 minutos y 10 segundosintrínseco de predeterminado de matlab que lo que hace efe bal evalúa
+17:2017 minutos y 20 segundosefe no me donde yo tenía almacenada mi generatriz en la estimación inicial de cero y eso lo guarda entre sus causas en
+17:2917 minutos y 29 segundospk eso es la iteración de punto fijo sí es decir ir evaluando mi generatrices en
+17:3717 minutos y 37 segundoslas estimaciones que yo voy generando en cada paso o sea en la variable pk tengo la
+17:4617 minutos y 46 segundositeración en el paso camas 1 y en pc lo tengo la integración en el paso pk así
+17:5617 minutos y 56 segundosen la segunda línea dentro de google lo que hago es calcular un error que en realidad es la norma dado que peca y
+18:0418 minutos y 4 segundospeseros son vectores ahora cálculo en la norma euc libia de la diferencia entre esos vectores o
+18:1218 minutos y 12 segundossea estoy viviendo de alguna manera cuál es la distancia que hay entre dos aproximaciones
+18:1918 minutos y 19 segundossucesivas si en el plan euclid eo si fuese en todo el mundo fijo en varias
+18:2818 minutos y 28 segundosdimensiones también el comando me serviría la norma me serviría esta norma o cualquier otra para medir qué tan
+18:3618 minutos y 36 segundoscerca están mis aproximaciones entre sí y después cálculo en especie error relativo que va a ser el error / la
+18:4518 minutos y 45 segundosnorma de la aproximación cámaras uno más una opción chiquito sí y bueno ahora lo que hago es
+18:5418 minutos y 54 segundosimplementar mis criterios de parada para que mi algoritmo se tenga
+19:0119 minutos y 1 segundosi eres menor que tool o esa doble barrita es 1 el error relativo es menor
+19:0819 minutos y 8 segundosque doble algún aviso se cumpla se alcanza la tolerancia imprimo el resultado y a un break
+19:1619 minutos y 16 segundosy el otro oír lo que me dice es que si el número de raciones máximos su mayor
+19:2319 minutos y 23 segundosmayor o igual convendría poner ahí mi número interacciones interés mayor
+19:3019 minutos y 30 segundosigual que el max así que el número de atracciones máximas el ingrese entonces ya el número de interacciones máximo que
+19:3819 minutos y 38 segundosfue alcanzado con lo cual hay un break hay un corte luego
+19:4719 minutos y 47 segundosactualizo mi contador y tal y hago la actualización de la variable
+19:5419 minutos y 54 segundosp subsede es 0 con la variable pk si esa actualización es muy importante para que el algoritmo actualice su variable y
+20:0220 minutos y 2 segundosvuelva a integrar sí y bueno y con el último efe brindé estoy imprimiendo por ventana de comando
+20:0920 minutos y 9 segundosresultados parciales o sea el algoritmo punto fijo en realidad está en la primera paso y lo
+20:1720 minutos y 17 segundosdemás son criterios de parada que necesito hacer para evitar que mi
+20:2320 minutos y 23 segundosesquema y tere indefinidamente bueno vamos a ver cómo funciona este
+20:3120 minutos y 31 segundospunto fijo y vamos vamos a hacerlo nosotros matt lamb sí vamos a hacerlo nosotros
+20:4020 minutos y 40 segundoslo que primero voy a hacer es graficar mi sistema
+20:4920 minutos y 49 segundosustedes ya tienen él comando de control sí
+20:5820 minutos y 58 segundosperdón el script te contó que es un script que me sirve para plantear curvas de nivel
+21:0621 minutos y 6 segundosyo estaba subido en la en la carpeta cuando hicimos la introducción a matlab
+21:1421 minutos y 14 segundosoctavi si la si con lo cual deseamos este comando y lo que yo hice fue hacer que justamente este mismo ejemplo para
+21:2321 minutos y 23 segundosque ustedes ya tengan como plotear esa parábola y esencia lo que hacemos ejecutado ustedes lo pueden ejecutar por
+21:3221 minutos y 32 segundosventana de comandos lo pueden ejecutar por ventana de comandos
+21:4721 minutos y 47 segundoso bien bien y les debería salir una figura
+21:5821 minutos y 58 segundosa ver si son en juego mostraron mi figura de ahí está
+22:0822 minutos y 8 segundosles debería usando el té con thorne y lo
+22:1422 minutos y 14 segundosejecutan deberían poder ver esta figuración de ven que tengo las dos
+22:2222 minutos y 22 segundosraíces y en principio vamos a intentar aproximar esta raíz que stern al segundo cuadrante si tomando como valor inicial
+22:2922 minutos y 29 segundospor ejemplo el valor 01 o sea vamos a empezar a integrar partiendo como
+22:3622 minutos y 36 segundosaproximación inicial de ese valor
+22:5222 minutos y 52 segundosalgo
+23:1023 minutos y 10 segundosaunque hoy vamos a intentar
+23:1623 minutos y 16 segundosy hacer nuestra aproximación de esa raíz
+23:2123 minutos y 21 segundosvamos a asignar como argumento de salida
+23:3023 minutos y 30 segundosy dijimos que no tengo la variable pk en este caso motion marco de cada uno
+23:3923 minutos y 39 segundosel iter 1 sí es el argumento
+23:4823 minutos y 48 segundosd salida
+23:5723 minutos y 57 segundosigual a dijimos que se llama punto fijo como función que define mi ingeniera
+24:0724 minutos y 7 segundosdice yo tengo definida mi g1 luego necesito una aproximación inicial que
+24:1324 minutos y 13 segundosdijimos que va a ser 0 1 y después necesito pasarles una
+24:2024 minutos y 20 segundostolerancia que va a ser uno por lo menos 9 y un número de iteraciones máximas que en este caso podría tomar 15
+24:2924 minutos y 29 segundosinteracciones máximas ejecuto punto fijo
+24:3524 minutos y 35 segundosy lo que vemos es que en 10 y 3
+24:4224 minutos y 42 segundosse alcanzó la tolerancia así sea el resultado final de mi primera
+24:5124 minutos y 51 segundosaproximación termina siendo -0 22 099 qué
+25:0125 minutos y 1 segundosi miramos si miramos la transparencia si vemos que
+25:1225 minutos y 12 segundosestá cerquita de la intersección de las curvas en el segundo cuadrado
+25:2425 minutos y 24 segundosno ve lo que podremos hacer es lotear
+25:3425 minutos y 34 segundosfin vamos a hacer explotarlo
+25:4625 minutos y 46 segundosconte cóndor y si quieren la aproximación la podemos
+25:5325 minutos y 53 segundosmarcar en la gráfica y la podemos marcar en la gráfica por ejemplo usando el comando hold on
+26:0226 minutos y 2 segundosque lo que hace es me mantiene abierta la figura demanda y luego lo que puedo hacer es un blog de fe
+26:1226 minutos y 12 segundospk dijimos que cada uno voy a plantearla
+26:1926 minutos y 19 segundosprimer componente versus la segunda componente de pk 1 sí
+26:2726 minutos y 27 segundosy esto lo voy a hacer en color negro y con una marquita de asterisco lo que va a hacer este comando explote arme
+26:3626 minutos y 36 segundossolamente el primer componente de pk 1 verso es la segunda o sea va a ser sólo un puntito y lo va a hacer en cada en
+26:4426 minutos y 44 segundoscolor negro y con la marquita asterisco cuando yo ejecuto eso
+26:5326 minutos y 53 segundoslo que debería aparecer
+27:0027 minutosa ver qué se nos muestra ahí
+27:0627 minutos y 6 segundosaparece fíjense en un asterisco la marca en la radio evidentemente estamos
+27:1427 minutos y 14 segundosrealizando una buena aproximación de esa intersección ok bueno voy a volver a la
+27:2227 minutos y 22 segundoslectura sí voy a volver a la lectura
+27:3027 minutos y 30 segundosv entonces lo que vimos es que cuando empezamos a integrar con las
+27:3727 minutos y 37 segundosgeneratrices que está almacenada en el archivo que uno en inicial izando no en 01 él
+27:4727 minutos y 47 segundosalgoritmo de punto fijo alcanzó la tolerancia osea convergió ahora lo que hice fue inicializar lo en 20 si es
+27:5727 minutos y 57 segundosdecir lo que quise hacer fue intentar ver si yo podía
+28:0328 minutos y 3 segundosa aproximar esta otra raíz inicial izando me en 20 o sea en este valor si
+28:1128 minutos y 11 segundoscerquita de esta raíz bueno qué nos pasa en este caso
+28:2028 minutos y 20 segundoscuando yo ejecutó lo mismo en este caso inicial hizo 20
+28:3228 minutos y 32 segundoslo que les va a pasar es que fíjense las interacciones empieza ideal en el 20 si
+28:3928 minutos y 39 segundosen algún momento esos números se hacen extremadamente grande y ya después se hacen infinito y menos infinito cada una
+28:4628 minutos y 46 segundosen sus componentes o se termina alcanzando el número máximo de iteraciones sí que en este caso era 15
+28:5528 minutos y 55 segundospero que la solución divergencia sea tengo una solución que en absoluto aproxima la intersección de las dos
+29:0329 minutos y 3 segundoscurvas bueno o sea que no me sirvió si en ese caso
+29:1229 minutos y 12 segundosinicializar cerquita de las cerquita de
+29:1829 minutos y 18 segundosla raíz del primer cuadrante no me sirvió si ustedes prueban con otros
+29:2529 minutos y 25 segundosvalores cerquitas van a ver que también en el algoritmo va a divertirse ósea
+29:3329 minutos y 33 segundoslo que no me está sirviendo acá no es que tan cerca yo estoy de mi raíz sino que mi general dirige uno no es buena
+29:4129 minutos y 41 segundosentonces lo que hice fue teniendo en cuenta las el par de generatrices que
+29:4829 minutos y 48 segundosuno moño y head o moño lo que hice fue
+29:5729 minutos y 57 segundosgenerarme un esquema iterativo usando g1 moño y g2 monio decir de la primera
+30:0530 minutos y 5 segundosecuación me hice un despeje de la x con la g1 amonio y de la segunda ecuación hice una especie de life on ag 2 moño y
+30:1430 minutos y 14 segundosahora lo que considero es una nueva iteración de punto fijo usando estas
+30:2130 minutos y 21 segundosnuevas generalices sino sea los valores de pk busca de su kaiku psuv carlos obtengo a
+30:3130 minutos y 31 segundospartir me sirven para calcular los evaluó las generatrices que 12 mont yo y me
+30:4030 minutos y 40 segundosactualizan los valores de pesca empezó camas 1 y coors uk en sus camas 1
+30:4730 minutos y 47 segundossiempre y cuando yo de una aproximación es decir tengo una nueva iteración de punto fijo
+30:5730 minutos y 57 segundosimplementarlas nuevamente es muy sencillo en este caso lo hice en una sub-22 de x hice la implementación de
+31:0631 minutos y 6 segundosnuevas general 3 pueden chequear lo que coinciden con la g1 moño con la g2 moño sí
+31:1531 minutos y 15 segundosya que esta nueva función de matlab g2 define las nuevas general generatrices y que voy a pasar como
+31:2431 minutos y 24 segundosargumento de vuelta de punto fijo ok vamos a ver qué pasa si vamos a hacerlo nosotros
+31:3231 minutos y 32 segundosa ver si nos sale haga si el mount lab otro
+31:3931 minutos y 39 segundosvoy a limpiar pantalla con un clc entonces
+31:4731 minutos y 47 segundospara no escribir todo puede usar el cursor hacia arriba y hacia abajo miren voy a actualizar esto a la esta aproximación le voy a llamar
+31:5531 minutos y 55 segundospesos cap de sus pecados y cerdos va a ser punto fijo que va a usar la general
+32:0432 minutos y 4 segundosvi que yo ya tengo almacenada anjé 2 y en vez de empezar y tirando en 10 voy a
+32:1032 minutos y 10 segundosempezar y teramo en 0 2 con la misma tolerancia 1 por 10 el al menos 9 y como
+32:1932 minutos y 19 segundos15 como número máximo de iteraciones
+32:2532 minutos y 25 segundosejecuto bueno fíjense aparentemente los resultados parciales hay una
+32:3332 minutos y 33 segundosconvergencia hay una convergencia pero estoy alcanzando el número máximo de integración
+32:4332 minutos y 43 segundosestoy alcanzando el número máximo integración lo que podría hacer es aumentar la cantidad de interacciones
+32:5132 minutos y 51 segundosmáximas fíjense que sigue habiendo una convergencia si a un valor que es 1.9
+33:0233 minutos y 2 segundos0.31 aproximadamente si pero sigue cortando por integración es máxima es
+33:1033 minutos y 10 segundosdecir que mi algoritmo está integrando algo hasta alcanzar un número de interacciones máximo o sea que no está cortando por por tolerancia la
+33:1833 minutos y 18 segundostolerancia que él ingrese es muy chica bueno aumentemos esto 40 iteraciones bueno y ahora si vemos qué
+33:2833 minutos y 28 segundosse alcanza la tolerancia ah perdón acá en el 30 ya había alcanzado la tolerancia o sea que justo
+33:3733 minutos y 37 segundosen el valor 30 chad se alcanza la tolerancia sea por ejemplo si se le hubiese puesto 25 iteraciones máxima
+33:4633 minutos y 46 segundosplano y si hubiese puesto 31 o sea que exactamente en la interacción
+33:5533 minutos y 55 segundos30 yo alcanzo la tolerancia así ok que pude finalmente aproximar la
+34:0434 minutos y 4 segundossegunda respiren sé que es un 1.90 31 que a ver si miramos nuestra
+34:1434 minutos y 14 segundosla próxima opción es 1 punto
+34:2034 minutos y 20 segundos1.99 0 con dijimos 1.90 31 o sea 1.9
+34:3134 minutos y 31 segundos0 31 es aproximadamente este valor sí
+34:3834 minutos y 38 segundostambién lo que pueden hacer es quedarse tranquilo pueden los diablos como una marquita
+34:4834 minutos y 48 segundosy ahora tengo que cambiar que la aproximación está en pecados sí
+34:5634 minutos y 56 segundoslos lotes o sí y lo que me debería parecer a ver si
+35:0635 minutos y 6 segundosve ok ahí me tiene que aparecer el bloqueo fíjense que logré aproximar las dos
+35:1435 minutos y 14 segundosraíces con una tolerancia chica ok bueno esto es lo que les contaba
+35:2235 minutos y 22 segundosantes fue liderando hasta que en 33 iones
+35:3035 minutos y 30 segundosconvergió o sea alcance la tolerancia deseada entonces bueno
+35:3935 minutos y 39 segundosqué es un punto fijo sí entonces definamos lo en principio para
+35:4535 minutos y 45 segundosun sistema bidimensional qué es lo que estuvimos ejemplificando recién
+35:5335 minutos y 53 segundosun punto fijo de un sistema de ecuaciones bidimensional que está
+35:5935 minutos y 59 segundosescrito en la forma x igual jesús uno de
+36:0536 minutos y 5 segundosxy e igual jesús 2 de xy ya donde jesús uno jesús dos son mi generatrices es un
+36:1536 minutos y 15 segundospunto cita el dominio de g1 y g2 que llamó p estrella q estrecha donde si yo
+36:2636 minutos y 26 segundosevalúo mi generatrices en ese punto la primera generatriz evaluada en el p
+36:3536 minutos y 35 segundosestrella su estrella me dan la primera componente de mi punto fijo o sea se estrecha y si yo evalúo la segunda
+36:4436 minutos y 44 segundosgeneratriz en punto fijo me da la segunda componente de mi mundo
+36:5136 minutos y 51 segundosok eso sería un punto fijo de mi sistema de ecuaciones bidimensionales es decir
+36:5936 minutos y 59 segundosnuestro problema original que era encontrar raíces del sistema de
+37:0737 minutos y 7 segundosecuaciones no lineales efe su 1 igual a 0 efe
+37:1337 minutos y 13 segundossub 20 se transformó en encontrar un punto fijo de mi sistema de ecuaciones
+37:2237 minutos y 22 segundosbidimensional que construir con mi generatrices a partir de la f1 y f2 me
+37:3037 minutos y 30 segundosconstruir la jesus bonynge sub-21 busque a este sistema bidimensional un punto
+37:3837 minutos y 38 segundosfijo se entiende decir encontrar raíces de mi sistema original fx igual a cero
+37:4737 minutos y 47 segundosse transformó en encontrar una genere un punto fijo de mi sistema
+37:5537 minutos y 55 segundosx igual a cero que esto es el caso de un sistema n dimensional un punto
+38:0238 minutos y 2 segundosfijo de un sistema n dimensional que lo tengo definido como x en negrita igual
+38:1038 minutos y 10 segundosque en negrita que depende de x va a ser un punto x estrella que está en el
+38:1638 minutos y 16 segundosdominio de la g tal que la g generatriz que en este caso es un vector de funciones si un vector de campos
+38:2538 minutos y 25 segundosescalares la generatriz evaluada en esa estrella damm efectivamente eléctrica si se es el
+38:3638 minutos y 36 segundoscaso de un mundo fijo en el caso n dimensional
+38:4738 minutos y 47 segundosok para él
+38:5338 minutos y 53 segundossistema primero de el sistema de ecuaciones bidimensional el esquema de
+39:0139 minutos y 1 segundopunto fijo va a estar dado por esa interacción que nosotros lo hicimos en un caso particular siempre que yo de un
+39:1039 minutos y 10 segundosvalor inicial pero q cero y donde los componentes de su cama su no sucumbas uno depende de las evaluaciones de las
+39:1939 minutos y 19 segundosgeneratrices en las componentes de azúcar azúcar y en el caso n dimensional
+39:2639 minutos y 26 segundosen el caso general evaluando la generatriz si en las aproximaciones
+39:3339 minutos y 33 segundoscalles y más si yo obtengo las aproximaciones cama un pésima siempre y
+39:3939 minutos y 39 segundoscuando yo de una aproximación inicial x0 sí entonces es importante el concepto de
+39:4639 minutos y 46 segundosno confundir lo que son las funciones que definen mi sistema de ecuaciones no
+39:5439 minutos y 54 segundoslineales negrita con la negrita que son las funciones que definen mi género a
+40:0340 minutos y 3 segundostrichet el problema de hallar una raíz al sistema original se transformó en hallar
+40:1240 minutos y 12 segundosun punto fijo de mi sistema nuevo definido por las generatrices
+40:2040 minutos y 20 segundosahora bien una pregunta natural que surge es cuando converge punto fijo
+40:2840 minutos y 28 segundossiempre convergen nosotros vimos recién en el ejemplo que qué bueno que cuando usamos un par de generatrices en un cazo
+40:3740 minutos y 37 segundosconvergió para una relleno grano incluso si yo inicializa va con una estimación inicial muy cerca tampoco convert que
+40:4740 minutos y 47 segundosbueno cuando converge bueno para eso tenemos algunas herramientas teóricas por ejemplo en el
+40:5640 minutos y 56 segundoscaso bidimensional que es el caso que estuvimos trabajando nosotros
+41:0341 minutos y 3 segundosla convergencia cerca o sea cuando puedo garantizar la convergencia cuando estoy
+41:1041 minutos y 10 segundoscerca de mi punto fijo y se acercaba entre comillas el teorema
+41:1741 minutos y 17 segundosdice que si tengo dos funciones que un eje dos que tienen derivadas parciales
+41:2541 minutos y 25 segundoscontinuas si en un dominio que contiene al punto fijo estrella o estrella es
+41:3341 minutos y 33 segundosdecir que el estando la derivada parcial en x como la derivada parcial en y de la que uno y la dos
+41:4141 minutos y 41 segundosson continuas y si yo empiezo a alterar
+41:4941 minutos y 49 segundossuficientemente cerca es decir es un teorema de carácter local si va a haber un radio a partir del cual un carácter
+41:5941 minutos y 59 segundosde local existencial a la vez que hay un radio a partir del cual yo empiezo y terán sea si yo tengo empiezo y de largo
+42:0842 minutos y 8 segundosa una estimación inicial de cero crucero suficientemente cerca de mi punto fijo y
+42:1542 minutos y 15 segundosque además se satisface que el valor absoluto de la derivada parcial de la g1
+42:2342 minutos y 23 segundosrespecto a x más el valor absoluto de la derivada parcial de la geo no respecto a y es menor estricto que uno y lo mismo
+42:3242 minutos y 32 segundospasa para la segunda generatriz y eso se satisface para todo xy en el entorno del
+42:4042 minutos y 40 segundospunto fijo la iteración de punto fijo genera una sucesión de pares ordenados
+42:4742 minutos y 47 segundosque cuando k tiende a infinito va a converger al punto fijo de estrella o
+42:5442 minutos y 54 segundosestrella que no es otra cosa que la raíz de mi sistema entonces si las condiciones de acotación
+43:0443 minutos y 4 segundosse cumplen que son acotación es de tipo operativa yo puedo
+43:1143 minutos y 11 segundosconstruida mixe unnim y g2 yo puedo hacer las derivadas parciales y las puedo acostar
+43:1743 minutos y 17 segundossi se da esa acotación entonces puedo decir que mundo fijo
+43:2443 minutos y 24 segundosconvergió sí ahora bien si las condiciones de la construcción no se cumplen es decir que si no hay estas
+43:3443 minutos y 34 segundoscondiciones entonces no se cumple esto no significa que vaya a divergir o sea el esquema de puntos fijos podría
+43:4043 minutos y 40 segundosdivergen o bien converger para extender esta definición al caso n
+43:5043 minutos y 50 segundosdimensional necesito definir lo que es recordar lo que es la matriz hakobyan a de un campo de una de dos campos
+43:5943 minutos y 59 segundosescalares tengo f1 y f2 con derivadas parciales
+44:0644 minutos y 6 segundoscontinuas definimos en cada par xy la matriz agobian a en ese mundo xy cómo
+44:1644 minutos y 16 segundoses un vector donde cada fila es el gradiente de cada uno de los campos es
+44:2344 minutos y 23 segundosdecir la primer fila es el gradiente del f1 y la segunda fila ese gradiente de la
+44:2944 minutos y 29 segundosf sub 2 con lo cual expresado en forma matricial me queda como esa matriz si es
+44:3744 minutos y 37 segundosuna matriz de funciones en el caso n dimensional si yo tengo las f 1
+44:4544 minutos y 45 segundostengo m tengo m funciones que tienen derivadas parciales continuas
+44:5444 minutos y 54 segundosy ss 1 se superan 1 significa que las derivadas parciales de mis jefes son
+45:0145 minutos y 1 segundocontinuas sobre ese dominio mega y x es un vector de en el componente y jacob ya
+45:0945 minutos y 9 segundosno de esas funciones evaluado en ese punto x no es otra cosa que él
+45:1745 minutos y 17 segundosestá formado por en cada fila tengo el gradiente de cada uno de las funciones
+45:2445 minutos y 24 segundoscomponentes y cuando hago el desarrollo de cada uno de esos gradientes obtengo la matriz hakobyan así es decir
+45:3345 minutos y 33 segundosde una matriz que va a tener m filas que van a estar definidas por las funciones componentes y n columnas que van a estar
+45:4245 minutos y 42 segundosdefinida por las n derivadas parciales respecto a mí puntito de lo mismo
+45:5045 minutos y 50 segundosesta es la matriz al gobierno entonces porque necesito la matriz algo bien a bueno en el caso n dimensional
+45:5845 minutos y 58 segundoscuando convergen punto fijo bueno si yo ahora tengo la negrita que
+46:0546 minutos y 5 segundosestá compuesta por n funciones si vamos a considerar un sistema de genes funciones con en incógnitas sí
+46:1446 minutos y 14 segundoso sea tengo n generatrices y sobre definidas sobre puntos de rn y
+46:2346 minutos y 23 segundosesas funciones tienen derivadas parciales continuas en un dominio que contiene a mi punto fijo x estrella
+46:3246 minutos y 32 segundossi tomo un x0 suficientemente cerca de la estrella y se satisface que la norma
+46:4046 minutos y 40 segundosinfinito si la norma infinito en menor
+46:4546 minutos y 45 segundosde esa matriz hakobyan si es menor a 1 en todo punto
+46:5446 minutos y 54 segundoses que esté en un entorno de aquí estrecha el punto fijo entonces la iteración de punto fijo va a
+47:0347 minutos y 3 segundosconverger cuando el k tiende a infinito sin ser esto no es otra cosa que la
+47:1147 minutos y 11 segundosgeneralización de el caso bidimensional si yo ya lo que estamos haciendo en el
+47:1847 minutos y 18 segundoscaso bidimensional es pedimos que la norma infinito de la matriz hakobyan a sea menor
+47:2547 minutos y 25 segundoseste menor estricto que uno y recuerden que la norma infinito de una matriz era
+47:3247 minutos y 32 segundosmirar cada fila de la matriz tomar el valor absoluto sumar el valor absoluto cada uno de esas filas
+47:4147 minutos y 41 segundosy luego a todos esos valores le calculo el máximo bueno qué nos pasaba en nuestro ejemplo
+47:5047 minutos y 50 segundosy ya con esto terminamos porque nuestro ejemplo en un caso de yo
+47:5747 minutos y 57 segundosconvergencia en otro no bueno miremos las primeras generatrices
+48:0348 minutos y 3 segundosque teníamos almacenado en g mayúscula 1
+48:1148 minutos y 11 segundosque estaban definidas como la jesús 1 y las jesús 2 si yo hago la suma en valor absoluto de
+48:1948 minutos y 19 segundoslas derivadas parciales para la g1 g2 obtengo estas dos ecuaciones y también
+48:2748 minutos y 27 segundoscon valor absoluto si yo trabajo con un poquito
+48:3548 minutos y 35 segundosla primera ecuación la segunda de 1 lo que obtengo es que el valor absoluto de
+48:4448 minutos y 44 segundosquien menor que 0.5 o sea que esta primera en ecuación me está definiendo
+48:5148 minutos y 51 segundoscomo una una banda entre menos 0.5 y 0.5 una banda infinita y por otro lado tengo
+49:0049 minutosesta otra esta otra in ecuación que me dice que el valor absoluto de x sobre 4 más el valor
+49:0849 minutos y 8 segundosabsoluto de y menos uno es menor a 1 que esto me va a definir una especie de rectángulo si en el plano
+49:1849 minutos y 18 segundosr2 sí con lo cual si yo hago la intersección geométrica de estas dos regiones obtengo
+49:2749 minutos y 27 segundosla que se conoce como la región de convergencia es decir donde valen las acotaciones de mis derivadas por tanto
+49:3549 minutos y 35 segundossi valen estas acotaciones teniendo en cuenta que las derivadas parciales de la g1 y de la geo son continuas
+49:4349 minutos y 43 segundossí porque vienen de funciones polinómicas tengo la región donde puedo garantizar la convergencia de punto fijo
+49:5349 minutos y 53 segundosentonces fíjense nosotros primero que hicimos inicializa mos en el punto 0 1 recuerda
+50:0050 minutosentonces sí sí yo inicial hizo en el punto 01 mi componente x vale 0 o sea
+50:0750 minutos y 7 segundosque satisface la primera y negación y en la segunda también porque me queda que 0 es menor a 1 o sea inicial izando
+50:1650 minutos y 16 segundosen el punto 0 1 se satisfacen las 2 in ecuaciones por tanto tengo garantizada la convergencia de punto fijo al valor
+50:2450 minutos y 24 segundosaproximado pero sin embargo cuando lo que hice en el
+50:3050 minutos y 30 segundossegundo paso fue inicializar en el punto 2 0 y en el
+50:3950 minutos y 39 segundosmundo 2 0 ya fíjense que no se cumple las
+50:4750 minutos y 47 segundosecuaciones o sea la primera componente ya no la primera ecuación ya no se cumple por tanto no puedo garantizar la
+50:5650 minutos y 56 segundosconvergencia lo cual no significa que no no tendría que haber convertido pero en nuestro caso no convergió si sea lo que
+51:0551 minutos y 5 segundostengo asegurado es que eso no satisface las hipótesis ya que el teorema no se cumplía ahora bien aún cuando las
+51:1451 minutos y 14 segundoscondiciones de convergencia no se cumplían podría haber sido que converjamos nuestro caso no convergen
+51:2551 minutos y 25 segundosqué pasó cuando hice la región de convergencia para las otras generatrices las que estuve en las que
+51:3351 minutos y 33 segundosalmacene en el archivo mayúscula 2 o sea que yo tenía almacena las que uno moño y
+51:4151 minutos y 41 segundoslas jesús los moños si yo hago las condiciones de acotación respecto a las derivadas parciales a un
+51:4851 minutos y 48 segundospoco de cuenta obtengo esto si lo trabajo un poquito algebraica mente si
+51:5451 minutos y 54 segundosobtengo esto con lo cual fíjense la primera ecuación me define una bandita
+52:0352 minutos y 3 segundosestá bien centrada en dos sí infinita si la primera ecuación me define una banda
+52:1152 minutos y 11 segundosinfinita la segunda me define un rectángulo también o una especie de rectángulo si dio
+52:2052 minutos y 20 segundoscuadrilátero está bien en el plano alrededor
+52:2652 minutos y 26 segundospor tanto qué pasó cuando en este caso empecé a integrar en el valor
+52:3752 minutos y 37 segundos20 sí pero qué pasó fíjense si yo evalúo en 20 que me queda la primera en
+52:4652 minutos y 46 segundosecuación me queda dos menos 20 es menor estricto que 0.5 pero en la segunda bien
+52:5352 minutos y 53 segundosme queda un medio más once octavos no es menor estricto que
+53:0253 minutos y 2 segundosonce octavos por dando la segunda y negocio no se cumple sin embargo sin embargo aún cuando las condiciones de
+53:1053 minutos y 10 segundosacotación no se cumple o sea cuando mi puntito no está dentro de la región de convergencia yo no puedo garantizar la convergencia
+53:1853 minutos y 18 segundospor teorema pero sin embargo usando nuestra head on nuestra generatrices que
+53:2453 minutos y 24 segundosuno moño y g2 moño si si pude converger al punto fijo de mi sistema que en ese
+53:3153 minutos y 31 segundoscaso era aproximadamente 1.9 0.31
+53:3953 minutos y 39 segundoses importante remarcar que son condiciones suficientes de convergencia
+53:4853 minutos y 48 segundossi son condiciones suficientes de convergencia que si se cumplen si se cumplen
+53:5653 minutos y 56 segundostengo garantizar la convergencia pero en caso de que estas condiciones no se cumplan el algoritmo de punto fijo puede
+54:0554 minutos y 5 segundosconverger o puede diversidad bueno hasta aquí las transparencias de
+54:1354 minutos y 13 segundosla lectura de punto fijo si les dejo la bibliografía fíjense que son
+54:2254 minutos y 22 segundosbibliografía bastante reciente porque son el método de punto fijo el método de
+54:3054 minutos y 30 segundosnewton rap son tanto para sistemas tanto para ecuaciones como para sistemas no
+54:3954 minutos y 39 segundoslineales si todavía están en pleno desarrollo
+54:4654 minutos y 46 segundosdigamos y se siguen mejorando las implementaciones numéricas mejorando los
+54:5354 minutos y 53 segundosalgoritmos numéricos y se siguen incorporando a matt lab
+54:5954 minutos y 59 segundosshaila bio clave para optimizar la resolución de problemas así que se haría
+55:0755 minutos y 7 segundostambién interesante estudio bueno hasta acá la lectura de esta seguimos con la próxima que es la última lectura

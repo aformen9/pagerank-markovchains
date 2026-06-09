@@ -1,0 +1,514 @@
+bueno vamos a hacer la lectura 6 sobre resolución de sistemas de ecuaciones
+0:1111 segundoslineales en este caso vamos a ver métodos directos
+0:1818 segundosperteneciente a la unidad 6 de métodos numéricos de la asignatura matemática aplicada para las carreras de ingeniería
+0:2525 segundoselectrónica y eléctrica de la facultad de ciencias exactas ingeniería y agrimensura de la universidad nacional de rosario
+0:3232 segundosyo soy y luciano woods elin y marinería ok vamos a hacer primero una pequeña
+0:4040 segundosintroducción el objetivo que tenemos ahora es estudiar aspectos numéricos que se
+0:4949 segundossuceden cuando queremos resolver sistemas de ecuaciones lineales en
+0:5656 segundosparticular vamos a trabajar con en ecuaciones que vamos a notar con x sub y
+1:021 minuto y 2 segundosy las incógnitas que también serán n que nos daremos con las a su hijo está sin
+1:101 minuto y 10 segundosmatricial mente ustedes recordarán que este sistema sólo puedo reescribir este sistema de en ecuaciones con hénin con
+1:191 minuto y 19 segundoscon n incógnitas yo lo puedo reescribir de la siguiente manera
+1:251 minuto y 25 segundoscomo la matriz de coeficientes formada por los as vj por el vector columna
+1:341 minuto y 34 segundosincógnita que lo vamos a notar con x1x sub 2 x sub n
+1:431 minuto y 43 segundosigualado a los besos que van a hacerlos el vector lado derecho de mi sistema que
+1:511 minuto y 51 segundoscontiene los términos independientes del sistema entonces cuál es nuestro problema si en
+2:002 minutoseste caso dada una matriz a n n por n y
+2:062 minutos y 6 segundosun vector columna de rn queremos encontrar un vector x también
+2:132 minutos y 13 segundoscolumna columna de rn tal que por equis igual a ver
+2:212 minutos y 21 segundosparece un problema sencillo ustedes recordarán que una condición
+2:292 minutos y 29 segundosnecesario y suficiente para que el sistema de ecuaciones anterior tenga solución es que el determinante de la
+2:392 minutos y 39 segundosmatriz sea no nulo así porque porque al ser no nulos o
+2:462 minutos y 46 segundosdeterminante existe la inversa de la matriz entonces como puedo obtener la solución al sistema anterior
+2:542 minutos y 54 segundospartiendo de la ecuación original pre multiplicó por la inversa de la a ambos lados de la ecuación asoció en el lado
+3:023 minutos y 2 segundosizquierdo de la igualdad ustedes saben que la inversa de una matriz por sí misma nos da la identidad y la identidad
+3:093 minutos y 9 segundospor el doctor x notas de equipo por lo tanto x resulta hacer otra cosa que la
+3:163 minutos y 16 segundosinversa de a por b entonces calcular esta solución si bien
+3:233 minutos y 23 segundosesto que les mostré parece muy sencillo desde el punto de vista matemático desde el punto de vista de las aplicaciones
+3:303 minutos y 30 segundoscalcular esta solución puede ser muy complicado desde el punto de vista numérico incluso incluso en casos
+3:403 minutos y 40 segundossencillos sin casos de matrices 2 x 2 esto puede tener sus complicaciones ok
+3:483 minutos y 48 segundosentonces este procedimiento que les mostré acá no es la forma en que lo vamos a poder resolver nosotros en un
+3:563 minutos y 56 segundoscomputador en los problemas reales los problemas reales que uno aborda y que quiere
+4:054 minutos y 5 segundosresolver sistemas necesitamos a veces resolver sistemas de ecuaciones cuyas
+4:114 minutos y 11 segundosmatrices de coeficientes a veces son llenas y a veces son raras o spartz se
+4:204 minutos y 20 segundosla conoce también o dispersa también pueden encontrar veces ese objetivo y
+4:264 minutos y 26 segundosson muy grandes a la vez y yo necesito poder resolver esos sistemas en forma exacta y eficiente decir en un plazo de
+4:354 minutos y 35 segundostiempo este que me sea adecuado al problema disfrute y resolviendo ahí la gráfica
+4:424 minutos y 42 segundosque ven es una matriz es en realidad un espacio de una matriz que lo que muestra
+4:494 minutos y 49 segundoses en qué posición esa matriz que tiene tamaño 500 x 500 tiene elementos no
+4:594 minutos y 59 segundosnulos los puntitos en azul son donde esta matriz tiene elementos no nulo es una matriz 500 x 500 y tiene una
+5:085 minutos y 8 segundoscantidad de elementos no nulos de 2.636 esta matriz proviene del algoritmo
+5:175 minutos y 17 segundospagerank de google cada vez que ustedes usan google y usan el buscador el
+5:235 minutos y 23 segundosalgoritmo page rank es el que permite en forma eficiente y de forma muy rápida y de forma muy muy rápida y precisa
+5:335 minutos y 33 segundoseste resolver digamos a través de un método
+5:395 minutos y 39 segundoseste resolver usando ese algoritmo para que la búsqueda se realice en el menor
+5:465 minutos y 46 segundostiempo posible ese es una de las claves del éxito de google ahora bien en el
+5:545 minutos y 54 segundosmedio de ese proceso hay que resolver un sistema de ecuaciones lineales
+6:016 minutos y 1 segundook entonces bien cómo resolvemos a por x igual b
+6:096 minutos y 9 segundosbueno existen dos grandes tipos o categorías de métodos para resolver este tipo de problemas por un lado los
+6:176 minutos y 17 segundosmétodos directos los métodos directos son métodos numéricos que se ejecutan un
+6:236 minutos y 23 segundosnúmero finito de pasos y que generarían la solución exacta al ejecutarse esos
+6:316 minutos y 31 segundosesos pasos si no fuese por los errores del redondeo que vimos que ya existen en
+6:386 minutos y 38 segundosuna computadora cuando yo necesito representar cantidades numéricas y operar con las mismas en los métodos
+6:456 minutos y 45 segundosnuméricos no hay truncamiento no hay errores de truncamiento pero si hay
+6:526 minutos y 52 segundoserror de redondeo que puede ser muy significativo algunos ejemplos de ellos de ellos ya logros en la eliminación gauss jana que
+7:027 minutos y 2 segundosustedes conocen del álgebra lineal es un caso la factorización helleu que vamos a ver la factorización qr el método de
+7:117 minutos y 11 segundossolecki o hay otros todos ellos son considerados métodos directos pero también existen los métodos interactivos
+7:197 minutos y 19 segundoses decir son son métodos numéricos que lo que generan y tirando generan
+7:277 minutos y 27 segundosinteractivamente una sucesión de vectores x sub k
+7:327 minutos y 32 segundosque converge a una solución aproximada x estrella que satisface una toleran
+7:407 minutos y 40 segundostolerancia deseada algunos ejemplos de esto que vamos a ver van a ser el método de jacob yo de outsider pero hay otros
+7:497 minutos y 49 segundoscomo el método short de sobre relajación o los métodos de krill out o también hay
+7:567 minutos y 56 segundosotros y los más generales son los métodos y los que son muy usado actualmente
+8:048 minutos y 4 segundosentonces empecemos por la eliminación gauss jana que es un método directo que
+8:108 minutos y 10 segundoses lo que vamos a ver en esta lectura sistemas fáciles de resolver por ejemplo
+8:178 minutos y 17 segundossi ustedes tienen una matriz diagonal si ustedes tienen una matriz diagonal sí y vamos a asumir que la matriz es
+8:258 minutos y 25 segundosinvencible también como resolvemos una matriz diagonal vemos cómo resolvemos un
+8:328 minutos y 32 segundossistema cuya matriz de consciente de diagonal bueno muy sencillo la solución algorítmica cómo sería bueno como en cada ecuación de mi
+8:418 minutos y 41 segundossistema sería así y por equis psuv y igual debe subir y con mayo asumo que la
+8:498 minutos y 49 segundosmatriz es invisible por lo tanto el producto de su diagonal es no nula por lo tanto cada término en su diagonal es
+8:568 minutos y 56 segundosno nulo cada componente que subí la puedo calcular cómo en consciente entre b subir y a subir para ir variando entre 1
+9:059 minutos y 5 segundosy n y resuelvo este sistema otro sistema fácil de resolver es el
+9:139 minutos y 13 segundossistema cuando tengo una matriz tree diagonal triangular en mi sistema de ecuaciones por ejemplo en este caso
+9:229 minutos y 22 segundosveamos supongamos que es una matriz triangular superior es decir que debajo de la diagonal hay todos ceros sin la
+9:319 minutos y 31 segundosdefinición de matriz triangular superior es tal que debajo de la diagonal hay todos ceros entonces como sería una solución
+9:409 minutos y 40 segundosalgorítmica bueno empezamos de la última fila el xv n lo despejó como b sub n
+9:469 minutos y 46 segundosdividido a su vez el x n 1 lo puedo calcular como el beso
+9:549 minutos y 54 segundosn menos uno menos a su n 1 n por x n sobre a su vez menos 1 en el -1 el x su
+10:0410 minutos y 4 segundosvenecia lo tengo del paso anterior si cuando calculó lo despeje de la última fila
+10:1010 minutos y 10 segundosentonces obtuve x sube menos 1 y así para atrás si recorriendo la fila hacia
+10:1810 minutos y 18 segundosatrás hasta llegar la primera puedo encontrar los x subí para ir variando entre menos n menos 2 y 1 y este método
+10:2810 minutos y 28 segundosque ustedes seguramente han hecho vamos han realizado en alguna vez en un cálculo para
+10:3510 minutos y 35 segundosresolvemos un sistema con una matriz triangular superior se conoce como sustitución regresiva o password
+10:4310 minutos y 43 segundossustituyo análogamente si mi matriz es triangular inferior es decir encima de
+10:5110 minutos y 51 segundosla diagonal hay todos ceros puedo aplicar el mismo algoritmo empezando en la primera fila y
+10:5710 minutos y 57 segundosrecorriendo y despejando las variables x subí hasta la última fila y esto se
+11:0411 minutos y 4 segundosconoce como sustitución progresiva o forward sustitución ya que estos son sistemas fáciles de
+11:1311 minutos y 13 segundosresolver si hay también sistemas para matrices y diagonales sí pero veamos qué pasa cuando yo tengo ahora una matriz
+11:2211 minutos y 22 segundosgeneral vamos a entender qué pasa en un caso de una matriz 3 x 3 que viene dado por ese sistema
+11:3111 minutos y 31 segundosmatricial mente yo puedo representar ese sistema de la siguiente manera
+11:3811 minutos y 38 segundosy la matriz ampliada de ese sistema que era la matriz de coeficientes y al lado
+11:4611 minutos y 46 segundosponerle el vector del lado derecho el vector de los términos independientes me quedaría expresado de esa manera ok
+11:5611 minutos y 56 segundosentonces como trabajaba yo en la matriz ampliada haciendo uso de las que se conocen como operaciones equivalentes
+12:0512 minutos y 5 segundospor ejemplo si yo a un intercambio de filas puedo intercambiar filas o renglones entre sí
+12:1312 minutos y 13 segundoseso es una operación index equivalente también puedo hacer un escalamiento es decir a una fila la multiplicó por una
+12:2212 minutos y 22 segundosconstante siempre que la constante no nula porque si no en ese caso estaría nula anular fila y me cambia el sistema es similar al feng onu lo yo puedo
+12:3012 minutos y 30 segundosreemplazar un renglón o fila por un escalamiento de la misma o también algo muy común que hacíamos era reemplazar
+12:3912 minutos y 39 segundosuna fila por una suma o resta si de esa fila más un múltiplo escalar de
+12:4612 minutos y 46 segundoscualquier otro sea la la fila acá decimos al renglón que decimos lo puedo reemplazar por sí mismo más un m en este
+12:5612 minutos y 56 segundoscaso podría ser ser bueno adriana siempre se creó por otra fila o renglón js
+13:0413 minutos y 4 segundosentonces decimos que dos sistemas de ecuaciones son equivalentes cuando
+13:1113 minutos y 11 segundostienen el mismo vector solución y se puede mostrar qué
+13:1813 minutos y 18 segundoscualesquiera de las operaciones elementales vistas anteriormente aplicadas un número finito de veces a
+13:2613 minutos y 26 segundosuna matriz ampliada de un sistema de ecuaciones lineales produce sistemas equivalentes es decir que yo puedo ir
+13:3313 minutos y 33 segundosoperando con las operaciones anteriores citadas de forma ir transformando mi
+13:4113 minutos y 41 segundossistema original en un sistema más fácil de rosso luego cuál es nuestro objetivo es dado el sistema por x vuelve queremos
+13:4913 minutos y 49 segundosconstruir un sistema equivalente o por x igual sé donde use a una matriz
+13:5613 minutos y 56 segundostriangular superior y luego con backward sustitución voy a encontrar el valor de el vector x
+14:0414 minutos y 4 segundosen álgebra lineal seguramente han visto cómo aplicar las operaciones elementales para lograr eso vamos a intentar
+14:1114 minutos y 11 segundosreplicar esto
+14:2414 minutos y 24 segundospaso 1 la primera fila se usa para eliminar los elementos de la primera
+14:3214 minutos y 32 segundoscolumna debajo de la diagonal principal sin siempre cuando que el primer
+14:3814 minutos y 38 segundoselemento de la sub sea nulo decimos en ese caso que el elemento a
+14:4414 minutos y 44 segundossub 11 se usa que en este caso vale 10 se usa como pivote y lo que hacíamos es
+14:5314 minutos y 53 segundoscalcular los multiplicadores los m si en
+14:5914 minutos y 59 segundoseste caso para el mes 2 1 m sus 3 1 que van a ser llamados
+15:0815 minutos y 8 segundosmultiplicadores y los cálculos haciendo el cociente entre a su k 1 dividido a
+15:1615 minutos y 16 segundossub 11 es decir en este caso haría el menos tres dividido el 10 que usó como
+15:2315 minutos y 23 segundospivote y el 5 / 10 que usó como pivote marcado en azul con en ese caso yo tengo
+15:3115 minutos y 31 segundoslos multiplicadores luego que hago luego al renglón 2
+15:4015 minutos y 40 segundosle restó le restó lo sumo es indistinto depende como considere suele el multiplicador al al renglón 2 le restó
+15:4915 minutos y 49 segundosel m2 uno por el renglón uno sí está bien
+15:5715 minutos y 57 segundoscon lo cual me anula el término de la matriz debajo del 10 y me varía toda la
+16:0516 minutos y 5 segundossegunda fila de la matriz marcada de lamadrid ampliada amargada en rojo de renglón 3 de la misma manera el
+16:1216 minutos y 12 segundosrenglón 3 lo reemplazó por sí mismo - el multiplicador 31 que es 0.5 por el
+16:2216 minutos y 22 segundosrenglón 1 original y me queda en debajo del 10 o toda la columna de ceros y me
+16:3016 minutos y 30 segundosmodifica la última fila de la matriz ampliada todo lo que está marcado en rojo son los términos que fueron modificados
+16:3916 minutos y 39 segundosen el paso 2 ahora ya uso la segunda fila para eliminar los elemento de la segunda columna debajo de la diagonal
+16:4616 minutos y 46 segundosprincipal en este caso el elemento a sub 22 es menos 0.1 que se usa como pivote
+16:5616 minutos y 56 segundosentonces en este caso sólo tengo que calcular un multiplicador para hacer 0 el valor que está debajo de mi pivote
+17:0417 minutos y 4 segundosque está marcado en azul como calculó ese multiplicador bueno hago el elemento a 32 dividido en la sub
+17:1417 minutos y 14 segundos22 que es mi bigote eso me da el multiplicador 32 que en este caso es menos 25
+17:2317 minutos y 23 segundosy luego la fila tercero el renglón del 0 lo reemplazó por sí mismo - el multiplicador
+17:3217 minutos y 32 segundos- el multiplicador por el renglón 2 ok
+17:4017 minutos y 40 segundoscon lo cual obtengo sí
+17:4717 minutos y 47 segundosobtengo la última fila modificada
+17:5517 minutos y 55 segundosen rojo y fíjense que ahora ya mi matriz ampliada si la matriz de coeficientes de
+18:0318 minutos y 3 segundosmi matriz ampliada resulta una matriz triangular superior por lo tanto puedo hacer sustitución regresiva en la última ecuación despejó el x sub 3 que vale 1
+18:1218 minutos y 12 segundosde la segunda ecuación despejó el x sub 2 que termina valiendo menos uno de la primera ecuación despejó el x uno vale
+18:2118 minutos y 21 segundoscero y la solución del sistema terminó haciendo 0 - 1
+18:3518 minutos y 35 segundosbueno entonces veamos definamos que son los pivotes y los multiplicadores
+18:4318 minutos y 43 segundosdado una matriz de coeficiente n por en en cuyos coeficientes van a ser los y j
+18:5018 minutos y 50 segundosel elemento a zhouqu de la matriz en el paso que estimó se va a usar para la
+18:5918 minutos y 59 segundoseliminación de los coeficientes a su rq donde elevaría entre 1 hasta en es decir
+19:0819 minutos y 8 segundostodos los coeficientes que están debajo del elemento a zhouqu
+19:1719 minutos y 17 segundoslos números m sub rq 2 que definidos como el cociente
+19:2319 minutos y 23 segundosentre los sub rq y los asus qq donde el error es un índice que varía entre comas
+19:3219 minutos y 32 segundos1 y n con los cuales voy a multiplicar la fila pivote para restarle las
+19:4019 minutos y 40 segundoscorrespondientes filas posteriores si las filas están debajo de la fila donde
+19:4719 minutos y 47 segundosse ubica mi elemento pivote se van a llamar los multiplicadores
+19:5519 minutos y 55 segundosentonces qué nos dice el teorema de la eliminación de oceana nos dice que si yo tengo un sistema a por x igual a b con
+20:0420 minutos y 4 segundosuna matriz n por n y esa matriz asumo que es invencible
+20:1020 minutos y 10 segundosentonces va a existir un sistema de ecuaciones lineales equivalentes por x
+20:1720 minutos y 17 segundosigual sé donde es triangular superior con elementos diagonales y sub kaká
+20:2520 minutos y 25 segundosdistintos de 0 si es decir que yo si empiezo a operar
+20:3320 minutos y 33 segundosy operar con operaciones equivalente el sistema original voy y me matriz es
+20:3920 minutos y 39 segundosinvencible entonces voy a poder llegar obtener un sistema por x igual sé de dónde es una triangular superior y en su
+20:4920 minutos y 49 segundosdiagonal no va a haber ceros lo cual me garantiza la también la invertibilidad de la 'u' porque él pero recuerden que
+20:5720 minutos y 57 segundosel producto que él que el determinante de una matriz triangular superior o inferior es el
+21:0521 minutos y 5 segundosproducto de sus diagonales por tanto si sus diagonales no nula la matriz va a ser invencible porque su determinante lo
+21:1421 minutos y 14 segundoshace entonces vamos a construir esa y es hace para luego usar la sustitución regresiva
+21:2321 minutos y 23 segundosy resolver el sistema equivalente al primero lo hacemos con la función de maldad
+21:3221 minutos y 32 segundosel programa que ustedes usan en este caso tienen la implementación de gauss punto m
+21:4021 minutos y 40 segundosqué es una función que tiene dos argumentos de entrada es una matriz inversiã n por n iv b es un vector
+21:4721 minutos y 47 segundoscolumna n por 1 y el resultado va a ser un vector columna n por 1 que va a ser
+21:5421 minutos y 54 segundosla solución aproximada del sistema por x igual b lo primero que hace con el site
+22:0122 minutos y 1 segundode a determinó el tamaño de la matriz que ingrese como argumento luego fíjense qué fácil
+22:0822 minutos y 8 segundosasignó en la variable a un la matriz aumentada sí que tiene la matriz de
+22:1522 minutos y 15 segundosdientes ahí el vector lo derecho ve y luego voy a hacerlo variar el q desde uno hasta n menos uno que van a hacer
+22:2222 minutos y 22 segundoslos los n 1 pasos de mi eliminación gauss jana y finalmente vi a asignar término transponiendo para que salga
+22:3122 minutos y 31 segundoscomo el por volumen el vector x que es la solución aproxima de mi sistema
+22:3922 minutos y 39 segundosfíjense en el proceso de eliminación gauss jana digo en el q varía entre
+22:4722 minutos y 47 segundosel q varía entre 1 y n 1 y dentro de ese foro tengo otro porque
+22:5422 minutos y 54 segundosdice porque igual n 1 el perdón que uno hasta ene sig es decir voy a empezar a
+23:0223 minutos y 2 segundosrecorrer las filas que están debajo de mi bigote nm voy a asignar el cociente d
+23:1023 minutos y 10 segundosde aún acá y sobre aún cucu que no va a hacer otra cosa el multiplicador cuando
+23:2023 minutos y 20 segundosel k varía entre el 1 y n y luego en cada fila en cada fila
+23:2923 minutos y 29 segundosfíjense voy a ir modificando las filas posteriores que están debajo de la fila
+23:3623 minutos y 36 segundosque tiene mi pivote sí es decir
+23:4323 minutos y 43 segundosparándome en la fila k décima recorro el índice de las columnas de q hasta n 1
+23:5123 minutos y 51 segundosy voy a ir modificando toda esa fila reemplazándola por sí mismo menos el
+23:5723 minutos y 57 segundosmultiplicador por la fila aún q donde el segundo índice varía entre tú y
+24:0624 minutos y 6 segundosn 1 para poder modificar todas las filas debajo de la fila guinea mi elemento
+24:1324 minutos y 13 segundosbiotech revísenlo pero esa línea está haciendo eso finalmente hago la sustitución regresiva
+24:2224 minutos y 22 segundoso hacia atrás fíjense que la componente x x paréntesis n es la última componente de mi vector x no es otra cosa que el
+24:3124 minutos y 31 segundoscociente entre aún de que está en la fila enésima y en la columna n 1 sigue recuerden que estoy trabajando con la
+24:4024 minutos y 40 segundosmatriz ampliada y la madre ha ampliado tiene un columna / el término a su a su punto en el que en este caso es el a un
+24:4824 minutos y 48 segundosnn y luego hago el mismo proceso recorriendo hacia atrás o nunca variando
+24:5624 minutos y 56 segundosentre n 1 con un paso de menos 1 hasta 1 y voy obteniendo los componentes x de
+25:0625 minutos y 6 segundosacá si de mi vector solución y ahí en esa línea estoy
+25:1325 minutos y 13 segundosobteniendo como dije la fórmula inicialmente la sustitución regresiva pueden leerlo con detenimiento para
+25:2125 minutos y 21 segundosconvencerse de que efectivamente ahí estoy haciendo la sustitución regresiva
+25:2825 minutos y 28 segundosok todos en nuestro algoritmo al menos en principio nuestro punto es muy fácil pero hay algunas cosas a tener en cuenta
+25:3525 minutos y 35 segundospor ejemplo qué pasa si en el paso último sí
+25:4125 minutos y 41 segundostengo que el elemento a su cucu es 0 si no voy a poder usarlo como el bigote
+25:4825 minutos y 48 segundosporque yo tengo que dividir por mi bigote para hacer los multiplicadores por tanto
+25:5625 minutos y 56 segundoslo que tengo que hacer es en esa columna en esa columna acá encima
+26:0226 minutos y 2 segundosque estoy parado tengo que buscar debajo de mi pivote que es 0 si tengo que
+26:0926 minutos y 9 segundosbuscar una sub acá o distinto de 0 que siempre va a ver si mi matriz es invencible y luego una vez que lo
+26:1826 minutos y 18 segundosencuentro intercambiar la fila o encima con la caixa este proceso se conoce como el pivote o trivial en dos punto m lo
+26:2726 minutos y 27 segundostengo hecho como una verificación que dice que sí aunque q q es igual 0 lo que va a pasar es que la matriz jon
+26:3526 minutos y 35 segundosinvencible o bien con lo cual no hay solución o no es única sí recuerden que
+26:4126 minutos y 41 segundosun sistema de ecuaciones puede tener una solución o no tener soluciones sí o sea
+26:5026 minutos y 50 segundospuede ser determinado o indeterminado y en el caso de ser determinado puede ser definido o sea puede una sola solución o
+27:0027 minutosbien puede ser indefinido puede tener infinitas soluciones ahora bien hay de otro tipo de bigote o
+27:0727 minutos y 7 segundosel que vimos en el vídeo trivial si existen lo que se conoce como el pivote o parcial veamos de qué trata el bigote
+27:1627 minutos y 16 segundoso parcial entonces vimos que cuando calculamos
+27:2327 minutos y 23 segundosmultiplicadores la sustitución regresiva requería de hacer algunas divisiones y cuando hago los multiplicadores sin
+27:3227 minutos y 32 segundosembargo yo no puedo realizar divisiones por cero pero tampoco pudo realizar divisiones por elementos que son casi
+27:4027 minutos y 40 segundoscero entonces miren vamos a modificar el ejemplo dado inicialmente donde en vez de el término el coeficiente 2 de mi
+27:4927 minutos y 49 segundosmatriz lo voy a perturbar por 2.000 99 sí que es una perturbación de mi matriz
+27:5827 minutos y 58 segundosoriginal y voy a modificar el ve de forma tal que la solución sigue haciendo
+28:0628 minutos y 6 segundos0 - 1 1 entonces fíjense lo que pasa ahora
+28:1528 minutos y 15 segundosagarró el 10 como pivote sí si hago el cálculo de los multiplicadores menos 03 y 05
+28:2528 minutos y 25 segundoshago la operación elemental para hacer 0 debajo de mi pilotes de mi pivote si sea las filas en rojo son las que modifique
+28:3428 minutos y 34 segundosy fíjense que en este caso el valor del pivote nuevo que voy a usar en el paso 2
+28:4228 minutos y 42 segundoses muy chico fíjense que es menos 0 1 2001
+28:4928 minutos y 49 segundosahora bien sí qué es ese que está marcado en azul y que voy a usar como pivote cuando yo
+28:5828 minutos y 58 segundoscalculo el multiplicador 32 que sería el cociente entre 2.5 y menos 0.001 el
+29:0929 minutos y 9 segundosmultiplicador termina dando menos 2500 entonces fíjense yo ahora calculo voy a
+29:1729 minutos y 17 segundosmodificar la tercer fila si de mi madrina ampliada
+29:2429 minutos y 24 segundoscon lo cual el término a 33 va a ser 5 - el multiplicador que es menos 2500
+29:3329 minutos y 33 segundospor 6 esto termina dando 15 mil 500 y vamos a suponer que mi computadora que estoy trabajando en una computadora que
+29:4129 minutos y 41 segundostrabaja con 5 cifras significativas qué pasa con el elemento 34 de mi matriz
+29:4929 minutos y 49 segundosampliada va a ser 2.5 menos el multiplicador que es menos 2500 por
+29:5729 minutos y 57 segundos6.200 1 con lo cual me queda hago la cuenta me queda 2.5 más 15.000 2.5 que estén azul
+30:0730 minutos y 7 segundosfíjense que eso ya tiene seis cifras significativas voy a tener que hacer algún tipo de redondeo vamos a hacer que
+30:1330 minutos y 13 segundoshacemos un redondeo simétrico sí con lo cual eso va a pasa a ser quince mil tres
+30:2030 minutos y 20 segundoscon lo cual tengo aproximadamente eso hacer 2.5 15000 3 me da 15 mil 5.5 que
+30:2930 minutos y 29 segundosnuevamente tengo que redondear porque eso ya tiene seis cifras significativa y termina aproximado por donde o simétrico
+30:3630 minutos y 36 segundosa quince mil seis suponiendo que estoy trabajando en una computadora imaginaria con cinco cifras significativas
+30:4430 minutos y 44 segundoscon lo cual mi última fila termina siendo esa que está marcada en rojo ahora cuando hago el cociente para
+30:5330 minutos y 53 segundosdespejar x sus 3 y trabajo con 5 cifras significativas la componente x sub tres
+31:0031 minutosterminan siendo aproximadamente 1.000 1 si sustituyó en la segunda ecuación y
+31:0831 minutos y 8 segundosvuelvo a trabajar nuevamente vuelvo a trabajar nuevamente con 5 cifras significativas revisen las cuentas pero
+31:1731 minutos y 17 segundoseso termina haciendo el x sub 20 punto 4 y finalmente si yo reemplazo x subraye x
+31:2631 minutos y 26 segundos1 en la primera ecuación y trabajo con 5 cifras significativas x1 termina siendo punto cero 42 es decir que la solución
+31:3531 minutos y 35 segundosque era cero menos 11 ahora termina
+31:4231 minutos y 42 segundossiendo esa solución marcada en azul que dista bastante de ser la solución exacta bueno donde se generó el problema donde
+31:5031 minutos y 50 segundosse generó el corrimiento de la bandita bueno cuando tuve un multiplicador muy grande que surgió de dividir por un
+31:5931 minutos y 59 segundosnúmero muy chico y eso la técnica para evitar eso se conoce como pivote o parcial y para
+32:0832 minutos y 8 segundosevitar la propagación de errores de redondeo usamos la estrategia de pivote o parcial es decir para cada columna
+32:1532 minutos y 15 segundosdesde uno hasta n menos 1 encuentro la fila pivote q encima más grande es decir
+32:2332 minutos y 23 segundosque voy a tomar como pivote voy a mirar en valor absoluto en la sub qq/ha sub
+32:3132 minutos y 31 segundos1 q y así hasta la última fila azul n si estoy parado en la columna cohesiva
+32:4132 minutos y 41 segundosy opté y agarró el máximo de esos coeficientes sí y eso lo almacenó en a
+32:4832 minutos y 48 segundossu comunión q ellos en la fila kumon yo en la fila kumon yo encima yo obtengo el
+32:5632 minutos y 56 segundosmáximo de todos esos pivotes y lo que hago es un intercambio de la filia q es imán con la fila como encima salvo
+33:0533 minutos y 5 segundosobviamente que q se iguala como año y luego lo que hago es que continúo con
+33:1133 minutos y 11 segundosmi proceso también eliminó los elementos que están debajo de mi pivote y por qué
+33:1833 minutos y 18 segundoshago esto fíjense como el psuv como año q es un máximo si tomado de la columna q
+33:2733 minutos y 27 segundosestima para los elementos que están entre 1 y n entonces ese máximo va a ser mayor o
+33:3533 minutos y 35 segundosigual que en valor absoluto a su pico donde y varía entre cv y n
+33:4233 minutos y 42 segundospor tanto si reescribo esa desigualdad paso dividiendo el azul como sobre lo
+33:5133 minutos y 51 segundosabsoluto de azul sobre azul como yo q eso no es otra cosa que la definición de
+33:5833 minutos y 58 segundosmis multiplicadores importando los multiplicadores son menores iguales que 1 si los multiplicadores resultan
+34:0734 minutos y 7 segundosmenores google es que uno por lo tanto al ser los multiplican no son tan
+34:1534 minutos y 15 segundosgrandes y pueden ser controlados y recuerden también que en él cuando yo trabajo con números menores igual es que aún no tengo mayor densidad
+34:2334 minutos y 23 segundosrepresentación en matemática punto flotante por tanto esta técnica de pivote o parcial es adecuada
+34:3134 minutos y 31 segundosse puede mejorar lo que se conoce como el pivote o parcial escalado que es para evitar aún más la propagación de errores
+34:3834 minutos y 38 segundosde redondeo si lo que hago en este caso es nuevamente llegamos para cada columna
+34:4634 minutos y 46 segundoslo que hago es encuentro el coeficiente más grande en cada fila sí es decir me
+34:5434 minutos y 54 segundosparo en la fila y encima y busco el coeficiente más grande que tengo
+35:0435 minutos y 4 segundosfíjense que busca un valor absoluto del de la fila y encima variando el
+35:1135 minutos y 11 segundosvariando el me paro en la columna e
+35:1835 minutos y 18 segundosy encima si me paro en la fila y encima sí
+35:2435 minutos y 24 segundosy calculó el máximo variando el q / q hasta el tren o sea en cada fila
+35:3435 minutos y 34 segundosbusco el máximo en valor absoluto y eso lo hago para cada fila ahora lo que hago es a cada fila la
+35:4435 minutos y 44 segundosdivido por ese máximo sí y aplicó el pivote o parcial sí
+35:5235 minutos y 52 segundosentonces lo que hago es calculo ese máximo de eso que está entre corchetes
+35:5935 minutos y 59 segundosy lo que digo es bueno si la fila que sí más y si obtengo dónde está en la fila
+36:0636 minutos y 6 segundosen la fila como no que yo obtuve ese máximo lo que
+36:1336 minutos y 13 segundoshago intercambio la fila coenzima con la fila como año encima salvo el caso que q vale a común
+36:2236 minutos y 22 segundosy luego hago la eliminación debajo de mi pivot como son todas operaciones elementales las que estoy haciendo esta
+36:3136 minutos y 31 segundosoperación es válida y yo puedo seguir adelante con mi proceso esto es lo que se conoce como pivote o parcial escalado que lo tengo implementado en mi punto m
+36:4036 minutos y 40 segundossí fíjense que en ese foro en s mayúscula calculó todos los máximos
+36:5036 minutos y 50 segundosy luego lo que hago usando el comando max y el comando apps
+36:5836 minutos y 58 segundos/ el el s mayúscula sí ahí estoy encontrando cuál es el valor máximo y el
+37:0637 minutos y 6 segundosíndice donde se da y finalmente hago un intercambio de fila o estima con
+37:1437 minutos y 14 segundosen este caso la décima usando una variable auxiliar que llamo sé si se
+37:2037 minutos y 20 segundosúltimos tres pasos que está ahí ya estoy haciendo el intercambio de fin con lo cual tengo implementado un mínimo de o
+37:2837 minutos y 28 segundosparcial escalado cualquier cosa vean en detenimiento la implementación para convencerse
+37:3737 minutos y 37 segundosentonces bien estas técnicas son muy importantes tanto el bigote o parcial peor que o parciales que es calado y se usan
+37:4537 minutos y 45 segundosentonces algunas consideraciones sobre la eliminación de oceana el error de truncamiento no hay en este caso y si no
+37:5437 minutos y 54 segundoshubiese error de redondeo tendríamos la solución exacta en el paso recuerden que nosotros estamos trabajando en un
+38:0138 minutos y 1 segundoformato donde tengo entre 15 y 16 cifras significativas y por tanto tengo una buena representación de los números pero de
+38:0938 minutos y 9 segundostodas formas voy a tener los grandes el error de redondeo puede ser serio y
+38:1738 minutos y 17 segundoshay que tenerlo en cuenta sin embargo se recomienda siempre en cuando uno usa eliminación no use an a usar pivote o
+38:2438 minutos y 24 segundosparcial o pivote o mercedes escalarlo el esfuerzo computacional para un sistema de ecuaciones n por rp n por n
+38:3338 minutos y 33 segundostermina siendo el flop sería la cantidad de operaciones que termino haciendo en la eliminación
+38:3938 minutos y 39 segundoslaosiana es de orden dos tercios hubo más algo que es de orden de n cuadrado en la sustitución regresiva
+38:4838 minutos y 48 segundostermina siendo n cuadrado más algo que es de orden n por lo tanto en el total termina siendo algo que es de dos
+38:5638 minutos y 56 segundostercios de nuevo más algo que es de orden en el cuadrado por tanto la cantidad de operaciones que se realizan
+39:0239 minutos y 2 segundosla eliminación de opciones de orden en el cubo fíjense que si es muy grande en cubos se
+39:1139 minutos y 11 segundosvuelve más grande todavía y eso lleva mucho más tiempo y otra consideración a tener en cuenta
+39:1839 minutos y 18 segundosson los que se conocen como sistemas mal condicionados es decir sistemas donde
+39:2539 minutos y 25 segundospequeños cambios en los elementos de la matriz a pequeñas perturbaciones en el elemento de la mayoría o en el lado
+39:3339 minutos y 33 segundosderecho de van a provocar grandes cambios en el vector solución si entonces estos sistemas que se conocen
+39:4239 minutos y 42 segundoscomo mal condicionados son proclives a tener mayor error de redondeo y mi solución muchas veces se vuelve con eso
+39:5239 minutos y 52 segundosen relación a lo que es la eliminación la opción si lo que vamos
+40:0040 minutosa hacer ahora es vamos a vamos a ir a manda
+40:0940 minutos y 9 segundospiense vamos al sistema vamos a usar nuestro house voy a cargar mi madrid
+40:2440 minutos y 24 segundosmi matriz a del sistema que yo digo originalmente sí voy a también cargar mi vector lado
+40:3440 minutos y 34 segundosderecho sí que era 746 lo tras pongo para que sea columna y
+40:4240 minutos y 42 segundosfíjense que no le estoy poniendo punto y como al final para que se imprima por pantalla
+40:5140 minutos y 51 segundosy ahora lo que voy a hacer voy a usar la función house donde paso como argumento a ive para
+40:5940 minutos y 59 segundosobtener la solución aproximada fíjense qué parecería que es la que la solución
+41:0841 minutos y 8 segundosexacta que es 0 - 11 pero estos 0 me están indicando que evidentemente hay un
+41:1641 minutos y 16 segundospequeño que no es exactamente 0 si no es exactamente menos 1 y no exactamente 1
+41:2341 minutos y 23 segundosvamos a cambiar el formato largo si vamos a ver quién es el valor x fíjense
+41:2941 minutos y 29 segundosque evidentemente hay un residuo ahí si hay un error de redondeo que se cuando
+41:3741 minutos y 37 segundosse me cause el punto m en mi aproximación pero de todas formas para nosotros esto tranquilamente podríamos
+41:4541 minutos y 45 segundosdecir que el exacta pero en términos exacto vamos a aguardar la variable exacta
+41:5541 minutos y 55 segundosla solución exacta que habíamos dicho era 0 1 1
+42:0242 minutos y 2 segundosok y fíjense miren si yo le pregunto a manda si mi solución aproximada que está
+42:1042 minutos y 10 segundosel mazo en la variable x es igual a mi exacta en todas las componentes lógicas aparece
+42:1842 minutos y 18 segundos000 es decir que es falso que yo estoy obteniendo esa exacta si hay error de
+42:2542 minutos y 25 segundosredondeo en mí y en mi solución aproximada pero evidentemente está en
+42:3342 minutos y 33 segundosuna cifra significativa muy por detrás muy chiquita importando a mí en todo caso puede esta solución podría servir
+42:4242 minutos y 42 segundosya que fíjense que aún en mi caso una matriz tres por tres el error de redondeo sé
+42:4942 minutos y 49 segundosse ve sin ok bueno eso en relación a lo que es la
+42:5942 minutos y 59 segundoseliminación náusea
+43:0843 minutos y 8 segundosbueno vamos a ver lo que es la factorización
+43:1343 minutos y 13 segundoslv sin otro método directo entonces vamos a decir que una matriz
+43:2243 minutos y 22 segundosinvertible también admite una factorización triangular o factorización l por hugo l
+43:3143 minutos y 31 segundossi la puedo expresar como el producto a igual lv donde l es una matriz triangular
+43:3943 minutos y 39 segundosinferior y es una matriz triangular superior es decir que viene en delaware y a ver
+43:4843 minutos y 48 segundoses decir si yo puedo a mí a expresarla como una ele que es la matriz
+43:5643 minutos y 56 segundosdel lado lamadrid laprida más de joel igual sí fíjense una triangular inferior
+44:0344 minutos y 3 segundosdonde toda su diagonal es 1 y la matriz derecha es una madrid superior sí
+44:1144 minutos y 11 segundostambién y además en particular todos los usos kaká son distintos de 0 porque
+44:1844 minutos y 18 segundosporque si mi matriz es invencible el determinante de la matriz a es distinto de 0 ahora viene el determinante de la
+44:2744 minutos y 27 segundosmatriz a la puedo calcular como el determinante de la l por el determinante de la ucv por propia determinantes por
+44:3444 minutos y 34 segundostanto el determinante un out y triangular es el producto de su diagonal en el caso de el determinante de la uv
+44:4144 minutos y 41 segundoses claro que es 1 y en el caso de la matriz y es claro que va a ser el producto de su diagonal por lo tanto si
+44:4944 minutos y 49 segundosmi matriz es invisible toda la diagonal de eeuu tiene que ser no nula v
+44:5744 minutos y 57 segundosahora porque es útil la factorización lv entonces supongan seguir yo pude expresar a mi matriz a como l
+45:0645 minutos y 6 segundospor um como resuelva por aquí igual b entonces fíjense digo a por x es igual a
+45:1345 minutos y 13 segundosl por x x ahora bien a socio y por equis y eso lo llamo vector y
+45:2145 minutos y 21 segundosfíjense que por x es un vector columna sí porque es un producto matriz vector me da un vector que llamo y y l por y me
+45:2945 minutos y 29 segundosdaba por tanto si yo primero yo x resolviendo l x y
+45:3845 minutos y 38 segundosigual b y segundo yo perdón si yo primero a yo y resolviendo el 'poli'
+45:4445 minutos y 44 segundosigual b y segundo a yo x resolviendo un x x igual ahí donde el lado derecho del segundo sistema lo obtuve como la
+45:5345 minutos y 53 segundossolución del primer sistema yo termino obteniendo la solución de mi sistema
+46:0346 minutos y 3 segundosoriginal sí y la ventaja está en que resolver sistemas donde las matrices
+46:1046 minutos y 10 segundostriangulares sean triangulares superiores o inferiores son sistemas muy fáciles de resolver que yo hago por
+46:1746 minutos y 17 segundossustitución progresiva o regresiva y además la ventaja de esto sin es que si
+46:2546 minutos y 25 segundosyo tengo que resolver muchos muchos sistemas de ecuaciones lineales donde la
+46:3246 minutos y 32 segundosmatriz de coeficientes fija pero lo que varía es el vector no dado derecho b si
+46:3946 minutos y 39 segundosyo obtuve la factorización elaboró una vez luego luego resolver estos dos sistemas serían fáciles variando el
+46:4746 minutos y 47 segundosvector b porque serían sistemas trémulas e inferiores y superiores
+46:5546 minutos y 55 segundosentonces ahora bien si la eliminación cause jana para resolver el sistema se puede llevar
+47:0347 minutos y 3 segundosa cabo sin hacer un intercambio de filas entonces es posible realizar la factorización lv y esto es útil como les
+47:1147 minutos y 11 segundosdecía antes porque una vez hallada por única vez la factorización elevó de matriz coeficiente yo puedo resolver el
+47:1947 minutos y 19 segundossistema para distintos valores desde a un bajo costo computacional
+47:2647 minutos y 26 segundosvolvamos al sistema dado originalmente si sin perturbar
+47:3547 minutos y 35 segundoscuya solución sabemos que es 0 menos 11 que hicimos matricial mente cuando
+47:4347 minutos y 43 segundosaplicamos eliminación de ausiàs bueno fíjense en realidad en realidad lo que hicimos es la matriz original a la
+47:5247 minutos y 52 segundosmatriz coeficiente original la pre multiplique por una matriz que llamó m 1 que que tiene una diagonal de unos y
+48:0148 minutos y 1 segundodebajo del primer pivote tiene los multiplicadores fíjense que son los multiplicadores lo que tengo en rojo
+48:0948 minutos y 9 segundosentonces si ustedes hacen el producto entre sm1 y esa les da nuestra primera matriz del primer paso
+48:1848 minutos y 18 segundosahora bien si a esta matriz que yo obtengo luego la pre multiplicó por otra madrid m2 que está definida como una
+48:2648 minutos y 26 segundosmatriz que es diagonal es una diagonal de 1 y debajo del pivote 22 si en la posición
+48:3348 minutos y 33 segundosvídeos 2 tengo el multiplicador si el 25 que es el multiplicador el segundo paso si yo me construyó una m2 de esa manera
+48:4248 minutos y 42 segundossi ellos pre multiplicó por lo que obtuve antes eso me da la matriz en azul que ya es la matriz triangular superior
+48:5048 minutos y 50 segundosque obtuvimos nosotros sea hacer eliminación gauss jana no es otra cosa que ir pre multiplicando en la matriz a
+48:5948 minutos y 59 segundospor unas matrices que vamos a llamar m sub acá sí que van a estar formadas por
+49:0649 minutos y 6 segundosdiagonales de 1 y debajo del elemento de la posición pivote que yo estoy tomando
+49:1449 minutos y 14 segundossi voy a tener los multiplicadores entonces hacer eliminación de oceana no es otra cosa que hacer es subir pre
+49:2249 minutos y 22 segundosmultiplicando por este tipo de matrices hasta llegar a la matriz triangular superior entonces fíjense que en mi matriz un
+49:3149 minutos y 31 segundostriangular superior terminó siendo otra cosa que el producto de m2 por m 1 por a
+49:4049 minutos y 40 segundosentonces si mi matriz m2 y m 1 son invencibles y lo son si yo lo que puedo
+49:4849 minutos y 48 segundoshacer es la igual la primera ecuación pre multiplicar la ambos lados por la inversa de m2 y logró multiplicada por
+49:5649 minutos y 56 segundosla inversa de m1 de forma tal que obtengo esa ecuación matricial y si a la inversa dm1 la llamó el lunes y a la
+50:0450 minutos y 4 segundosinversa de l 2 dm2 la llamó l 2 lo que tengo en realidad es que estoy multiplicando el 1 por el leu el 2 por
+50:1450 minutos y 14 segundosla uv y eso me da la matriz a y si llamamos al producto de l 1 por l 2 l y
+50:2350 minutos y 23 segundoseso termina siendo una matriz triangular inferior porque tanto el uno como el de dos son triangulares inferiores lo que
+50:3250 minutos y 32 segundosobtengo es la factorización l por un lado es decir
+50:3750 minutos y 37 segundoscomo yo las m las m1 y la m25 nuestros
+50:4450 minutos y 44 segundosmultiplicadores si todo el proceso todo el proceso de eliminación de oceana me
+50:5250 minutos y 52 segundosva definiendo quiénes son las matrices l es decir dicho de otra manera los
+50:5950 minutos y 59 segundoselementos dv y dl son calculados en el proceso de la eliminación de oceana
+51:0751 minutos y 7 segundosentonces qué es esto es lo que se conoce como factorización directa
+51:1451 minutos y 14 segundoslv decir no hacer un intercambio de fila no hacemos un intercambio de filas
+51:2251 minutos y 22 segundosentonces si yo considero el sistema por x igual b donde es una matriz cuadrada n por n y si yo puedo realizar toda la
+51:2951 minutos y 29 segundoseliminación de oceana sin intercambio de filas entonces mi matriz puede factorizar se como el producto de una
+51:3751 minutos y 37 segundosmatriz angular inferior por una madrid que angular superior es decir que a es igual el de polo entonces es la demostración del teorema
+51:4651 minutos y 46 segundospueden contar en fin entonces una vez construida la l y la bu lo que hago es la solución regresiva y
+51:5251 minutos y 52 segundosprogresiva para resolver el sistema de ecuaciones lineales equivalente al original
+52:0152 minutos y 1 segundobueno la implementación de la factorización lv la tengo es una de las funciones que le pase también van a ir
+52:1052 minutos y 10 segundoscomo argumento a ive de entrada y la salida va a ser la solución aproximada y
+52:1752 minutos y 17 segundosfíjense que va a ser igual a gauss iguala gauss
+52:2352 minutos y 23 segundosigual a gauck pero además tengo metido dentro d esa implementación esa función de es
+52:3252 minutos y 32 segundoscomo lv tengo la sustitución progresiva y la sustitución regresiva que uso para
+52:4252 minutos y 42 segundosresolver por un lado el sistema triangular
+52:5052 minutos y 50 segundosinferior donde hay o el vector y como les decía anteriormente y luego ese y
+52:5752 minutos y 57 segundospasa a servir mi vector lado derecho y obtengo el vector x que es la absolución
+53:0353 minutos y 3 segundosde mi sistema original es decir dentro de dzeko l
+53:0953 minutos y 9 segundostengo sustitución progresiva y regresiva y obtengo la aproximación del sistema a
+53:1753 minutos y 17 segundospor x iguales ahora bien volvamos nuevamente al ejemplo tres por tres modificados sí
+53:2753 minutos y 27 segundosporque en general lo que sucede es que yo no tengo una factorización directa en general lo que sucede son
+53:3553 minutos y 35 segundosfabricaciones indirecta veamos que ser devolvamos al ejemplo tres por tres modificados tres por tres perturbado
+53:4453 minutos y 44 segundosrecuerden que le había perturbado el término en dos por 2.0
+53:5453 minutos y 54 segundosde forma tal que la solución seguía sí siendo 0 - 1
+54:0354 minutos y 3 segundosentonces si yo hubiese hecho por ti o te o parcial si yo hubiese aplicado pivote o
+54:1254 minutos y 12 segundosparcial ni siquiera para llevar secas escalado si yo hubiese hecho pivote o parcial
+54:1854 minutos y 18 segundosen el segundo paso hubiese tenido que permutan la segunda fila con la tercera bien
+54:2654 minutos y 26 segundossi yo hubiese tenido de para no andar porque si se fijan en el segundo paso hubiese tenido que calcular el máximo
+54:3454 minutos y 34 segundosentre menos 0.001 y 2.5 que es 2.5 y eso está en la tercera fila por tanto tengo
+54:4254 minutos y 42 segundosque hacer un intercambio de fila entonces lo que hago un intercambio de fila de la segunda con el tercero
+54:5454 minutos y 54 segundospor tanto lo que hice matricial mente es a mi
+55:0155 minutos y 1 segundomatriz original la multiplique por esa mim-1 que tienen los multiplicadores del
+55:0855 minutos y 8 segundosprimer paso y ahora en el segundo paso lo que voy a hacer es agarrar esta matriz que tengo
+55:1655 minutos y 16 segundosen el lado izquierdo que es el resultado de el primer paso de la eliminación de oceana y lo que hago es como estoy
+55:2455 minutos y 24 segundosusando pivote o parcial y necesito intercambiar la segunda con la tercera fila en el paso 2
+55:3255 minutos y 32 segundosvoy a promulgar esa matriz por una p sí fíjense que esa p tiene
+55:4155 minutos y 41 segundoses 1 0 0 0 0 1 y 0 10 es como si fuese una matriz identidad modificado
+55:5155 minutos y 51 segundosentonces lo que me hace esa matriz es me va a intercambiar la segunda fila con la tercera créanme
+56:0056 minutoshagan un producto matricial para convencerse y lo que hago cuando yo pre multiplicó la b x
+56:0856 minutos y 8 segundosen la matriz m m ahora me termina dando la esa misma matriz pero dónde están las filas
+56:1656 minutos y 16 segundossegunda y tercera permutadas ahora bien esa vez se conoce como una
+56:2356 minutos y 23 segundosmatriz de permutación y cada vez que yo intercambio filas en
+56:3056 minutos y 30 segundosla eliminación de oceana matricial mente lo que estoy haciendo estoy pre multiplicando por una matriz de permutación
+56:3956 minutos y 39 segundosqué es una matriz de permutación n por n en general es tal que cada fila y cada columna solo tiene un elemento igual a
+56:4956 minutos y 49 segundosun desigual dominó por fin lo mismo con la columna siempre tengo un solo defiende uno y todos los más son 0 es
+56:5656 minutos y 56 segundoscomo si yo a la prole identidad y las intercambio o intervalos y por ejemplo una matriz
+57:0457 minutos y 4 segundosde permutación de orden 4 que esa que está dada en ese ejemplo que va a ser si
+57:1057 minutos y 10 segundosyo pre multiplicó esa p por una bueno lo que hace es a pep ahora lo que me va a hacer me va a permutar la primera fila
+57:1857 minutos y 18 segundoscon la segunda y la tercera con la cuarta en un solo paso
+57:2557 minutos y 25 segundosademás una particularidad que tienen que amo usar es que la inversa de la matriz de permutación no es otra cosa que la
+57:3357 minutos y 33 segundostraspuesta si quieren convencerse en ese ejemplo bueno algún otro construir ante
+57:4157 minutos y 41 segundosuna matriz de puntuación transpongan la multiplica en la por sí mismo y van a obtener la identidad
+57:5057 minutos y 50 segundosentonces veamos el caso general de la factorización indirecta lv consideremos p sub cam y matrices de permutación con
+58:0058 minutosk variando 1 hasta el n 1 sí que son las matrices de permutación que yo tengo en
+58:0858 minutos y 8 segundoslos intercambios de filas de la matriz en los pasos acá decimos en la eliminación now sean así cada vez que yo empiezo un paso de la
+58:1758 minutos y 17 segundoseliminación de oceana y hago pivote o parcial lo que yo tengo para ser escalado si tengo que hacer una permutación voy a tener una pesca ahora
+58:2658 minutos y 26 segundossi no tengo que hacer una permutación de filas se llama esa p su casera la identidad que no hará nada pero siempre
+58:3358 minutos y 33 segundossiempre tengo una matriz de permutación la identidad puede considerarse de ninguna manera por mutación
+58:4158 minutos y 41 segundostengo también la semes uvc a que le mostré anteriormente en el caso tres por tres pero piénsenlo en el caso general tengo matrices m sub acá donde acabaría
+58:5058 minutos y 50 segundosentre 1 y no menos 1 es además su caso matrices unitarias triangulares inferiores recuerden que eran matrices
+58:5858 minutos y 58 segundosque tienen todos unos en su diagonal y son triangulares inferiores porque lo fui completando con los multiplicadores
+59:0559 minutos y 5 segundosdebajo de la diagonal de la carísima diagonal en el pasok a décimo
+59:1259 minutos y 12 segundostengo la matriz triangular superior obtenida después de los n menos un paso en la eliminación laosiana y lo que pasó
+59:2059 minutos y 20 segundosfue que arranque leamos de esta primera actuación de derecha a izquierda haga arranque con la matriz a de coeficientes
+59:2959 minutos y 29 segundosla pre multiplique por una matriz por la primera permutación si es que tuberías un intercambio de fila o matrices luego
+59:3659 minutos y 36 segundoshice el primer paso de la eliminación gauss jana es decir multiplicó multiplique por m psuv 1 luego el paso 2
+59:4459 minutos y 44 segundosy tuve que hacer un intercambio de filas pero multiplique por 12 si no tuve que hacer un intercambio de files ap-2
+59:5259 minutos y 52 segundoshubiese sido la identidad luego tuve que prevé multiplicar por una m2 una matriz
+59:5859 minutos y 58 segundosángulo una madryn unitaria triangular y así sucesivamente lo hice hasta n 1 y
+1:00:061 hora y 6 segundoseso me terminó dando la u sí ahora bien se puede trabajar hay que
+1:00:131 hora y 13 segundoshacer se puede consultar en el mba o en ese libro cómo está hecho los pasos la
+1:00:191 hora y 19 segundosjustificación pero eso se puede expresar de la siguiente manera la uv va
+1:00:271 hora y 27 segundosa ser igual al producto de unas m primas si que las como que las aglutina entre
+1:00:371 hora y 37 segundoslas factorías entre paréntesis la junto en un paréntesis por todas las p desde n menos 1 hasta 1 por la
+1:00:461 hora y 46 segundosahora bien quiénes son esas primas bueno tienen esa expresión que tengo ahí sí
+1:00:531 hora y 53 segundoslas primas sub k son esa expresión que tengo ahí la forma de ciencia m prima
+1:01:001 hora y 1 minutoson es como agarrar la de mesuca y pre y pos multiplicarla por la matriz de
+1:01:081 hora, 1 minuto y 8 segundospermutación siguiente y su inversa
+1:01:161 hora, 1 minuto y 16 segundosentonces fíjense que esto ya casi tiene la forma igual el 'pollo' pero qué pasa ahora
+1:01:261 hora, 1 minuto y 26 segundoslo que hago es a la inversa a la inversa de todo el producto de esa esa g m
+1:01:341 hora, 1 minuto y 34 segundosprimas los llamo l sí es decir qué
+1:01:421 hora, 1 minuto y 42 segundosla matriz m prima a la menos uno o sea la inversa de la matriz m prima sub k
+1:01:511 hora, 1 minuto y 51 segundosno es otra cosa que la l psuv k si ya todo ese producto al producto a la inversa todo ese producto que tenía el
+1:01:591 hora, 1 minuto y 59 segundosnegocio anterior los llamó l al producto de toda la fe todas las pescas los llamo p sí es decir
+1:02:081 hora, 2 minutos y 8 segundosesa p va a contener todos los intercambios de fila que hice
+1:02:171 hora, 2 minutos y 17 segundosentonces esa última ecuación que yo tengo la puedo escribir como un igual l a la menos uno por p por a o
+1:02:271 hora, 2 minutos y 27 segundosequivalente mente si la el pre multiplicó a ambos lados por l lo que
+1:02:361 hora, 2 minutos y 36 segundosobtengo es que l x es igual a p por ado equivalentemente pep ahora es igual
+1:02:431 hora, 2 minutos y 43 segundosl por lo que se conoce como una factoría acción indirecta lv de la xi es decir cuando yo hago
+1:02:531 hora, 2 minutos y 53 segundospivote o parcial o escalado porque quiero evitar lo erróneo necesariamente voy a estar intercambiando filas o
+1:03:011 hora, 3 minutos y 1 segundocolumnas con lo cual ahí se me va a introducir una matriz de permutación y ahora ya no resulta una autorización
+1:03:081 hora, 3 minutos y 8 segundosdirecta a igual l por u sino p ahora igual l por u
+1:03:161 hora, 3 minutos y 16 segundosentonces si ya es una madrid inversis sí
+1:03:231 hora, 3 minutos y 23 segundosentonces existe una matriz de permutación tal que pep ahora ahora
+1:03:301 hora, 3 minutos y 30 segundosadmite la factorización triangular de x a igual l por u la demostración también la puede encontrar es magnífica
+1:03:381 hora, 3 minutos y 38 segundosahora bien es igual para qué quieres como resuelvo como uso esto ahora ya habíamos visto que la ventaja de usar
+1:03:451 hora, 3 minutos y 45 segundoseste tipo de factorización es es cuando yo quiero resolver un sistema que tiene una matriz de
+1:03:531 hora, 3 minutos y 53 segundoscoeficiente fija y varía mucho los derechos pero ahora tengo que tener cuidado como resuelva por equis igual en el caso
+1:04:021 hora, 4 minutos y 2 segundosque admita una factorización indirecta bueno ahora lo que hago es pero multiplicó por la matriz de
+1:04:091 hora, 4 minutos y 9 segundospermutación p si ambos lados fíjense que ahora me queda p podrá por x va a ser igual a pp por b
+1:04:161 hora, 4 minutos y 16 segundosahora como pep ahora es igualdad el reemplazo lo que espera igual el depor
+1:04:221 hora, 4 minutos y 22 segundosun asocio con x con x por equis los llamo el vector y con lo cual tengo que resolver dos sistemas uno triangular
+1:04:311 hora, 4 minutos y 31 segundosinferior y o de otro angular superior tal que el primero es l x y es igual a pep orbe y x x es igual
+1:04:391 hora, 4 minutos y 39 segundosay o sea el primer sistema cuyo lado derecho es
+1:04:461 hora, 4 minutos y 46 segundosel vector be permutado obtengo el vector y es el vector y pasa a ser el lado
+1:04:541 hora, 4 minutos y 54 segundosderecho en mi segundo sistema que es un sistema de emular superior que es el suelo por su sustitución
+1:05:021 hora, 5 minutos y 2 segundosregresiva y de ese término hallando x que era el resultado de mi sistema a porec y vuelve original
+1:05:121 hora, 5 minutos y 12 segundosentonces bien tenemos nosotros no tenemos una implementación propia porque es un código están de un poco más
+1:05:181 hora, 5 minutos y 18 segundoscomplicado pero tenemos en los sistemas computaciones que usamos incorporada una función intrínseca que usa el método
+1:05:271 hora, 5 minutos y 27 segundoseliminación de oceana con bigote o parcial y nos devuelve la l la uv y la p
+1:05:331 hora, 5 minutos y 33 segundossi ustedes los llaman de la siguiente manera diciendo bueno lv es la
+1:05:401 hora, 5 minutos y 40 segundosfertilización lv de la sim esto nos devuelve una triangular
+1:05:471 hora, 5 minutos y 47 segundossuperior y en él se va a almacenar el producto de la triangular inferior y la matriz de permutación esto no nos va a
+1:05:551 hora, 5 minutos y 55 segundosservir mucho pero lo que más nos va a servir es si quiero hacer una descomposición
+1:06:021 hora, 6 minutos y 2 segundosuna factorización lv y saber si fue directa o indirecta yo puedo llamar a lv de la matriz a y
+1:06:131 hora, 6 minutos y 13 segundosahora en los argumentos de salida de mi función intrínseca lv llamo lv y p en ese orden la l que es el primer
+1:06:221 hora, 6 minutos y 22 segundosargumento es la regla inferior la u el segundo argumento es la regular superior y la p que el de los argumentos es la
+1:06:291 hora, 6 minutos y 29 segundosmatriz de permutaciones de forma tal que pep ahora me da el depor entonces
+1:06:391 hora, 6 minutos y 39 segundosvamos a hacer esto voy a hacer esto ya para terminar voy a volver a matt lamb sin
+1:06:491 hora, 6 minutos y 49 segundosvoy a borrar el pantalla sin recuerden que yo tenía almacenada en madre original y
+1:06:581 hora, 6 minutos y 58 segundosfíjense que si yo llamo a él y p como argumento de salida y llamar la
+1:07:051 hora, 7 minutos y 5 segundosfunción intrínseca de mis matriz
+1:07:131 hora, 7 minutos y 13 segundosen formato largo pero bueno se ve que l es la matriz triangular inferior
+1:07:211 hora, 7 minutos y 21 segundosunitaria sí también que tiene el producto de todos los
+1:07:291 hora, 7 minutos y 29 segundosmultiplicadores y la uv es la matriz triangular superior sí
+1:07:371 hora, 7 minutos y 37 segundosy la p fíjense que en este caso y hubo que hacer una permutación hubo
+1:07:441 hora, 7 minutos y 44 segundosque hacer una permutación entre la segunda y la tercera fila
+1:07:511 hora, 7 minutos y 51 segundoscuando hago mi eliminación gauss jana porque quiero evitar los errores de
+1:07:571 hora, 7 minutos y 57 segundosromero ya que en este caso sería pep ahora igual
+1:08:051 hora, 8 minutos y 5 segundosl por 1 bueno vuelvo a la lectura
+1:08:151 hora, 8 minutos y 15 segundosy ya para terminar lo que les contaban que había una permutación y hasta acá llegamos es la bibliografía con los
+1:08:221 hora, 8 minutos y 22 segundosmétodos directos de la eliminación de aus jana y
+1:08:301 hora, 8 minutos y 30 segundosla factorización directa e indirecta el agua y otro tipo de autorizaciones la fertilización qr es una formación muy
+1:08:371 hora, 8 minutos y 37 segundosusada sí algoritmo de hecho el esquí también es para un tipo de matriz particular cuando
+1:08:451 hora, 8 minutos y 45 segundosla matriz consiguiente tiene algunas características definidas pero lo dejo en dos casos para que le interese puedo

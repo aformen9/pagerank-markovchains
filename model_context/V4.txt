@@ -1,0 +1,539 @@
+bueno esta es la lectura 4 de errores en los métodos numéricos perteneciente a la
+0:099 segundosunidad 6 de la asignatura matemática aplicada para las carreras de ingeniería eléctrica y electrónica de la facultad
+0:1616 segundosde ciencias exactas ingeniería y agrimensura de la universidad nacional de rosario
+0:2323 segundosyo soy ilusión o conseguir mi marinelli bueno vamos a hacer una introducción a
+0:3030 segundoslos errores en los métodos numéricos recuerden el esquema inicial que habíamos visto donde uno construía un
+0:4040 segundosexperimento luego a partir de esa construcción armaba un problema
+0:4646 segundosmatemático a partir de un modelo y luego ese problema matemático que había que
+0:5555 segundosresolver o que uno quería resolver en forma exacta lo transformaba en un problema numérico
+1:051 minuto y 5 segundospara lo cual necesitaba de los métodos o algoritmos numéricos que me dan la salida del resultado
+1:131 minuto y 13 segundosahora bien en todo este esquema van a aparecer errores por ejemplo los errores de aproximación cuando yo quiera
+1:221 minuto y 22 segundostransformar mi problema matemático en un problema numérico o bien los errores de redondeo que van a ser los que van a
+1:311 minuto y 31 segundosaparecer en la y en el uso de mis métodos y en la implementación de mis
+1:381 minuto y 38 segundosmétodos en una computadora además va a haber otro tipo de errores que van a ser heredados si estoy resolviendo problemas
+1:481 minuto y 48 segundoscon datos reales en las aplicaciones existen muchos errores tenemos errores de entrada de
+1:561 minuto y 56 segundosdatos que son los cometidos en valores numéricos de datos de entrada estos pueden ser sistemáticos por la
+2:042 minutos y 4 segundosimprecisión de los aparatos de medición o experimentales debido a la apreciación del observador y otras causas
+2:132 minutos y 13 segundostambién hay simplificaciones cuando uno construye el modelo que está observando y son las simplificaciones que le
+2:212 minutos y 21 segundoshacemos al modelo físico para poder representarlo como un modelo matemático y poder resolverlo obviamente en este
+2:292 minutos y 29 segundoscaso en general usamos leyes de la física de la química o dependiendo de
+2:362 minutos y 36 segundosdonde ese problema que quiero resolverlo hay errores causados por la computadora
+2:432 minutos y 43 segundosy por el hombre y son debido al mal funcionamiento o simplemente a imperfecciones humanas
+2:522 minutos y 52 segundosy finalmente están los errores numéricos que son los errores introducidos al usar
+3:003 minutosun algoritmo en una computadora por un lado van a estar asociado al algoritmo es decir yo tengo un tiempo finito para
+3:093 minutos y 9 segundospoder ejecutar mi algoritmo y por otro van a estar asociado al hardware es decir al espacio finito que tengo en mi
+3:173 minutos y 17 segundoscomputadora para representar valores numéricos nosotros nos vamos a concentrar en esos
+3:253 minutos y 25 segundosúltimos dos colores algunos conceptos básicos en el análisis de errores es la exactitud refiere a la
+3:353 minutos y 35 segundosproximidad de un valor calculado respecto al valor verdadero exacto
+3:423 minutos y 42 segundosla precisión que refiere a la proximidad de un valor particular calculado
+3:483 minutos y 48 segundosrespecto a otros valores calculados las cifras significativas que son los
+3:563 minutos y 56 segundosdígitos distintos del cero de un número leyendo el número de izquierda a derecha
+4:044 minutos y 4 segundosel lobelle flow que es un fenómeno numérico cuando en un espacio de memoria
+4:104 minutos y 10 segundosno puede almacenar su número positivo negativo por ser mayor que el mayor
+4:194 minutos y 19 segundosnúmero representable en la máquina lo mismo vale para el caso negativo es decir si yo quiero por ejemplo en
+4:274 minutos y 27 segundosmatlab octavo con el comando real max representar un número mayor que rial max
+4:354 minutos y 35 segundosque recuerden era del orden de 10 a la a-308 posiblemente ese número no lo pueda representar y la computadora lo
+4:444 minutos y 44 segundosvas a tener que aproximar piensa en que cuando se hiciera muchas
+4:514 minutos y 51 segundosveces en cálculo mucho y se realizan muchos cálculos son muy comunes que aparezcan este tipo de errores y hay que
+4:594 minutos y 59 segundoscontemplarlo de la misma manera aparecen los amber flow que son fenómenos cuando
+5:055 minutos y 5 segundosel dentro de la memoria ya no puedo representar un número positivo muy chico
+5:125 minutos y 12 segundospor ser menor al menor número máquina o al menor número que yo puedo representar
+5:195 minutos y 19 segundosuna memoria recuerdan que teníamos el real mío que devolvía un valor numérico
+5:265 minutos y 26 segundosmuy chiquito y cualquier número menor que ese iba a ser aproximado
+5:335 minutos y 33 segundosposiblemente al valor numérico cero con lo cual son errores que también digo contemplar
+5:415 minutos y 41 segundosfíjense en este esquema la diferencia entre lo que es la exactitud y la
+5:485 minutos y 48 segundosprecisión piensen que las círculos o circunferencias concéntricas en el centro está
+5:565 minutos y 56 segundosel valor exacto de mi problema numérico y los puntitos negros son las aproximaciones
+6:046 minutos y 4 segundossi yo un incremento la exactitud lo que hago
+6:116 minutos y 11 segundoses pasar de la gráfica a la gráfica v es decir mis aproximaciones se van a ir
+6:196 minutos y 19 segundosacercando al centro de la circunferencia ahora bien si yo de la gráfica paso a la gráfica hace lo que estoy haciendo es
+6:286 minutos y 28 segundosaumentar la precisión de mi algoritmo suponiendo que esos puntitos negros sean a salidas de un método numérico
+6:386 minutos y 38 segundosentonces esas aproximaciones se aproximan entre sí porque yo estoy incrementando la precisión ahora el caso
+6:476 minutos y 47 segundosideal sería poder simultáneamente incrementar la precisión y la exactitud de mi algoritmo para qué
+6:566 minutos y 56 segundosy poder lograr la mayor cambiada de aproximaciones en el centro de estos circunferencias concéntricas como se
+7:037 minutos y 3 segundosmuestra en bueno como medimos la exactitud
+7:107 minutos y 10 segundossupongamos que x sub es el valor exacto del número real y x es su aproximación el error absoluto nos
+7:207 minutos y 20 segundosva a medir la diferencia entre el valor exacto hizo aproximado en general en
+7:267 minutos y 26 segundoscálculo numérico siempre uno considera el valor absoluto del error absoluto directamente se le llama absoluto
+7:357 minutos y 35 segundosel error relativo que no es otra cosa que el cociente entre el error absoluto y el valor exacto en este caso también
+7:447 minutos y 44 segundosse toma valor absoluto teniendo en cuenta siempre que el valor exacto no sea el valor
+7:537 minutos y 53 segundosy el error relativo porcentual que va a hacer otra cosa que el error relativo por cien
+8:018 minutos y 1 segundocomo medimos la precisión en los errores al menos en aproximaciones como los reales vamos a decir que x sub
+8:118 minutos y 11 segundosa es una aproximación del valor exacto x de equisur
+8:188 minutos y 18 segundoscon de cifras decimales significativas si d es el mayor número natural tal que
+8:288 minutos y 28 segundosel error relativo es menor que 0.5 por 10 a la menor
+8:378 minutos y 37 segundosveamos esto esta definición en algunos ejemplos por ejemplo supongan que tenemos el
+8:448 minutos y 44 segundosvalor exacto x v que sería una especie de aproximación de pi 3 14 15 92 y su
+8:538 minutos y 53 segundosaproximación es 314 cuando yo calculo fíjense que fui calculando absoluto el error relativo el error relativo
+9:029 minutos y 2 segundosporcentual cuando yo calculo el error relativo lo que veo que ese error relativo es menor
+9:109 minutos y 10 segundosestricto que 0.005 que no es otra cosa que un medio por 10 a la menos 2 de
+9:199 minutos y 19 segundosdonde obtengo que en nuestro caso el de 2 es decir qué
+9:269 minutos y 26 segundostengo dos cifras decimales significativas por tanto el valor x supa
+9:329 minutos y 32 segundospuedo confiar en las dos primeras cifras significativas leyendo ese número de izquierda a derecha es decir puedo
+9:409 minutos y 40 segundosconfiar en el 3 y el 1 la tercera cifra ya no es consejo por ejemplo qué pasa si yo pero con
+9:489 minutos y 48 segundosnúmeros muy grandes tengo equis sube el valor exacto y tengo que sería un millón y tengo x sub a que
+9:569 minutos y 56 segundossu aproximación cuando yo calculo fíjense el error
+10:0210 minutos y 2 segundosrelativo si el error relativo o el error relativo porcentual que es chiquito lo que veo que ese error es menor estricto
+10:1210 minutos y 12 segundosque un medio por 10 a lo menos 5 de donde 5 es la cantidad de cifras significativa por dando de esta
+10:2110 minutos y 21 segundosaproximación y suba puedo confiar en los primeros 5 9 y el 7 ya no es una cifra
+10:2810 minutos y 28 segundosconfianza ahora the end y qué pasa cuando uno trabaja con números muy pequeños
+10:3510 minutos y 35 segundossi bien son números muy pequeños esto no me dicen que son buenas aproximaciones entre sí por ejemplo si se cae es el valor exacto
+10:4310 minutos y 43 segundosiceta suba su aproximación fíjense cuando yo calculo el error absoluto y
+10:5010 minutos y 50 segundoscuando cálculo el error relativo o si quieren cálculo del error relativo porcentual ese error relativo porcentual
+10:5910 minutos y 59 segundoses de un 25% entonces cuando miro las cantidades cifras significativas en las que puedo
+11:0811 minutos y 8 segundosconfiar veo que ese error relativo es menor estricto que un medio por 10 a la
+11:1411 minutos y 14 segundos0 de donde obtengo que el de cero por lo tanto yo no puedo
+11:2211 minutos y 22 segundosconfiar en ninguna en ningún dígito del zeta suba para poder aproximar presenta a su vez
+11:3111 minutos y 31 segundosbueno esta misma muy sencillamente usted puede calcular y así lo hice yo el mar la otan o si
+11:4111 minutos y 41 segundoslado si pueden ir calculando y aplicando la definición para ver cuántas cifras
+11:4811 minutos y 48 segundossignificativas tiene la aproximación fui calculando lo lo que hice
+11:5611 minutos y 56 segundosanteriormente por montones de comandos bueno otro concepto importante es la
+12:0312 minutos y 3 segundosanotación científica normalizada en este caso lo definimos en el caso decimal pero es importante tener en cuenta que
+12:1112 minutos y 11 segundosinternamente la máquina trabaja en binario entonces decimos que si x es un valor
+12:1912 minutos y 19 segundosreal podemos escribirlo como x en base x sub día es que quiere decir x en base de 10
+12:2612 minutos y 26 segundoscomo 0.0 y poner todas sus cifras
+12:3412 minutos y 34 segundossignificativas después de la coma por 10 a la n los de sub k que están marcados en rojo
+12:4312 minutos y 43 segundosse van a conocer como la mantilla del número real y él exponente del 10 se conoce como el
+12:5212 minutos y 52 segundosexponente es importante remarcar que el de sub 1 el de sub uno es un valor que no puede
+13:0013 minutosser cero porque en cuyo caso yo podría aumentar un un número el exponente
+13:0813 minutos y 8 segundospor tanto necesariamente este de sub 1 no es 0 pero en cambio todos los demás
+13:1413 minutos y 14 segundossi podrían ser valores entre 0 x dígitos en tres elevado
+13:2113 minutos y 21 segundospor ejemplo fíjense este número grande yo lo puedo representar como 0.1 27 por
+13:2913 minutos y 29 segundos10 a la 10 formato normalizado sima
+13:3713 minutos y 37 segundosfíjense también este otro número ya no tan grande puedo representarlo de esta manera sí
+13:4513 minutos y 45 segundosy este número negativo también puedo representarlo haciendo de alguna forma
+13:5113 minutos y 51 segundoscorrer la coma a derecha con esta representación con lo cual esto me
+13:5813 minutos y 58 segundosindica que una forma de poder almacenar los números para poder almacenar con números me va a alcanzar con poder
+14:0614 minutos y 6 segundosalmacenar su mantilla y su exponente fíjense que
+14:1314 minutos y 13 segundoseste número que tiene varios dígitos yo sencillamente almacenando el 9 y el 7 y
+14:2014 minutos y 20 segundosla potencia 10 podría claramente tener una representación de este número sí sobre entiendo que estoy usando una
+14:2814 minutos y 28 segundosopción científica normalizada bueno error de truncamiento
+14:4114 minutos y 41 segundosentonces uno de los errores que nos interesan el error de truncamiento son errores debido a la interrupción del
+14:4914 minutos y 49 segundosproceso matemático antes de su terminación y están asociado al tiempo
+14:5614 minutos y 56 segundosfinito que tiene la corrida de un algoritmo ejemplos
+15:0315 minutos y 3 segundossupongan sé que quieren calcular un cociente e incrementar ustedes por definición saben que es la derivada del
+15:1015 minutos y 10 segundosdf en x 0 es el límite cuando h tiende a cero de su cociente incremental
+15:1815 minutos y 18 segundosahora bien una representación natural de esta una aproximación natural de esta
+15:2515 minutos y 25 segundosderivada sería aproximar a la derivada como el cociente incremental con un cierto h
+15:3315 minutos y 33 segundoschico es decir que jugó un truncamiento en ese caso por ejemplo en un proceso iterativo que
+15:4215 minutos y 42 segundostengan una sucesión de valores reales que convergen a una raíz como fue el caso de la sucesión que en la lectura 1
+15:5215 minutos y 52 segundoseste hicimos converger a raíz de 2 yo no puedo integrar infinitamente sino que lo que voy a obtener son una
+16:0116 minutos y 1 segundoaproximación x sub zero x 1 hasta un x sub n de forma tal que el x sub n se
+16:0616 minutos y 6 segundosaproxima r para cierto ere grande
+16:1416 minutos y 14 segundosnuevamente tan bien acá hubo un va a haber un error por truncamiento y este
+16:2116 minutos y 21 segundosejemplo también es muy importante en una serie infinita tampoco yo puedo representar una serie infinita que no es otra cosa el límite
+16:3016 minutos y 30 segundoslas sumas parciales entonces lo que hago es me voy a aproximar mi función suponiendo que sea representable mi
+16:3716 minutos y 37 segundosfunción como una serie infinita una serie de taylor infinita cómo
+16:4516 minutos y 45 segundossu polinomio de taylor para cierto n grandes ahora vamos a volver sobre esto
+16:5216 minutos y 52 segundosporque les quiero contar la fórmula del error de lagrange de la serie de taylor
+16:5816 minutos y 58 segundosel desarrollo de una de taylor de una función que vamos a suponer que viene
+17:0517 minutos y 5 segundosderivada continua hasta n 1 en el intervalo de s el desarrollo de hilo centrada en a
+17:1417 minutos y 14 segundosustedes lo pueden representar como la f va a ser igual a su polinomio de taylor
+17:2017 minutos y 20 segundosde grado n más la derivada n uno evalúa de na de la función sobre n 1 factorial
+17:2917 minutos y 29 segundospor x menos a a la n 1 donde s a hay un error es que no es sí sino es a
+17:3817 minutos y 38 segundosestá entre 0 y x en el intervalo bs
+17:4717 minutos y 47 segundossi aca el error es que lo voy a corregir en la transparencia es la derivada n 1
+17:5317 minutos y 53 segundoscentrada en si está entre 0 y x luego corrijo la transparencia el primer
+18:0218 minutos y 2 segundostérmino como dije se conoce como polinomio de taylor y suele notarse como jesús n de x en el segundo es el error
+18:1118 minutos y 11 segundosde taylor en la forma de lagrange que suele notarse como es vnd x de a
+18:1918 minutos y 19 segundosy ahora bien este error de truncamiento de taylor que es un error analítico
+18:2518 minutos y 25 segundosyo puedo controlarlo al tener una forma explícita del error acotando
+18:3418 minutos y 34 segundosla expresión de la derivada en e1 centrado en un sí voy a corregir eso
+18:4118 minutos y 41 segundossobre n +1 factorial por x menos a la n mayor
+18:4818 minutos y 48 segundosel desarrollo de taylor vamos a ver el caso de la función exponencial
+18:5618 minutos y 56 segundoscentrado en nada para simplificar los cálculos es la equis igual la sumatoria de x al acaso break a factor ya lo
+19:0419 minutos y 4 segundosvariando cada vez de ser infinito puedo expresarlo como la suma hasta en el que la casa sobre qué factor y'all más
+19:1319 minutos y 13 segundosevaluado en cierto sí porque la n 1 sobre n 1 factorial donde s si está
+19:2119 minutos y 21 segundosentre 0 y x entonces si estamos suficientemente
+19:2919 minutos y 29 segundoscerca es decir si nuestro x está suficientemente cerca de la donde yo
+19:3619 minutos y 36 segundosestoy desarrollando serie de taylor la suma parcial debería
+19:4419 minutos y 44 segundosconverger es interesante ver que el error puede ser controlado acortando la expresión
+19:5319 minutos y 53 segundosque les mencioné en este caso con la función exponencial es decir que si yo puedo acotar esa expresión del error
+20:0220 minutos y 2 segundosvamos a obtener una estimación con un número finito de términos
+20:0920 minutos y 9 segundosen esa última expresión del error en valor absoluto que es el error de nunca miento de taylor en la forma de lagrange
+20:1620 minutos y 16 segundoses importante ver que hay un n factorial dividiendo por tanto
+20:2420 minutos y 24 segundossi yo fijo el x con lo cual se me fija el valor sí
+20:3120 minutos y 31 segundosese valor en el numerador va a ser un número fijo y en la medida que yo haga
+20:3720 minutos y 37 segundosaumentar el n osea agregue términos a mi suma o a mi polinomio de taylor el
+20:4520 minutos y 45 segundosfactorial de abajo va a ir creciendo mucho y arriba voy a tener una función de tipo potencial y es sabido que cuando
+20:5420 minutos y 54 segundosel n tiende a infinito el factorial siempre le va a ganar a esa función potencial es decir que en la medida que
+21:0421 minutos y 4 segundosese n en infinito el error de truncamiento por el de taylor en la
+21:1221 minutos y 12 segundosforma de lagrange debería atender a 0 bueno esta función que hace el taylor de
+21:2321 minutos y 23 segundosla función exponencial lo hice en realidad como un script sí y lo que hace
+21:2921 minutos y 29 segundosexplote a como función de n un error relativo a la aproximación de taylor de la función exponencial conocida que
+21:3821 minutos y 38 segundosustedes conocen aquí uso parte de lo que vimos en lectura anteriores sobre sobre marc la
+21:4721 minutos y 47 segundosoctava en particular estoy usando manda con lo cual lo que hago es para los
+21:5421 minutos y 54 segundosvalores 15 10 menos 15 y menos 10 estoy
+22:0022 minutoscalculando calculando cuánto vale la exponencial en esos valores en la medida
+22:0922 minutos y 9 segundosque aumentó el n es decir voy a hacer a incrementar el n
+22:1722 minutos y 17 segundoshasta un n times que va a ser 50
+22:2322 minutos y 23 segundosluego en ese foro en ese en si quieren verlo lo que estoy construyendo en ese
+22:3122 minutos y 31 segundoscaso no es otra cosa que cada uno de los términos de la suma parcial y luego los voy acumulando con un contadores y
+22:4022 minutos y 40 segundosfinalmente cálculo el error cuando sigo de ese for cálculo del er que no es otra cosa que el error
+22:4922 minutos y 49 segundosrelativo y lo peloteó usando el sup lot hago un sub los dos por tres
+22:5822 minutos y 58 segundospara que los seis valores de xx puedan ser planteados en una misma figura
+23:0523 minutos y 5 segundosy además uso el comando semi lobby para lograr el eje de las ordenadas
+23:1423 minutos y 14 segundosfinalmente los comandos 6a lo que hacen es me guardan la figura con el nombre de
+23:2223 minutos y 22 segundostaylor eps en el directorio actual de trabajo bueno lo dejo también para que lo miren los reyes
+23:3023 minutos y 30 segundosaquí les traje la una parte de la primera su plot para que lo veamos y
+23:3823 minutos y 38 segundosdonde vemos que cuando yo ejecuto ejecute ese script eps taylor
+23:4623 minutos y 46 segundoslo que van a ver en principio es que cuando yo quiero calcular
+23:5323 minutos y 53 segundosla función exponencial en 1 sí el error relativo que estoy calculando
+24:0024 minutosva decreciendo al menos hasta que vale 16 fíjense que hay un decrecimiento de
+24:1024 minutos y 10 segundosla curva marcado y que es lo esperable porque cuando aumento ln el factorial
+24:1824 minutos y 18 segundosle gana en la expresión del error de la gracia y por tanto eso debería ir
+24:2524 minutos y 25 segundoshacerlo sin embargo cuando ustedes van a ver el sub plot lo que van a obtener va a ser esta gráfica
+24:3424 minutos y 34 segundosen el su blog van a ver qué hay un título que es el x arriba que es
+24:4124 minutos y 41 segundosel valor que yo estoy calculando la función exponencial o bien su
+24:4924 minutos y 49 segundosaproximación y esta aproximación está hecha a través de su taylor centrado en el origen en
+24:5724 minutos y 57 segundosrealidad estoy usando un polinomio de mac loading con lo cual lo que ven por ejemplo en el
+25:0425 minutos y 4 segundoscaso x igual a 1 que la curva desciende hasta el valor que le mostré pero después ya no se gráfica o en dos casos
+25:1325 minutos y 13 segundosy se gráfica no lo estoy viendo también veo que cuando x vale 5 el error desciende hasta 31 32
+25:2225 minutos y 22 segundosvalores de n pero luego se estanca en un valor chico pero se estanca
+25:3125 minutos y 31 segundoscuando x vale 10 también me sucede algo muy parecido si voy teniendo un decaimiento pero aparentemente en cuál
+25:4025 minutos y 40 segundoses cuando n vale 45 se estanca y en los valores negativos fíjense que aparece otro fenómeno que no se ve en las otras
+25:4825 minutos y 48 segundosgráficas que aparecen como unos 5 es decir decrece y luego crece con lo cual esto no es esperable del error porque el
+25:5725 minutos y 57 segundoserror siempre debería estar decreciendo además de que se estanca acá llamativamente el error harán arranca
+26:0526 minutos y 5 segundoscreciendo y luego decrece hasta un valor donde se estanca y también en el caso de que igual a menos 10 también
+26:1426 minutos y 14 segundoses decir esto tiene que ver con que cuando yo ingreso un valor negativo ahora ya la serie o si quieren el
+26:2226 minutos y 22 segundospolinomio es un buen hombre es una sería alternante con lo cual estoy sumando y restando cosas todo el tiempo y ese
+26:2926 minutos y 29 segundoserror va a ser que en algún momento eso suba pero está claro que en todos los casos de ese error se estanca y lo que
+26:3926 minutos y 39 segundosesto no es debido a la expresión matemática analítica del error de taylor en la forma de lagrange que nos dice que
+26:4726 minutos y 47 segundossiempre debería tender a cero entonces bueno luego de haber hecho esta
+26:5426 minutos y 54 segundosexperiencia numérica con stay long fíjense que el ploteo nos muestra que la
+27:0127 minutos y 1 segundoconvergencia matemática no siempre es válida en la máquina los errores no convergen a cero a medida
+27:1127 minutos y 11 segundosque la serie aumenta la cantidad de términos el error en todos los casos parece
+27:1727 minutos y 17 segundosacostarse a acostarse en un valor pequeño si si uno empieza a incorporar
+27:2327 minutos y 23 segundosmás términos al el polinomio uno no hace la diferencia y además lo que se observa
+27:3227 minutos y 32 segundoses que el piso donde se estanca de ese error relativo depende del valor de x
+27:3927 minutos y 39 segundospor ejemplo en el caso que equivale menos 10 el error es mayor que 1 por 10
+27:4727 minutos y 47 segundosla menos 10 un cambio en el en el cuando equivale 10 el error es menor que 1 por 10 a lo menos 15
+27:5527 minutos y 55 segundoses decir que evidentemente además de este error de truncamiento si hay otro
+28:0528 minutos y 5 segundoserror que está operando en esta experiencia ese error es el error de redondeo
+28:1428 minutos y 14 segundosque se define como error de redondeo son errores debido a las limitaciones
+28:2428 minutos y 24 segundospropias de la máquina para representar cantidades por ejemplo cantidades reales
+28:3128 minutos y 31 segundosesto tiene que ver con que en mi computadora yo tengo un espacio finito de memoria y no puedo representar el
+28:4028 minutos y 40 segundoscontinuo o por ejemplo la representación de los números reales que tengo es una representación finita
+28:5028 minutos y 50 segundossin embargo los reales tienen infinitos decimales no nulo
+28:5928 minutos y 59 segundosalgunos de ellos por ejemplo y fíjense la cantidad de cifra es una irracional
+29:0629 minutos y 6 segundosque soy racional un tercio que son periódicos y fíjense que les puse el
+29:1329 minutos y 13 segundosundécimo luego vamos a ver por qué el undécimo e
+29:2029 minutos y 20 segundoses un número que tiene infinitas
+29:2729 minutos y 27 segundoscifras decimales en 0 esa es la representación de ese mal
+29:3829 minutos y 38 segundosel error de redondeo surge debido a la limitación de espacio como les decía por ejemplo cuando tengo que almacenar
+29:4729 minutos y 47 segundosnúmero en máquina sólo podemos representar una cantidad finita de de cantidades finitas
+29:5429 minutos y 54 segundosel error de redondeo suele aparecer como fenómeno en los grandes cálculos cuando ellos realizan muchísimo cálculo el error de redondeo es importante
+30:0330 minutos y 3 segundosconsidere considerarlo porque estos errores pueden ser muy significativos
+30:1330 minutos y 13 segundoscuando sumamos un número muy grande a un número muy chico en general hay un corrimiento de la bandita para poder
+30:2230 minutos y 22 segundossumar los números y se va a generar lo que se conoce como pérdida de cifras significativas vamos a ver un ejemplo de
+30:2930 minutos y 29 segundoseso y también se producen pérdidas cifras significativas cuando restamos números
+30:3630 minutos y 36 segundosque son muy parecidos entre sí y también en ese caso hay un corrimiento de la marca y sé que produce el error round
+30:4630 minutos y 46 segundosbueno qué pasa si representamos número en base 10 a binario fíjense que algunos números que lo 11 en base 10 yo lo puedo
+30:5430 minutos y 54 segundosllevar sin problema binario o el 0 18 75 tranquilamente lo puedo llevar a binario
+31:0131 minutos y 1 segundopero qué nos pasa si yo quiero representar el decimal 0.1 en binario lo que sucede
+31:1031 minutos y 10 segundoses que el undécimo que es 0,1 en base decimal se transforma en un periódico en
+31:1731 minutos y 17 segundosel sistema binario que es el sistema que utiliza nuestra computadora para almacenar los números
+31:2431 minutos y 24 segundospor tanto el 11º no es un numero representable en máquina y por tanto lo
+31:3131 minutos y 31 segundostengo que truncar en general hay dos grandes categorías de drogado
+31:3931 minutos y 39 segundoslas dos formas de redondeos quiere ron de otro bocado o redondeo simétrico
+31:4931 minutos y 49 segundosel redondeo truncado consiste en truncar el resultado de una operación al número
+31:5631 minutos y 56 segundosde dígitos significativos que estemos utilizando o que tenga nuestra computadora por ejemplo si tengo un real
+32:0432 minutos y 4 segundosy yo estoy trabajando con casitas significativas y mi máquina mi computadora a mí
+32:1132 minutos y 11 segundosmi dispositivo trabaja con casi fra significativas lo que va a poder almacenar mi dispositivo es lo marcado
+32:1932 minutos y 19 segundosen azul con lo cual va a tener que truncar truncar todo lo que está los
+32:2632 minutos y 26 segundosdígitos significativos después del azul teniendo en cuenta que mi número está normalizado
+32:3232 minutos y 32 segundosentonces la flor trump por truncamiento de ese número real es la representación
+32:4232 minutos y 42 segundosde coma flotante por truncamiento donde solamente me quedo con los dígitos en azul por 10 a la n
+32:5132 minutos y 51 segundosdonde es el exponente el redondeo simétrico consiste en
+33:0133 minutos y 1 segundoaumentar en 1 el último dígito si el primer dígito descartado está entre 5 y
+33:1033 minutos y 10 segundos9 o dejarlo igual si el primer dígito descartado está entre 0 y 4 teniendo en cuenta que leemos el número de izquierda
+33:1833 minutos y 18 segundosa derecha y el mismo estado normalizado es decir el float simétrico de un número de x real no va a ser otra cosa que la
+33:2633 minutos y 26 segundospartecita en azul los pero hasta acá menos 1 o sea los caps menos los primeros caminos son dígitos y el de sub
+33:3533 minutos y 35 segundosque estrella ha marcado en rojo se va a calcular dependiendo si él
+33:4233 minutos y 42 segundosel número siguiente está entre 5 y 9 se aumentará en una unidad en
+33:5233 minutos y 52 segundoscambio si el número siguiente el de su cama 1 está entre 0 y 4 c mantendrá
+34:0034 minutosigual por ejemplo veamos cómo representar el 7
+34:0734 minutos y 7 segundosnoveno que es 0,7 periódico y supongan que estamos trabajando en una
+34:1534 minutos y 15 segundoscomputadora con 4 dígitos significativos qué nos sucede bueno cuando trabajamos
+34:2334 minutos y 23 segundoscon cuatro dígitos significativos en el truncamiento solamente me quedo con los primeros 47 en cambio en el redondeo simétrico
+34:3234 minutos y 32 segundoslo que hago es al último 7 lo aumento en una unidad y se me transforma
+34:4234 minutos y 42 segundospor ejemplo el 22 séptimo si estoy trabajando con seis dígitos significativos me quedaré con los
+34:4934 minutos y 49 segundosprimeros seis dígitos y en el caso de truncado el último dígito será un 5 en el caso del program de ok simétrico será
+34:5634 minutos y 56 segundosun 6 porque el dígito siguiente es un 7
+35:0335 minutos y 3 segundosel número z que lo quiero representar con ocho
+35:0935 minutos y 9 segundosdígitos significativos en truncado me va a quedar con la octava o el octavo
+35:1635 minutos y 16 segundosdígito 9 y en el caso de redondeo simétrico como el número siguiente es un 9 y sólo aumentó en una unidad me pasan
+35:2635 minutos y 26 segundostodos los valores hacer 0 y el cuarto dígito
+35:3335 minutos y 33 segundosahora bien veamos cómo funciona este error de redondeo en una experimentación
+35:4035 minutos y 40 segundosnumérica si en este caso lo que voy a hacer es simplemente bloquear un
+35:4935 minutos y 49 segundospolinomio si el polinomio es p de x x menos 1 a la sexta y lo quiero plotear
+35:5735 minutos y 57 segundoshaciendo una especie de zoom es decir como ir acercándome al en el intervalo
+36:0536 minutos y 5 segundos0.9 1.1 al valor 1 que es el centro de s
+36:1236 minutos y 12 segundosel punto medio de ese intervalo y además coincide con
+36:1836 minutos y 18 segundoslos ceros de mi polinomio de grado 6 en este caso las raíces de ese polinomio
+36:2536 minutos y 25 segundosson seis raíz e iguales y valen 1 ahora bien yo este polinomio lo puedo desarrollar
+36:3436 minutos y 34 segundoshaciendo uso del álgebra lo puedo desarrollar para obtener esa expresión puede chequear que esa es la previsión que se obtiene
+36:4336 minutos y 43 segundosy lo que hice fue en un pool y graficar este polinomio para entornos pequeños
+36:5136 minutos y 51 segundoscercanos a 1 usando la segunda expresión
+36:5936 minutos y 59 segundosentonces si ustedes ven el script son poli sí que es un script simplemente
+37:0637 minutos y 6 segundoslo que hago es voy dando un delta a partir del cobalto al valor 1 le voy a ir sumando y restando para ir definiendo
+37:1537 minutos y 15 segundosmi sub intervalos voy a definir x usando el comando lines
+37:2137 minutos y 21 segundospay que lo que hace es simplemente una subdivisión del intervalo 1 - delta 1 +
+37:3037 minutos y 30 segundosdelta en intervalos luego lo que hago con ese x
+37:3937 minutos y 39 segundoslo reemplazó en la expresión de mi polinomio siendo uso del comando
+37:4837 minutos y 48 segundospunto sí para evitar que no haya errores en el producto yo lo que quiero hacer es
+37:5637 minutos y 56 segundoscada en el primer término lo que quiero hacer cada componente x y elevarlo a la sexta y así
+38:0438 minutos y 4 segundossucesivamente esto lo reemplazó en la variable y lo asignó en la variable y
+38:1138 minutos y 11 segundoscon lo cual lo que tengo en la variable y no es otra cosa que los valores de mi de mi polinomio de grado 6 usando la
+38:2138 minutos y 21 segundosexpresión desarrollada y evaluado en la discriminación que tengo almacenado en él
+38:2938 minutos y 29 segundoscon el contador camas un aumento en uno y luego me armo un soplo dos por tres y ploteo x versus y además voy a bloquear
+38:3838 minutos y 38 segundosx versus 0 para bloquear él y lg de las abscisas
+38:4738 minutos y 47 segundosy después defino axis para que se vea bien comando axis puede consultar en el health cómo funciona dado que es un
+38:5538 minutos y 55 segundosvector de cuatro componente donde yo le define cuál es el rango de mis variable
+39:0239 minutos y 2 segundosx-men y variable y que quiero bloquearlo fíjense miren que se me va a ir
+39:0939 minutos y 9 segundosachicando mi psuv intervalo el primero es 0.9 o 1.1 el segundo de 0 99 1.01 y
+39:1839 minutos y 18 segundosasí sucesivamente con lo cual lo que veo es que al comienzo puedo representar en
+39:2539 minutos y 25 segundosazul mi polinomio fíjense alrededor del 1 si lo puedo graficar bien acá simplemente estoy
+39:3439 minutos y 34 segundosgraficando carcaño no hay ningún error de truncamiento no estoy haciendo un polinomio de taylor sino que estoy
+39:4139 minutos y 41 segundosgraficando un polinomio luego hago una especie de zoom de ese intervalo
+39:4939 minutos y 49 segundossigo pudiendo bloquear el polinomio pero a partir del tercer sector si se acercan
+39:5639 minutos y 56 segundosvan a ver una especie de ruido o de oscilaciones y ya en la medida en la
+40:0440 minutos y 4 segundostercera cuarta y quinta gráfica este polinomio se me empieza a estropear hasta en la última se me estropea
+40:1140 minutos y 11 segundoscompletamente sí es decir que no pude bloquear mi polinomio debido si aquí hay
+40:2140 minutos y 21 segundosun error de redondeo acá no hay error del tratamiento que hay un error de redondeo que está afectando mi cálculo
+40:2940 minutos y 29 segundossiga acá no hay truncamiento porque no estoy haciendo un proceso iterativo no estoy aproximando una función por un
+40:3840 minutos y 38 segundospolinomio simplemente estoy graficando usando su ley matemática exacta un polinomio sin embargo cuando hago un
+40:4540 minutos y 45 segundospoquito de zoom eso ya no se puede ver aplicar y lo que se ve es algo que
+40:5140 minutos y 51 segundosni siquiera aparece un poli no de las conclusiones de esa experiencia que el ploteo ni siquiera parece un
+41:0041 minutospolinomio obviamente ni siquiera parece algo derivable como debería ser un polinomio no hay error de truncamiento
+41:0841 minutos y 8 segundossi lo que les decía en las cercanías del valor 1 los valores
+41:1641 minutos y 16 segundosde p son calculados restando números muy parecidos por ejemplo si ustedes
+41:2441 minutos y 24 segundosrecuerdan en el desarrollo del polinomio estoy restando
+41:3141 minutos y 31 segundosx un coeficiente por el que a la sexta menos un coeficiente porque a la quinta y eso va a ser que esos números al
+41:4041 minutos y 40 segundoselevarse a la sexta y a la guinda y se resten se vuelvan números muy
+41:4841 minutos y 48 segundosparecidos y se va a generar un fenómeno conocido como la pérdida de cifras
+41:5841 minutos y 58 segundoseste es un error numérico de redondeo que se conoce como pérdida de cifras significativas por corrimiento de la
+42:0742 minutos y 7 segundosmantis a veamos en detalle cómo funciona este error
+42:1542 minutos y 15 segundosme parece que este ejemplo es muy instructivo bueno supongan que tenemos dos leyes de
+42:2442 minutos y 24 segundosfunciones que en realidad son la misma función son dos leyes algebraica mente equivalentes
+42:3142 minutos y 31 segundospara un x mayor o igual que 0 es un ejercicio ver que efectivamente
+42:4142 minutos y 41 segundosesas dos leyes son algebraica mente equivalentes vamos a comparar los resultados de
+42:5042 minutos y 50 segundoscalcular efe en 500 y g en 500 usando una máquina imaginaria que tiene 4 cifras
+43:0043 minutossignificativas y que además trabaja con redondeo simétrico en decimal pregunta debería obtenerse el mismo
+43:0843 minutos y 8 segundosresultado bueno a priori uno diría que si algebraica mente son dos leyes equivalentes el valor de feng quinientos
+43:1643 minutos y 16 segundosy sentimientos debería numéricamente ser ahora vamos a trabajar con cuatro cifras
+43:2443 minutos y 24 segundossignificativas para que veamos en detalle qué sucede lo primero que hace qué hacemos es como si estuviésemos
+43:3243 minutos y 32 segundostrabajando en una computadora si lo que hace la computadora es normalizar los números si el 500 en una con 4 cifras
+43:4243 minutos y 42 segundossignificativas en decimal se normaliza como 0.500 por 10 a la 3 por lo mismo el
+43:5243 minutos y 52 segundos1 también lo normal hizo menos la raíz de 500 normalizados
+43:5843 minutos y 58 segundosluego lo que hace si ven el primer símbolo radical dentro del símbolo radical para hacer la suma llevó al
+44:0644 minutos y 6 segundosmismo exponente que 10 a la 3 corriendo la mandisa luego sumo es decir que
+44:1444 minutos y 14 segundosdentro del primer radical lo que obtengo es el 501 luego voy a tener que aproximar esta
+44:2344 minutos y 23 segundosraíz de alguna manera pónganse que yo estoy aproximando ese valor de esa raíz de alguna manera
+44:3344 minutos y 33 segundosa una manera podría hacer hacer un taylor de una función raíz cuadrada de x 1 y aproximar la raíz de esa valor 501 y
+44:4344 minutos y 43 segundosen este caso en el caso de la derecha del fondo radical de 500 entonces lo que yo debería obtener si yo
+44:5244 minutos y 52 segundostrabajarse con más dígitos significativas es todos esos números lo que sucede es que como mi computadora
+44:5944 minutos y 59 segundosimaginaria trabaja con cuatro dígitos significativos solo me voy a poder almacenar los primeros 4
+45:0845 minutos y 8 segundospero además como dijimos que mi computadora imaginaria hace redondeo simétrico el 22.38 va a redondear se
+45:1745 minutos y 17 segundossimétrico como 22.38 y el 22.36 como la quinta cifra significativa 10 va
+45:2545 minutos y 25 segundosredondearse también como 22.36 y luego y luego este normalizarse
+45:3445 minutos y 34 segundosahora bien fíjense que hago una resta en el paréntesis de números que son muy parecidos en mi computadora y cuando yo
+45:4445 minutos y 44 segundoshago esa resta como yo todo lo que está en rojo lo perdí si los primeros cuatro dígitos significativos se me cancelan me queda
+45:5345 minutos y 53 segundossolamente el último dígito significativo tengo que redondear
+46:0046 minutoscon lo cual estos últimos 300 2000
+46:0746 minutos y 7 segundostienen que ver con que yo perdí los dígitos significativos en rojo
+46:1346 minutos y 13 segundosy finalmente terminó mi cálculo dándome por resultado que efe en 500 galerías
+46:2446 minutos y 24 segundosqué pasa cuando hago en la segunda expresión cada una segunda expresión tengo
+46:3146 minutos y 31 segundosprimero que hago es normal hizo 500 si como 0,5 por 10 al a3 usando cuatro
+46:4046 minutos y 40 segundosdígitos significativos luego como antes en el primer radical
+46:4646 minutos y 46 segundosdel denominador llevo al mismo exponente antes de sumar
+46:5346 minutos y 53 segundosluego sumo para obtener el 501 en el 1er en el primer radical del denominador
+47:0247 minutos y 2 segundosnormalizado luego tengo que calcular las aproximaciones de esas raíces mediante algún método una vez que lo hago obtener
+47:1247 minutos y 12 segundostendría que obtener esa expresión pero lo que está en rojo no lo voy a poder almacenar en mi computadora y además lo
+47:2047 minutos y 20 segundosvoy a tener que redondear como antes quedándome esos valores aproximados pero
+47:2747 minutos y 27 segundosahora cuando tengo que sumar ya no tengo que restar como en el caso anterior sumo esos dos valores obtengo en el
+47:3547 minutos y 35 segundosdenominador sí un nuevo valor que 0 4 474 por 10 a la 2
+47:4447 minutos y 44 segundosy luego finalmente hago el cociente de alguna manera tengo que poder aproximar el cociente ese cociente me da con
+47:5347 minutos y 53 segundosinfinitas cifras decimales pero tengo que normalizarlo y
+48:0048 minutosademás hacer un redondeo simétrico con lo cual termina dándome que el valor de
+48:0748 minutos y 7 segundoseje en 500 no es otra cosa que 11.17 entonces la diferencia entre el primer
+48:1548 minutos y 15 segundosejemplo y el segundo es que en el primero tuve que restar cuando aproxime
+48:2248 minutos y 22 segundoslas raíces en los en el numerador tuve que restar la y en el segundo tuve que sumarlas por tanto
+48:3048 minutos y 30 segundostodos esos dígitos que estaban en rojo que si bien los perdí no me generaron perdidas de cifras
+48:3948 minutos y 39 segundossignificativas en este segundo paso entonces
+48:4548 minutos y 45 segundosfíjense que el valor exacto créanme que cc es 11.17 47 55 etcétera si nuestra
+48:5748 minutos y 57 segundosaproximación es en nuestra computadora imaginaria adiós efe 510 y efe
+49:0349 minutos y 3 segundosy perdón en 500 11.17 ahora lo que hice fue calcular los errores
+49:1349 minutos y 13 segundosy absolutos relativos y relativos porcentuales y veo que en el caso de la
+49:2149 minutos y 21 segundosf en el caso de la f tengo un error relativo porcentual en relación al valor exacto que tengo disponible en este caso
+49:3049 minutos y 30 segundosde por encima del 10% 10.51 esto tiene que ver
+49:3749 minutos y 37 segundosjustamente porque se produjo un corrimiento de la mantilla cuando reste números parecidos entre sí
+49:4649 minutos y 46 segundossi bien mal la octava trabajan con máxima precisión internamente y yo ya no
+49:5349 minutos y 53 segundostengo cuatro dígitos significativos como en mi computadora ideal puedo repetir esta experiencia yo estoy
+50:0150 minutos y 1 segundotrabajando con 15 o 16 dígitos significativos en malabo en octavo con lo cual pueden hacer esta experiencia y
+50:1050 minutos y 10 segundosver que definirme fíjense que acá me definí en línea usando la función handle
+50:1750 minutos y 17 segundosde matlab efe y también calculé lo que vale
+50:2450 minutos y 24 segundossentimientos y me definí lage usando la expresión de la g y calculé g en 500 y
+50:3250 minutos y 32 segundossi bien son números casi iguales lo que van a ver lo que van a ver es que al
+50:3850 minutos y 38 segundosfinal en las últimas dígitos
+50:4750 minutos y 47 segundos13 o sea hasta los primeros 13 dígitos significativos coinciden sin embargo los últimos 4 difieren y esto tiene que ver
+50:5750 minutos y 57 segundoscon el corrimiento de la mantilla que hubo en el cálculo con la expresión de la f y que nos debería dar un peor error
+51:0551 minutos y 5 segundosrelativo un ejercicio interesante es calcular el error relativo calcular el error
+51:1451 minutos y 14 segundosrelativo en ese caso para que vean el orden que tiene el error relativo que si
+51:2151 minutos y 21 segundosbien va a ser muy chiquito pero van a ver que el error relativo del cálculo de
+51:2851 minutos y 28 segundossentimiento va a ser mayor que el error relativo de
+51:3651 minutos y 36 segundosok finalmente vamos a ver el error total
+51:4651 minutos y 46 segundosqué es el error total bueno el error numérico total no es otra cosa que la acumulación del error de
+51:5551 minutos y 55 segundostruncamiento con el error de redondeo ahora bien qué nos pasa cuando uno tiene
+52:0452 minutos y 4 segundosque resolver un problema numérico si disminuyó el error de truncamiento
+52:1152 minutos y 11 segundosentonces en general el error de redondeo aumenta por ejemplo supongan que quieren
+52:2052 minutos y 20 segundosrepresentar una función por su polinomio del traidor una idea
+52:2652 minutos y 26 segundosnatural sería aumentar la ln la cantidad de términos de su polinomio sabían
+52:3852 minutos y 38 segundoso disminuirlo dependiendo como sea el caso por ejemplo
+52:4852 minutos y 48 segundossi yo aumentó el n aumento en la cantidad de términos de mi polinomio
+52:5752 minutos y 57 segundoslo que hago es reducir el error de truncamiento porque
+53:0553 minutos y 5 segundossi recuerdan la forma de lagrange del error de taylor
+53:1253 minutos y 12 segundosen la serie de taylor y el error en la medida que aumentó n en el
+53:2053 minutos y 20 segundosfactorial disminuye sin embargo lo que yo estoy
+53:2753 minutos y 27 segundosincorporando es más cálculo a mi polinomio si entonces si yo introduzco
+53:3653 minutos y 36 segundosmás cálculo a mi polinomio hay más cuentas más operaciones que hacer hay más números que representar hay más
+53:4453 minutos y 44 segundoscorrimientos de mantillas que se van a dar por dando el error de redondeo aumenta y también pasa al revés si uno dice
+53:5253 minutos y 52 segundosbueno no quiero un n tan grande quiero un n más bien chico para que mi polinomio de taylor no tenga muchos
+54:0254 minutos y 2 segundostérminos de forma tal que el error de redondeo se achique lo que pasa es que
+54:0954 minutos y 9 segundosal tener un n con n no tan chic no tan tan grande el
+54:1654 minutos y 16 segundoserror de truncamiento crece entonces disminuir una componente del
+54:2354 minutos y 23 segundoserror conduce al incremento de la otra componente esto es lo que sucede
+54:3154 minutos y 31 segundospor lo tanto muchas veces necesitamos buscar una solución de compromiso por ejemplo piensen que estoy graficando
+54:4154 minutos y 41 segundospor un lado el error de truncamiento y el error de redondeo
+54:4854 minutos y 48 segundosy suponga sé que lo estoy graficando en función de una h que es un paso en este
+54:5454 minutos y 54 segundoscaso el el h es un recíproco del n sí es decir en la medida que aumenta mi paso
+55:0355 minutos y 3 segundossi esto lo vamos a ver en el método de eulen la media que me pasó
+55:1255 minutos y 12 segundosaumenta el error de truncamiento crece
+55:1955 minutos y 19 segundospero en la medida que me pasó de crece que el step size decrece
+55:2855 minutos y 28 segundoslo que sucede es que el error de redondeo aumenta entonces cuando yo hago una especie de
+55:3655 minutos y 36 segundossuma gráfica de él truncase jon error y randoph error lo
+55:4455 minutos y 44 segundosque obtengo es el error total o el total error es decir que cuál va a ser mi mejor resultado y bueno mi mejor
+55:5355 minutos y 53 segundosresultado va a ser un valor que esté aproximadamente en el medio y que me permita minimizar el error total
+56:0256 minutos y 2 segundosobviamente esto es un tema que dependiendo del problema que yo esté trabajando se estudia se investiga y se
+56:1156 minutos y 11 segundosoptimiza este es un esquema muy general pero que nos sirve para tener un error de lo que es el error total
+56:2056 minutos y 20 segundossin embargo nosotros podemos ver un poco en un ejemplo sencillo ese error total
+56:2856 minutos y 28 segundosy lo vamos a ver con la función serie seno serie xenón
+56:3656 minutos y 36 segundoses una función que está en la parte de implementaciones pueden descargar y probar ahora bien vamos a
+56:4456 minutos y 44 segundosver cuál es el error de truncamiento del seno de x
+56:5256 minutos y 52 segundosvamos a confiar la serie de taylor del seno centrada de nada es decir vamos a confiar el poema mclaughling del seno
+56:5956 minutos y 59 segundosque ustedes ya saben que no es otra cosa que la suma de cada igual cero al infinito de menos uno a la k por equis a
+57:0857 minutos y 8 segundosla dos más uno sobre dos camas 1 factorial porque es una serie alternada de las potencias impares de x dividido
+57:1757 minutos y 17 segundosesas potencias en pares factorías ahora bien si yo uso la expresión del error de lagrange lo que veo es que el
+57:2657 minutos y 26 segundosprimer término es un polinomio si su polinomio que va a tener grado
+57:3657 minutos y 36 segundos2 n 1 sí está bien y luego cuando sumó la derivada en uno
+57:4757 minutos y 47 segundossiguiente como las derivadas de más uno de la función en el perdón como las
+57:5357 minutos y 53 segundosderivadas enésimas de el seno van circulando entre 10 menos 10 y así
+58:0258 minutos y 2 segundossucesivamente lo que va a pasar es que el polinomio el coeficiente de taylor de
+58:1058 minutos y 10 segundosorden 2 en 20 pero ya el coeficiente de
+58:1558 minutos y 15 segundos2n +3 no es cero con lo cual ahí en s
+58:2158 minutos y 21 segundosen ese grado yo en ese orden yo expreso mi error de lagrange usando la derivada
+58:3158 minutos y 31 segundos2n másteres entonces por un lado tengo el polinomio de taylor
+58:3858 minutos y 38 segundosde la función seno de de grados n 1 y por otro lado tengo la expresión el
+58:4758 minutos y 47 segundoserror de lagrange de taylor de orden 2 n 3 centrada en en fin la derivada de no más de chantaje en fi por el lado de más
+58:5558 minutos y 55 segundos3 sobre 2n +3 factorial donde el tri el si está entre 0 y x
+59:0359 minutos y 3 segundosestá entre 0 y x porque dependerá si el x es positivo o negativo
+59:1059 minutos y 10 segundosentonces el error de la gran puede acordarse de qué forma haciendo
+59:1759 minutos y 17 segundosuso de la expresión de lagrange en valor absoluto lo que puedo hacer es en este cociente de distribuir las barras de
+59:2559 minutos y 25 segundosvalor absoluto y lo que veo es que la derivada de la función n de la función
+59:3259 minutos y 32 segundosseno no importa cuál sea su orden la derivada siempre va a estar agotada porque van a hacer senos cosenos o menos
+59:4259 minutos y 42 segundosseno - jose no siempre va a estar acotada por 1 por lo tanto puedo acotar la por el valor absoluto de x al lado de
+59:4959 minutos y 49 segundosmás 3 sobre 2 en el másters factorial que es positivo entonces lo que obtuve es una acotación
+59:5959 minutos y 59 segundosdel error de truncamiento de la función seno y es importante remarcar
+1:00:091 hora y 9 segundosque este es una acotación analítica del dolor de truncamiento y lo que está claro como en el caso de la exponencial
+1:00:161 hora y 16 segundoses que en la medida que viene crece el factorial en el denominador le va a ganar al potencial en el numerador y ese
+1:00:251 hora y 25 segundoserror va a tender a cero ok bueno hice mi función serie seno que es
+1:00:351 hora y 35 segundosuna función que va a devolver un valor numérico se llama serie seno y tiene
+1:00:411 hora y 41 segundoscomo argumento de entrada el argumento del seno donde yo voy a aproximar haciendo uso del taylor del seno una
+1:00:501 hora y 50 segundostolerancia opcional que si no le ingresó por defecto el 5 ordinal dominó 9 y una cantidad de términos máximos que voy a
+1:00:591 hora y 59 segundossumar que por defecto es 15 en caso que yo y el resultado en ese es un va a ser el
+1:01:071 hora, 1 minuto y 7 segundosvalor de la serie al cabo de n términos o satisfacer la tolerancia que el ingreso
+1:01:171 hora, 1 minuto y 17 segundosbueno entonces en este primero 2 if lo que hacen es chequear quién es el
+1:01:241 hora, 1 minuto y 24 segundosnúmero argumento y me definen perfecto la tolerancia del n y luego yo ya empiezo a calcular el primer término y
+1:01:321 hora, 1 minuto y 32 segundosempezar a acumular lo en ese sum y en el fort agua algunas impresiones de pantalla con fp ene efe dejo para que el
+1:01:411 hora, 1 minuto y 41 segundosdonde han en detalle y con el foro ya empiezo a sumar
+1:01:461 hora, 1 minuto y 46 segundosa sumar los n términos no nulos los n términos no nulos d
+1:01:551 hora, 1 minuto y 55 segundosel me polinomio technology y fíjense que en
+1:02:031 hora, 2 minutos y 3 segundoseste y que está dentro del foro lo que hago es chequeo cuando el término sobre
+1:02:111 hora, 2 minutos y 11 segundosy lo que voy acumulando ya es menor que la tolerancia si voy a decir que en ese
+1:02:191 hora, 2 minutos y 19 segundoscaso se verifica una determinada convergencia que a mí me satisface el comando break corta la estructura de
+1:02:281 hora, 2 minutos y 28 segundosbucle del foro y finalmente se imprime el valor aproximado y el error
+1:02:371 hora, 2 minutos y 37 segundosentonces fíjense además que el error lo estoy comparando con el seno de x calculado
+1:02:471 hora, 2 minutos y 47 segundoscon marta en ese es un yo tengo mi aproximación por ejemplo si quiero calcular el seno
+1:02:571 hora, 2 minutos y 57 segundosde pi sobre 4 que sabemos que el rey de 2 sobre 2 con una tolerancia de 5 x de
+1:03:041 hora, 3 minutos y 4 segundosal menos 9 y con 100 es consciente al menos no no los llamo
+1:03:111 hora, 3 minutos y 11 segundosen el prom de esta manera y lo que me devuelve por pantalla me va a dar decir
+1:03:191 hora, 3 minutos y 19 segundosque yo quiero calcular el valor aproximado de la función seno de iu sobre 4 me va a imprimir los valores
+1:03:271 hora, 3 minutos y 27 segundoshasta que se alcance la tolerancia sí y además me va a imprimir cada componente de cada valor del término que va a ir
+1:03:361 hora, 3 minutos y 36 segundossumando fíjense que son términos alternantes y positivos y negativos y el valor de la serie que como ustedes
+1:03:441 hora, 3 minutos y 44 segundospueden ver se va acercando al valor de raíz es decir que están dando vida a nuestra
+1:03:501 hora, 3 minutos y 50 segundosserie ser bueno fíjense si lo llamo de esta manera
+1:03:561 hora, 3 minutos y 56 segundoslo que hago acá en y sobre dos que obviamente
+1:04:031 hora, 4 minutos y 3 segundosel seno de pi sobre 2 debería dar el valor 1 por c la tolerancia cero es decir que nunca va a alcanzar la
+1:04:111 hora, 4 minutos y 11 segundostolerancia porque la tolerancia que yo el ingreso es cero entonces lo que va a ser va a calcular cinco términos no
+1:04:201 hora, 4 minutos y 20 segundosnulos sí que son los que me despliega acá y
+1:04:251 hora, 4 minutos y 25 segundos[Música]
+1:04:271 hora, 4 minutos y 27 segundosme va a imprimir la aproximación del valor del y sobre dos que es una aproximación del valor
+1:04:351 hora, 4 minutos y 35 segundossi quiero también puedo aumentar aumentar de 5 a 15 esto y van a ver que
+1:04:431 hora, 4 minutos y 43 segundosen ese caso al ponerle más términos si al ponerle más más términos no lo amamos
+1:04:521 hora, 4 minutos y 52 segundosa mi serie voy a tener una mejor aproximación y en ese caso el error absoluto es del orden
+1:05:001 hora y 5 minutosde 2 por 22 por 10 a la menos 16 ahora bien dicho esto que dejo para que
+1:05:101 hora, 5 minutos y 10 segundospractiquen y calculen algunas series en o en las vibras tienen veamos como qué pasa con la cuota
+1:05:201 hora, 5 minutos y 20 segundosy veamos qué pasa con la cota cuando yo utilizo término cinco términos
+1:05:291 hora, 5 minutos y 29 segundosno nulos la cota de truncamiento sí recuerden que esto era
+1:05:381 hora, 5 minutos y 38 segundoscuando hay cinco términos no nulos el n vale cuatro porque se llega arranca en
+1:05:451 hora, 5 minutos y 45 segundoscero la sumatoria si entonces el error de orden 11 no es está acotado por
+1:05:561 hora, 5 minutos y 56 segundosel valor absoluto de x a la 11 sobre
+1:06:021 hora, 6 minutos y 2 segundos11 factorial sí pueden chequearlo con la fórmula anterior y fíjense que como yo voy a
+1:06:121 hora, 6 minutos y 12 segundosestar representando mi x en un intervalo que va a ser de entre 0 y pi sobre 2 lo que puedo decir que el x es menor o
+1:06:211 hora, 6 minutos y 21 segundosigual que pi sobre 2 con lo cual obtengo que el error de orden 11 d
+1:06:291 hora, 6 minutos y 29 segundosdel seno con 5 terminó en un nulo está agotado por este valor numérico que si
+1:06:361 hora, 6 minutos y 36 segundoslo aproximó no es otra cosa que 3 59 88 por 10 a la menos 6
+1:06:441 hora, 6 minutos y 44 segundoso sea que en el caso que tengo pocos términos en mi polinomio sí
+1:06:511 hora, 6 minutos y 51 segundospocos terminaron en mi polinomio sí obtengo una cota del orden de al menos 6
+1:07:001 hora y 7 minutosy si lo que hago es graficar lo sea aplicó la función serie el seno para muchos valores de x
+1:07:081 hora, 7 minutos y 8 segundoses decir sobre el eje las abscisas hago una discreta ción y luego evaluó las
+1:07:171 hora, 7 minutos y 17 segundosseries en cada uno de esos puntos luego puedo a esos valores restarlo con el seno de x
+1:07:251 hora, 7 minutos y 25 segundosde matlab 8ª y hacer una especie de error total dado que ese error va a
+1:07:321 hora, 7 minutos y 32 segundoscontener el error de truncamiento y redondeo y graficar en el intervalo 0 y sobre 2
+1:07:401 hora, 7 minutos y 40 segundoscon lo cual fíjense que la cota del error de truncamiento que es del orden de 10 a la
+1:07:481 hora, 7 minutos y 48 segundosmenos 6 se respeta en esta gráfica ahora qué pasa cuando yo
+1:07:561 hora, 7 minutos y 56 segundospongo 15 términos si también en este caso el n vale 28
+1:08:061 hora, 8 minutos y 6 segundosln vale el perdón va a llegar hasta él y no va a valer 14 porque he hecho arrancó con él
+1:08:141 hora, 8 minutos y 14 segundosel desarrollo del pueblo de otelo en cada igual 0 por lo tanto el el n va a
+1:08:211 hora, 8 minutos y 21 segundosvaler 14 con lo cual 2 por 14 más 3 terminando 31
+1:08:271 hora, 8 minutos y 27 segundospor tanto el error con 15 términos no nulos va a ser
+1:08:341 hora, 8 minutos y 34 segundosacotado por este valor el valor fruto de que la tren de 121 factorial y como x yo lo voy a tomar en el intervalo 0 y sobre
+1:08:421 hora, 8 minutos y 42 segundos2 el máximo valor que puede tomar x y sobre 2 por tanto este valor numérico no es otra cosa que 1,46 11 por 10 a la
+1:08:511 hora, 8 minutos y 51 segundosmenos 28 fíjense que muchísimo más chico la cota que habíamos obtenido anteriormente o sea el error de
+1:09:011 hora, 9 minutos y 1 segundotruncamiento de taylor debería ser menor que 10 a la menos 28 este orden controla
+1:09:101 hora, 9 minutos y 10 segundosel error de tonga miento del texto al menos en términos analítico sin embargo cuando vuelvo a hacer la
+1:09:181 hora, 9 minutos y 18 segundosmisma experiencia que antes es un ejercicio de la actividad 1 discret izar el problema empleadores y
+1:09:271 hora, 9 minutos y 27 segundoscree tizar en el eje de las abscisas digamos el intervalo 0 sobre 2 y
+1:09:351 hora, 9 minutos y 35 segundoscalcular sobre cada uno de esos valores la función serie seno con 15 términos nulos
+1:09:411 hora, 9 minutos y 41 segundosluego cálculo el error total haciendo la diferencia con el seno y ploteo y lo que
+1:09:481 hora, 9 minutos y 48 segundosveo es esta oscilación esta oscilación y además que en el mejor de los casos
+1:09:551 hora, 9 minutos y 55 segundoscuando yo me herbario entre 0 y sobre 2 más me alejo del 0 más se empeora mi
+1:10:021 hora, 10 minutos y 2 segundoserror pero cuando llegó a cercano a pi sobre los errores rondan los valores de 10 a la menos 16 que se observan son
+1:10:111 hora, 10 minutos y 11 segundoserrores muchísimos muchísimo más grandes que 10 a la menos 28 es decir que al
+1:10:201 hora, 10 minutos y 20 segundosagregar 15 términos pasar de 5 a 15 términos tuve que hacer más cálculos numéricos tuve que hacer más cálculos
+1:10:291 hora, 10 minutos y 29 segundosnuméricos ese cálculo numérico que introduje me introdujo mayor error del redondeo mayor corrimiento de matiza y
+1:10:391 hora, 10 minutos y 39 segundospor lo tanto el error total ahora empezó a ser dominado ya por
+1:10:481 hora, 10 minutos y 48 segundosel error de redondeo de la computadora y no el error de truncamiento porque si
+1:10:561 hora, 10 minutos y 56 segundosesto sería dominado por el error de truncamiento el error tendría que ser más chico que 10 a la menos 28
+1:11:051 hora, 11 minutos y 5 segundosy sin embargo como se observa en la gráfica no lo es entonces
+1:11:131 hora, 11 minutos y 13 segundospara valores algunas conclusiones de esta última experiencia para valores chicos de aquí necesitamos pocos términos para una buena aproximación sí
+1:11:231 hora, 11 minutos y 23 segundoscon cinco términos no nulos y valores mayores a 1 el error numérico total que es el
+1:11:311 hora, 11 minutos y 31 segundostruncamiento y el redondeo aumenta rápidamente cuando el x se acerca piso de 2 es decir en la medida que me alejo
+1:11:381 hora, 11 minutos y 38 segundosdel origen el error se agranda porque yo me estoy alejando del lugar donde tengo
+1:11:461 hora, 11 minutos y 46 segundoscentrado mi desarrollo del líquido el error máximo alcanzado es
+1:11:521 hora, 11 minutos y 52 segundosaproximadamente 3.6 por 10 al menos 6 en consonancia con el error teórico de truncamiento de taylor
+1:12:011 hora, 12 minutos y 1 segundosin embargo cuando pongo 15 términos observamos un fenómeno numérico de observación que aumenta hasta un valor
+1:12:091 hora, 12 minutos y 9 segundosaproximado de 3.3 por día y la menos 16 mientras que la cota del error teórico de truncamiento ha expresado es del
+1:12:181 hora, 12 minutos y 18 segundosorden de 10 a la menos 28 es decir que en este último caso el error de redondeo está controlando el
+1:12:281 hora, 12 minutos y 28 segundoscomportamiento del nuestro algoritmo o bien el error total
+1:12:361 hora, 12 minutos y 36 segundosbueno hasta acá entonces los errores numéricos

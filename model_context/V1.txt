@@ -1,0 +1,443 @@
+
+0:011 segundohola yo soy y luciano con celine y marine link y les voy a contar la unidad
+0:077 segundos6 de métodos numéricos perteneciente a la asignatura matemática aplicada es la
+0:1414 segundosúltima unidad de la asignatura este perteneciente a las carreras de electrónica y eléctrica del departamento
+0:2323 segundosde matemática de la escuela de formación básica de la facultad de ciencias de ingeniería y agrimensura de la universidad nacional rosario
+0:3232 segundoshoy vamos a ver la lectura 1 una introducción a los métodos numéricos
+0:4040 segundosvoy a ir pasando las transparencias como organizamos esta unidad de la
+0:4949 segundossiguiente manera vamos a hacer primero hoy una introducción a los métodos numéricos
+0:5656 segundosluego vamos a hacer una introducción a los lenguajes como a matt lamb si la
+1:031 minuto y 3 segundosoctava que son lenguajes para implementar nuestros algoritmos o métodos numéricos
+1:121 minuto y 12 segundosluego vamos a hacer otra lectura de los errores que aparecen cuando uno trabaja
+1:181 minuto y 18 segundoscon métodos numéricos y luego ya vamos a ir a resolver algunos
+1:241 minuto y 24 segundosproblemas específicos por ejemplo resolver numéricamente
+1:331 minuto y 33 segundosun sistema de ecuaciones de ecuaciones lineales también vamos a aproximar numéricamente
+1:421 minuto y 42 segundoslas raíces de algunas ecuaciones sí o lo que podemos pensar también como ceros de
+1:501 minuto y 50 segundosalgunas funciones de una variable también vamos a resolver numéricamente
+1:571 minuto y 57 segundossistemas de ecuaciones no lineales sí y finalmente vamos a hacer una breve
+2:062 minutos y 6 segundosintroducción a la solución numérica de ecuación diferencial a ordinaria en particular vamos a resolver problemas de
+2:132 minutos y 13 segundosvalores iniciales con el método de regular bueno vamos a hacer una introducción
+2:202 minutos y 20 segundosbien entonces nosotros nos enfrentamos a
+2:292 minutos y 29 segundosveces a resolver problemas que observamos si en el mundo real si este es una representación esquemática que me
+2:372 minutos y 37 segundosparece muy interesante entonces nosotros queremos resolver problemas del mundo real ya sea como
+2:482 minutos y 48 segundosfuturos ingenieros y para eso usamos algunas ecuaciones
+2:582 minutos y 58 segundosalgunas leyes generales de la física por ejemplo o de la química o del área
+3:053 minutos y 5 segundosespecífica que sea y hacemos nuestra formulación matemática si de esas leyes
+3:153 minutos y 15 segundosahora bien luego una vez que ese problema está formulado con la matemática y usando estas leyes
+3:243 minutos y 24 segundosgenerales obtenemos una solución matemática sí y
+3:313 minutos y 31 segundosluego esa solución la contrastamos con la solución con lo que observamos del
+3:403 minutos y 40 segundosfenómeno en el mundo real que obviamente tiene que ser coherente con el problema
+3:483 minutos y 48 segundosinicial que uno estaba observando en la realidad y para lo cual para el último
+3:563 minutos y 56 segundoseste último paso este cierre de este siglo muchas veces es necesario consultar a gente especialista del tema
+4:044 minutos y 4 segundossí para que nos diga si los resultados que obtuvimos luego de recorrer todo este siglo
+4:134 minutos y 13 segundoses coherente con el problema que estábamos observando inicialmente
+4:234 minutos y 23 segundosok eso es un esquema muy simplificado sí de lo que sería
+4:334 minutos y 33 segundosresolver problemas del mundo real entonces
+4:414 minutos y 41 segundoslos modelos matemáticos son esas herramientas que nos permiten resolver
+4:474 minutos y 47 segundosproblemas científicos que se nos van a aparecer en las distintas áreas de la ciencia de la industria y de la gestión
+4:574 minutos y 57 segundoscomo le decía hacemos uso de esas leyes generales en general a nosotros vamos a hacer uso de las leyes de la física que
+5:065 minutos y 6 segundosvan a determinar las ecuaciones que definen nuestro modelo
+5:155 minutos y 15 segundoscuando uno modela en general siempre hace una simplificación también que no
+5:245 minutos y 24 segundosva a describir exactamente la realidad por ejemplo si el fenómeno que estamos
+5:315 minutos y 31 segundosobservando es un fenómeno de caída libre y yo quiero describir el movimiento de un objeto con determinada masa que
+5:395 minutos y 39 segundossuelto a cierta distancia del suelo muchas veces una simplificación que se hace es despreciar el empuje del aire
+5:495 minutos y 49 segundoshacia arriba si debido a que en generar la distancia es corta pero si yo estaría modelando la caída de un paracaidista
+5:585 minutos y 58 segundospor ejemplo o de un objeto que cae de mucha distancia al suelo en ese caso si debería considerar el empuje del aire
+6:086 minutos y 8 segundosotra cosa que también podría considerar es por ejemplo los vientos pero bueno eso dependerá qué tan complejo sea
+6:166 minutos y 16 segundosnuestro modelo y nuestro problema resolución más complejo más complejizó
+6:236 minutos y 23 segundosel modelo más difícil se vuelve de resolver nuestro problema
+6:316 minutos y 31 segundosjustamente como cada vez que yo complejizó el modelo se me vuelve muy difícil resolver en forma analítica si
+6:406 minutos y 40 segundosel problema o sea no siempre puedo encontrar soluciones exactas por métodos
+6:486 minutos y 48 segundosanalíticos es decir en una hoja o en un papel digamos a nuestros problemas entonces muchas
+6:556 minutos y 55 segundosveces tenemos que recurrir a soluciones aproximadas del problema
+7:047 minutos y 4 segundosentonces como construimos esas soluciones aproximadas para construir esas soluciones aproximadas
+7:127 minutos y 12 segundosvamos a necesitar desarrollar implementar y validar los métodos
+7:217 minutos y 21 segundosnuméricos entonces
+7:277 minutos y 27 segundosse modifica nuestro esquema inicial las aproximaciones numéricas que vamos a
+7:367 minutos y 36 segundosintroducir al modelo matemático a nuestro esquema original reemplazan el
+7:437 minutos y 43 segundosproblema matemático que teníamos por un problema numérico sí es decir los
+7:517 minutos y 51 segundosproblemas científicos que resolvemos que a partir de determinadas leyes nosotros modelamos y se transforma en un problema
+7:597 minutos y 59 segundosmatemático luego ese problema matemático lo vamos a tener que transformar en en
+8:068 minutos y 6 segundosun problema numérico para lo cual son ya no van a aparecer más soluciones exactas sino lo que van a aparecer son
+8:158 minutos y 15 segundossoluciones numéricas que van a aproximar la solución exacta
+8:228 minutos y 22 segundosy esas van a ser las respuestas que vamos a obtener a los problemas del mundo real y que tendremos que
+8:308 minutos y 30 segundoscontrastar con los problemas científicos originales que estábamos resolviendo
+8:408 minutos y 40 segundosentonces un problema numérico necesita ser
+8:518 minutos y 51 segundosresuelto por un algoritmo o método numérico adecuado
+8:598 minutos y 59 segundoslos métodos se desarrollan muchas veces se desarrollan teóricamente
+9:079 minutos y 7 segundosluego se implementan computacionalmente
+9:149 minutos y 14 segundosa través de algún lenguaje y luego se testean numéricamente para en
+9:219 minutos y 21 segundosprincipio ver que el método esté funcionando correctamente
+9:309 minutos y 30 segundosobviamente estos métodos permiten simplificar procedimientos y cálculos
+9:379 minutos y 37 segundosmatemáticos sobre todo cuando uno hace uso de la computadora
+9:449 minutos y 44 segundosa veces el desarrollo de los métodos ha sido por
+9:519 minutos y 51 segundossu uso ingeniería sí es decir hubo un desarrollo teórico pero ese
+9:589 minutos y 58 segundosdesarrollo teórico quedó planteado y años después vinieron algunos ingenieros
+10:0610 minutos y 6 segundoslo empezaron a usar vieron que ese método servía para resolver problemas de
+10:1310 minutos y 13 segundosla ciencia o de la ingeniería y ese uso también fue el que determinó su
+10:2410 minutos y 24 segundosdesarrollo un claro ejemplo la década de los 50 con el desarrollo de computadora
+10:3010 minutos y 30 segundosfue el método elementos finitos que fue desarrollado mucho antes que existan la computadora
+10:3710 minutos y 37 segundospero fue a partir del uso del cálculo de las estructuras sobre todo en la ingeniería civil que este método se
+10:4510 minutos y 45 segundosdesarrolló y es uno de los métodos más conocido hoy día para y aproximar soluciones de ecuaciones en
+10:5510 minutos y 55 segundosderivadas parciales también lo pueden encontrar como finito element mejor en inglés
+11:0311 minutos y 3 segundosy les puse el link por si quieren clickear y leer un poquito sobre el método elemento finito nosotros no lo
+11:1111 minutos y 11 segundosvamos a desarrollar el área co de los métodos obviamente como les decía se consolidó como ciencia
+11:2011 minutos y 20 segundosa partir del desarrollo de las computadoras y de la tecnología hoy día y un crecimiento exponencial de
+11:2911 minutos y 29 segundosdesarrollos de métodos que para resolver determinados problemas obviamente no hay un método que resuelva
+11:3811 minutos y 38 segundostodos los problemas en general los métodos son desarrollado a partir de
+11:4511 minutos y 45 segundosquerer resolver un problema específico por tanto no hay que pensar que va a
+11:5311 minutos y 53 segundoshaber un método que va a resolver todos los problemas sino que en función de los problemas que uno esté resolviendo va a
+12:0112 minutos y 1 segundotener que usar o desarrollar o adaptar un método determinado
+12:0912 minutos y 9 segundosel área de la matemática que estudia y desarrolla los fundamentos de los
+12:1612 minutos y 16 segundosmétodos numéricos y analizas fundamentalmente sus errores se conoce como análisis numérico les comento esto
+12:2612 minutos y 26 segundosporque si en algún momento ven algún libro de análisis numéricos ahí van a encontrar
+12:3412 minutos y 34 segundosmuchos de los desarrollos de los métodos numéricos y sobre todo sus fundamentos
+12:4112 minutos y 41 segundosanálisis cotas de árboles entonces en un libro transfer bout que
+12:5212 minutos y 52 segundosestá en la bibliografía se preguntan bueno qué es el análisis numérico
+12:5912 minutos y 59 segundosy por años por años por muchos años una respuesta equivocada
+13:0813 minutos y 8 segundosfue pensar que el análisis numérico era el estudio de los errores de redondeo y
+13:1513 minutos y 15 segundosla aritmética de punto flotante es decir el estudio de los errores que aparecen en la computadora
+13:2413 minutos y 24 segundosy la aritmética que yo voy a usar en la computadora si nosotros vamos a ver
+13:3213 minutos y 32 segundoscuando veamos errores en los métodos numéricos los errores que aparecen en en
+13:3913 minutos y 39 segundosla máquina y la aritmética que yo tengo para representar los números en la
+13:4713 minutos y 47 segundosmáquina sí que van a ver que es una aritmética que no es exacta
+13:5413 minutos y 54 segundosuna respuesta más acertada y que me gusta mucho es la respuesta que dice que el análisis numéricos es el estudio de
+14:0414 minutos y 4 segundosalgoritmos para problemas de la matemática continua es decir
+14:1314 minutos y 13 segundosmucho de las soluciones que uno quisiera encontrar deberían resolver si la
+14:2114 minutos y 21 segundossolución es exacta si problemas del continuo si sea por ejemplo el tiempo
+14:3014 minutos y 30 segundosuno la piensa como una variable continua el problema va a ser que en la
+14:3814 minutos y 38 segundoscomputadora yo no puedo representar una variable continua sí sino que la voy a tener que
+14:4514 minutos y 45 segundosdiscret izar sí entonces el análisis numérico va a ser el estudio de esos
+14:5214 minutos y 52 segundosalgoritmos que tratan de resolver problemas de la matemática continua
+15:0115 minutos y 1 segundola mayoría de los problemas de la matemática continua no pueden ser
+15:0915 minutos y 9 segundosresueltos por algoritmos estos algoritmos una de las características que tienen es que son finitos que
+15:1715 minutos y 17 segundosterminan entonces ahí es donde y aparece un
+15:2515 minutos y 25 segundosun problema necesitamos resolver problemas de la matemática continua pero
+15:3215 minutos y 32 segundosen una computadora que tiene una representación discreta de datos y tiene
+15:3915 minutos y 39 segundosun tiempo finito para resolver esos problemas como les dije volveremos sobre este
+15:4715 minutos y 47 segundospunto cuando veamos el desarrollo de los errores en los métodos numéricos
+15:5515 minutos y 55 segundosbueno donde se aplica los métodos numéricos se aplica en la resolución de sistemas
+16:0416 minutos y 4 segundosde ecuaciones lineales ustedes han visto cómo resolver sistemas lineales al menos en casos sencillos han
+16:1316 minutos y 13 segundosvisto ciertos métodos por ejemplo el método la eliminación de oceana ahora bien
+16:2116 minutos y 21 segundoslo han visto en casos muy sencillos han resuelto una matriz 3 por 3 4 por 4 5 por 5 resueltos sistemas de ecuaciones
+16:2916 minutos y 29 segundoslineales cuya materia coeficiente tiene esas dimensiones ahora en los problemas reales
+16:3516 minutos y 35 segundoslos las matrices que aparecen son de tamaño 10.000 por 10.000 o más grandes
+16:4216 minutos y 42 segundosentonces es posible resolver con eliminación de opciones con una
+16:4916 minutos y 49 segundosmatriz tan grande bueno evidentemente no y allí donde van a aparecer los métodos numéricos
+16:5616 minutos y 56 segundosraíces de ecuaciones también hay ecuaciones que no le podemos hallar sus raíces
+17:0517 minutos y 5 segundosentonces lo que hacemos es usar algún método para aproximarla también cuando tenemos un
+17:1417 minutos y 14 segundossistema de ecuaciones no lineales seguramente han visto ustedes cómo resolver sistemas de ecuaciones no lineales por ejemplo
+17:2317 minutos y 23 segundostengo una parábola y una elipse si en el plano y que se intersectan bueno tengo
+17:3117 minutos y 31 segundosque resolver ese sistema no lineal a veces es posible hacerlo a mano a veces no entonces ahí vamos a recurrir a un
+17:4117 minutos y 41 segundosmétodo numérico en negrita les remarca algo de lo que vamos a ver en estas lecturas pero tiene
+17:5017 minutos y 50 segundosmuchísimas más aplicaciones por ejemplo interpolar y aproximar funciones cuando uno no tiene la ley dada sino que tiene
+17:5817 minutos y 58 segundosdatos de esa función tengo que aproximar esa función cuando tengo que hacer una derivada si a
+18:0618 minutos y 6 segundosveces es bueno hacer una derivada numérica para evitar hacer una mano vamos a ver algo de eso cuando tengo que
+18:1418 minutos y 14 segundosintegrar a veces ustedes han visto métodos para integrar funciones pero a veces los cálculos yo puedo recurrir a
+18:2218 minutos y 22 segundosla integración numérica no vamos a ver eso los auto valores son muy importantes el
+18:3118 minutos y 31 segundoscálculo dolor es muy importante pero bueno este también hay métodos para aproximarlo hay desarrollo del cálculo numérico para
+18:4018 minutos y 40 segundoslas transformadas ustedes han visto la transformada de laplace pero bueno saben que hay otro tipo de transformada como la transformada de fourier gilbert entre
+18:4918 minutos y 49 segundosotras si bueno hay cálculo numérico aplicado a las aproximaciones transformadas bueno aproximar soluciones
+18:5818 minutos y 58 segundosde ecuaciones diferenciales ordinaria y también uno de los problemas más difíciles pero más lindo diría también
+19:0519 minutos y 5 segundoses aproximar soluciones de ecuaciones diferenciales parcial todos estos campos que le digo son campos de desarrollo
+19:1319 minutos y 13 segundosactualmente e incluso de investigación hoy día
+19:2319 minutos y 23 segundosbueno que es un método numérico sí que es un método numérico
+19:3019 minutos y 30 segundosque es un problema numérico un problema numérico es una descripción
+19:3619 minutos y 36 segundosclara sin ambigüedades que va a relacionar datos de entrada con datos de
+19:4319 minutos y 43 segundossalida si vamos a llamar data a lo que es el ingreso de los datos y las soluciones también serán datos de
+19:5319 minutos y 53 segundossalinidad ahora lo que hay que tener en cuenta en que estos datos consisten en un número
+19:5919 minutos y 59 segundosfinito de cantidades reales por ejemplo ustedes saben que es la raíz
+20:0620 minutos y 6 segundosde 2 es un número irracional tiene infinitas cifras después de la coma lo que yo quisiera es aproximar la raíz de
+20:1620 minutos y 16 segundosdos con cierta tolerancia entonces que es un problema numérico es describir claramente
+20:2520 minutos y 25 segundoseste cómo se va a relacionar esos datos de entrada con los datos de salida
+20:3220 minutos y 32 segundosy que va a ser el método numérico va a ser la descripción completa de un número finito de operaciones que estén bien
+20:4120 minutos y 41 segundosdefinidas para el problema numérico anterior a través de las cuales la data o el
+20:4920 minutos y 49 segundosvector de datos de entrada va a ser transformado en un vector de datos de salida cuando último sector de datos nos
+20:5820 minutos y 58 segundoshacemos referencia tanto a un valor escalar o también a vectores de datos o matrices de datos
+21:0721 minutos y 7 segundosentonces es un método numérico por ejemplo para aproximar la raíz de 2 con determinada tolerancia
+21:1521 minutos y 15 segundossería por ejemplo un esquema iterativo que vaya enterando y de esa forma aproximando la raíz cuadrada de dos o
+21:2421 minutos y 24 segundostambién uno desarrollo de pelo usted han visto cómo desarrollar el taylor de la función raíz
+21:3321 minutos y 33 segundoscuadrada de x 1 y si no lo han visto pueden hacer como una serie infinita de taylor sí entonces también yo podría
+21:4221 minutos y 42 segundoshacer un desarrollo de taylor para aproximar la raíz cuadrada
+21:5121 minutos y 51 segundosqué característica deseo que tenga ese algoritmo bueno en principio tiene que ser finito tiene que terminar en un
+21:5821 minutos y 58 segundosnúmero finito de pasos es decir tengo que evitar por ejemplo si estoy en una estructura repetitiva que
+22:0722 minutos y 7 segundosesta estructura se repita infinitamente en algoritmos tiene que terminar en algún momento
+22:1522 minutos y 15 segundosdefinido es decir tengo que definir acciones sin ambigüedad si tengo que a
+22:2222 minutos y 22 segundosveces es muy común en las implementaciones de los métodos sobreescribir variables y es un error muy común no creo que tiene que ser
+22:3022 minutos y 30 segundosdefinir acciones sin ambigüedad en la implementación de nuestros algoritmos
+22:3722 minutos y 37 segundosvoy a tener una entrada seguramente esa entrada van a ser datos de números reales vectores escalares matrices quizá
+22:4622 minutos y 46 segundosuna ley de una función y voy a tener una salida que también
+22:5322 minutos y 53 segundostendrá esas mismas características el algoritmo tiene que ser eficiente es
+23:0223 minutos y 2 segundosdecir las operaciones que haga mi algoritmo se van a tener que realizar en
+23:0923 minutos y 9 segundosun tiempo tolerable tolerable que va a ser tolerable bueno eso dependerá del
+23:1723 minutos y 17 segundosproblema que esté resolviendo si quiero resolver un sistema de ecuaciones lineales 3 x 3
+23:2623 minutos y 26 segundosun algoritmo eficiente tendría que hacerlo relativamente menos de un segundo por ejemplo ahora si mi matriz
+23:3223 minutos y 32 segundoses una matriz enorme si ya eso tendría que evaluar que es un tiempo tolerable
+23:4023 minutos y 40 segundospara mí a veces hay algoritmos que tardan horas o días enteros en correr si
+23:4923 minutos y 49 segundosno va a ser nuestro caso pero la palabra tolerable tendrá que ver con el problema
+23:5623 minutos y 56 segundosque yo esté resolviendo nuestro algoritmo también tiene que ser exacto y preciso es decir la salida del
+24:0424 minutos y 4 segundosalgoritmo deben aproximarse a la solución del problema y a la vez yo
+24:1124 minutos y 11 segundosquisiera que las salidas en función de que yo pueda ir variando la entrada de
+24:1824 minutos y 18 segundoslos datos se aproximen entre sí y finalmente hay un concepto que el concepto de estabilidad que hace
+24:2724 minutos y 27 segundosreferencia a que pequeñas variaciones iniciales en la entrada en el input de
+24:3424 minutos y 34 segundosmi algoritmo deberían generar pequeños cambios en la salida de mi algoritmo
+24:4324 minutos y 43 segundoscuando yo modifico un poquito en un diferencial la entrada de datos de mi
+24:4924 minutos y 49 segundosalgoritmo y la solución se me vuelve muy inexacta en relación al resultado que yo
+24:5624 minutos y 56 segundoshabía obtenido anteriormente ahí se va a considerar que el algoritmo no está siendo estable
+25:0525 minutos y 5 segundosbueno como vamos a implementar nuestros algoritmos
+25:1225 minutos y 12 segundosbueno va a necesitar lenguajes sí uno de los más conocidos y que vamos a
+25:2125 minutos y 21 segundosusar nosotros en la asignatura es matlab sí que es una obligación de matrix laboratories
+25:3025 minutos y 30 segundoses un software privado creado allá por moler en los 80 sí y es un intérprete
+25:3925 minutos y 39 segundosque permite ejecutar orden de un modo muy interactivo
+25:4625 minutos y 46 segundostiene además un lenguaje de programación propio donde vamos a poder programar
+25:5425 minutos y 54 segundosy tiene una versión de prueba que si les interesa descargar la que es gratuita al menos por 30 días la pueden descargar en
+26:0226 minutos y 2 segundosel link soy de link la página oficial de manda pueden ir a
+26:0926 minutos y 9 segundosver un poquito en la página el octavo es lo que equivale a una
+26:1726 minutos y 17 segundosversión libre de matlab es un poquito más limitado en algo
+26:2526 minutos y 25 segundoscomandos pero para los objetivos que tenemos en esta unidad también pueden usar el
+26:3326 minutos y 33 segundosoctavo es parte del proyecto genere super software libre sí y también está
+26:4026 minutos y 40 segundosdesarrollado para realizar cálculos numéricos a diferencia de otros software computacionales que se conocen como
+26:4826 minutos y 48 segundossistemas de álgebra computacional como mal como matemática y maple octavo y
+26:5726 minutos y 57 segundosmatlab están orientados al cálculo y al análisis numérico fue creado también posterior a amable en
+27:0627 minutos y 6 segundosel 88 por hitos y así también pueden ir a
+27:1327 minutos y 13 segundosde ayala link a ver un poquito se pueden descargar si también está para las
+27:2027 minutos y 20 segundosdistintas plataformas se puede descargar tanto para los sistemas operativos de windows y linux o incluso de marca
+27:3227 minutos y 32 segundosotro software también muy conocido que fue desarrollado en francia por debe existir allá por los 80 también
+27:4227 minutos y 42 segundoses el shaila sí o sí la xii también es un lenguaje de programación para el cálculo numérico e incluso también para
+27:5127 minutos y 51 segundosel cálculo científico todos estos software que él existe también se usan mucho en la ciencia
+27:5927 minutos y 59 segundossí pero bueno shaila o sea un poco ya no es tan libre como antes lo ha desarrollado por una empresa shaila
+28:0728 minutos y 7 segundosenterprises y bueno ya otro lenguaje de
+28:1328 minutos y 13 segundosalto nivel para programación y que alguno numérico es el forehand fórmula
+28:2128 minutos y 21 segundostras la translate en system si ya aquí para ejecutar fortran van a necesitar un
+28:3028 minutos y 30 segundoscompilador para traducir el código máquina si son lenguajes de tipo compilado
+28:3728 minutos y 37 segundoses más antiguo de hecho qué qué mal que octavo que shaila o de hecho
+28:4528 minutos y 45 segundosgran parte de los algoritmos desarrollados por ejemplo en maldad
+28:5128 minutos y 51 segundosestán hechos por trump y más lab lo que hace es simplemente tiene un buen intérprete con el usuario pero en la
+29:0029 minutosbase de sus programas el el algoritmo está escrito en fort sí
+29:0829 minutos y 8 segundosfort drum sigue sus desarrollos en algoritmos y en muchísimos años pero la última versión en el 2018 puede venir a
+29:1629 minutos y 16 segundosver un poquito y también hay otros algoritmos como cs +
+29:2429 minutos y 24 segundos+ python se están usando mucho siguen usándose mucho para implementar nuestros algoritmos
+29:3229 minutos y 32 segundosen esta unidad y para lo que vamos a hacer en esta unidad con mawla octavio silao
+29:4029 minutos y 40 segundosalcanza si para los comandos que vamos a necesitar alcanza nosotros en particular nuestras implementaciones están
+29:5029 minutos y 50 segundoshechas en matlab pero pueden tranquilamente ejecutarlas en octava y
+29:5729 minutos y 57 segundossi quiere usar si las van a tener que hacer algunas pequeñas modificaciones para que esas implementaciones de todas
+30:0530 minutos y 5 segundosformas esos tres lenguajes son muy amigables y los pueden
+30:1130 minutos y 11 segundosbueno como me interesa mucho esta primera lectura ideal
+30:1930 minutos y 19 segundosal grano digamos lo que hago es un un ejemplo si aún sin saber los lenguajes
+30:2530 minutos y 25 segundosme interesa que veamos un ejemplo entonces como les decía me interesa
+30:3530 minutos y 35 segundoscalcular la raíz cuadrada de 2 con determinada tolerancia
+30:4130 minutos y 41 segundosentonces la solución numérica que usaremos va a ser un esquema
+30:5030 minutos y 50 segundositerativo no vamos a usar un desarrollo de taylor sino que vamos a usar un esquema iterativo de la siguiente forma
+31:0031 minutosla aproximación inicial es 1 sí y luego
+31:0831 minutos y 8 segundosla siguiente aproximación en el enésimo o en una sima va a ser un medio por las
+31:1531 minutos y 15 segundospróximas por paréntesis la aproximación enésima más dos sobre la aproximación en encima para n mayor o igual que será o
+31:2531 minutos y 25 segundossea poner la aproximación inicial la reemplazó en la fórmula y luego tengo la
+31:3131 minutos y 31 segundosaproximación primero o sea x luego con x sub 1 vuelvo a reemplazar en la fórmula y obtengo la aproximación x 2 y así
+31:4131 minutos y 41 segundossucesivamente bueno como notarán fácilmente esto puede implementarse en un algoritmo donde
+31:5031 minutos y 50 segundostengo una entrada que es la aproximación inicial y también voy a tener que dar una tolerancia
+31:5731 minutos y 57 segundosy una tolerancia un criterio para que todo vaya una vez que se alcance esa
+32:0332 minutos y 3 segundostolerancia que el algoritmo termino entonces en el paso 1 que hago la
+32:1032 minutos y 10 segundosasignación d la fórmula evaluada en x0 lo asignó a la
+32:1832 minutos y 18 segundosvariable x1 en el paso 2 digo bueno sí
+32:2432 minutos y 24 segundosel valor absoluto de la diferencia entre la aproximación inicial y x1 es menor o
+32:3132 minutos y 31 segundosigual que 0 entonces pero es menor o igual que nuestra tolerancia entonces el algoritmo termina
+32:4032 minutos y 40 segundosen caso contrario si esto no sucede lo que hago es a la variable x0 la actualizó o sea reemplazo lo que tenía
+32:5032 minutos y 50 segundosen x0 x x 1 y vuelvo a repetir el paso 1 con lo cual voy a obtener una variable x
+32:5932 minutos y 59 segundos2 sería en este caso entonces bueno voy a ver si el valor absoluto de la diferencia entre x 2 y x 1 mb cualquier
+33:0833 minutos y 8 segundosla tolerancia entonces que termine si no vuelvo a repetir el paso 1 y así sucesivamente supongamos que se alcanza la tolerancia
+33:1733 minutos y 17 segundosen algún momento es decir qué a distancia que hay entre las aproximaciones sucesivas sean menor que
+33:2533 minutos y 25 segundosuna tolerancia chiquita que yo le voy a fijar se va a asignar esto a una variable de salida
+33:3333 minutos y 33 segundossupongamos x1 y el algoritmo termina y la salida de mi algoritmo va a ser x1
+33:4033 minutos y 40 segundosque va a ser la aproximación de equipos bueno sería un pseudo algoritmo veamos cómo implementar esto
+33:4933 minutos y 49 segundosen manga para implementarlo voy a tener que crear lo que se conoce como una función de
+33:5633 minutos y 56 segundosmaldad entonces una función se define en matlab
+34:0334 minutos y 3 segundosen un archivo los archivos en manda van a tener extensión m y fíjense que la
+34:1034 minutos y 10 segundosestructura de la función dice función x1 igual r 4 2 x 0 3 x 1 va a ser mi
+34:1834 minutos y 18 segundosvariable de salida o sea la aproximación de la p cuadrados y recuerdos va a ser el nombre que va a
+34:2634 minutos y 26 segundostener mí mi función en matlab sí que además va a coincidir con el nombre
+34:3434 minutos y 34 segundosque tenga ese archivo y matt lamb x 0 va a ser la aproximación inicial de la raíz
+34:4234 minutos y 42 segundosde 2 y todo él va a ser la tolerancia que yo le voy a buscar por defectos y yo
+34:5134 minutos y 51 segundosnos llega así a ingresar una tolerancia mi implementación va a tomar 5 x 10 a la
+35:0035 minutosmenos 9 s 5 m 9 significa 5 x 10 09 este el valor de esa tolerancia un valor
+35:0835 minutos y 8 segundosmuy chiquito o sea que es cero coma van a aparecer después de la coma todos
+35:1635 minutos y 16 segundosceros hasta la posición 9 donde va a aparecer un 5 o sea sería 0,80
+35:2435 minutos y 24 segundosy 15 después bueno el comando cl se lo que me hace me limpia la salida de matlab después le
+35:3135 minutos y 31 segundosdigo que si el número argumento es menor estricto que 2 la tolerancia de hacer 5 por día menos 9
+35:3935 minutos y 39 segundosvoy a imprimir voy a hacer un lifting efe lo que hace son algunos carteles de impresión en lo que vamos a llamar la
+35:4635 minutos y 46 segundosventana de comando y fíjense que en x 1 estoy haciendo la primera asignación que es ese punto 5 no es otra cosa que el
+35:5535 minutos y 55 segundos0,5 en un medio por x 0 + 2 sobre x ceros que es la primera aproximación
+36:0436 minutos y 4 segundosluego en una variable que ya mover asignó el aps que es el valor absoluto
+36:1036 minutos y 10 segundosde x 1 - x 0 si todavía o sea cálculo el error entre
+36:1836 minutos y 18 segundosaproximaciones o sea la distancia que entre esas aproximaciones y en cada uno voy a asignar otro contador y luego con efe brin efe voy
+36:2636 minutos y 26 segundosimplica y fíjense que usó una estructura de while repetitiva que vivo en while que
+36:3436 minutos y 34 segundosva a ser un mientras el error sea mayor que la tolerancia voy a estar repitiendo este hecho si
+36:4236 minutos y 42 segundosentonces si mi error calculado anteriormente es mayor que la tolerancia que hago reasignó a x0 pam x1
+36:5336 minutos y 53 segundosvuelvo a calcular con mi fórmula interactiva vuelvo a calcularlo tomando como
+37:0237 minutos y 2 segundosaproximaciones x0 y esto es lo real signo en x1 vuelvo a calcular el error y actualizó en 1
+37:1037 minutos y 10 segundosel contador con k igual k más 1 imprimo y bueno y esto se repite hasta que en
+37:1737 minutos y 17 segundosalgún momento yo esperaría que el error sea menor o igual que la tolerancia en ese momento salvo con él en del while
+37:2637 minutos y 26 segundose imprime el valor final aproximado el valor exacto de matlab que los calculó
+37:3537 minutos y 35 segundoscon s qr t 2 y finalmente el error absoluto que va a ser la diferencia en
+37:4237 minutos y 42 segundosvalor absoluto que hay entre mi última aproximación que es x 1 y la raíz cuadrada calculada por maldad de la raíz
+37:5237 minutos y 52 segundosde 2 obviamente también la raíz cuadrada de 2 va a ser una aproximación porque la
+37:5937 minutos y 59 segundosraíz cuadrada de 2 no tiene una representación como número decimal si dado que es un número irracional
+38:0838 minutos y 8 segundosentonces matlab también va a ser una aproximación pero vamos a considerar que esa aproximación es mejor que la nuestra
+38:1638 minutos y 16 segundosentonces vamos a comparar con la aproximación demanda nuestra aproximación y eso le vamos a llamar el error absoluto
+38:2438 minutos y 24 segundosentonces una vez realizado esta función que es la implementación de nuestro algoritmo para resolver nuestro problema
+38:3338 minutos y 33 segundosnumérico si lo que vamos a hacer es ejecutarlo sí
+38:4138 minutos y 41 segundosentonces les voy a mostrar antes voy a hacer un les voy a mostrar cómo se ve
+38:4738 minutos y 47 segundosmatlab sí miren esto es más de éste es el entorno de
+38:5538 minutos y 55 segundosmatt lamb yo ahí ya tengo mi función y yo estas funciones nosotros las vamos a enviar
+39:0439 minutos y 4 segundosuna vez que ustedes la van a tener que programar sino que esta función a ustedes la van a tener
+39:1239 minutos y 12 segundosy acá está la función que yo les comentaba en la transparencia ok entonces
+39:2139 minutos y 21 segundoseste es el editor de maldad donde yo veo mi función acá tengo este el directorio
+39:2839 minutos y 28 segundosactual el cordón folder sí que es el directorio donde yo voy a trabajar tengo
+39:3539 minutos y 35 segundosmi workspace donde van a aparecer las variables que se vayan usando y acá
+39:4139 minutos y 41 segundostengo el comando windows donde yo voy a ejecutar los comandos que yo quiero que
+39:5039 minutos y 50 segundosrealice manda entonces
+39:5839 minutos y 58 segundosvoy a volver a la transparencia donde yo ya hago como una simulación de lo que tenemos acá pero ustedes acá van a poder
+40:0840 minutos y 8 segundosescribir x1 igual r cuba 2 y podrán ingresar
+40:1940 minutos y 19 segundospor ejemplo sí los comandos y con enter si ejecutan
+40:3140 minutos y 31 segundosse ejecuta la función que yo tengo definida en el recuerdos
+40:3840 minutos y 38 segundosvoy a volver a la ventana de la transparencia a las lecturas
+40:4640 minutos y 46 segundossi así lo seguimos desde la transparencia
+40:5340 minutos y 53 segundosentonces en el prom que ese doble doble simbolito de
+41:0141 minutos y 1 segundode mayor que aparece si ingrese ere igual r 4 21 15 sea lo que le estoy
+41:1241 minutos y 12 segundosdiciendo qué mi aproximación inicial es 1 y que la
+41:1941 minutos y 19 segundostolerancia es 1 por 10 a la menos 5 cuando lo ejecutó me aparece
+41:2841 minutos y 28 segundosentonces ahí vemos qué y mi contador llegó hasta cuatro y en
+41:3741 minutos y 37 segundoscuatro interacciones en cuatro interacciones alcance la tolerancia que le había
+41:4541 minutos y 45 segundosingresado fíjense que tengo un valor final aproximado
+41:5241 minutos y 52 segundostengo el valor exacto que el calculado por maldad de la raíz cuadrada de 2 y tengo un error absoluto fíjense que el
+42:0242 minutos y 2 segundoscerro absoluto tiene fíjense cuenten los ceros 1 2 3 4 5 6 7 8 9 10 11 12
+42:1142 minutos y 11 segundoso sea la distancia que hay entre
+42:1842 minutos y 18 segundosel valor aproximado sí y el valor exacto de matlab alcanzó un
+42:2642 minutos y 26 segundoserror absoluto del orden de 1 por 10 a la menos 12 si con lo cual es un buen
+42:3442 minutos y 34 segundoserror de todas formas quiero hacerle una aclaración una cosa es el error absoluto
+42:4442 minutos y 44 segundossí que es la diferencia entre el último valor aproximado y el valor exacto y otra cosa es como yo fui aproximando mi
+42:5342 minutos y 53 segundostolerancia dado que esta tolerancia la fui calculando entre aproximaciones
+43:0143 minutos y 1 segundosucesivas pero yo espero uno espera en general en los métodos numéricos que
+43:1043 minutos y 10 segundosen la medida que las aproximaciones sucesivas se aproximen entre sí
+43:1843 minutos y 18 segundosel error absoluto también se va a hacer chiquito sin
+43:2743 minutos y 27 segundosok bueno qué pasa si ahora modifico modifico mi
+43:3843 minutos y 38 segundosaproximación inicial si en vez de d
+43:4543 minutos y 45 segundoshay que iniciar la próxima inicialmente con 1 mi aproximación inicial es 15 ustedes saben
+43:5543 minutos y 55 segundosque la raíz cuadrada de 2 es aproximadamente 141 9 o sea 1.5 está un poquito más cerca de la raíz cuadrada de 2
+44:0344 minutos y 3 segundosentonces si yo arrancó más cerca obtuve una iteración
+44:1044 minutos y 10 segundosmenos o sea en tres iteraciones alcance la misma tolerancia que le había puesto que era uno por diez era menos
+44:1844 minutos y 18 segundostambién sin embargo la aproximación que obtuve es la misma que anteriormente
+44:2744 minutos y 27 segundosasí entonces tomando un valor inicial más cercano a raíz de 2 el
+44:3544 minutos y 35 segundosalgoritmo convergen obviamente y lo hace en una iteración menor
+44:4244 minutos y 42 segundoseso sería lo esperable cuando más cerca estoy de la raíz de dos ni algoritmo
+44:5044 minutos y 50 segundosdebería integrar menos veces bueno qué pasa si ahora modificó la
+44:5744 minutos y 57 segundosaproximación inicial a 5 o sea si me alejo bueno fíjense me aleje bastante de
+45:0445 minutos y 4 segundosla raíz cuadrada de 2 mi algoritmo tuvo que esperar en
+45:1145 minutos y 11 segundosrelación a la liberación al ejemplo inicial tuvo que tirar dos veces más si
+45:1845 minutos y 18 segundoscuando arranque con un aproximación inicial x0 igual a x sub zero igual a 1 lo había hecho en cuatro iteraciones
+45:2545 minutos y 25 segundosahora lo hago en una perdón lo hago en él lo hago en seis o sea necesite dos
+45:3245 minutos y 32 segundositeraciones más pero fíjense me aleje bastante sin embargo sin embargo solamente yo todas interacciones más
+45:4045 minutos y 40 segundospara alcanzar la misma tolerancia con lo cual esto va a ser lo que vamos a ver esto es lo que se conoce como la
+45:4945 minutos y 49 segundosvelocidad de convergencia de algoritmo si vamos a volver sobre esto
+45:5745 minutos y 57 segundosy fíjense también otra cosa que aparece acá es que si bien yo inicié más lejos las aproximaciones que se fueron
+46:0646 minutos y 6 segundosconstruyendo en algún momento llegó a alcanzar la tolerancia que yo le había
+46:1446 minutos y 14 segundospuesto pero además el error absoluto en este caso es cero o sea el valor final
+46:2146 minutos y 21 segundosaproximado coincide con el valor exacto demanda con lo cual nuestro error
+46:2846 minutos y 28 segundosabsoluto es cero sí o sea que esta es una mejor aproximación aún cuando yo inicie
+46:3546 minutos y 35 segundosun poco más lejos de la de la raíz cuadrada de 2
+46:4246 minutos y 42 segundosbueno otra experiencia puede ser modificar la tolerancia fíjense que habíamos tomado uno por día menos 5
+46:5046 minutos y 50 segundosahora voy a tomar 5 por 10 a las menos 9 recuerden que nuestro algoritmo está implementado de forma tal que si yo
+46:5846 minutos y 58 segundosno le ingreso la tolerancia por defecto toma 5 por 10 al menos 9 bueno
+47:0547 minutos y 5 segundosentonces como lo hago en matlab ejecuto digamos escribo era igual r 42 entre
+47:1347 minutos y 13 segundosparéntesis 1 y fíjense qué
+47:2247 minutos y 22 segundoscon el valor inicial aproximado tarda una iteración más el ejemplo original
+47:2947 minutos y 29 segundosque habíamos tomado sí y como es una es una tolerancia más chica
+47:3847 minutos y 38 segundosque 1 por 10 a lo menos 5 o sea es cuatro órdenes de magnitud más chica en este caso yo ya alcanzó el valor exacto
+47:4847 minutos y 48 segundosdemanda y qué pasa si esfuerzo mucho más si me
+47:5547 minutos y 55 segundosesfuerzo mucho más está bien bueno ahí lo ejecuté con uno por diez al
+48:0348 minutos y 3 segundosmenos diez sí e
+48:1048 minutos y 10 segundoshay dos iteraciones más en relación a lo original sí
+48:1648 minutos y 16 segundospero también alcanzó el error absoluto de mando ahí hay una pequeña diferencia entre la
+48:2448 minutos y 24 segundostolerancia en el membrete rojo y la tolerancia en el que escribió mawla bueno eso es un pequeño error de
+48:3348 minutos y 33 segundostransparencia después lo corregimos entonces más fuerza la tolerancia seguro
+48:4048 minutos y 40 segundosllegó al valor exacto demanda si ya que tengo una muy buena aproximación de la
+48:4948 minutos y 49 segundosraíz cuadrada de 2 vamos a volver sobre este algoritmo más adelante cuando veamos raíces
+48:5948 minutos y 59 segundosbueno estos bebés es muy importante que contárselo ahora que es otra forma de ejecutar nuestros algoritmos si también
+49:0749 minutos y 7 segundosla otra forma de ejecutar nuestros algoritmos no sólo es por la ventana de comandos sino es crear un nuevo archivo
+49:1749 minutos y 17 segundosque vamos a denominar script smart line octava los scripts van a tener archivos van a ser tiro de tensión punto m y en
+49:2649 minutos y 26 segundosshaila va a ser archivos de extensión es ese que vamos a escribir en ese archivo
+49:3649 minutos y 36 segundosbueno vamos a escribir secuencialmente también secuencialmente las instrucciones que queremos que se
+49:4449 minutos y 44 segundosrealicen cuando se ejecute en ese script por ejemplo si yo abro un archivo si si
+49:5349 minutos y 53 segundosyo hago un archivo y lo nombro de recuerdos o tests de recuerdos
+50:0150 minutos y 1 segundovoy a ejecutar voy a en ese archivo voy a escribir que erre 0 por ejemplo es la
+50:1050 minutos y 10 segundoses la variable de rasero le asignó el valor 1 a la variable todos los signo del valor 1 por 10 la menos 5 estoy
+50:1950 minutos y 19 segundosdefiniendo la aproximación inicial de la tolerancia y hago el llamado a la función r 42 en ese mismo archivo sí
+50:2950 minutos y 29 segundosentonces tengo un nuevo archivo además del archivo de la función que va a ejecutar la función entonces cómo
+50:3850 minutos y 38 segundosejecutó sí como ejecutó este archivo de prueba este script sí lo puedo hacer a
+50:4650 minutos y 46 segundostravés de la ventana de comandos en el prom escribiendo el nombre del archivo o también lo puedo hacer a través de un
+50:5450 minutos y 54 segundosacceso directo que muchas veces tienen los software miren voy a mostrarle en matlab sing
+51:0251 minutos y 2 segundoscomo esto funciona por ejemplo yo aquí voy a crear con el más
+51:1051 minutos y 10 segundosboyacá con el más voy a armar me un nuevo archivo entonces por ejemplo acá
+51:1951 minutos y 19 segundosvoy a escribir que x 0 1
+51:2951 minutos y 29 segundosel punto y coma al final evita que se imprima por la ventana de pantalla
+51:3751 minutos y 37 segundospor la ventana de comandos y voy a poner un comentario siempre es recomendable poner un comentario que lo que hace es
+51:4551 minutos y 45 segundosscript script que ejecuta la función
+51:5551 minutos y 55 segundosr r 42 x
+52:0152 minutos y 1 segundoentonces lo que hago es asignó la aproximación inicial defino una tolerancia así que habíamos dicho por
+52:1052 minutos y 10 segundosejemplo que era 1 por 10 a la menos 5 y luego voy a hacer el llamado
+52:1752 minutos y 17 segundosvoy a ser el llamado a la función lo voy a asignar a una variable el recuerdos
+52:2752 minutos y 27 segundosdonde los argumentos de entrada van a ser x 0 y la tolerancia
+52:3452 minutos y 34 segundosy esto lo voy a guardar cuando lo guarde me va a preguntar dónde bueno
+52:4152 minutos y 41 segundosy martes cuando sea le pongo un nombre parecido a la función y ejecutar o
+52:4952 minutos y 49 segundossimplemente para acordar me lo guardo bueno me dice que ya lo tengo lo voy a reemplazar
+52:5652 minutos y 56 segundoseste y ahora voy a hacer un clc voy a dejar variables si y fíjense voy a
+53:0453 minutos y 4 segundosejecutar este script que se llama t 2
+53:1353 minutos y 13 segundostambién entonces cuando lo ejecutó cuando lo ejecutó en la ventana de comandos lo que
+53:2153 minutos y 21 segundoshace manda es lee las instrucciones que tiene aquí adentro de las instrucciones que tienen a gritos
+53:2853 minutos y 28 segundosson tres por un lado que asigne a la variable x 0 el valor numérico 1 a la variable todo el valor numérico 1 por 10
+53:3753 minutos y 37 segundosa la menos 5 y que genere asigne con el igual el resultado del llamado de la
+53:4553 minutos y 45 segundosfunción de efectuados donde está la implementación de nuestro algoritmo fíjense además que acá en lo que se
+53:5253 minutos y 52 segundosconoce como workspace o área de trabajo se generan la variable r sí que perón la
+54:0054 minutosvariable x0 que es la producción se inicial la variable toll que es la tolerancia que yo definí y la variable r que es la
+54:1054 minutos y 10 segundosasignación si de la solución d la función del recuerdo donde tengo
+54:1854 minutos y 18 segundosimplementado mi algoritmo con estos argumentos de entradas en este caso 1 y 1 por 10 sea la menos 5
+54:2654 minutos y 26 segundosde todas formas bueno vuelvo vuelvo a a la transparencia
+54:3854 minutos y 38 segundosde todas formas vamos a volver sobre lo que es el uso de matlab el uso de los scripts así que tómenlo simplemente como
+54:4654 minutos y 46 segundosun caso introductorio pero para que se vayan familiarizando en cómo vamos a trabajar
+54:5454 minutos y 54 segundosa perdón no les conté otra forma bueno otra forma de ejecutarlo miren
+55:0155 minutos y 1 segundovuelvo a matlab y es con darles otra forma de ejecutar mi script
+55:0855 minutos y 8 segundosfíjense voy a hacer 1 de variable y de pantalla otra forma es usando este acceso directo
+55:1855 minutos y 18 segundossi este round si lo que hace fíjense que dice ground de recuerdos
+55:2555 minutos y 25 segundoso sea que cuando lo lo presionó ya se ejecuta sí también
+55:3655 minutos y 36 segundosy con f5 también lo pueden ejecutar
+55:4455 minutos y 44 segundosok entonces bueno esas son formas de ejecutar nuestros screen
+55:5155 minutos y 51 segundosbueno ya para terminar esta introducción
+55:5555 minutos y 55 segundos[Música]
+55:5855 minutos y 58 segundosles cuento simplemente a modo
+56:0556 minutos y 5 segundosde comentario al margen de la vigencia de los desarrollos de métodos numéricos sus aplicaciones en la
+56:1256 minutos y 12 segundosingeniería y en la matemática aplicada hay congresos y hay congresos por
+56:2056 minutos y 20 segundosejemplo algunos que los que cité allí que se realizan donde a veces los estudiantes pueden presentar trabajos
+56:3156 minutos y 31 segundospor ejemplo en el 2021 se va a realizar el séptimo congreso matemática aplicada
+56:3856 minutos y 38 segundoscomputacional industrial o también se pospuso el congreso que estaba planteado para este año por
+56:4756 minutos y 47 segundosrazones de la pandemia el congreso argentino de mecánica computacional si se propuso para el año que viene
+56:5656 minutos y 56 segundossi congresos donde se muestran la comunidad científica aparece antes en matemáticos físicos e
+57:0557 minutos y 5 segundosingenieros que se encuentran son lugares de encuentro donde se muestran los desarrollos de los avances científicos y
+57:1257 minutos y 12 segundostecnológicos de muchas áreas asociadas los métodos numéricos
+57:1957 minutos y 19 segundoshay asociaciones también que organizan estaciones nacionales e incluso vinculadas asociaciones internacionales
+57:2857 minutos y 28 segundosque organizan estos congresos y también hay revistas internacionales hay algunos
+57:3457 minutos y 34 segundosejemplos tan limpiadas donde y el resultado de los desarrollos o del uso de algunos métodos numéricos
+57:4357 minutos y 43 segundosaplicados a problemas a resolver problemas de las distintas áreas de las ciencias son publicados
+57:5157 minutos y 51 segundoses un área en constante auge y desarrollo también le puse para el que le interese
+58:0058 minutoses algo que no evaluamos obviamente esta unidad simplemente vamos a tener una
+58:0758 minutos y 7 segundosactividad final de práctica de experimentación numérica que tienen que
+58:1558 minutos y 15 segundoscumplir no hay una evaluación por eso no hay una evaluación teórica les puse
+58:2158 minutos y 21 segundosacá para que vean también un poco la algunos desastres que fueron causados
+58:2858 minutos y 28 segundospor errores en los métodos numéricos de ahí la importancia de estudiar el estudio de los errores en los métodos
+58:3758 minutos y 37 segundosnuméricos cosas reales problemas reales que han causado desastres humanos
+58:4658 minutos y 46 segundoseconómicos también o sea que son es muy importante tener en cuenta los
+58:5458 minutos y 54 segundoserrores que se van produciendo en cada uno de los métodos hay una escriba que ha limpiado en inglés pero que le
+59:0259 minutos y 2 segundosinterese lo puede ir ojea y bueno es la biografía bueno con esto
+59:1159 minutos y 11 segundosme despido voy a hacer otras lecturas a la próxima
+59:1759 minutos y 17 segundoslectura vamos a meternos ya en los lenguajes de
+59:2459 minutos y 24 segundosprogramación vamos a ver un poco algunos comandos algunas operaciones y algunas funciones demanda contable
+59:3459 minutos y 34 segundosy si la en particular vamos a concentrarnos más preferente en el mar la pero en sí es muy muy muy parecido a
+59:4459 minutos y 44 segundosoctavo y si las necesita de alguna bueno ahí tienen la bibliografía está todo disponible y cualquier duda pueden

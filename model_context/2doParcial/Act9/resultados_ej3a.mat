@@ -1,0 +1,29 @@
+# Created by Octave 9.4.0, Thu Nov 13 19:19:26 2025 -03 <aformen9@Agus-MacBook-Air.local>
+# name: x_eval
+# type: matrix
+# rows: 1
+# columns: 2
+ 0.75 1.5
+
+
+# name: error_rel
+# type: matrix
+# rows: 1
+# columns: 2
+ 0.08536585365853655 0.023529411764706114
+
+
+# name: P_aprox
+# type: matrix
+# rows: 1
+# columns: 2
+ 3.125 2.9000000000000004
+
+
+# name: f_real
+# type: matrix
+# rows: 1
+# columns: 2
+ 3.4166666666666665 2.833333333333333
+
+

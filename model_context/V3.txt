@@ -1,0 +1,455 @@
+bueno vamos a ver comienzo a la lectura 3 de introducción amanda optado y shaila en este caso
+0:1313 segundosvamos a ver algunos aspectos de programación funciones definidas por usuarios y peloteos
+0:2121 segundosesto es parte de la unidad seis métodos numéricos de matemática aplicada para las carreras de ingeniería electrónica
+0:2929 segundoseléctrica de la facultad de ciencias exactas ingeniería y agrimensura de la universidad nacional de rosario
+0:3535 segundosyo soy luciano con celine y marinero en programación vamos a ver algunos aspectos fundamentales que nos van a
+0:4545 segundosservir para luego poder implementar nuestros algoritmos numéricos
+0:5454 segundostanto en más la octava si la podemos programar muy fácilmente aunque hay que reconocer que estos programas no son
+1:031 minuto y 3 segundoslenguajes avanzados de programación como lo son por tam se temas más o uno más reciente
+1:131 minuto y 13 segundoscomo es python sin embargo a los fines de la implementación del cálculo numérico que vamos a hacer y también
+1:201 minuto y 20 segundospara un buen nivel de implementación numérica son extremadamente útiles
+1:291 minuto y 29 segundosnuestros programas se van a escribir en archivos punto ms que usemos manda
+1:361 minuto y 36 segundosoctavo o en archivos punto ccss csc y el
+1:441 minuto y 44 segundoscaso en caso mills en sala estos archivos se pueden agregar o modificar con cualquier editor de texto
+1:531 minuto y 53 segundospero siempre es recomendable poder usar el propio editor del programa en consejos
+2:012 minutos y 1 segundohay dos tipos o dos grandes categorías de archivos por un lado van a estar las funciones definidas por los usuarios sí
+2:112 minutos y 11 segundosy por otro lado van a estar los archivos de comando también conocido como scripts
+2:192 minutos y 19 segundoso bien también suele ubicarse en la literatura como guiones o libretos
+2:292 minutos y 29 segundosque disponemos para programar tenemos sentencias de bifurcaciones y sentencias
+2:362 minutos y 36 segundosde bucles las sentencias de bifurcaciones realizan una o más operaciones según se cumpla o no una
+2:452 minutos y 45 segundosdeterminada condición en general es una condición de tipo lógica
+2:522 minutos y 52 segundoslos bucles permiten repetir o integrar las mismas operaciones sobre distintos
+3:003 minutosdatos en el caso de las primeras tenemos if y switch en matlab y optado o también
+3:093 minutos y 9 segundostenemos ypf y select en el caso de shy lab y la segunda son para todos los programas iguales las estructuras de
+3:173 minutos y 17 segundosfort y las estructuras de wilde es importante comentar nuestros programas siempre es importante ir
+3:263 minutos y 26 segundoscomentando cuando vayamos definiendo variables o haciendo algún tipo de asignaciones o
+3:343 minutos y 34 segundosincluso al comienzo de nuestro programa poner
+3:423 minutos y 42 segundospara que es la función o bien para qué es el script que estoy programando si al
+3:493 minutos y 49 segundoscuándo uno introduce el porcentual todo lo que va después se considera comentario y el
+3:593 minutos y 59 segundoslenguaje no lo va a intentar ejecutar
+4:064 minutos y 6 segundosla sentencia es conocida es ir alguna determinada condición si se cumple esa
+4:134 minutos y 13 segundoscondición se van a ejecutar una serie de sentencias ahora bien también tenemos frustraciones múltiples si se cumple la
+4:214 minutos y 21 segundoscondición uno se va a ejecutar el bloque uno el if se cumple la condición 2 se va a ejecutar el bloque 2
+4:304 minutos y 30 segundosel cce es decir en cualquier otro caso se va a ejecutar el bloque de sentencias 3
+4:384 minutos y 38 segundosla bifurcación switch es análoga al if pero permite concatenar casos por
+4:464 minutos y 46 segundosejemplo en octavo o más lab como ven a la izquierda ustedes pueden hacer un switch de una determinada variable y en
+4:564 minutos y 56 segundosel case o en el caso que esa variable asuma el valor uno se va a ejecutar el
+5:025 minutos y 2 segundosbloque uno en el caso que asuma un conjunto de valores de 2 hasta n se
+5:095 minutos y 9 segundosva a ejecutar el bloque 2 o en cualquier otro caso se va a ejecutar el bloque 3 análogamente el sai la tenemos
+5:175 minutos y 17 segundosel comando con la sentencia select que funciona nuevamente
+5:265 minutos y 26 segundosla ascendencia force repite un número determinado de veces un conjunto de
+5:335 minutos y 33 segundossentencia el uso usual es por una variable índice que en este caso llaman
+5:405 minutos y 40 segundosy la discreta hizo usando el operador dos puntos con un inicio un paso y un
+5:475 minutos y 47 segundosfin recuerden que si no introducen paso por omisión va a tomar uno y se van a
+5:555 minutos y 55 segundosejecutar las en sentencias que estén dentro de esa estructura otra forma también se puede definir
+6:056 minutos y 5 segundoscon un paso negativo se van a ejecutar las sentencias desde n hasta 1 y otra
+6:136 minutos y 13 segundostambién que resulta muy útil es hacer un foro donde el índice por ejemplo sea un
+6:216 minutos y 21 segundosvector y las sentencias se van a ejecutar una cantidad de veces que va a
+6:286 minutos y 28 segundosser la longitud de ese vector en este caso 5 y en su primer ejecución cuando
+6:376 minutos y 37 segundosyo introduzca en las sentencias la variable x entenderá que el primer valor
+6:436 minutos y 43 segundosde x es el 10 el segundo en la segunda ascendencia cuando se ejecuta por segunda vez va a entender que el valor
+6:516 minutos y 51 segundosde x 5.5 y así sucesivamente la estructura while es similar a otros
+7:027 minutos y 2 segundoslenguajes while o mientras se eje cumple una determinada condición se van
+7:097 minutos y 9 segundosa ejecutar una serie de sentencias que yo introduzca dentro de la estructura también voy a usar se une un while 1 que
+7:197 minutos y 19 segundoscomo siempre es cierto se va a ejecutar la sentencia dentro de la estructura
+7:257 minutos y 25 segundospero en este caso tengo que dar una condición de salida porque si no si no va a quedar y tirando indefinidamente
+7:357 minutos y 35 segundosesas sentencias de salida pueden ser el comando break que termina la ejecución de un bucle interno
+7:447 minutos y 44 segundossea tanto white o también informe o la ascendencia
+7:517 minutos y 51 segundoso el comando restaban que permite salir de una función antes de llegar a la
+7:587 minutos y 58 segundosúltima orden otra cosa importante en programación es
+8:058 minutos y 5 segundosalmacenar datos en archivos o variables en archivos en general cuando se trabaja en métodos
+8:138 minutos y 13 segundosnuméricos aplicados a problemas reales de gran escala o problema científico de gran escala
+8:208 minutos y 20 segundostenemos que nuestra data o nuestro imputa nuestro algoritmo viene dada en
+8:268 minutos y 26 segundosun formato de archivo general puede ser un archivo de texto tipo plano
+8:388 minutos y 38 segundos[Música]
+8:398 minutos y 39 segundosque podrá ser un archivo tipo text o txt o punto edad u otro tipo y en general
+8:488 minutos y 48 segundosdentro habrá valores numéricos se atando un vector una columna de vectores o bien
+8:568 minutos y 56 segundosuna matriz es importante poder leer estos dos datos
+9:049 minutos y 4 segundosy almacenarlo en alguna variable de nuestro programa para poder luego
+9:119 minutos y 11 segundostrabajar con esos valores almacenados también es importante que una vez que
+9:189 minutos y 18 segundosrealicemos los cálculos correspondientes con estos datos ingresados nuestra salida de datos nuestro output se guarde
+9:279 minutos y 27 segundosen algún espacio de trabajo o archivo para que luego pueda ser leído
+9:359 minutos y 35 segundospor nuestro mismo programa para por ejemplo tabular graficar o hacer un
+9:419 minutos y 41 segundosanálisis de errores numéricos esta tarea muchas veces no es sencilla
+9:499 minutos y 49 segundoscuando los archivos son grandes o también a veces hay problemas con los formatos de los archivos de entrada y de
+9:579 minutos y 57 segundossalida recordemos que cuando uno cierra la sesión o cuando uno apaga la computadora
+10:0410 minutos y 4 segundosel contenido de las variables en la ventana de comando que yo venía trabajando se borran automáticamente
+10:1010 minutos y 10 segundossalvo que eso le indique que se almacene con lo cual toda la información los
+10:1910 minutos y 19 segundosvalores que yo tenían calculado se borra como también se borran todo lo que yo
+10:2510 minutos y 25 segundosingresé en la ventana de comandos entonces cómo leer datos desde archivos
+10:3310 minutos y 33 segundosbueno para recuperar datos almacenados en un archivo podemos utilizar el comando loa más la octava o sugiere usar
+10:4310 minutos y 43 segundosel comando ruiz para datos numéricos ensayar y cómo lo usamos bueno muy sencillo a la izquierda van a ver el uso
+10:5210 minutos y 52 segundosde octavo como hablar y a la derecha el uso de salida los datos punto edad
+11:0011 minutospor reid datos punto edad / apostrophes y en el caso de sylar tengo que indicar
+11:0711 minutos y 7 segundosla dimensión lo que hace es el contenido de el archivo llamado datos punto edad
+11:1511 minutos y 15 segundosque debe existir en el directorio actual de trabajo lo va a almacenar en una variable que va a llamar por defecto con
+11:2311 minutos y 23 segundosel mismo nombre del archivo en este caso datos si deseamos que la variable tenga un
+11:3111 minutos y 31 segundosnombre distinto lo que puedo hacer es asignar dicho
+11:3811 minutos y 38 segundosdicho archivo a una variable usando el comando coa a loar en este caso
+11:4911 minutos y 49 segundosla variable a porque supongo que es una matriz de datos que habíamos guardado en ese archivo
+11:5811 minutos y 58 segundosen matlab city pidamos lo haga lo que hace es recuperar las variables
+12:0512 minutos y 5 segundosdefinidas en una sesión anterior siempre y cuando las mismas hayan sido guardadas
+12:1212 minutos y 12 segundoscon el comando 6 bueno como usarse como guardar datos en
+12:1912 minutos y 19 segundosarchivos digo una vez que yo tengo mi ingreso de datos mi cálculo numérico y quiero
+12:2812 minutos y 28 segundosguardar los resultados de ese cálculo en un archivo para eso es muy útil de usar el comando safe
+12:3612 minutos y 36 segundossi yo en el prom tecleo save lo que voy a hacer es crear un archivo binario con
+12:4412 minutos y 44 segundosel nombre y valor de todas la variables definidas durante mi sesión
+12:5212 minutos y 52 segundosen cambio si quiero guardar algunas variables particulares y con algún
+12:5912 minutos y 59 segundosnombre específico lo que puedo hacer es save nombre del archivo y las variables que quiera guardar en ese archivo en
+13:0913 minutos y 9 segundoseste caso guarde las variables a x si en cambio quiero guardarla usando
+13:1813 minutos y 18 segundosotro formato aquí el formato aquí que va a ser más fácil para la lectura sobre todo cuando
+13:2613 minutos y 26 segundosguardo datos numéricos la forma de usarlo es save datos punto that que va a ser el nombre del archivo y ahora además
+13:3413 minutos y 34 segundosle estoy definiendo el tipo de archivo que se va a definir voy a guardar la variable solamente en la variable a y la
+13:4213 minutos y 42 segundosguardo en formato cada elemento de ac almacena de esta
+13:4913 minutos y 49 segundosmanera con ocho cifras decimales pero sí quiero almacenarlo con 16 citó decimales lo que puedo hacer es agregar al final
+13:5713 minutos y 57 segundosde mi línea guión down es importante remarcar que en formato
+14:0614 minutos y 6 segundosaquí solo se guardan valores y no información tal como el nombre de las
+14:1314 minutos y 13 segundosmatrices o de los vectores bueno funciones definidas por usuarios
+14:2514 minutos y 25 segundoshay dos modos básicos de definir funciones en matlab en octavo shaila
+14:3414 minutos y 34 segundospor ejemplo en archivos punto m en miami notable y archivos punto cc es
+14:4314 minutos y 43 segundosese y en saida o también puedo definir funciones en línea de comandos haciendo
+14:5014 minutos y 50 segundosuso de los comandos in line o función handle que va a ser el arroba o en salou
+14:5914 minutos y 59 segundostengo el comando de a continuación veremos cómo se definen y cómo se usan cada uno de estos comandos
+15:0815 minutos y 8 segundosel caso de un archivo de m fíjense la estructura que tiene
+15:1515 minutos y 15 segundosnosotros ya vimos cuando aproximamos la raíz cuadrada de 2
+15:2215 minutos y 22 segundoscon un método interactivo creamos una función de matlab en este caso la
+15:2915 minutos y 29 segundoslectura 1 entonces va a tener esa estructura function argumento de salida igual el nombre la
+15:3815 minutos y 38 segundosfunción argumento de entrada todo lo que está en verde es comentario que siempre es recomendable ingresar tanto el nombre
+15:4715 minutos y 47 segundosdetalle lo que hace la función la descripción del argumento de entrada la descripción del argumento de salida es
+15:5515 minutos y 55 segundosrecomendable poner los autores de los determinados programas y las
+16:0216 minutos y 2 segundosmodificaciones posteriores que fueron haciéndose a ese programa y también las
+16:1016 minutos y 10 segundosfunciones a las que va a llamar ese programa si es que se da el caso de funciones anidados
+16:1716 minutos y 17 segundosy es importante que en el contenido de la función los argumentos de entrada
+16:2516 minutos y 25 segundossean de alguna forma es igual es igual simbólico pero lo que está diciendo es que de alguna manera los argumentos de
+16:3416 minutos y 34 segundosentrada tienen que ser asignado o transformado a partir de determinados cálculos a los argumentos de salida
+16:4616 minutos y 46 segundoscomo es la estructura de una función la primera línea es su definición en
+16:5516 minutos y 55 segundosremarcar en azul la palabra function entre corchetes van los argumentos de
+17:0217 minutos y 2 segundossalida luego el igual luego el nombre que le voy a dar a esa función y que
+17:0917 minutos y 9 segundosdebe coincidir con el nombre del archivo donde yo voy a borrar esa función y
+17:1617 minutos y 16 segundosentre paréntesis separados por comas irán los nombres de entradas
+17:2317 minutos y 23 segundosesto es lo que le comentaba antes es importante remarcar que no se deben incluir espacios ni palabras reservadas
+17:3117 minutos y 31 segundospor el software sí si hay más de uno van separados por coma
+17:3917 minutos y 39 segundosy a veces si no hay argumentos de entrada no hace falta poner el paréntesis lo mismo si no hay argumentos
+17:4917 minutos y 49 segundosde salidas se omiten los corchetes y el signo igual por ejemplo
+17:5717 minutos y 57 segundossi yo no tuviese a ningún argumento de salida si mi función no va a almacenar
+18:0318 minutos y 3 segundosningún valor en ese argumento puedo definirlo como function el nombre de la función y entre paréntesis los
+18:1218 minutos y 12 segundosargumentos de entradas en valor por comas en cambio si no hay variable entrada o
+18:1918 minutos y 19 segundosargumento de entrada directamente defino function entre corchetes los
+18:2618 minutos y 26 segundosargumentos salida separados por goma el igual y el nombre de mi función
+18:3318 minutos y 33 segundoscuando la función devuelve solo un resultado si cuando en por ejemplo en
+18:4018 minutos y 40 segundoseste caso en el argumento llamado y se devuelve un solo resultado se puede
+18:4618 minutos y 46 segundosomitir el corchete nosotros en general definiremos funciones que tengan dando
+18:5518 minutos y 55 segundosargumentos de entrada como de salida como se muestra en este caso tenemos
+19:0119 minutos y 1 segundoissues y 1 y 2 como argumentos de salida y abc como argumentos de entrada por
+19:1319 minutos y 13 segundosejemplo este sería un caso si yo quisiese implementar un algoritmo que
+19:2019 minutos y 20 segundoscalcula las raíces cuadradas de la cuadrática
+19:2819 minutos y 28 segundosy si serían los coeficientes de mi
+19:3219 minutos y 32 segundoscuadrática y su 1 y 1 y 2 serían las
+19:4019 minutos y 40 segundosraíces aproximadas de dicha ecuación cuadrática
+19:4819 minutos y 48 segundos02 del polinomio cuadrática como quieran verlo
+19:5519 minutos y 55 segundoses importante decir que una función no modifica los argumentos que recibe es
+20:0220 minutos y 2 segundosdecir cuando yo hago el llamado a dicha función
+20:0920 minutos y 9 segundosno se van a modificar no se van a modificar los argumentos que reciben
+20:1620 minutos y 16 segundosesos argumentos pueden ser string escalares vectores matrices o incluso
+20:2520 minutos y 25 segundosalgunas funciones es decir que si yo le paso un valor a una función
+20:3320 minutos y 33 segundos[Música]
+20:3420 minutos y 34 segundosla variable no va a ser modificada no va a ser modificada por fuera de esa
+20:4220 minutos y 42 segundosfunción opcionalmente como comen de ebro recomendable desde la segunda línea se
+20:5020 minutos y 50 segundospone en los comentarios que me detalle en toda la descripción de la función y
+20:5520 minutos y 55 segundosademás cuando en el front yo tecla help y el nombre de la función que yo haya
+21:0321 minutos y 3 segundoscreado me va a aparecer toda esta descripción que aparece a partir de la segunda línea donde se describe qué hace
+21:1321 minutos y 13 segundoscuál es el input output y demás cuestiones de mi función es importante que los argumentos de
+21:2121 minutos y 21 segundossalida se calculen dentro de la función es decir debe haber una asignación a los
+21:2821 minutos y 28 segundosargumentos de salida dentro de la función también es importante remarcar que las
+21:3621 minutos y 36 segundosvariables que fuesen usadas o definidas dentro de la función son variables locales es decir variables que por fuera
+21:4521 minutos y 45 segundosde mi función no se van a ver por decirlo de alguna forma
+21:5321 minutos y 53 segundosy dichas variables pertenecen a ese espacio de trabajo y no son vistas desde
+22:0122 minutos y 1 segundootro espacio de trabajo es decir que si yo trabajo a un llamado a mi función desde la ventana de comandos las
+22:1122 minutos y 11 segundosvariables internas usadas dentro de la función no van a ser vistas desde la
+22:1822 minutos y 18 segundosventana de comando de decir no van a ser generadas las variables que
+22:2422 minutos y 24 segundosse usen dentro de mi función en cambio si iban a ser generadas en mi works
+22:3022 minutos y 30 segundosspace los argumentos de salida de mi función
+22:3822 minutos y 38 segundosopcionalmente pero recomendable es terminar las funciones con el comando en aunque algunas versiones marcan esto
+22:4722 minutos y 47 segundoscomo un warning pero no hay que prestarle atención porque la función se va a ejecutar igual
+22:5722 minutos y 57 segundosbueno eso es lo que refiere a funciones definidas en archivos por usuarios pero también
+23:0623 minutos y 6 segundostenemos funciones definidas en línea como las in line functions de marley opt-out
+23:1423 minutos y 14 segundoslas funciones en línea son funciones de una línea de comando definida por cadena de caracteres
+23:2223 minutos y 22 segundosde tipo string por ejemplo la estructura el mar la octava es la siguiente
+23:2923 minutos y 29 segundosva a ser él el nombre de la el argumento salida de
+23:3623 minutos y 36 segundosla función inline es el comando que me define en la función en línea expresión
+23:4323 minutos y 43 segundosva a ser la expresión algebraica la función que se va a pasar como cadena de
+23:5023 minutos y 50 segundoscaracteres entre comillas y también luego de la expresión van a ir separados por coma y también entre apostó frob
+23:5923 minutos y 59 segundosentre apostó fue entre apóstrofo los argumentos de esa función es decir sus
+24:0624 minutos y 6 segundosvariables ok si el caso de que haya un solo argumento
+24:1324 minutos y 13 segundosno va a hacer falta especificar lo sino que el programa ya
+24:1924 minutos y 19 segundosva a entender cuál es la variable en la expresión
+24:2624 minutos y 26 segundoses importante también decir que el argumento de salida solo puede ser
+24:3824 minutos y 38 segundoslas funciones en línea en shaila se definen usando el comando de que es análogo simplemente cambia su estructura
+24:4724 minutos y 47 segundossi la estructura es de entre paréntesis abrió apóstrofo art font va a ser el
+24:5724 minutos y 57 segundosargumento de salida de mi función nombre fan va a ser el nombre de mi
+25:0425 minutos y 4 segundosfunción y entre paréntesis separados por comas mis argumentos y separado por coma
+25:1325 minutos y 13 segundostambién entre apostar fox la expresión algebraica que define
+25:1925 minutos y 19 segundosmi función vamos a comprender esto en los siguientes ejemplos por ejemplo supongan sé que quieren
+25:2825 minutos y 28 segundosdefinir la función cuadrática fx igual x
+25:3425 minutos y 34 segundoscuadrado más 3 entonces en el nombre o valor o argumento de salida lo llame f
+25:4325 minutos y 43 segundosigual online entre apostó fos pongo x al cuadrado más 3
+25:5325 minutos y 53 segundosy me define como no le pongo punto y coma menos me define me dice que f es una función en línea cuya ley es x
+26:0226 minutos y 2 segundoscuadrado + 3 y luego en la próxima línea el ejecutó cuánto vale efe en 3 y la
+26:1126 minutos y 11 segundosrespuesta es 12 también si quisieran si quisieran definir un campo escalar por ejemplo el
+26:1926 minutos y 19 segundoscampo escalar g de xy igual x + y cubo en este caso a diferencia del anterior
+26:2726 minutos y 27 segundosdonde no definir a x como argumento que me funciona en línea en este caso si
+26:3426 minutos y 34 segundostengo que decirle cuáles son mis argumentos de mi función en este caso x
+26:4326 minutos y 43 segundose y fundamentalmente por el orden que va a tener esas variables
+26:5026 minutos y 50 segundosen este caso entonces es importante aclarar que x son los argumentos de mi
+26:5826 minutos y 58 segundosfunción g en línea sí nuevamente defino como game line
+27:0627 minutos y 6 segundosme va a imprimir kg en línea es g de x x woman y cubo y luego sí quiero valorizar
+27:1527 minutos y 15 segundoseste campo escalar en el valor en el punto d de r 225 simplemente ejecutó g entre
+27:2627 minutos y 26 segundosparéntesis separado por coma 25 y me va a dar a dar el valor de ese campo en el
+27:3327 minutos y 33 segundospunto 25 los invito a que practiquen en la práctica en las actividades hay
+27:4127 minutos y 41 segundosvarios ejemplos para que ustedes implementen pero los invito también a que reproduzcan los ejemplos de la transparencia
+27:4927 minutos y 49 segundosen shaila como le decía es muy sencillo puedo definir la función cuadrática por ejemplo x cuadrado + 2 usando el comando
+27:5927 minutos y 59 segundosde paréntesis entre apostar fox y igual funk va a ser el nombre de mi función de
+28:0628 minutos y 6 segundosx y luego separado por comas la expresión algebraica que define mi
+28:1228 minutos y 12 segundosfunción en este caso para evaluar como el nombre de la función es fong
+28:1928 minutos y 19 segundosdijo que fue un es en 3.5 y me va a devolver el valor de la función x
+28:2928 minutos y 29 segundoscuadrados más 2 en 3.5 hay otro tipo de funciones que son
+28:3728 minutos y 37 segundosconocidas como funciones anónimas sí que tienen otro tipo de fundamento en su
+28:4528 minutos y 45 segundosprogramación en más los dos se conocen como conexión handels fueron introducidas en versiones
+28:5428 minutos y 54 segundosrecientes de matlab sí y su construcción no usa string y están asociados a una variable que se
+29:0429 minutos y 4 segundosva a representar con él por ejemplo su estructura va a ser
+29:1029 minutos y 10 segundosnombre de la función igual arroba entre paréntesis separados por comas los
+29:1729 minutos y 17 segundosargumentos de mi función espacio la expresión algebraica que define mi
+29:2529 minutos y 25 segundosfunción bueno esto es lo que decía la expresión lo que son los argumentos y lo que es el
+29:3529 minutos y 35 segundosargumento de salida en este caso no un funk que solo admite que sea un argumento de
+29:4329 minutos y 43 segundossalida si queremos definir las mismas funciones que definimos antes para que
+29:5029 minutos y 50 segundosvean la diferencia en el uso decimos que en el prom podemos escribir efe igual roba entre paréntesis x
+30:0030 minutosespacio x circunflejo 2 + 3 con lo cual defino mi función cuadrática x cuadrado
+30:0730 minutos y 7 segundos+ 3 y si la quiero valorizar ahora digo quién es efe / si me va a devolver el valor 12 en
+30:1530 minutos y 15 segundosla variable ansa de la misma manera si quiero definir el campo escalar que de xy ahora en este
+30:2430 minutos y 24 segundoscaso voy a decir que es igual arroba x y separado por coma entre paréntesis y la expresión que define la ley de mi campo
+30:3330 minutos y 33 segundosy análogamente para valorizar es importante remarcar que este
+30:4230 minutos y 42 segundoseste tipo de funciones anónimas en línea en versiones viejas de matlab no lo van
+30:4930 minutos y 49 segundosa encontrar y además algunas versiones recientes ya
+30:5530 minutos y 55 segundosadvertían que las funciones inline iba a ser removidas en versiones futuras de maldad y que sólo iba a quedar
+31:0431 minutos y 4 segundoscomando nos interesa definir funciones en línea
+31:1431 minutos y 14 segundosporque muchas veces queremos pasar funciones como argumentos en particular
+31:2131 minutos y 21 segundosen matlab y ahí según müller que fue el creador de
+31:2931 minutos y 29 segundosmatlab al menos cinco formas diferentes de pasar una función como argumento de
+31:3531 minutos y 35 segundosotra función una de ellas es la funciones en línea inline otra es las funciones definidas
+31:4531 minutos y 45 segundosen archivos de files otra es las funciones anónimas
+31:5431 minutos y 54 segundosque son function handle que acabamos de ver también se pueden pasar como expresión de cadena de caracteres o
+32:0232 minutos y 2 segundostambién se pueden basar como expresiones simbólicas estas últimas no vamos a ver pero las otras tres sí vamos a verlos en
+32:0932 minutos y 9 segundoslos ejemplos como le mostré en la lectura 1 es muy
+32:1732 minutos y 17 segundosimportante que trabajen con escribir guiones o libretos si los scripts que
+32:2432 minutos y 24 segundosson archivos de comando que van a ser una secuencia de órdenes que yo quiero
+32:3132 minutos y 31 segundosque se ejecuten secuencialmente hice de la manera que si yo estuviese ingresando
+32:3932 minutos y 39 segundosesas órdenes por tecleado en la ventana los scripts no tienen argumento de
+32:4932 minutos y 49 segundosentrada ni de salida a diferencia de las funciones los comandos se ejecutan se
+32:5632 minutos y 56 segundossecuencialmente y también lo puedo ejecutar por ejemplo si yo tengo un
+33:0333 minutos y 3 segundosscript almacenado que tiene una serie de comandos que quiero ejecutar lo que
+33:1133 minutos y 11 segundospuedo hacer si se escribe está almacenado en mi directorio actual de trabajo yo puedo
+33:1833 minutos y 18 segundosejecutar dicho script simplemente escribiendo en la ventana de comando su nombre sin la extensión esto lo vimos en
+33:2733 minutos y 27 segundosla lectura 1 cuando ejecutamos el script de para
+33:3633 minutos y 36 segundosel algoritmo en recuerdos que aproximaba a la rede 2
+33:4233 minutos y 42 segundosel script no se olvidan debe almacenarse en el directorio actual de trabajo donde uno está trabajando
+33:5033 minutos y 50 segundossiempre es bueno en los scripts no se olvidan de esto de poner punto y coma al final de la línea porque esto evita una
+33:5833 minutos y 58 segundossalida innecesaria de datos en la ventana de comando sobre todo si uno
+34:0634 minutos y 6 segundoscarga una matriz y uno luego empieza a integrar con esa matriz o con esos vectores si no pongo el punto y coma al
+34:1334 minutos y 13 segundosfinal de cada una de las líneas posiblemente se esté imprimiendo imprimiendo
+34:2234 minutos y 22 segundostodas esas matrices en cada paso del iteración un archivo sea tanto un escribo función
+34:3234 minutos y 32 segundospuede también llamar a otros archivos esto es lo que se conoce como programación anidada
+34:4034 minutos y 40 segundoslas variables definidas en los scripts son variables internas
+34:4834 minutos y 48 segundosasí que del espacio de trabajo donde se ejecuta en las varias definida en funciones son
+34:5634 minutos y 56 segundosvariables internas en mar la octava los scripts van a ser
+35:0435 minutos y 4 segundosde extensión m y ensaye la van a ser de extensión 112 sc
+35:1535 minutos y 15 segundosbueno finalmente veamos cómo plotear como realizar gráficas
+35:2435 minutos y 24 segundosmat la octava isla particularmente nos vamos a centrar en maldad y octava los
+35:3035 minutos y 30 segundoscomandos y lab son muy semejantes hay cuatro funciones o comandos básicos
+35:4035 minutos y 40 segundospara crear gráficos en dos dimensiones el comando plot crea un gráfico a partir
+35:4835 minutos y 48 segundosde vectores o columnas de matrices con escalas lineales en ambos ejes decir el
+35:5635 minutos y 56 segundoseje de las abscisas y el eje de las coordenadas en el mismo comando plot existe en seis lados
+36:0536 minutos y 5 segundosel comando sem y lo realiza lo mismo que el comando plot pero hace una escala lineal en el eje de las ordenadas y una
+36:1436 minutos y 14 segundosescala logarítmica en el eje la posición se me love x hace una escala lineal en el eje de las abscisas de una escala
+36:2336 minutos y 23 segundoslogarítmica en el eje de las ordenadas y el comando log lo que hace escalas
+36:3036 minutos y 30 segundoslogarítmicas en ambos ejes nosotros en lo sucesivo vamos a usar la
+36:3736 minutos y 37 segundosfunción plot aunque puede consultarse el help para ver las restantes
+36:4536 minutos y 45 segundospor ejemplo fíjense y voy a como usamos el comando plot
+36:5536 minutos y 55 segundose x defino x e iu
+37:0137 minutos y 1 segundodefino x como dos vectores de cinco
+37:0837 minutos y 8 segundoscomponentes cada una son vectores fila tienen que tener la misma dimensión
+37:1537 minutos y 15 segundosen este caso tienen esos valores enteros que les di a continuación luego lo que hago es flote o vector
+37:2537 minutos y 25 segundosversus vector engordante remarcar que diciembre se bloquea vector versus vector x dando ambos vectores tienen que
+37:3237 minutos y 32 segundostener la misma dimensión para evitar errores entonces luego pongo plot entre
+37:4237 minutos y 42 segundosparéntesis xy coma espacio bridón lo que hace un activo una grilla y además en él
+37:5137 minutos y 51 segundosen el bronx pongo y igual 13 24 53 otro nuevo vector de longitud
+38:0138 minutos y 1 segundo6 en este caso mandab octavo por defecto
+38:0738 minutos y 7 segundosvan a tomar que el vector x aunque no lo defina pero va a ser el vector de las
+38:1538 minutos y 15 segundosabscisas es 123456 luego simplemente
+38:2238 minutos y 22 segundospongo plot day y grito y se va a generar otra figura la figura de la izquierda es el primer
+38:3038 minutos y 30 segundosplot que ejecute donde lo tiene el vector x versus el y fíjense que cada
+38:3938 minutos y 39 segundospunto de esa poligonal está formado por los componentes en sus respectivos
+38:4938 minutos y 49 segundosórdenes de los vectores x 6 es decir el primer punto de la poligonal es el punto
+38:5638 minutos y 56 segundos11 el segundo punto es el 60 el tercero 54 y así con los restantes
+39:0439 minutos y 4 segundosen la figura de la izquierda que se me genera cuando ejecute el segundo blog
+39:1239 minutos y 12 segundosvan a ver que hay una poligonal cerrada fíjense qué
+39:2039 minutos y 20 segundosen este caso tengo los puntos 1 3245 y 3
+39:3439 minutos y 34 segundosy por defecto en ese caso toma el vector de las abscisas
+39:4439 minutos y 44 segundosel proyecto de la abscisa uno dos tres cuatro cinco y seis
+39:5439 minutos y 54 segundos[Música]
+39:5739 minutos y 57 segundosbueno ahora tengo un interés un poquito más complicado quiero empezar a graficar algunas funciones
+40:0640 minutos y 6 segundosa plantear algunas funciones y para lo cual lo que hago ahora es
+40:1240 minutos y 12 segundosuna discreta ción fíjense que en la primera tendencia
+40:1940 minutos y 19 segundoshago una discreta ción lo asignó en la variable x esto va desde el valor menos
+40:2640 minutos y 26 segundos2 a 2 con un paso de 0,01 o sea 1 por 10 a
+40:3540 minutos y 35 segundoslo menos 2 y lo que hago es el plot de x
+40:4040 minutos y 40 segundosdel vector x versus eps de x es de x no es otra cosa que la función exponencial
+40:4940 minutos y 49 segundosuna función predefinido en maldad y además le digo que
+40:5640 minutos y 56 segundoslo haga usando el argumento de estilo g / apóstrofo que tiene que ver con el
+41:0541 minutos y 5 segundoscolor ahora a continuación lo vamos a ver es el color gris verde a su vez defina otra discreta ción
+41:1341 minutos y 13 segundosfíjense que defino la discreta ción en el -2 2 p2p si con un paso que spears
+41:2341 minutos y 23 segundossobre 100
+41:2441 minutos y 24 segundos[Música]
+41:2641 minutos y 26 segundosy luego es solo asignó a la variable x y luego lo que hago es en las variables
+41:3741 minutos y 37 segundosy zeta se valoriza los valores de esa discriminación haciendo uso de la
+41:4641 minutos y 46 segundosfunción seno de x la función coseno de x predefinida en matt la octava
+41:5641 minutos y 56 segundosfíjense que en este caso tanto x como i como zetas son funciones son vectores
+42:0542 minutos y 5 segundospero son vectores y ahora lo que hago es ploteo el vector
+42:1342 minutos y 13 segundosde las abscisas que en este caso es el vector x con el vector de las ordenadas que en este caso es y para el seno y z
+42:2342 minutos y 23 segundospara el coseno al ponerlo todo dentro del mismo paréntesis separado por coma
+42:3142 minutos y 31 segundoslo que me permite es graficar ambas curvas en la misma figura recuerden que cada vez que se ejecuta el
+42:3942 minutos y 39 segundoscomando plot se genera una figura en una ventana aparte en este caso no van a
+42:4642 minutos y 46 segundosaparecer dos ventanas por un lado a la izquierda van a ver la función exponencial en realidad vemos un plot
+42:5542 minutos y 55 segundosque está muy descrita dow y que simula la continuidad pero no es es una gráfica
+43:0543 minutos y 5 segundosdiscret izada en la figura de la derecha van a ver el seno y el coseno solapado gráfica 2 en
+43:1343 minutos y 13 segundosel intervalo menos y sobre 2 piso de 2 bueno también tienen distintos tipos de
+43:2143 minutos y 21 segundoscolores y los marcadores que uno puede usar si ahí les dejo algunos
+43:2743 minutos y 27 segundospor ejemplo es interesante usarlo para distinguir las gráficas por ejemplo
+43:3543 minutos y 35 segundossi tengo quiero graficar en el intervalo 0 10 la función seno de x por una
+43:4343 minutos y 43 segundosexponencial y la función coseno de aquí por otra exponencial lo defino en el vector y 1 y el doctor y
+43:5243 minutos y 52 segundos2 y luego cuando ejecuto el comando plot hago lote x versus y 1 y le digo que lo
+44:0144 minutos y 1 segundohaga en blue con la marquita más o sea en azul con la marquita más y luego que en la misma figura blog de y versus y 2
+44:1044 minutos y 10 segundosque lo haga en en color red con la marquita 0 y lo que
+44:1644 minutos y 16 segundosnos va a parecer es lo siguiente después pueden jugar ustedes con los distintos estilos marcas y colores para
+44:2444 minutos y 24 segundosidentificar sus gráficas a veces interesante que en una misma
+44:3044 minutos y 30 segundosventana de figura nos aparezcan muchas gráficas sí entonces
+44:3944 minutos y 39 segundosme interesa usar definir otro comando que es el comando su plot
+44:4544 minutos y 45 segundosque lo que hace es permite particionar o dividir la gráfica la ventana de la
+44:5344 minutos y 53 segundosfigura de maldad donde yo puedo insertar distintas sus figuras
+45:0145 minutos y 1 segundoen ese caso el psuv blot m n y lo que hace m m define la cantidad de filas que
+45:0945 minutos y 9 segundostiene esa partición en la cantidad de columnas y el índice y me activa la su
+45:1745 minutos y 17 segundosfigura donde yo voy a graficar veamos cómo se usa el comando su blog por
+45:2445 minutos y 24 segundosejemplo si yo defino x como una discreta ción del intervalo 010 luego defino y
+45:3245 minutos y 32 segundoscomo la valorización del seno en ese en esa discriminación lo mismo hago con z
+45:4045 minutos y 40 segundoscon el coseno luego defino un exponencial por y que tenía almacenado el seno o sea que es una exponencial por
+45:4945 minutos y 49 segundosel seno y lo almacena en w y finalmente defino la variable el producto de la variable y que es el
+45:5745 minutos y 57 segundosseno la valorización del seno en x por la variable zeta que es la valorización
+46:0446 minutos y 4 segundosde la función coseno o sea que no es otra cosa que la función seno por coseno
+46:1146 minutos y 11 segundospero es importante remarcar que tanto y z wv y b no son funciones en línea sino
+46:1946 minutos y 19 segundosque están definidas como vectores porque son la valorización de algunas funciones
+46:2646 minutos y 26 segundosen los en la discreta ción definida x
+46:3346 minutos y 33 segundosinicialmente además fíjense que estoy usando el comando punto asterisco para
+46:4046 minutos y 40 segundosque tenga sentido el producto componente a componente de esos vectores
+46:4946 minutos y 49 segundosentonces ahora si puedo hacer uso del comando su plot diciéndole que me defino un sub plot 2 x
+46:5846 minutos y 58 segundos2 y en el índice 1 en la primera figura que va a ser la de arriba a la izquierda hago el plot de x versus y en la segunda
+47:0847 minutos y 8 segundosfigura que va a ser la figura de arriba a la derecha voy a hacer el plot x per
+47:1447 minutos y 14 segundossuceda en rojo en regeneren en red luego en la figura 3 que va a ser la
+47:2347 minutos y 23 segundosfigura de abajo la izquierda va voy a plantear x verso w que va a ser la figuración y en la figura en la su
+47:3147 minutos y 31 segundosfigura 4 cáncer abajo a la derecha voy a pelotear x ver sube que va a ser lo voy a plantear en color de todo esto su blog
+47:4147 minutos y 41 segundosvan a aparecer en una misma ventana en ese caso me va a aparecer de esta
+47:4947 minutos y 49 segundosmanera la figura y en cada una de esas figuras sus gráficas va a aparecer cada
+47:5747 minutos y 57 segundosuna de las funciones que yo fui planteando en el color determinado y fíjense también que incluso en cada una
+48:0748 minutos y 7 segundosde esas gráficas también podrían haberse gráfica dos más curvas
+48:1448 minutos y 14 segundospor eso la potencialidad del comando su blog permite muchas veces tener muchos
+48:2048 minutos y 20 segundosresultados muchas gráficas en una misma figura para visualizarla y hacer estudios errores
+48:3048 minutos y 30 segundosotro lote o importante es el comando con ton que sirve para graficar curvas de
+48:3848 minutos y 38 segundosnivel de un campo escalar en este caso el comando cóndor se define
+48:4548 minutos y 45 segundoscomo cóndor x y z y el nivel determinado que yo quiera graficar de esas curvas de
+48:5248 minutos y 52 segundosnivel recuerden que la curva de nivel es como si yo a la gráfica de un campo escalar la voy cortando con planos
+49:0149 minutos y 1 segundoparalelos al plano z y voy proyectando sobre el plan perdón plano paralelo al
+49:0749 minutos y 7 segundosplano x xi y lo voy proyectando sobre el plano xy
+49:1449 minutos y 14 segundosentonces en este caso x mayúscula y mayúscula van a hacer arreglos bidimensionales o matrices que van a
+49:2249 minutos y 22 segundostener incluidas las coordenadas de xy de y z también va a ser un arreglo bidimensional que van a estar los
+49:3149 minutos y 31 segundosvalores d la función del campo sobre cada una de esas coordenadas y nivel va
+49:4049 minutos y 40 segundosa ser un vector que contiene los niveles de contorno o bien un entero que representa el número de
+49:4849 minutos y 48 segundosniveles de contorno y en general se divide entre el valor máximo y mínimo de z en n
+49:5749 minutos y 57 segundosniveles si yo no aclaro por defecto como hago uso bueno
+50:0650 minutos y 6 segundossi yo escribo x igual menos 2 la discriminación del menos 22 con un paso
+50:1450 minutos y 14 segundos0.2 si a la vez usó la misma fiscalización para definirme el vector y en x
+50:2350 minutos y 23 segundostengo dos vectores que son la discriminación del eje x y del eje y
+50:3050 minutos y 30 segundosdonde yo tengo definida mi función en este caso sería el cuadradito menos 2 2
+50:3950 minutos y 39 segundospor menos 22 o sea el producto cartesiano del intervalo menos 22 producto cartesiano menos 22
+50:4850 minutos y 48 segundosahora necesito usar un comando que se llama más grid que me permite hacer un
+50:5550 minutos y 55 segundosmallado es decir generar a partir de esos vectores
+51:0351 minutos y 3 segundosmatrices x e y donde cada línea de x va
+51:1151 minutos y 11 segundosa ser una réplica d la equis chiquita y cada columna de iba a ser una réplica de la y grande
+51:2051 minutos y 20 segundosde forma tal que cuando yo miré una componente de la matriz x grande
+51:2751 minutos y 27 segundosy cuando mire una componente de la matriz y grande con esos dos valores
+51:3451 minutos y 34 segundostengo el par cartesiano que me define un
+51:4051 minutos y 40 segundosvalor en el plano cartesiano que es parte de mi mallado
+51:4851 minutos y 48 segundosuna vez que defino las matrices x lo que hago es defino z también como una
+51:5751 minutos y 57 segundosgran matriz pero no es otra cosa que la valorización de mi función sobre el
+52:0652 minutos y 6 segundosmallado esos valores que están definidos en una matriz los guardo en la variable
+52:1252 minutos y 12 segundoszeta mayúscula y finalmente algo contra x mayúscula y mayúscula zeta y le digo
+52:2052 minutos y 20 segundosque haga 10 curvas de nivel y grid on para que me haga el brillado y voy a obtener las 10 curvas de nivel en este
+52:2852 minutos y 28 segundoscaso de el campo escalar x x ala menos x cuadrados más y cuadrado
+52:4052 minutos y 40 segundostambién el comando con ton me sirve por ejemplo para graficar funciones
+52:4752 minutos y 47 segundosimplícitas sí es decir cuando yo tengo un campo escalar igualado a cero o si quieren pensarlo como la curva de nivel
+52:5552 minutos y 55 segundoscero por ejemplo en este caso una parábola y una lección la parábola está definida como x cuadrado menos 2 x menos
+53:0353 minutos y 3 segundosy más son me da igual a cero y la elipse está definida como x cuadrado más 4 y cuadrado igual a 4 esas dos ecuaciones
+53:1053 minutos y 10 segundosdefinen implícitamente una parábola y una elipse ahora bien quiero graficar las en el
+53:1953 minutos y 19 segundosplano en el plano xy entonces voy a definir mi diferenciación en x en el intervalo
+53:2753 minutos y 27 segundosmenos 33 con un paso 0,1 luego tomó la misma discriminación para el i es decir
+53:3453 minutos y 34 segundosque voy a trabajar en el plan en el en el cuadrado cartesiano menos 33 producto
+53:4253 minutos y 42 segundoscartesiano menos 33 hago el mallado usando el comando mes
+53:4853 minutos y 48 segundosgrid y almacenándolo en y en x mayúscula y mayúscula luego asignó en zeta
+53:5653 minutos y 56 segundosmayúscula 1 la primera ley es decir x cuadrado menos 2 x menos y más 0.5 que
+54:0554 minutos y 5 segundoses un medio luego en z 2 asignó x cuadrado más 4 y cuadrado menos 4
+54:1254 minutos y 12 segundosfíjense que tengo que trabajar algebraica mente en la ecuación que define la elipse de forma tal que quede
+54:2054 minutos y 20 segundosigualada a cero y luego con control público perdón el gráfico en
+54:3054 minutos y 30 segundosz 1 y z 2 y ahora en vez de de pasar la cantidad
+54:3654 minutos y 36 segundosde niveles que quiero lo que le pasó es el 0 0 entre corchete que me especifica
+54:4454 minutos y 44 segundosel nivel del contorno los niveles de contorno cuando yo quiero ingresar un nivel de contorno determinado se
+54:5254 minutos y 52 segundosingresan en forma de vector y como en este caso me interesa el nivel de contorno 0 es decir la intersección de
+55:0055 minutosesos campos con el plano set igual 0 hago este
+55:0755 minutos y 7 segundosel público el vector 0 0 en un caso lo hago en color blue en otro caso lo hago en color red y es importante usar el
+55:1655 minutos y 16 segundoscomando hold on para qué y luego de haber realizado el primer control el hold on lo que hace es
+55:2555 minutos y 25 segundosmantiene abierta esa figura para que yo luego o usando el segundo comando que es
+55:3355 minutos y 33 segundoscon ton y plot el la zeta 2s grafique solapado en esa misma figura lo que van
+55:4255 minutos y 42 segundosa obtener es una figura que va a tener una intersección de la elipse y la parábola
+55:5155 minutos y 51 segundosbueno finalmente es interesante poder hacer ploteo 3d ahora me interesa así hacer un ploteo 3d y vamos a hacerlo
+56:0056 minutossobre un dominio rectangular que es el producto cartesiano del intervalo ave
+56:0656 minutos y 6 segundoscon el intervalo cd lo primero que hacemos es como antes
+56:1356 minutos y 13 segundosdefinimos xy vectores con coordenadas en otra en una en otra dirección de mi retícula que va a definir el
+56:2256 minutos y 22 segundosdominio de mi campo es decir en x voy a guardar la discriminación del intervalo b y en y
+56:2956 minutos y 29 segundosvoy a guardar la discriminación del intervalo cerrado cede luego usando el comando me script creó
+56:3956 minutos y 39 segundosdos matrices como dije antes la matriz mayúscula x son filas copias de x y la
+56:4756 minutos y 47 segundosmatriz grande y son columnas copia de i chiquita y con más grit género las
+56:5556 minutos y 55 segundosmatrices x grande y grande y van a representar cada uno de los puntos de esa ridícula
+57:0557 minutos y 5 segundosla matriz zeta la calculé como antes a partir de las matrices de coordenadas x
+57:1157 minutos y 11 segundosxi y luego ejecutando el comando mes con las matrices x mayúscula y mayúsculas
+57:1957 minutos y 19 segundoseta mayúscula como argumentos sep lotes a una superficie cuyos puntos en el
+57:2657 minutos y 26 segundosespacio tridimensional van a tener coordenadas cada una de las componentes
+57:3457 minutos y 34 segundosde las matrices x y z mayúscula en sus respectivos índices hijos y su co i
+57:4957 minutos y 49 segundosentonces fíjense en este ejemplo discret hizo él
+57:5557 minutos y 55 segundosintervalo menos 22 con un paso de 0.05 discreto el intervalo menos 11 con un
+58:0358 minutos y 3 segundospaso 0.1 y lo almacena invariable x y minúscula luego hago uso del comando
+58:1058 minutos y 10 segundosscript ingeniero la variable x mayúscula
+58:1758 minutos y 17 segundosque es mi reticulado finalmente el zeta generó el valor que tiene sobre s reticulado con la ley de disfunción que
+58:2658 minutos y 26 segundosen este caso voy a usar la misma ley que venía que usé para hacer las curvas de nivel que es el campo escalar x por ala
+58:3558 minutos y 35 segundosmenos x cuadrado más y cuadrado y con el comando mes x mayúscula y mayúscula se
+58:4358 minutos y 43 segundosestá mayúscula se me va a generar una figura como el de aparece ahí con la superficie
+58:5258 minutos y 52 segundosd qué es la gráfica de la función que estoy graficando en este caso
+59:0159 minutos y 1 segundolo que hacemos es eliminar ciertas líneas ocultas el color va a depender de
+59:0759 minutos y 7 segundosla variable z en cambio si yo lo que hago es usar el comando sur me va a
+59:1459 minutos y 14 segundosaparecer una superficie fase de hada sí y cada color que va a tener ese rectángulo de esa práctica de partícula
+59:2459 minutos y 24 segundosva a depender del valor que asuma z si yo quiero ver qué color a su meseta puedo tranquilamente usar el comando
+59:3359 minutos y 33 segundoscolor bar que me va a imprimir una barra de color a la derecha de mi figura esto
+59:3959 minutos y 39 segundossiempre se puede reubicar y hay muchos cursos se pueden editar muchas propiedades de de los ejes de las
+59:4759 minutos y 47 segundosfiguras la ubicación las vistas de la figura entonces usando el comando sur como hice
+59:5559 minutos y 55 segundosanteriormente con la variable x eta que tengo definido anteriormente voy a poder
+1:00:011 hora y 1 segundográfica hacer un falsete ado si demi de la gráfica de mi superficie de la
+1:00:081 hora y 8 segundosfunción que yo estaba graficando inicialmente bueno este es el contenido básico con
+1:00:171 hora y 17 segundosesto cerramos la lectura 3 y cerramos los comandos básicos de los programas
+1:00:241 hora y 24 segundosmás la octava y shaila ya hay una actividad uno que pueden realizar
+1:00:321 hora y 32 segundosy para luego empezar a poder a implementar
+1:00:381 hora y 38 segundosnuestros algoritmos numéricos y empezar a analizar los errores numéricos que veremos en las lecturas
